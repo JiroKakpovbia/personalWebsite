@@ -7,8 +7,13 @@ h1 {
     text-align: center;
     color: goldenrod;
 }
+
 p {
     font-size: 1.2rem;
+}
+
+.text-content {
+    flex: 1;
 }
 
 /* Top-Level Navigation */
@@ -60,6 +65,64 @@ a:hover {
     font-size: 4rem;
 }
 
+/* About */
+.about {
+    /* border: 5px outset goldenrod; */
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 75%;
+    margin: auto;
+    /* background-color: lightgoldenrodyellow;     */
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about img {
+    width: 35%;
+    height: auto;
+}
+
+/* Experience */
+.experience {
+    border: 0.5rem outset goldenrod;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 75%;
+    margin: auto;
+    background-color: lightgoldenrodyellow;    
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.experience img {
+    width: 10%;
+    height: auto;
+}
+
+.job-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.job-title .position {
+    text-align: left;
+    font-weight: bold;
+}
+
+.job-title .dates {
+    text-align: right;
+    font-style: normal;
+    font-weight: normal;
+}
+
 /* Footer */
 .footer {
     font-size: 1rem;
@@ -78,11 +141,31 @@ img {
     height: auto;
 }
 
-th, td {
-    padding: 15px;
-}
-
 .center {
     margin-left: auto;
     margin-right: auto;
-  }
+}
+
+.button {
+    background-color: goldenrod;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.button:hover {
+    background-color: darkgoldenrod;
+    color: white;
+}
+
+/* Centering the button */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
