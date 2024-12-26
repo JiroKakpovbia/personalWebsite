@@ -8,7 +8,7 @@ h1 {
     color: goldenrod;
 }
 p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 /* Top-Level Navigation */
@@ -51,12 +51,7 @@ a:hover {
 }
 
 /* Home */
-.home1 {
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.home2 {
+.homeSubtitle {
     font-size: 1.5rem;
     text-align: center;
 }
@@ -65,9 +60,29 @@ a:hover {
     font-size: 4rem;
 }
 
+/* Footer */
+.footer {
+    font-size: 1rem;
+    text-align: center;
+}
+
 
 /* Miscellaneous */
 
 html {
     scroll-behavior: smooth;
 }
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+th, td {
+    padding: 15px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
