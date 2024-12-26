@@ -3,9 +3,12 @@ body {
     background-color: whitesmoke;
 }
 h1 {
-    font-size: 24px;
+    font-size: 2rem;
     text-align: center;
     color: goldenrod;
+}
+p {
+    font-size: 1.1rem;
 }
 
 /* Top-Level Navigation */
@@ -23,12 +26,11 @@ nav {
 .nav-links {
     gap: 2rem;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 a {
     color: black;
-    font-size: 24px;
     text-decoration: none;
     text-decoration-color: white;
 }
@@ -47,6 +49,22 @@ a:hover {
 .logo:hover {
     cursor: default;
 }
+
+/* Home */
+.home1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.home2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.homeTitle {
+    font-size: 4rem;
+}
+
 
 /* Miscellaneous */
 
