@@ -8,6 +8,11 @@ h1 {
     color: goldenrod;
 }
 
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 p {
     font-size: 1.2rem;
 }
@@ -67,7 +72,7 @@ a:hover {
 
 /* About */
 .about {
-    /* border: 5px outset goldenrod; */
+    /* border: 5px solid goldenrod; */
     border-radius: 1rem;
     padding: 1rem;
     width: 75%;
@@ -77,7 +82,7 @@ a:hover {
 
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .about img {
@@ -87,7 +92,7 @@ a:hover {
 
 /* Experience */
 .experience {
-    border: 0.5rem outset goldenrod;
+    border: 0.1rem solid goldenrod;
     border-radius: 1rem;
     padding: 2rem;
     width: 75%;
@@ -97,7 +102,7 @@ a:hover {
 
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .experience img {
@@ -123,8 +128,37 @@ a:hover {
     font-weight: normal;
 }
 
+/* Contact */
+.contact {
+    border: 0.1rem solid goldenrod;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 75%;
+    margin: auto;
+    background-color: lightgoldenrodyellow;    
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact img {
+    width: 20%;
+    height: auto;
+}
+
+.method {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    gap: 0.5rem;
+}
+
 /* Footer */
 .footer {
+    /* background-color: goldenrod; */
     font-size: 1rem;
     text-align: center;
 }
