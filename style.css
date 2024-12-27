@@ -11,6 +11,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     text-align: center;
+    color: black;
 }
 
 p {
@@ -46,7 +47,7 @@ a {
 }
 
 a:hover {
-    color: grey;
+    color: goldenrod;
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: rbg(181, 181, 181);
@@ -72,12 +73,10 @@ a:hover {
 
 /* About */
 .about {
-    /* border: 5px solid goldenrod; */
     border-radius: 1rem;
     padding: 1rem;
     width: 75%;
     margin: auto;
-    /* background-color: lightgoldenrodyellow;     */
     text-align: left;
 
     display: flex;
@@ -88,6 +87,35 @@ a:hover {
 .about img {
     width: 35%;
     height: auto;
+}
+
+/* Projects */
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.project {
+    border: 0.1rem solid goldenrod;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: lightgoldenrodyellow;
+    width: calc(33% - 2rem); /* Adjust for responsive design */
+    box-sizing: border-box;
+}
+
+.project p {
+    margin: 0.5rem 0;
+}
+
+.project a {
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
 }
 
 /* Experience */
@@ -158,28 +186,11 @@ a:hover {
 
 /* Footer */
 .footer {
-    /* background-color: goldenrod; */
     font-size: 1rem;
     text-align: center;
 }
 
-
-/* Miscellaneous */
-
-html {
-    scroll-behavior: smooth;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-.center {
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* Resume Button */
 .button {
     background-color: goldenrod;
     border: none;
@@ -202,4 +213,14 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Miscellaneous */
+html {
+    scroll-behavior: smooth;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }
