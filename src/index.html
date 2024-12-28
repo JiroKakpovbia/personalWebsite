@@ -3,10 +3,16 @@
     <!-- Metadata for the page -->
     <head>
         <link rel="stylesheet" href="output.css">
+
         <!-- Title of webpage in the browser -->
         <title>Jiro Kakpovbia</title>
         <meta charset="UTF-8">
+
+        <!-- idk -->
         <meta name=“viewport” content=“width=device-width, initial-scale=1”>
+
+        <!-- Animate on Scroll -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     </head>
 
     <!-- All visible content on the page -->
@@ -38,7 +44,7 @@
         <section id="about">
             <h1>About Me</h1>
             <br>
-            <div class="about animate-slideInUp">
+            <div class="about" data-aos="slide-up">
                 <img id="headshot" alt="Headshot of Jiro Kakpovbia" src="../imgs/Headshot.jpg">
 
                 <!-- About Me Description-->
@@ -60,7 +66,11 @@
                 </div>
             </div>
         </section>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
         <!-- Projects -->
         <section id="projects">
@@ -85,11 +95,17 @@
                         // Select the container where projects will be displayed
                         const projectsContainer = document.getElementById('projects-container');
                         projectsContainer.innerHTML = ''; // Clear existing content
+
+                        var repoNum = 0;
             
                         repos.forEach(repo => {
                             // Create a new div for each repository
                             const projectElement = document.createElement('div');
                             projectElement.className = 'project';
+
+                            // Determine which side the element will slide from
+                            if (repoNum % 2 == 0) { projectElement.setAttribute("data-aos", "slide-right"); }
+                            else { projectElement.setAttribute("data-aos", "slide-left"); }
             
                             // Populate the project div with repository details
                             projectElement.innerHTML = `
@@ -100,6 +116,8 @@
             
                             // Append the project element to the container
                             projectsContainer.appendChild(projectElement);
+
+                            ++repoNum;
                         });
                     } catch (error) {
                         console.error('Error fetching GitHub repositories:', error);
@@ -112,13 +130,17 @@
                 });
             </script>
         </section>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
         <!-- Experience -->
         <section id="experience">
             <h1>Experience</h1>
             <br>
-            <div class="experience animate-slideInLeft">
+            <div class="experience" data-aos="slide-left">
                 <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="../imgs/wprint.png">
                 <div class="text-content">
                     <h2 class="job-title">
@@ -130,7 +152,7 @@
                 </div>
             </div>
             <br>
-            <div class="experience animate-slideInRight">
+            <div class="experience" data-aos="slide-right">
                 <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="../imgs/wprint.png">
                 <div class="text-content">
                     <h2 class="job-title">
@@ -142,7 +164,7 @@
                 </div>
             </div>
             <br>
-            <div class="experience animate-slideInLeft">
+            <div class="experience" data-aos="slide-left">
                 <img id="warriors" alt="Logo of Waterloo Warriors" src="../imgs/waterloowarriors.png">
                 <div class="text-content">
                     <h2 class="job-title">
@@ -154,13 +176,17 @@
             </div>
             <br>
         </section>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
         <!-- Contact -->
         <section id="contact">
             <h1>Contact</h1>
             <br>
-            <div class="contact">
+            <div class="contact" data-aos="slide-up">
                 <div class="method">
                     <img id="phone" alt="Phone" src="../imgs/phone.png">
                     <div class="text-content">
@@ -187,7 +213,11 @@
                 </div>
             </div>
         </section>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
         <!-- Footer -->
         <section id="footer">
@@ -197,6 +227,15 @@
                 <br>
             </div>
         </section>
+
+        <!-- Animate on Scroll -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>AOS.init({
+            duration: 1000,
+            offset: 120,
+            easing: 'ease-in-out',
+          });
+        </script>
     </body>
 </html>
   
