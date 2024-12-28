@@ -28,6 +28,8 @@ p {
     flex: 1;
 }
 
+
+
 /* Top-Level Navigation */
 nav, 
 .nav-links {
@@ -61,12 +63,14 @@ a:hover {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .logo:hover {
     cursor: default;
 }
+
+
 
 /* Home */
 .homeSubtitle {
@@ -78,6 +82,26 @@ a:hover {
 .homeTitle {
     font-size: 4rem;
     color: #a188d8;
+}
+
+.socials {
+    border: none;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 20%;
+    margin: auto;
+    background-color: #27272a;
+    text-align: left;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.socials a {
+    width: 25%;
+    height: auto;
 }
 
 /* About */
@@ -98,6 +122,8 @@ a:hover {
     width: 35%;
     height: auto;
 }
+
+
 
 /* Projects */
 #projects-container {
@@ -134,6 +160,8 @@ a:hover {
 .project a:hover {
     text-decoration: underline;
 }
+
+
 
 /* Experience */
 .experience {
@@ -175,6 +203,8 @@ a:hover {
     color: whitesmoke;
 }
 
+
+
 /* Contact */
 .contact {
     border: none;
@@ -206,12 +236,16 @@ a:hover {
     gap: 0.5rem;
 }
 
+
+
 /* Footer */
 .footer {
     font-size: 1rem;
     background-color: #1e1e21;
     text-align: center;
 }
+
+
 
 /* Resume Button */
 .button {
@@ -231,12 +265,16 @@ a:hover {
     color: whitesmoke;
 }
 
+
+
 /* Centering the button */
 .center-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
 
 /* Miscellaneous */
 html {
