@@ -1,11 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Text */
 body {
-    background-color: whitesmoke;
+    background-color: #27272a;
 }
 h1 {
     font-size: 2rem;
     text-align: center;
-    color: goldenrod;
+    color: rgb(198, 172, 255);
 }
 
 h2 {
@@ -16,6 +20,7 @@ h2 {
 
 p {
     font-size: 1.2rem;
+    color: whitesmoke;
 }
 
 .text-content {
@@ -32,29 +37,30 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh;
+    color: whitesmoke;
+    background-color: #27272a;
 }
 
 .nav-links {
     gap: 2rem;
     list-style: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 a {
-    color: black;
     text-decoration: none;
     text-decoration-color: white;
 }
 
 a:hover {
-    color: goldenrod;
+    color: rgb(198, 172, 255);
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: rbg(181, 181, 181);
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .logo:hover {
@@ -65,10 +71,12 @@ a:hover {
 .homeSubtitle {
     font-size: 1.5rem;
     text-align: center;
+    color: whitesmoke;
 }
 
 .homeTitle {
     font-size: 4rem;
+    color: rgb(198, 172, 255);
 }
 
 /* About */
@@ -76,6 +84,7 @@ a:hover {
     border-radius: 1rem;
     padding: 1rem;
     width: 75%;
+    background-color: #1e1e21;
     margin: auto;
     text-align: left;
 
@@ -100,20 +109,22 @@ a:hover {
 }
 
 .project {
-    border: 0.1rem solid goldenrod;
+    border: none;
     border-radius: 0.5rem;
     padding: 1rem;
-    background-color: lightgoldenrodyellow;
-    width: calc(50% - 2rem); /* Adjust for responsive design */
+    background-color: #1e1e21;
+    width: calc(50% - 1rem);
     box-sizing: border-box;
 }
 
 .project p {
     margin: 0.5rem 0;
+    color: whitesmoke;
 }
 
 .project a {
     text-decoration: none;
+    color: whitesmoke;
 }
 
 .project a:hover {
@@ -122,12 +133,12 @@ a:hover {
 
 /* Experience */
 .experience {
-    border: 0.1rem solid goldenrod;
+    border: none;
     border-radius: 1rem;
     padding: 2rem;
     width: 75%;
     margin: auto;
-    background-color: lightgoldenrodyellow;    
+    background-color: #1e1e21;
     text-align: left;
 
     display: flex;
@@ -145,6 +156,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    color: whitesmoke;
 }
 
 .job-title .position {
@@ -156,16 +168,17 @@ a:hover {
     text-align: right;
     font-style: normal;
     font-weight: normal;
+    color: whitesmoke;
 }
 
 /* Contact */
 .contact {
-    border: 0.1rem solid goldenrod;
+    border: none;
     border-radius: 1rem;
     padding: 2rem;
     width: 75%;
     margin: auto;
-    background-color: lightgoldenrodyellow;    
+    background-color: #1e1e21;
     text-align: left;
 
     display: flex;
@@ -194,10 +207,10 @@ a:hover {
 
 /* Resume Button */
 .button {
-    background-color: goldenrod;
+    background-color: rgb(198, 172, 255);
     border: none;
     border-radius: 1rem;
-    color: white;
+    color: whitesmoke;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -206,8 +219,8 @@ a:hover {
 }
 
 .button:hover {
-    background-color: darkgoldenrod;
-    color: white;
+    background-color: rgb(48, 43, 62);
+    color: whitesmoke;
 }
 
 /* Centering the button */

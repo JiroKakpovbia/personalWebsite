@@ -2,7 +2,7 @@
 <html lang="en">
     <!-- Metadata for the page -->
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="output.css">
         <!-- Title of webpage in the browser -->
         <title>Jiro Kakpovbia</title>
         <meta charset="UTF-8">
@@ -21,20 +21,27 @@
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </div>
-        </nav><hr>
+        </nav>
 
         <!-- Home -->
         <section id="home">
-            <p class="homeSubtitle">Hi there, my name is</p>
-            <h1 class="homeTitle">Jiro Kakpovbia</h1>
-            <p class="homeSubtitle">Full-Stack Software Developer</p>
-        </section><hr>
+            <div class="home">
+                <br><br><br><br><br><br><br><br><br><br>
+                <p class="homeSubtitle">Hi there, my name is...</p>
+                <h1 class="font-semibold homeTitle">Jiro Kakpovbia</h1>
+                <p class="homeSubtitle">Full-Stack Software Developer</p>
+                <br><br><br><br><br><br><br><br><br><br>
+            </div>
+        </section>
 
         <!-- About -->
         <section id="about"></section>
             <h1>About Me</h1>
+            <br>
             <div class="about">
-                <img id="headshot" alt="Headshot of Jiro Kakpovbia" src="./imgs/Headshot.jpg">
+                <img id="headshot" alt="Headshot of Jiro Kakpovbia" src="../imgs/Headshot.jpg">
+
+                <!-- About Me Description-->
                 <div class="text-content">
                     <p>
                         Hi there! My name is Jiro Kakpovbia, and I'm a third-year Computer Science student at the University of Waterloo, graduating in Spring 2027.
@@ -44,15 +51,21 @@
                         Additionally, as a former student-athlete, I've learned to stay organized and motivate myself to succeed in both academically and athletically.
                         Please feel free to reach out — I'm always open to meeting new people!
                     </p>
+                    <br>
+
+                    <!-- Resume Button-->
+                    <div class="center-container">
+                        <a href="../docs/Jiro Kakpovbia's Resume.pdf" class="button">Download CV</a>
+                    </div>
                 </div>
             </div>
-
-
-        </section><hr>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br>
 
         <!-- Projects -->
         <section id="projects"></section>
             <h1>Projects</h1>
+            <br>
             <div id="projects-container"></div>
 
             <!-- Script to fetch Github Repositories -->
@@ -99,19 +112,14 @@
                 });
             </script>
         </section>
-        <br>
-        <hr>
+        <br><br><br><br><br><br><br><br><br><br>
 
         <!-- Experience -->
         <section id="experience"></section>
             <h1>Experience</h1>
-            <!-- Resume Button-->
-            <div class="center-container">
-                <a href="./docs/Jiro Kakpovbia's Resume.pdf" class="button">Download CV</a>
-            </div>
             <br>
             <div class="experience">
-                <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="./imgs/wprint.png">
+                <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="../imgs/wprint.png">
                 <div class="text-content">
                     <h2 class="job-title">
                         <span class="position">Back-End Software Engineer, Co-op</span>
@@ -123,7 +131,7 @@
             </div>
             <br>
             <div class="experience">
-                <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="./imgs/wprint.png">
+                <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="../imgs/wprint.png">
                 <div class="text-content">
                     <h2 class="job-title">
                         <span class="position">Front-End Web Developer, Co-op</span>
@@ -135,7 +143,7 @@
             </div>
             <br>
             <div class="experience">
-                <img id="warriors" alt="Logo of Waterloo Warriors" src="./imgs/waterloowarriors.png">
+                <img id="warriors" alt="Logo of Waterloo Warriors" src="../imgs/waterloowarriors.png">
                 <div class="text-content">
                     <h2 class="job-title">
                         <span class="position">Varsity Athlete</span>
@@ -145,32 +153,34 @@
                 </div>
             </div>
             <br>
-        </section><hr>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br>
 
         <!-- Contact -->
         <section id="contact"></section>
             <h1>Contact</h1>
+            <br>
             <div class="contact">
                 <div class="method">
-                    <img id="phone" alt="Phone" src="./imgs/phone.png">
+                    <img id="phone" alt="Phone" src="../imgs/phone.png">
                     <div class="text-content">
                         <p><span>(226) 899-3921</span></p>
                     </div>
                 </div>
                 <div class="method">
-                    <img id="email" alt="Email" src="./imgs/email.png">
+                    <img id="email" alt="Email" src="../imgs/email.png">
                     <div class="text-content">
                         <p><span><a href="mailto:kakpovbia.jiro@gmail.com">kakpovbia.jiro@gmail.com</a></span></p>
                     </div>
                 </div>
                 <div class="method">
-                    <img id="linkedin" alt="LinkedIn" src="./imgs/linkedin.png">
+                    <img id="linkedin" alt="LinkedIn" src="../imgs/linkedin.png">
                     <div class="text-content">
                         <p><span><a href="https://linkedin.com/in/jiro-kakpovbia">jiro-kakpovbia</a></span></p>
                     </div>
                 </div>
                 <div class="method">
-                    <img id="github" alt="GitHub" src="./imgs/github.png">
+                    <img id="github" alt="GitHub" src="../imgs/github.png">
                     <div class="text-content">
                         <p><span><a href="https://github.com/JiroKakpovbia">JiroKakpovbia</a></span></p>
                     </div>
@@ -179,13 +189,16 @@
         </section>
         <br>
         <hr>
+        <br>
 
         <!-- Footer -->
         <section id="footer"></section>
             <div class="footer">
                 <p class="footer">The source code for this website can be found on my <a href="https://github.com/JiroKakpovbia/personalWebsite">GitHub</a>, so be sure to check it out!</p>
             </div>
-        </section><hr>
+        </section>
+        <br>
+        <hr>
     </body>
 </html>
   
