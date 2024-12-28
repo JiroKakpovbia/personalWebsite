@@ -26,19 +26,19 @@
         <!-- Home -->
         <section id="home">
             <div class="home">
-                <br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <p class="homeSubtitle">Hi there, my name is...</p>
-                <h1 class="font-semibold homeTitle">Jiro Kakpovbia</h1>
+                <h1 class="homeTitle animate-pulse">Jiro Kakpovbia</h1>
                 <p class="homeSubtitle">Full-Stack Software Developer</p>
-                <br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
             </div>
         </section>
 
         <!-- About -->
-        <section id="about"></section>
+        <section id="about">
             <h1>About Me</h1>
             <br>
-            <div class="about">
+            <div class="about animate-slideInUp">
                 <img id="headshot" alt="Headshot of Jiro Kakpovbia" src="../imgs/Headshot.jpg">
 
                 <!-- About Me Description-->
@@ -60,10 +60,10 @@
                 </div>
             </div>
         </section>
-        <br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <!-- Projects -->
-        <section id="projects"></section>
+        <section id="projects">
             <h1>Projects</h1>
             <br>
             <div id="projects-container"></div>
@@ -94,8 +94,8 @@
                             // Populate the project div with repository details
                             projectElement.innerHTML = `
                                 <h2><a href="${repo.html_url}" target="_blank">${repo.name}</a></h2>
-                                <p>${repo.description || 'No description available.'}</p>
-                                <p><strong>Language:</strong> ${repo.language || 'N/A'}</p>
+                                <p>${'<b>Description:</b> ' + repo.description || 'No description available.'}</p>
+                                <p><b>Language:</b> ${repo.language || 'N/A'}</p>
                             `;
             
                             // Append the project element to the container
@@ -112,13 +112,13 @@
                 });
             </script>
         </section>
-        <br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <!-- Experience -->
-        <section id="experience"></section>
+        <section id="experience">
             <h1>Experience</h1>
             <br>
-            <div class="experience">
+            <div class="experience animate-slideInLeft">
                 <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="../imgs/wprint.png">
                 <div class="text-content">
                     <h2 class="job-title">
@@ -130,7 +130,7 @@
                 </div>
             </div>
             <br>
-            <div class="experience">
+            <div class="experience animate-slideInRight">
                 <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="../imgs/wprint.png">
                 <div class="text-content">
                     <h2 class="job-title">
@@ -142,7 +142,7 @@
                 </div>
             </div>
             <br>
-            <div class="experience">
+            <div class="experience animate-slideInLeft">
                 <img id="warriors" alt="Logo of Waterloo Warriors" src="../imgs/waterloowarriors.png">
                 <div class="text-content">
                     <h2 class="job-title">
@@ -154,10 +154,10 @@
             </div>
             <br>
         </section>
-        <br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <!-- Contact -->
-        <section id="contact"></section>
+        <section id="contact">
             <h1>Contact</h1>
             <br>
             <div class="contact">
@@ -187,18 +187,16 @@
                 </div>
             </div>
         </section>
-        <br>
-        <hr>
-        <br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <!-- Footer -->
-        <section id="footer"></section>
+        <section id="footer">
             <div class="footer">
+                <br>
                 <p class="footer">The source code for this website can be found on my <a href="https://github.com/JiroKakpovbia/personalWebsite">GitHub</a>, so be sure to check it out!</p>
+                <br>
             </div>
         </section>
-        <br>
-        <hr>
     </body>
 </html>
   
