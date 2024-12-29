@@ -8,46 +8,23 @@
 body {
     background-color: #27272a;
 }
+
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     text-align: center;
     color: #a188d8;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     font-weight: bold;
 }
 
 p {
-    font-size: 2.5rem;
-    color: whitesmoke;
-}
-
-.text-content {
-    flex: 1;
-}
-
-
-
-/* Top-Level Navigation */
-nav, 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
     font-size: 3rem;
-    flex-wrap: wrap;
-}
-
-nav {
-    justify-content: space-around;
-    align-items: center;
-    height: 17vh;
     color: whitesmoke;
-    background-color: #27272a;
 }
 
 a {
@@ -62,8 +39,33 @@ a:hover {
     text-decoration-color: #a188d8;
 }
 
-.logo {
+.text-content {
+    flex: 1;
+}
+
+
+
+/* Desktop Navigation */
+nav, 
+.nav-links {
+    display: none;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    color: whitesmoke;
+    background-color: #27272a;
+}
+
+.nav-links {
+    gap: 2rem;
     font-size: 4rem;
+}
+
+.logo {
+    font-size: 5rem;
     text-align: center;
 }
 
@@ -71,17 +73,93 @@ a:hover {
     cursor: default;
 }
 
+/* Hamburger Navigation */
+
+#hamburger-nav {
+    display: flex;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 4rem;
+    height: auto;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: auto;
+    background-color: #27272a;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #27272a;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a{
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links.open {
+    max-height: 30rem;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
 
 
 /* Home */
 .homeSubtitle {
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     color: whitesmoke;
 }
 
 .homeTitle {
-    font-size: 10rem;
+    font-size: 8rem;
     color: #a188d8;
 }
 
@@ -89,7 +167,7 @@ a:hover {
     border: none;
     border-radius: 1rem;
     padding: 2rem;
-    width: 50%;
+    width: 60%;
     margin: auto;
     background-color: #27272a;
     text-align: left;
@@ -105,14 +183,17 @@ a:hover {
     height: auto;
 }
 
+
+
 /* About */
 .about {
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2rem;
     width: 75%;
     background-color: #1e1e21;
     margin: auto;
-    text-align: left;
+    flex-direction: column;
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -120,7 +201,7 @@ a:hover {
 }
 
 .about img {
-    width: 80%;
+    width: 50%;
     height: auto;
 }
 
@@ -139,14 +220,14 @@ a:hover {
 .project {
     border: none;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2rem;
     background-color: #1e1e21;
     width: calc(100% - 1rem);
     box-sizing: border-box;
 }
 
 .project p {
-    margin: 0.5rem 0;
+    margin: auto;
 }
 
 .project b {
@@ -160,6 +241,7 @@ a:hover {
 
 .project a:hover {
     text-decoration: underline;
+    color: #675a84;
 }
 
 
@@ -180,13 +262,14 @@ a:hover {
 }
 
 .experience img {
-    width: 10%;
+    width: 100%;
     height: auto;
 }
 
 .job-title {
-    display: flex;
+    display: block;
     justify-content: space-between;
+    text-align: center;
     align-items: center;
     margin: 0;
     color: whitesmoke;
@@ -195,10 +278,11 @@ a:hover {
 .job-title .position {
     text-align: left;
     font-weight: bold;
+    margin-bottom: 0.5rem; 
 }
 
 .job-title .dates {
-    text-align: right;
+    text-align: center;
     font-style: normal;
     font-weight: normal;
     color: whitesmoke;
@@ -223,7 +307,7 @@ a:hover {
 }
 
 .contact img {
-    width: 25%;
+    width: 40%;
     height: auto;
 }
 
@@ -241,7 +325,7 @@ a:hover {
 
 /* Footer */
 .footer {
-    font-size: 1rem;
+    font-size: 3rem;
     background-color: #1e1e21;
     text-align: center;
 }
@@ -258,11 +342,11 @@ a:hover {
     border: none;
     border-radius: 1rem;
     color: whitesmoke;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 3.5rem;
 }
 
 .button:hover {
@@ -281,8 +365,13 @@ a:hover {
 
 
 /* Media Queries */
+@media (max-width: 768px) { /* Phone */
+
+}
+
+
 @media (min-width: 768px) { /* Tablet */
-    h1 {
+    /* h1 {
         font-size: 2.5rem;
     }
 
@@ -317,7 +406,7 @@ a:hover {
     }
 
     .socials {
-        width: 40%;
+        width: 30%;
     }
 
     .project {
@@ -327,20 +416,54 @@ a:hover {
     .method {
         width: calc(40% - 0.5rem);
     }
+
+    .contact img {
+        width: 30%;
+        height: auto;
+    } */
 }
 
 @media (min-width: 1024px) { /* Laptop */
+    /* #desktop-nav {
+        display: flex;
+    }
+
+    .nav-links {
+        font-size: 1.5rem;
+    }
+
+    #hamburger-nav {
+        display: none;
+    }
+    .about {
+        flex-direction: left;
+        text-align: center;
+    }
+
+    .about img {
+        width: 35%;
+        height: auto;
+    }
+
+    .job-title {
+        display: flex;
+        text-align: left;
+    }
+
+    .job-title .dates {
+        text-align: right;
+    }
+
     .method {
         width: calc(15% - 0.5rem);
-    }
+    } */
 }
 
 
 
 /* Miscellaneous */
-body, html {
+html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 .center {
