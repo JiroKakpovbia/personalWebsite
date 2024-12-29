@@ -111,18 +111,18 @@ nav {
     transition: all 0.3 ease-in-out;
 }
 
-.menu-links a{
+.menu-links a {
     display: block;
     padding: 1rem;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: whitesmoke;
     text-decoration: none;
     transition: all 0.3 ease-in-out;
 }
 
 .menu-links.open {
-    max-height: 30rem;
+    max-height: fit-content;
 }
 
 .hamburger-icon.open span:first-child {
@@ -167,7 +167,7 @@ nav {
     border: none;
     border-radius: 1rem;
     padding: 2rem;
-    width: 60%;
+    width: 75%;
     margin: auto;
     background-color: #27272a;
     text-align: left;
@@ -254,10 +254,8 @@ nav {
     width: 75%;
     margin: auto;
     background-color: #1e1e21;
-    text-align: left;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     gap: 2rem;
 }
 
@@ -268,20 +266,19 @@ nav {
 
 .job-title {
     display: block;
-    justify-content: space-between;
     text-align: center;
-    align-items: center;
     margin: 0;
     color: whitesmoke;
 }
 
 .job-title .position {
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     margin-bottom: 0.5rem; 
 }
 
 .job-title .dates {
+    font-size: 3.5rem;
     text-align: center;
     font-style: normal;
     font-weight: normal;
@@ -338,6 +335,7 @@ nav {
 
 /* Resume Button */
 .button {
+    font-size: 3.5rem;
     background-color: #a188d8;
     border: none;
     border-radius: 1rem;
@@ -346,7 +344,6 @@ nav {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 3.5rem;
 }
 
 .button:hover {
@@ -394,7 +391,6 @@ nav {
 
     .about img {
         width: 35%;
-        height: auto;
     }
 
     .homeSubtitle {
@@ -419,7 +415,6 @@ nav {
 
     .contact img {
         width: 30%;
-        height: auto;
     } */
 }
 
@@ -436,26 +431,54 @@ nav {
         display: none;
     }
     .about {
-        flex-direction: left;
+        flex-direction: row;
         text-align: center;
+        padding: 2rem;
     }
 
     .about img {
         width: 35%;
+    }
+
+    .experience {
+        align-items: center;
+        text-align: left;
+        width: 75%;
+        padding: 1;
+    }
+
+    .experience img {
+        width: 15%;
         height: auto;
     }
 
     .job-title {
         display: flex;
         text-align: left;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .job-title .dates {
+        font-size: 1.5rem;
         text-align: right;
+    }
+    
+    .job-title .position {
+        text-align: left;
     }
 
     .method {
         width: calc(15% - 0.5rem);
+    }
+
+    .footer {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        font-size: 1.2rem;
+        padding: 1rem;
     } */
 }
 
@@ -464,6 +487,11 @@ nav {
 /* Miscellaneous */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .center {
