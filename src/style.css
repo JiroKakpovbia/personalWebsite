@@ -10,20 +10,20 @@ body {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
     color: #a188d8;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     font-weight: bold;
 }
 
 p {
-    font-size: 3rem;
+    font-size: 2rem;
     color: whitesmoke;
 }
 
@@ -61,11 +61,11 @@ nav {
 
 .nav-links {
     gap: 2rem;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .logo {
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
 }
 
@@ -153,13 +153,13 @@ nav {
 
 /* Home */
 .homeSubtitle {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     color: whitesmoke;
 }
 
 .homeTitle {
-    font-size: 8rem;
+    font-size: 7rem;
     color: #a188d8;
 }
 
@@ -167,7 +167,7 @@ nav {
     border: none;
     border-radius: 1rem;
     padding: 2rem;
-    width: 75%;
+    width: 65%;
     margin: auto;
     background-color: #27272a;
     text-align: left;
@@ -260,8 +260,9 @@ nav {
 }
 
 .experience img {
-    width: 100%;
+    width: 75%;
     height: auto;
+    margin: auto;
 }
 
 .job-title {
@@ -278,7 +279,7 @@ nav {
 }
 
 .job-title .dates {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     text-align: center;
     font-style: normal;
     font-weight: normal;
@@ -304,7 +305,7 @@ nav {
 }
 
 .contact img {
-    width: 40%;
+    width: 25%;
     height: auto;
 }
 
@@ -322,7 +323,7 @@ nav {
 
 /* Footer */
 .footer {
-    font-size: 3rem;
+    font-size: 2rem;
     background-color: #1e1e21;
     text-align: center;
 }
@@ -335,7 +336,7 @@ nav {
 
 /* Resume Button */
 .button {
-    font-size: 3.5rem;
+    font-size: 2rem;
     background-color: #a188d8;
     border: none;
     border-radius: 1rem;
@@ -414,7 +415,7 @@ nav {
     }
 
     .contact img {
-        width: 30%;
+        width: 25%;
     } */
 }
 
