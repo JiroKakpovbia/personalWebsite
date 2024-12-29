@@ -32,9 +32,9 @@
             <div class="logo" data-aos="fade-in" data-aos-delay="0">Jiro Kakpovbia</div>
             <div class="hamburger-menu" data-aos="fade-in" data-aos-delay="250">
                 <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span>________</span>
-                    <span>________</span>
-                    <span>________</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 <div class="menu-links">
                     <a href="#home" onclick="toggleMenu()">Home</a>
@@ -44,7 +44,6 @@
                     <a href="#contact" onclick="toggleMenu()">Contact</a>
                 </div>
             </div>
-
         </nav>
 
         <!-- Home -->
@@ -204,10 +203,10 @@
                 <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="./assets/imgs/wprint.png">
                 <div class="text-content">
                     <h2 class="job-title">
-                        <span class="position">Back-End Software Engineer, Co-op</span>
-                        <span class="dates">Sep 2024 — Dec 2024</span>
+                        <span class="position">Back-End Software Engineer</span>
+                        <span class="dates">September 2024 — December 2024</span>
                     </h2>
-                    <p>University of Waterloo's Print and Retail Solutions, Waterloo, ON</p>
+                    <p class="location">Print and Retail Solutions, Waterloo, ON</p>
                     <p><b>Languages and Tools:</b> UniVerse BASIC, PHP, HTML, Javascript, Node.js, Docker, MySQL.</p>
                 </div>
             </div>
@@ -216,10 +215,10 @@
                 <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="./assets/imgs/wprint.png">
                 <div class="text-content">
                     <h2 class="job-title">
-                        <span class="position">Front-End Web Developer, Co-op</span>
-                        <span class="dates">Jan 2024 — Apr 2024</span>
+                        <span class="position">Front-End Web Developer</span>
+                        <span class="dates">January 2024 — April 2024</span>
                     </h2>
-                    <p>University of Waterloo's Print and Retail Solutions, Waterloo, ON</p>
+                    <p class="location">Print and Retail Solutions, Waterloo, ON</p>
                     <p><b>Languages and Tools:</b> UniVerse BASIC, PHP, HTML, Javascript, SQL.</p>
                 </div>
             </div>
@@ -231,7 +230,7 @@
                         <span class="position">Order Picker, Part-Time</span>
                         <span class="dates">Jul 2023 — Oct 2023</span>
                     </h2>
-                    <p>Home Depot, Waterloo, ON</p>
+                    <p class="location">Home Depot, Waterloo, ON</p>
                     <p>Gathered merchandise throughout the store, filled orders promptly, and carefully packed orders ensuring products remained undamaged.</p>
                 </div>
             </div>
@@ -243,7 +242,7 @@
                         <span class="position">Grocery Clerk, Part-Time</span>
                         <span class="dates">Apr 2023 — Sep 2024</span>
                     </h2>
-                    <p>Sobeys, Waterloo, ON</p>
+                    <p class="location">Sobeys, Waterloo, ON</p>
                     <p>Efficiently and effectively organized shelf products while maintaining displays within the store.</p>
                 </div>
             </div> -->
@@ -253,9 +252,9 @@
                 <div class="text-content">
                     <h2 class="job-title">
                         <span class="position">Varsity Athlete</span>
-                        <span class="dates">Aug 2022 — Aug 2024</span>
+                        <span class="dates">August 2022 — August 2024</span>
                     </h2>
-                    <p>University of Waterloo's Varsity Football Team, Waterloo, ON</p>
+                    <p class="location">University of Waterloo Varsity Football, Waterloo, ON</p>
                     <p>Received University of Waterloo Varsity Football Athletic Scholarship.</p>
                 </div>
             </div>
@@ -264,10 +263,10 @@
                 <img id="svpteens" alt="Logo of SVP Teens" src="./assets/imgs/svpteens.png">
                 <div class="text-content">
                     <h2 class="job-title">
-                        <span class="position">Vice Chair of Engagement, Volunteer</span>
-                        <span class="dates">Sep 2019 — Jun 2022</span>
+                        <span class="position">Vice Chair of Engagement</span>
+                        <span class="dates">September 2019 — June 2022</span>
                     </h2>
-                    <p>Social Venture Partners Teens, Waterloo, ON</p>
+                    <p class="location">Social Venture Partners Teens, Waterloo, ON</p>
                     <p>Contributed to raising nearly $4000 presented to the Bereaved Families of Ontario in 2021, and nearly $5000 to Martin Luther University College in 2022.</p>
                 </div>
             </div>
@@ -372,11 +371,12 @@
         <!-- Hamburger Menu on Mobile -->
         <script>
             function toggleMenu() {
-                const menu = document.querySelector(".menu-links");
-                const icon = document.querySelector(".hamburger-icon");
-                menu.classList.toggle("open");
-                icon.classList.toggle("open");
+                const hamburgerIcon = document.querySelector('.hamburger-icon');
+                const menuLinks = document.querySelector('.menu-links');
+                hamburgerIcon.classList.toggle('open');
+                menuLinks.classList.toggle('open');
             }
+
         </script>
     </body>
 </html>

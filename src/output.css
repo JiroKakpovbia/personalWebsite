@@ -670,15 +670,14 @@ nav,
 
 nav {
   justify-content: space-around;
-  align-items: center;
   height: 17vh;
   color: whitesmoke;
   background-color: #27272a;
 }
 
 .nav-links {
-  gap: 2rem;
   font-size: 3rem;
+  gap: 2rem;
 }
 
 .logo {
@@ -694,28 +693,48 @@ nav {
 
 #hamburger-nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: whitesmoke;
 }
 
 .hamburger-menu {
   position: relative;
-  display: inline-block;
 }
 
 .hamburger-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 4rem;
-  height: auto;
+  width: 5rem;
+  height: 4rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .hamburger-icon span {
+  display: block;
   width: 100%;
-  height: auto;
-  background-color: #27272a;
-  transition: all 0.3 ease-in-out;
+  height: 4px;
+  background-color: whitesmoke;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
 }
+
+.hamburger-icon.open span:nth-child(1) {
+  transform: rotate(45deg) translate(1rem, 1rem);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(1.5rem, -1.5rem);
+}
+
+/* Menu Links */
 
 .menu-links {
   position: absolute;
@@ -726,40 +745,51 @@ nav {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: max-height 0.3s ease-in-out;
 }
 
 .menu-links a {
   display: block;
-  padding: 0.2rem;
-  text-align: center;
-  font-size: 3rem;
+  padding: 0.8rem 1rem;
   color: whitesmoke;
+  font-size: 3rem;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  border-bottom: 1px solid #3a3a3a;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menu-links a:hover {
+  background-color: #3a3a3a;
 }
 
 .menu-links.open {
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+  max-height: 500px;
+  /* Adjust based on content */
 }
 
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
+/* Mobile-First Adjustments */
 
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
+/* @media (max-width: 768px) {
+    #hamburger-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
+    .logo {
+        margin-bottom: 1rem;
+    }
 
-.hamburger-icon span:first-child {
-  opacity: 1;
-  transform: none;
-}
+    .menu-links {
+        width: 100%;
+    }
+
+    .menu-links a {
+        text-align: left;
+        padding: 0.8rem 1.5rem;
+    }
+} */
 
 /* Home */
 
@@ -819,10 +849,9 @@ nav {
 #projects-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1rem;
   width: 75%;
   margin: auto;
+  gap: 2rem;
 }
 
 .project {
@@ -873,24 +902,24 @@ nav {
 }
 
 .job-title {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin: 0;
   color: whitesmoke;
 }
 
-.job-title .position {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
 .job-title .dates {
   font-size: 2.5rem;
-  text-align: center;
   font-style: normal;
   font-weight: normal;
-  color: whitesmoke;
+}
+
+.location {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 /* Contact */
@@ -928,9 +957,14 @@ nav {
 /* Footer */
 
 .footer {
-  font-size: 2rem;
   background-color: #1e1e21;
+  align-items: center;
   text-align: center;
+  margin: auto;
+}
+
+.footer p {
+  max-width: 75%;
 }
 
 .footer a {
@@ -1051,7 +1085,7 @@ nav {
         align-items: center;
         text-align: left;
         width: 75%;
-        padding: 1;
+        padding: 1rem;
     }
 
     .experience img {
@@ -1060,18 +1094,22 @@ nav {
     }
 
     .job-title {
-        display: flex;
-        text-align: left;
-        align-items: center;
+        flex-direction: column;
         justify-content: space-between;
+    }
+    
+    .job-title .position {
+        text-align: left;
     }
 
     .job-title .dates {
         font-size: 1.5rem;
         text-align: right;
     }
-    
-    .job-title .position {
+
+
+    .location {
+        font-style: normal;
         text-align: left;
     }
 
