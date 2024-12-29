@@ -118,7 +118,6 @@ nav {
     transform: rotate(-45deg) translate(1.5rem, -1.5rem);
 }
 
-/* Menu Links */
 .menu-links {
     position: absolute;
     top: 100%;
@@ -366,62 +365,6 @@ nav {
 
 
 /* Media Queries */
-@media (max-width: 768px) { /* Phone */
-
-}
-
-
-@media (min-width: 768px) { /* Tablet */
-    /* h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    p {
-        font-size: 1.2rem;
-    }
-
-    .nav-links {
-        font-size: 1.5rem;
-    }
-
-    .logo {
-        font-size: 2rem;
-        text-align: left;
-    }
-
-    .about img {
-        width: 35%;
-    }
-
-    .homeSubtitle {
-        font-size: 1.5rem;
-    }
-
-    .homeTitle {
-        font-size: 5rem;
-    }
-
-    .socials {
-        width: 30%;
-    }
-
-    .project {
-        width: calc(50% - 1rem);
-    }
-    
-    .method {
-        width: calc(40% - 0.5rem);
-    }
-
-    .contact img {
-        width: 25%;
-    } */
-}
-
 @media (min-width: 1024px) { /* Laptop */
     /* #desktop-nav {
         display: flex;
@@ -434,6 +377,11 @@ nav {
     #hamburger-nav {
         display: none;
     }
+
+    .socials {
+        width: 15%;
+    }
+
     .about {
         flex-direction: row;
         text-align: center;
@@ -470,7 +418,6 @@ nav {
         text-align: right;
     }
 
-
     .location {
         font-style: normal;
         text-align: left;
@@ -488,6 +435,101 @@ nav {
         font-size: 1.2rem;
         padding: 1rem;
     } */
+}
+
+@media (min-width: 768px) { /* Tablet */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+
+    .hamburger-icon {
+        width: 4rem;
+        height: 3rem;
+    }
+
+    .menu-links a {
+        font-size: 2rem;
+    }
+
+    .hamburger-icon.open span:nth-child(1) {
+        transform: rotate(45deg) translate(1rem, 0.5rem);
+    }
+    
+    .hamburger-icon.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(1.5rem, -1rem);
+    }
+
+
+
+    .homeSubtitle {
+        font-size: 1.5rem;
+    }
+
+    .homeTitle {
+        font-size: 5rem;
+    }
+
+    .socials {
+        width: 43%;
+    }
+
+    .about img {
+        width: 35%;
+    }
+
+    .project {
+        width: calc(50% - 1rem);
+    }
+
+    .experience img {
+        width: 15%;
+    }
+
+    .job-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .job-title .dates {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    
+    .location {
+        text-align: left;
+    }
+
+    
+    .method {
+        width: calc(40% - 0.5rem);
+    }
+
+    .contact img {
+        width: 25%;
+    }
+    
+    .button {
+        font-size: 1.2rem;
+        padding: 1rem;
+    } 
+}
+
+@media (max-width: 768px) { /* Phone */
+
 }
 
 
