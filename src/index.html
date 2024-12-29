@@ -104,7 +104,14 @@
         <section id="about">
             <h1>About Me</h1>
             <br>
-            <div class="about" data-aos="slide-up">
+            <div id="about-container" class="about" data-aos="slide-up">
+
+                <!-- Change Animation Based on Window Size -->
+                <script>
+                    const aboutContainer = document.getElementById('about-container');
+                    if (window.innerWidth < 1024) { aboutContainer.setAttribute("data-aos", "fade-in"); }
+                </script>
+
                 <img id="headshot" alt="Headshot of Jiro Kakpovbia" src="./assets/imgs/Headshot.jpg">
 
                 <!-- About Me Description-->
@@ -162,9 +169,13 @@
                             const projectElement = document.createElement('div');
                             projectElement.className = 'project';
 
-                            // Determine which side the element will slide from
-                            if (repoNum % 2 == 0) { projectElement.setAttribute("data-aos", "slide-right"); }
-                            else { projectElement.setAttribute("data-aos", "slide-left"); }
+                            // Change Animation Based on Window Size
+                            if (window.innerWidth < 1024) { projectElement.setAttribute("data-aos", "fade-in"); }
+                            else {
+                                // Determine which side the element will slide from
+                                if (repoNum % 2 == 0) { projectElement.setAttribute("data-aos", "slide-right"); }
+                                else { projectElement.setAttribute("data-aos", "slide-left"); }
+                            }
             
                             // Populate the project div with repository details
                             projectElement.innerHTML = `
@@ -199,7 +210,14 @@
         <section id="experience">
             <h1>Experience</h1>
             <br>
-            <div class="experience" data-aos="slide-left">
+            <div id="experience1-container" class="experience" data-aos="slide-left">
+
+                <!-- Change Animation Based on Window Size -->
+                <script>
+                    const experience1Container = document.getElementById('experience1-container');
+                    if (window.innerWidth < 1024) { experience1Container.setAttribute("data-aos", "fade-in"); }
+                </script>
+
                 <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="./assets/imgs/wprint.png">
                 <div class="text-content">
                     <h2 class="job-title">
@@ -211,7 +229,15 @@
                 </div>
             </div>
             <br>
-            <div class="experience" data-aos="slide-right">
+            <div id="experience2-container" class="experience" data-aos="slide-right">
+
+                <!-- Change Animation Based on Window Size -->
+                <script>
+                    const experience2Container = document.getElementById('experience2-container');
+                    if (window.innerWidth < 1024) { experience2Container.setAttribute("data-aos", "fade-in"); }
+                </script>
+
+
                 <img id="prs" alt="Logo of University of Waterloo's Print and Retail Solutions" src="./assets/imgs/wprint.png">
                 <div class="text-content">
                     <h2 class="job-title">
@@ -247,7 +273,14 @@
                 </div>
             </div> -->
             <br>
-            <div class="experience" data-aos="slide-left">
+            <div id="experience3-container" class="experience" data-aos="slide-left">
+
+                <!-- Change Animation Based on Window Size -->
+                <script>
+                    const experience3Container = document.getElementById('experience3-container');
+                    if (window.innerWidth < 1024) { experience3Container.setAttribute("data-aos", "fade-in"); }
+                </script>
+
                 <img id="warriors" alt="Logo of Waterloo Warriors" src="./assets/imgs/waterloowarriors.png">
                 <div class="text-content">
                     <h2 class="job-title">
@@ -259,7 +292,14 @@
                 </div>
             </div>
             <br>
-            <div class="experience" data-aos="slide-right">
+            <div id="experience4-container" class="experience" data-aos="slide-right">
+
+                <!-- Change Animation Based on Window Size -->
+                <script>
+                    const experience4Container = document.getElementById('experience4-container');
+                    if (window.innerWidth < 1024) { experience4Container.setAttribute("data-aos", "fade-in"); }
+                </script>
+
                 <img id="svpteens" alt="Logo of SVP Teens" src="./assets/imgs/svpteens.png">
                 <div class="text-content">
                     <h2 class="job-title">
@@ -282,7 +322,13 @@
         <section id="contact">
             <h1>Contact</h1>
             <br>
-            <div class="contact" data-aos="slide-up">
+            <div id="contact-container" class="contact" data-aos="slide-up">
+                <!-- Change Animation Based on Window Size -->
+                <script>
+                    const contactContainer = document.getElementById('contact-container');
+                    if (window.innerWidth < 1024) { contactContainer.setAttribute("data-aos", "fade-in"); }
+                </script>
+
                 <div class="method">
                     <p><span><a href="tel:2268993921" class="flex flex-col items-center text-center">
                         <img id="phone" class="invert mb-4" alt="Phone" src="./assets/imgs/phone.png">
@@ -317,7 +363,7 @@
 
         <!-- Footer -->
         <section id="footer">
-            <div class="footer">
+            <div id="footer-container" class="footer">
                 <br>
                 <p class="footer">The source code for this website can be found on my <a href="https://github.com/JiroKakpovbia/personalWebsite">GitHub</a>, so be sure to check it out!</p>
                 <br>
