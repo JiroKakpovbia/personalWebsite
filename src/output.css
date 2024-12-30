@@ -628,20 +628,17 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
   text-align: center;
   color: #a188d8;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 3rem;
   text-align: center;
   font-weight: bold;
 }
 
 p {
-  font-size: 2rem;
   color: whitesmoke;
 }
 
@@ -653,7 +650,7 @@ a {
 a:hover {
   color: #a188d8;
   text-decoration: underline;
-  text-underline-offset: 1rem;
+  text-underline-offset: 0.5rem;
   text-decoration-color: #a188d8;
 }
 
@@ -670,18 +667,18 @@ nav,
 
 nav {
   justify-content: space-around;
+  align-items: center;
   height: 17vh;
   color: whitesmoke;
+  padding: 2rem;
   background-color: #27272a;
 }
 
 .nav-links {
-  font-size: 3rem;
   gap: 2rem;
 }
 
 .logo {
-  font-size: 4rem;
   text-align: center;
 }
 
@@ -695,7 +692,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 2rem;
   color: whitesmoke;
 }
 
@@ -707,8 +704,6 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 5rem;
-  height: 4rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -722,16 +717,8 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-.hamburger-icon.open span:nth-child(1) {
-  transform: rotate(45deg) translate(1rem, 1rem);
-}
-
 .hamburger-icon.open span:nth-child(2) {
   opacity: 0;
-}
-
-.hamburger-icon.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(1.5rem, -1.5rem);
 }
 
 .menu-links {
@@ -752,7 +739,6 @@ nav {
   display: block;
   padding: 0.8rem 1rem;
   color: whitesmoke;
-  font-size: 3rem;
   text-decoration: none;
   border-bottom: 0.07rem solid #3a3a3a;
   transition: background-color 0.3s ease-in-out;
@@ -770,13 +756,11 @@ nav {
 /* Home */
 
 .homeSubtitle {
-  font-size: 3rem;
   text-align: center;
   color: whitesmoke;
 }
 
 .homeTitle {
-  font-size: 7rem;
   color: #a188d8;
 }
 
@@ -784,7 +768,6 @@ nav {
   border: none;
   border-radius: 1rem;
   padding: 2rem;
-  width: 65%;
   margin: auto;
   background-color: #27272a;
   text-align: left;
@@ -816,7 +799,6 @@ nav {
 }
 
 .about img {
-  width: 50%;
   height: auto;
 }
 
@@ -835,7 +817,6 @@ nav {
   border-radius: 1rem;
   padding: 2rem;
   background-color: #1e1e21;
-  width: calc(100% - 1rem);
   box-sizing: border-box;
 }
 
@@ -872,22 +853,17 @@ nav {
 }
 
 .experience img {
-  width: 75%;
   height: auto;
   margin: auto;
 }
 
 .job-title {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   margin: 0;
   color: whitesmoke;
 }
 
 .job-title .dates {
-  font-size: 2.5rem;
   font-style: normal;
   font-weight: normal;
 }
@@ -926,7 +902,6 @@ nav {
   align-items: center;
   text-align: center;
   margin: auto;
-  width: calc(100% - 0.5rem);
   gap: 0.5rem;
 }
 
@@ -950,7 +925,6 @@ nav {
 /* Resume Button */
 
 .button {
-  font-size: 2rem;
   background-color: #a188d8;
   border: none;
   border-radius: 1rem;
@@ -976,83 +950,96 @@ nav {
 
 /* Media Queries */
 
-@media (min-width: 1024px) {
-  /* Laptop */
+/* Phone */
 
-  /* #desktop-nav {
-        display: flex;
-    }
-
-    .nav-links {
-        font-size: 1.5rem;
-    }
-
-    #hamburger-nav {
-        display: none;
-    }
-
-    .socials {
-        width: 15%;
-    }
-
-    .about {
-        flex-direction: row;
-        text-align: center;
-        padding: 2rem;
-    }
-
-    .about img {
-        width: 35%;
-    }
-
-    .experience {
-        align-items: center;
-        text-align: left;
-        width: 75%;
-        padding: 1rem;
-    }
-
-    .experience img {
-        width: 15%;
-        height: auto;
-    }
-
-    .job-title {
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    .job-title .position {
-        text-align: left;
-    }
-
-    .job-title .dates {
-        font-size: 1.5rem;
-        text-align: right;
-    }
-
-    .location {
-        font-style: normal;
-        text-align: left;
-    }
-
-    .method {
-        width: calc(15% - 0.5rem);
-    }
-
-    .footer {
-        font-size: 1.2rem;
-    }
-
-    .button {
-        font-size: 1.2rem;
-        padding: 1rem;
+@media only screen and (max-width: 768px) {
+  /* body {
+        background-color: red;
     } */
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .logo {
+    font-size: 4rem;
+  }
+
+  .nav-links {
+    font-size: 3rem;
+  }
+
+  .hamburger-icon {
+    width: 5rem;
+    height: 4rem;
+  }
+
+  .hamburger-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(1rem, 1rem);
+  }
+
+  .hamburger-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(1.5rem, -1.5rem);
+  }
+
+  .menu-links a {
+    font-size: 3rem;
+  }
+
+  .homeSubtitle {
+    font-size: 3rem;
+  }
+
+  .homeTitle {
+    font-size: 7rem;
+  }
+
+  .socials {
+    width: 65%;
+  }
+
+  .about img {
+    width: 50%;
+  }
+
+  .project {
+    width: calc(100% - 1rem);
+  }
+
+  .experience img {
+    width: 75%;
+  }
+
+  .job-title {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .job-title .dates {
+    font-size: 2.5rem;
+  }
+
+  .method {
+    width: calc(100% - 0.5rem);
+  }
+
+  .button {
+    font-size: 2rem;
+  }
 }
 
-@media (min-width: 768px) {
-  /* Tablet */
+/* Tablet */
 
+@media only screen and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
   }
@@ -1111,7 +1098,6 @@ nav {
   }
 
   .job-title {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
@@ -1119,7 +1105,6 @@ nav {
 
   .job-title .dates {
     font-size: 1.5rem;
-    text-align: left;
   }
 
   .location {
@@ -1130,18 +1115,63 @@ nav {
     width: calc(40% - 0.5rem);
   }
 
-  .contact img {
-    width: 25%;
-  }
-
   .button {
     font-size: 1.2rem;
     padding: 1rem;
   }
 }
 
-@media (max-width: 768px) {
-  /* Phone */
+/* Desktop */
+
+@media only screen and (min-width: 1024px) {
+  #desktop-nav {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    font-size: 1.5rem;
+  }
+
+  #hamburger-nav {
+    display: none;
+  }
+
+  .hamburger-menu, 
+    .menu-links {
+    display: none;
+  }
+
+  .socials {
+    width: 25%;
+  }
+
+  .about {
+    flex-direction: row;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .job-title {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .location {
+    font-style: normal;
+  }
+
+  .method {
+    width: calc(20% - 0.5rem);
+  }
+
+  .footer {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    font-size: 1.2rem;
+  }
 }
 
 /* Miscellaneous */
