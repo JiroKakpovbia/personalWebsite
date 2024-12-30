@@ -42,6 +42,10 @@ a:hover {
 }
 
 
+/* Navigation */
+:root {
+    --nav-background-color: #27272a;
+}
 
 /* Desktop Navigation */
 nav, 
@@ -50,12 +54,23 @@ nav,
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    height: 10vh;
     color: whitesmoke;
     padding: 2rem;
-    background-color: #27272a;
+    background-color: var(--nav-background-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+    --nav-background-color: #1e1e21;
+    box-shadow: 0 0.25rem 0.4rem #00000057;
 }
 
 .nav-links {
@@ -96,7 +111,7 @@ nav {
 .hamburger-icon span {
     display: block;
     width: 100%;
-    height: 0.3rem;
+    height: 0.2rem;
     background-color: whitesmoke;
     border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
@@ -110,13 +125,13 @@ nav {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #27272a;
+    background-color: var(--nav-background-color);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 0.4rem #00000057;
-    transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.3s ease-in-out, background-color 0.3s ease;
 }
 
 .menu-links a {
@@ -315,6 +330,7 @@ html {
 
 body {
     overflow-x: hidden;
+    padding-top: 17vh;
 }
 
 .button {
@@ -351,16 +367,16 @@ body {
     }
 
     .logo {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     .hamburger-icon {
-        width: 3rem;
-        height: 2rem;
+        width: 2rem;
+        height: 1.5rem;
     }
 
     .hamburger-icon.open span:nth-child(1) {
-        transform: rotate(45deg) translate(0.5rem, 0.5rem);
+        transform: rotate(45deg) translate(0.2rem, 0.2rem);
     }
     
     .hamburger-icon.open span:nth-child(3) {
@@ -424,16 +440,16 @@ body {
     }
 
     .logo {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .hamburger-icon {
-        width: 3rem;
-        height: 2rem;
+        width: 2.75rem;
+        height: 1.75rem;
     }
 
     .hamburger-icon.open span:nth-child(1) {
-        transform: rotate(45deg) translate(0.5rem, 0.5rem);
+        transform: rotate(45deg) translate(0.35rem, 0.35rem);
     }
     
     .hamburger-icon.open span:nth-child(3) {
@@ -497,12 +513,12 @@ body {
     }
 
     .logo {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hamburger-icon {
-        width: 4rem;
-        height: 3rem;
+        width: 3rem;
+        height: 2.5rem;
     }
 
     .menu-links a {
@@ -510,11 +526,11 @@ body {
     }
 
     .hamburger-icon.open span:nth-child(1) {
-        transform: rotate(45deg) translate(1rem, 0.5rem);
+        transform: rotate(45deg) translate(0.55rem, 0.65rem);
     }
     
     .hamburger-icon.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(1.5rem, -1rem);
+        transform: rotate(-45deg) translate(1rem, -1rem);
     }
 
     .homeSubtitle {
