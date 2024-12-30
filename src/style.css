@@ -13,6 +13,7 @@ h1 {
     text-align: center;
     color: #a188d8;
     font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
@@ -157,7 +158,6 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 2rem;
 }
 
 .socials a {
@@ -256,7 +256,6 @@ nav {
 
 .location {
     font-style: italic;
-    text-align: center;
     margin-bottom: 0.5rem;
 }
 
@@ -279,7 +278,6 @@ nav {
 }
 
 .contact img {
-    width: 25%;
     height: auto;
 }
 
@@ -301,6 +299,7 @@ nav {
     text-align: center;
     margin: auto;
 }
+
 .footer p {
     max-width: 75%;
 }
@@ -310,17 +309,26 @@ nav {
 }
 
 
+/* Miscellaneous */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
-/* Resume Button */
+body {
+    overflow-x: hidden;
+}
+
 .button {
     background-color: #a188d8;
     border: none;
     border-radius: 1rem;
     color: whitesmoke;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    margin: auto;
 }
 
 .button:hover {
@@ -330,67 +338,53 @@ nav {
 
 
 
-/* Centering the button */
-.center-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /* Media Queries */
- /* Phone */
-@media only screen and (max-width: 768px) {
-    /* body {
-        background-color: red;
-    } */
-
+/* Really Small Phone */
+@media only screen and (max-width: 375px) {
     h1 {
-        font-size: 4rem;
+        font-size: 1.5rem;
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 1.25rem;
     }
 
     p {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .logo {
-        font-size: 4rem;
-    }
-
-    .nav-links {
-        font-size: 3rem;
+        font-size: 1.75rem;
     }
 
     .hamburger-icon {
-        width: 5rem;
-        height: 4rem;
+        width: 3rem;
+        height: 2rem;
     }
 
     .hamburger-icon.open span:nth-child(1) {
-        transform: rotate(45deg) translate(1rem, 1rem);
+        transform: rotate(45deg) translate(0.5rem, 0.5rem);
     }
     
     .hamburger-icon.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(1.5rem, -1.5rem);
+        transform: rotate(-45deg) translate(0.75rem, -0.75rem);
     }
 
     .menu-links a {
-        font-size: 3rem;
+        font-size: 1.25rem;
     }
 
-    .homeSubtitle {
-        font-size: 3rem;
+    .homeSubtitle { 
+        font-size: 1.5rem;
     }
 
     .homeTitle {
-        font-size: 7rem;
+        font-size: 2.5rem;
     }
 
     .socials {
-        width: 65%;
+        width: 100%;
+        gap: 1rem;
     }
 
     .about img {
@@ -402,17 +396,23 @@ nav {
     }
 
     .experience img {
-        width: 75%;
+        width: 50%;
     }
 
     .job-title {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 
     .job-title .dates {
-        font-size: 2.5rem;
+        font-size: 1.25rem;
+    }
+
+    .location {
+        text-align: center;
+    }
+
+    .contact img {
+        width: 25%;
     }
 
     .method {
@@ -420,7 +420,64 @@ nav {
     }
 
     .button {
+        font-size: 1rem;
+    }
+}
+
+/* Average Phone */
+@media only screen and (min-width: 375px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
         font-size: 2rem;
+    }
+
+    .hamburger-icon {
+        width: 3rem;
+        height: 2rem;
+    }
+
+    .hamburger-icon.open span:nth-child(1) {
+        transform: rotate(45deg) translate(0.5rem, 0.5rem);
+    }
+    
+    .hamburger-icon.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(0.75rem, -0.75rem);
+    }
+
+    .menu-links a {
+        font-size: 1.5rem;
+    }
+
+    .homeSubtitle { 
+        font-size: 1.5rem;
+    }
+
+    .homeTitle {
+        font-size: 3rem;
+    }
+
+    .socials {
+        width: 75%;
+        gap: 1rem;
+    }
+
+    .job-title {
+        flex-direction: column;
+    }
+
+    .job-title .dates {
+        font-size: 1.25rem;
+    }
+
+    .location {
+        text-align: center;
     }
 }
 
@@ -468,7 +525,8 @@ nav {
     }
 
     .socials {
-        width: 43%;
+        width: 45%;
+        gap: 2rem;
     }
 
     .about img {
@@ -484,7 +542,6 @@ nav {
     }
 
     .job-title {
-        flex-direction: column;
         align-items: flex-start;
         text-align: left;
     }
@@ -503,11 +560,10 @@ nav {
 
     .button {
         font-size: 1.2rem;
-        padding: 1rem;
     } 
 }
 
-/* Desktop */
+/* Average Desktop */
 @media only screen and (min-width: 1024px) {
     #desktop-nav {
         display: flex;
@@ -528,13 +584,17 @@ nav {
     }
 
     .socials {
-        width: 25%;
+        width: 30%;
     }
 
     .about {
         flex-direction: row;
         text-align: center;
         padding: 2rem;
+    }
+
+    .experience img {
+        width: 10%;
     }
 
     .job-title {
@@ -544,6 +604,10 @@ nav {
     
     .location {
         font-style: normal;
+    }
+
+    .contact img {
+        width: 30%;
     }
 
     .method {
@@ -559,17 +623,13 @@ nav {
     }
 }
 
-/* Miscellaneous */
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
+/* Large Desktop */
+@media only screen and (min-width: 1024px) {
+    .socials {
+        width: 20%;
+    }
 
-body {
-    overflow-x: hidden;
-}
-
-.center {
-    margin-left: auto;
-    margin-right: auto;
+    .contact img {
+        width: 20%;
+    }
 }
