@@ -815,7 +815,6 @@ nav {
 }
 
 .project {
-  border: none;
   border-radius: 1rem;
   padding: 2rem;
   background-color: #1e1e21;
@@ -935,7 +934,6 @@ body {
 
 .button {
   background-color: #a188d8;
-  border: none;
   border-radius: 1rem;
   color: whitesmoke;
   padding: 1rem;
