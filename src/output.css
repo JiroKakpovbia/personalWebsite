@@ -1046,21 +1046,53 @@ body {
 /* Average Phone */
 
 @media only screen and (min-width: 375px) {
-  h1 {
+  h1,
+    .logo {
     font-size: 1.75rem;
   }
 
-  h2 {
+  h2,
+    .menu-links a,
+    .homeSubtitle {
     font-size: 1.5rem;
   }
 
-  .logo {
-    font-size: 1.75rem;
+  .homeTitle {
+    font-size: 3rem;
+  }
+
+  .job-title .dates {
+    font-size: 1.25rem;
   }
 
   .hamburger-icon {
     width: 2.75rem;
     height: 1.75rem;
+  }
+
+  .socials {
+    width: 75%;
+  }
+
+  .experience img {
+    width: 10rem;
+  }
+
+  .method {
+    width: calc(100% - 1rem);
+  }
+
+  .experience {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .job-title {
+    flex-direction: column;
+  }
+
+  .location {
+    text-align: center;
   }
 
   .hamburger-icon.open span:nth-child(1) {
@@ -1070,91 +1102,38 @@ body {
   .hamburger-icon.open span:nth-child(3) {
     transform: rotate(-45deg) translate(0.75rem, -0.75rem);
   }
-
-  .menu-links a {
-    font-size: 1.5rem;
-  }
-
-  .homeSubtitle {
-    font-size: 1.5rem;
-  }
-
-  .homeTitle {
-    font-size: 3rem;
-  }
-
-  .socials {
-    width: 75%;
-  }
-
-  .experience {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .experience img {
-    width: 10rem;
-  }
-
-  .job-title {
-    flex-direction: column;
-  }
-
-  .job-title .dates {
-    font-size: 1.25rem;
-  }
-
-  .location {
-    text-align: center;
-  }
-
-  .method {
-    width: calc(100% - 1rem);
-  }
 }
 
 /* Tablet */
 
 @media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-  }
-
-  .logo {
-    font-size: 2.5rem;
-  }
-
-  .hamburger-icon {
-    width: 3rem;
-    height: 2.5rem;
-  }
-
-  .menu-links a {
+  h1,
+    .logo {
     font-size: 2rem;
   }
 
-  .hamburger-icon.open span:nth-child(1) {
-    transform: rotate(45deg) translate(0.55rem, 0.65rem);
-  }
-
-  .hamburger-icon.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(1rem, -1rem);
-  }
-
-  .homeSubtitle {
+  h2,
+    .homeSubtitle,
+    .job-title .dates {
     font-size: 1.5rem;
+  }
+
+  .menu-links a {
+    font-size: 1.75rem;
+  }
+
+  p,
+    .button {
+    font-size: 1.2rem;
   }
 
   .homeTitle {
     font-size: 5rem;
+  }
+
+  .hamburger-icon {
+    width: 2.5rem;
+    height: 2rem;
   }
 
   .socials {
@@ -1165,13 +1144,17 @@ body {
     width: calc(50% - 1rem);
   }
 
+  .experience img {
+    width: 5rem;
+  }
+
+  .method {
+    width: calc(50% - 1rem);
+  }
+
   .experience {
     flex-direction: row;
     align-items: left;
-  }
-
-  .experience img {
-    width: 5rem;
   }
 
   .job-title {
@@ -1179,26 +1162,40 @@ body {
     text-align: left;
   }
 
-  .job-title .dates {
-    font-size: 1.5rem;
-  }
-
   .location {
     text-align: left;
   }
 
-  .method {
-    width: calc(50% - 1rem);
+  .hamburger-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(0.5rem, 0.75rem);
   }
 
-  .button {
-    font-size: 1.2rem;
+  .hamburger-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(0.55rem, -0.8rem);
   }
 }
 
 /* Average Desktop */
 
 @media only screen and (min-width: 1024px) {
+  h1,
+    .logo {
+    font-size: 2.5rem;
+  }
+
+  .footer,
+    .button {
+    font-size: 1.2rem;
+  }
+
+  .socials {
+    width: 30%;
+  }
+
+  .method {
+    width: calc(20% - 1rem);
+  }
+
   #desktop-nav {
     display: flex;
   }
@@ -1215,10 +1212,6 @@ body {
   .hamburger-menu, 
     .menu-links {
     display: none;
-  }
-
-  .socials {
-    width: 30%;
   }
 
   .about {
@@ -1239,18 +1232,6 @@ body {
 
   .location {
     font-style: normal;
-  }
-
-  .method {
-    width: calc(20% - 1rem);
-  }
-
-  .footer {
-    font-size: 1.2rem;
-  }
-
-  .button {
-    font-size: 1.2rem;
   }
 }
 
