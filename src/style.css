@@ -253,6 +253,7 @@ nav.scrolled {
 }
 
 .experience img {
+    width: 5rem;
     height: auto;
     margin: auto;
 }
@@ -266,6 +267,14 @@ nav.scrolled {
 .job-title .dates {
     font-style: normal;
     font-weight: normal;
+}
+
+.job-title .dates .full {
+    display: none;
+}
+
+.job-title .dates .short {
+    display: inline;
 }
 
 .location {
@@ -461,10 +470,6 @@ body {
         width: 75%;
     }
 
-    .experience img {
-        width: 10rem;
-    }
-
     .method {
         width: calc(100% - 1rem);
     }
@@ -528,10 +533,6 @@ body {
 
     .project {
         width: calc(50% - 1rem);
-    }
-
-    .experience img {
-        width: 5rem;
     }
 
     .method {
@@ -628,5 +629,13 @@ body {
 
     .method {
         width: calc(20% - 1rem);
+    }
+
+    .job-title .dates .full {
+        display: inline;
+    }
+    
+    .job-title .dates .short {
+        display: none;
     }
 }
