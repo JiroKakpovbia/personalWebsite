@@ -600,6 +600,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1006,4 +1010,9 @@ body {
 
 .button:hover {
   background-color: #675a84;
+}
+
+button:focus, a:focus, input:focus, textarea:focus {
+  outline: 2px solid #a188d8;
+  outline-offset: 2px;
 }
