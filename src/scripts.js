@@ -37,26 +37,29 @@ async function fetchGitHubProjects() {
         var repoNum = 0;
 
         repos.forEach(repo => {
-            ++repoNum;
+            // Ensure the README repo isn't shown
+            if (repo.name != "JiroKakpovbia") {
+                ++repoNum;
+    
+                // Create a new div for each repository
+                const projectElement = document.createElement('div');
+                projectElement.className = 'project';
+                projectElement.id = 'project' + repoNum;
+    
+                // Determine which side the element will slide from
+                if (repoNum % 2 == 0) { projectElement.setAttribute("data-aos", "fade-left"); }
+                else { projectElement.setAttribute("data-aos", "fade-right"); }
 
-            // Create a new div for each repository
-            const projectElement = document.createElement('div');
-            projectElement.className = 'project';
-            projectElement.id = 'project' + repoNum;
+                // Populate the project div with repository details
+                projectElement.innerHTML = `
+                    <h2><a href="${repo.html_url}" target="_blank">${repo.name}</a></h2>
+                    <p>${'<b>Description:</b> ' + repo.description || 'No description available.'}</p>
+                    <p><b>Language:</b> ${repo.language || 'N/A'}</p>
+                `;
 
-            // Determine which side the element will slide from
-            if (repoNum % 2 == 0) { projectElement.setAttribute("data-aos", "fade-left"); }
-            else { projectElement.setAttribute("data-aos", "fade-right"); }
-
-            // Populate the project div with repository details
-            projectElement.innerHTML = `
-                <h2><a href="${repo.html_url}" target="_blank">${repo.name}</a></h2>
-                <p>${'<b>Description:</b> ' + repo.description || 'No description available.'}</p>
-                <p><b>Language:</b> ${repo.language || 'N/A'}</p>
-            `;
-
-            // Append the project element to the container
-            projectsContainer.appendChild(projectElement);
+                // Append the project element to the container
+                projectsContainer.appendChild(projectElement);
+            }
         });
     } catch (error) {
         console.error('Error fetching GitHub repositories:', error);
