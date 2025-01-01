@@ -13,6 +13,7 @@
     }
 
     p,
+    .display-text,
     .contact-form input,
     .contact-form textarea,
     .button {
@@ -49,16 +50,16 @@
         flex-direction: column;
     }
 
-    .location {
-        text-align: center;
-    }
-
     .hamburger-icon.open span:nth-child(1) {
         transform: rotate(45deg) translate(0.2rem, 0.2rem);
     }
     
     .hamburger-icon.open span:nth-child(3) {
         transform: rotate(-45deg) translate(0.75rem, -0.75rem);
+    }
+    
+    .skills {
+        gap: 2rem;
     }
 }
 
@@ -106,16 +107,16 @@
         flex-direction: column;
     }
 
-    .location {
-        text-align: center;
-    }
-
     .hamburger-icon.open span:nth-child(1) {
         transform: rotate(45deg) translate(0.35rem, 0.35rem);
     }
     
     .hamburger-icon.open span:nth-child(3) {
         transform: rotate(-45deg) translate(0.75rem, -0.75rem);
+    }
+
+    .skills {
+        gap: 2rem;
     }
 }
 
@@ -137,6 +138,7 @@
     }
     
     p,
+    .display-text,
     .contact-form input,
     .contact-form textarea,
     .button {
@@ -174,16 +176,16 @@
         text-align: left;
     }
 
-    .location {
-        text-align: left;
-    }
-
     .hamburger-icon.open span:nth-child(1) {
         transform: rotate(45deg) translate(0.5rem, 0.75rem);
     }
     
     .hamburger-icon.open span:nth-child(3) {
         transform: rotate(-45deg) translate(0.55rem, -0.8rem);
+    }
+
+    .skills {
+        gap: 2rem;
     }
 }
 
@@ -239,6 +241,9 @@
         font-style: normal;
     }
 
+    .skills {
+        gap: 1rem;
+    }
 }
 
 /* Large Desktop */
@@ -257,5 +262,9 @@
     
     .job-title .dates .short {
         display: none;
+    }
+
+    .skills {
+        gap: 1rem;
     }
 }
