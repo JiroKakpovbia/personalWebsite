@@ -631,8 +631,9 @@ h1 {
 }
 
 h2 {
-  text-align: center;
   font-weight: bold;
+  color: whitesmoke;
+  margin-bottom: 0.5rem;
 }
 
 p {
@@ -641,7 +642,7 @@ p {
 
 a {
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: whitesmoke;
 }
 
 a:hover {
@@ -789,7 +790,6 @@ nav.scrolled {
   padding: 2rem;
   margin: auto;
   background-color: #27272a;
-  text-align: left;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -855,6 +855,43 @@ nav.scrolled {
 .project a:hover {
   text-decoration: underline;
   color: #675a84;
+}
+
+/* Skills */
+
+.skills {
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 75%;
+  margin: auto;
+  background-color: #1e1e21;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skills img {
+  width: auto;
+  max-height: 3rem;
+}
+
+.skills a:hover .display-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.display-text {
+  position: absolute;
+  background-color: #1e1e21;
+  color: whitesmoke;
+  box-shadow: 0 0.25rem 0.4rem #00000057;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 /* Experience */
