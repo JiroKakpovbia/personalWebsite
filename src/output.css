@@ -771,8 +771,8 @@ nav.scrolled {
 /* Home */
 
 #home {
-  padding-top: 15rem;
-  padding-bottom: 15rem;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 .homeSubtitle {
