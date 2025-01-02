@@ -690,7 +690,7 @@ nav.scrolled {
 }
 
 .nav-links {
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .logo {
@@ -796,9 +796,13 @@ nav.scrolled {
   gap: 1rem;
 }
 
-.socials a {
+.socials img {
   width: 4rem;
   height: auto;
+}
+
+.socials img:hover {
+  width: 5rem;
 }
 
 /* About */
@@ -806,7 +810,7 @@ nav.scrolled {
 .about {
   border-radius: 1rem;
   padding: 2rem;
-  width: 75%;
+  width: 80%;
   background-color: #1e1e21;
   margin: auto;
   flex-direction: column;
@@ -814,7 +818,7 @@ nav.scrolled {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .about img {
@@ -827,9 +831,9 @@ nav.scrolled {
 #projects-container {
   display: flex;
   flex-wrap: wrap;
-  width: 75%;
+  width: 80%;
   margin: auto;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .project {
@@ -862,7 +866,7 @@ nav.scrolled {
 .skills {
   border-radius: 1rem;
   padding: 2rem;
-  width: 75%;
+  width: 80%;
   margin: auto;
   background-color: #1e1e21;
   display: flex;
@@ -888,7 +892,6 @@ nav.scrolled {
   box-shadow: 0 0.25rem 0.4rem #00000057;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  font-size: 1.2rem;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -899,12 +902,12 @@ nav.scrolled {
 .experience {
   border-radius: 1rem;
   padding: 2rem;
-  width: 75%;
+  width: 80%;
   margin: auto;
   background-color: #1e1e21;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .experience img {
@@ -933,6 +936,7 @@ nav.scrolled {
 }
 
 .location {
+  text-align: left;
   font-style: italic;
   margin-bottom: 0.5rem;
 }
@@ -942,14 +946,14 @@ nav.scrolled {
 .contact {
   border-radius: 1rem;
   padding: 2rem;
-  width: 75%;
+  width: 80%;
   margin: auto;
   background-color: #1e1e21;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .contact img {
@@ -968,7 +972,7 @@ nav.scrolled {
 .contact-form {
   border-radius: 1rem;
   padding: 2rem;
-  width: 75%;
+  width: 80%;
   margin: auto;
   background-color: #1e1e21;
   text-align: left;
@@ -1020,7 +1024,7 @@ nav.scrolled {
 }
 
 .footer p {
-  max-width: 75%;
+  max-width: 80%;
 }
 
 .footer a {
