@@ -91,7 +91,7 @@
     }
 
     .socials {
-        width: 75%;
+        width: 70%;
     }
 
     .method {
@@ -155,7 +155,7 @@
     }
 
     .socials {
-        width: 45%;
+        width: 50%;
     }
 
     .project {
@@ -197,7 +197,7 @@
     }
 
     .socials {
-        width: 30%;
+        width: 40%;
     }
 
     .method {
@@ -242,14 +242,14 @@
     }
 
     .skills {
-        gap: 1rem;
+        gap: 2.5rem;
     }
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1440px) {
     .socials {
-        width: 25%;
+        width: 30%;
     }
 
     .method {

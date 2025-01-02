@@ -771,8 +771,9 @@ nav.scrolled {
 /* Home */
 
 #home {
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: 35vh;
+  padding-bottom: 20vh;
+  height: 100%;
 }
 
 .homeSubtitle {
@@ -787,7 +788,7 @@ nav.scrolled {
 
 .socials {
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1rem;
   margin: auto;
   background-color: #27272a;
   display: flex;
@@ -811,9 +812,7 @@ nav.scrolled {
 .about {
   border-radius: 1rem;
   padding: 2rem;
-  width: 80%;
   background-color: #1e1e21;
-  margin: auto;
   flex-direction: column;
   text-align: center;
   display: flex;
@@ -832,8 +831,6 @@ nav.scrolled {
 #projects-container {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
-  margin: auto;
   gap: 1.5rem;
 }
 
@@ -867,8 +864,6 @@ nav.scrolled {
 .skills {
   border-radius: 1rem;
   padding: 2rem;
-  width: 80%;
-  margin: auto;
   background-color: #1e1e21;
   display: flex;
   flex-wrap: wrap;
@@ -903,8 +898,6 @@ nav.scrolled {
 .experience {
   border-radius: 1rem;
   padding: 2rem;
-  width: 80%;
-  margin: auto;
   background-color: #1e1e21;
   display: flex;
   flex-wrap: wrap;
@@ -947,8 +940,6 @@ nav.scrolled {
 .contact {
   border-radius: 1rem;
   padding: 2rem;
-  width: 80%;
-  margin: auto;
   background-color: #1e1e21;
   display: flex;
   flex-wrap: wrap;
@@ -973,8 +964,6 @@ nav.scrolled {
 .contact-form {
   border-radius: 1rem;
   padding: 2rem;
-  width: 80%;
-  margin: auto;
   background-color: #1e1e21;
   text-align: left;
   display: flex;
@@ -1042,13 +1031,14 @@ html {
 body {
   background-color: #27272a;
   overflow-x: hidden;
-  padding-top: 17vh;
 }
 
 section {
   padding-top: 4rem;
   padding-bottom: 4rem;
   margin-bottom: 2rem;
+  width: 80%;
+  margin: auto;
 }
 
 .button {
