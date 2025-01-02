@@ -799,6 +799,7 @@ nav.scrolled {
 .socials img {
   width: 4rem;
   height: auto;
+  transition: width 0.3s ease-in-out;
 }
 
 .socials img:hover {
