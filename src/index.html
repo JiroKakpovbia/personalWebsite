@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="output.css">
         <link rel="stylesheet" href="media-queries.css">
 
+        <!-- Homepage Animation -->
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
         <!-- Viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -55,6 +58,10 @@
 
         <!-- Home -->
         <section id="home">
+            <!-- Animation -->
+            <dotlottie-player class="background-video" background="transparent" speed="1" data-aos="fade-in" data-aos-delay="2250" data-aos-once="true" src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie" loop autoplay></dotlottie-player>
+            
+            <!-- Text -->
             <div class="home">
                 <p class="homeSubtitle" data-aos="fade-down" data-aos-delay="1000" data-aos-once="true">Hi, my name is</p>
                 <h1 class="homeTitle" data-aos="fade-in" data-aos-delay="2000" data-aos-once="true">Jiro Kakpovbia</h1>
@@ -349,7 +356,7 @@
         </section>
 
         <!-- Footer -->
-        <section id="footer">
+        <footer id="footer">
             <div id="footer-container" class="footer">
                 <br>
                 <p class="footer">The source code for this website can be found on my <a href="https://github.com/JiroKakpovbia/personalWebsite" target="_blank">GitHub</a>, so be sure to check it out!</p>
@@ -357,7 +364,7 @@
                 <p class="footer">Copyright &#169; 2024 Jiro Kakpovbia. All Rights Reserved.</p>
                 <br>
             </div>
-        </section>
+        </footer>
 
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> <!-- AOS -->
