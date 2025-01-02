@@ -641,14 +641,13 @@ p {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
   text-decoration-color: whitesmoke;
 }
 
 a:hover {
   color: #a188d8;
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
   text-decoration-color: #a188d8;
 }
 
@@ -870,8 +869,8 @@ nav.scrolled {
 }
 
 .project a {
-  text-decoration: none;
   color: #a188d8;
+  text-decoration-color: #a188d8;
 }
 
 .project a:hover {
@@ -1035,10 +1034,6 @@ nav.scrolled {
 
 .footer p {
   max-width: 80%;
-}
-
-.footer a {
-  color: #a188d8;
 }
 
 /* Miscellaneous */
