@@ -1,0 +1,33 @@
+.about {
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: #1e1e21;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about img {
+    width: 20rem;
+    height: auto;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 0) {}
+
+@media only screen and (min-width: 375) {}
+
+@media only screen and (min-width: 768) {}
+
+@media only screen and (min-width: 1024px) {
+    .about {
+        flex-direction: row;
+        text-align: center;
+        padding: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {}

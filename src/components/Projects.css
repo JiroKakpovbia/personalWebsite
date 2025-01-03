@@ -1,0 +1,49 @@
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.project {
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: #1e1e21;
+    box-sizing: border-box;
+}
+
+.project p {
+    margin: auto;
+}
+
+.project b {
+    color: #a188d8;
+}
+
+.project a {
+    color: #a188d8;
+    text-decoration-color: #a188d8;
+}
+
+.project a:hover {
+    text-decoration: underline;
+    color: #675a84;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 0px) {
+    .project {
+        width: calc(100% - 1rem);
+    }
+}
+
+@media only screen and (min-width: 375px) {}
+
+@media only screen and (min-width: 768px) {
+    .project {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (min-width: 1440px) {}
