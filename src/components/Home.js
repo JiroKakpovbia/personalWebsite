@@ -26,16 +26,16 @@ function Home() {
 
                 {/* Social Media */}
                 <div className="socials" data-aos="fade-up" data-aos-delay="2500" data-aos-once="true">
-                        <a href="https://www.instagram.com/jiro.kakpovbia" target="_blank" rel="noreferrer">
+                        <a href="https://www.instagram.com/jiro.kakpovbia" target="_blank" rel="noopener noreferrer">
                             <img id="instagram" className="invert" alt="Visit my Instagram" src={instagramImage}/>
                         </a>
-                        <a href="https://x.com/JiroKakpovbia" target= "_blank" rel="noreferrer">
+                        <a href="https://x.com/JiroKakpovbia" target= "_blank" rel="noopener noreferrer">
                             <img id="x" className="invert" alt="Visit my X (formerly Twitter)" src={xImage}/>
                         </a>
-                        <a href="https://linkedin.com/in/jiro-kakpovbia" target="_blank" rel="noreferrer">
+                        <a href="https://linkedin.com/in/jiro-kakpovbia" target="_blank" rel="noopener noreferrer">
                             <img id="linkedin" className="invert" alt="Visit my LinkedIn" src={linkedinImage}/>
                         </a>
-                        <a href="https://github.com/JiroKakpovbia" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/JiroKakpovbia" target="_blank" rel="noopener noreferrer">
                             <img id="github" className="invert" alt="Visit my GitHub" src={githubImage}/>
                         </a>
                 </div>
