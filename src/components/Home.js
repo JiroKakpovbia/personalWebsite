@@ -13,6 +13,9 @@ function Home() {
         <section id="home">
             {/* Animation */}
             <DotLottieReact className="background-animation"
+                background="transparent"
+                speed="1"
+                data-aos="fade-in" data-aos-delay="2250" data-aos-once="true"
                 src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"
                 loop
                 autoplay
