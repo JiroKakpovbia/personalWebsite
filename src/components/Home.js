@@ -1,6 +1,6 @@
 import React from "react"
 import "./Home.css"
-// import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import instagramImage from '../assets/imgs/instagram.png';
 import xImage from '../assets/imgs/x.png';
@@ -12,11 +12,11 @@ function Home() {
     return (
         <section id="home">
             {/* Animation */}
-            {/* <DotLottieReact
+            <DotLottieReact className="background-animation"
                 src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"
                 loop
                 autoplay
-            /> */}
+            />
 
             {/* Text */}
             <div className="home">

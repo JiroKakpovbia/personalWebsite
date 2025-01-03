@@ -5,7 +5,7 @@
     height: 100%;
 }
 
-.background-video {
+.background-animation {
     position: absolute;
     top: 5vh;
     left: 0;
@@ -27,7 +27,7 @@
 }
 
 .homeTitle {
-    color: #a188d8;
+    color: white;
     margin-bottom: 0rem;
 }
 
@@ -80,10 +80,6 @@
 
     .homeTitle {
         font-size: 3rem;
-    }
-
-    #home {
-        width: 100%;
     }
 
     .socials {
