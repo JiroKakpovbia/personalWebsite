@@ -77,6 +77,10 @@ AOS.init({
     easing: 'ease-in-out',
 });
 
+// Update Footer Copyright with Current Year
+const currentYear = new Date().getFullYear();
+document.getElementById('current-year').textContent = currentYear;
+
 // Hamburger Menu
 function toggleMenu() {
     const hamburgerIcon = document.querySelector('.hamburger-icon');
