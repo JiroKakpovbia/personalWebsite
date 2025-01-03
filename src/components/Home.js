@@ -1,6 +1,6 @@
 import React from "react"
 import "./Home.css"
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+// import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import instagramImage from '../assets/imgs/instagram.png';
 import xImage from '../assets/imgs/x.png';
