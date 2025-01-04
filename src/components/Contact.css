@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .contact img {
@@ -28,7 +28,7 @@
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .contact-form input,
