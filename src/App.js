@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-import './App.css';
 
 import Navigation from './components/Navigation';
 import Home from './components/Home';
