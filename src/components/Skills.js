@@ -85,7 +85,7 @@ function Skills() {
                         <span className="display-text">Vim</span>
                     </a>
                     <a href="https://en.wikipedia.org/wiki/Visual_Studio_Code" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="450"> 
-                        <img alt="Visual Studio Code logo" src="https://carleton.ca/scs/wp-content/uploads/vscode-1.png"/>
+                        <img alt="Visual Studio Code logo" src="https://chris-ayers.com/assets/images/vscode-logo.png"/>
                         <span className="display-text">Visual Studio Code</span>
                     </a>
                 </div>

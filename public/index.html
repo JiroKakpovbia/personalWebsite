@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Metadata for the page -->
 	<head>
         <meta charset="UTF-8"/>
 
@@ -9,7 +10,6 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="output.css">
-        <link rel="stylesheet" href="media-queries.css">
 
         <!-- Homepage Animation -->
         <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
@@ -26,21 +26,22 @@
 			content="Jiro Kakpovbia's Personal Website, showcasing his projects, experiences, and qualifications regarding his role as a Full-Stack Software Developer while studying Computer Science at the University of Waterloo!"
 		/>
 
-		<!--
-			manifest.json provides metadata used when your web app is installed on a
-			user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-		-->
+		<!-- Manifest Metadata -->
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  </head>
-  <body>
-	<noscript>
-        <div class="noscript-message">
-            <p>JavaScript is disabled in your browser. Please enable JavaScript to access this website.</p>
-            <p>
-                For help enabling JavaScript, visit <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">enable-javascript.com</a>.
-            </p>
-        </div>
-    </noscript>
+
+		<!-- Theme Colour-->
+		<meta name="theme-color" content="#a188d8;"/>
+  	</head>
+  	<body>
+		<!-- JavaScript Reminder -->
+		<noscript>
+			<div class="noscript-message">
+				<p>JavaScript is disabled in your browser. Please enable JavaScript to access this website.</p>
+				<p>For help enabling JavaScript, visit <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">enable-javascript.com</a>.</p>
+			</div>
+		</noscript>
+
+		<!-- Page Content -->
 		<div id="root"></div>
 	</body>
 </html>

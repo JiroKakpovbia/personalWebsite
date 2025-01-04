@@ -10,10 +10,10 @@ function Contact() {
     return (
         <section id="contact">
         <h1>Contact</h1>
-        <form className="contact-form" id="contact-form" data-aos="fade-left" data-netlify="true">
-            <input type="text" id="name" name="name" placeholder="Name*" required></input>
-            <input type="email" id="email" name="email" placeholder="Email*" required></input>
-            <textarea id="message" placeholder="Message*" required></textarea>
+        <form className="contact-form" data-aos="fade-left" data-netlify="true">
+            <input type="text" name="name" placeholder="Name*" required></input>
+            <input type="email" name="email" placeholder="Email*" required></input>
+            <textarea placeholder="Message*" required></textarea>
             <button type="submit" className="button">Submit Form</button>
         </form>
         <br></br>
