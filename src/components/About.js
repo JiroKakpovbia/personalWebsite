@@ -1,8 +1,8 @@
 import React from 'react'
 import './About.css'
 
-import headshotImage from '../assets/imgs/Headshot.jpg';
-import resumePdf from '../assets/docs/Jiro Kakpovbia\'s Resume.pdf';
+import headshotImage from '../assets/headshot.jpg';
+import resumePdf from '../assets/resume.pdf';
 
 function About() {
     return (

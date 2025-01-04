@@ -1,9 +1,9 @@
 import React from "react"
 import "./Experience.css"
 
-import prsImage from '../assets/imgs/wprint.png';
-import warriorsImage from '../assets/imgs/waterloowarriors.png';
-import svpImage from '../assets/imgs/svpteens.png';
+import prsImage from '../assets/wprint.png';
+import warriorsImage from '../assets/waterloowarriors.png';
+import svpImage from '../assets/svpteens.png';
 
 function Experience() {
     return (
@@ -40,7 +40,7 @@ function Experience() {
             </div>
             {/* <br></br>
             <div className="experience" data-aos="fade-left">
-                <img id="homedepot" alt="Home Depot Logo" src="./../assets/imgs/homedepot.png"/>
+                <img id="homedepot" alt="Home Depot Logo" src="./../assets/homedepot.png"/>
                 <div className="text-content">
                     <h2 className="job-title">
                         <span className="position">Order Picker, Part-Time</span>
@@ -55,7 +55,7 @@ function Experience() {
             </div>
             <br></br>
             <div className="experience" data-aos="fade-right">
-                <img id="sobeys" alt="Sobeys Logo" src="./../assets/imgs/sobeys.png"/>
+                <img id="sobeys" alt="Sobeys Logo" src="./../assets/sobeys.png"/>
                 <div className="text-content">
                     <h2 className="job-title">
                         <span className="position">Grocery Clerk, Part-Time</span>
