@@ -17,7 +17,7 @@ function About() {
                         Hi! My name is Jiro Kakpovbia, and I'm a third-year Computer Science student at the University of Waterloo, graduating in Spring 2027.
                         At age 13, I independently developed a platformer video game in Python, which laid the foundation for my deep technical skills and passion for software development.
                         Since then, through my coursework and employment, I have honed my skills in various programming languages and development tools.
-                        Outside of programming, I enjoy watching football, making music, and spending time with others.
+                        Outside of programming, I enjoy watching football, working out, and making music.
                     </p>
                     <br></br>
                     <p>Please feel free to reach out — I'm always open to meeting new people!</p>
