@@ -2,7 +2,7 @@ import React from 'react'
 import './About.css'
 
 import headshotImage from '../assets/headshot.jpg';
-import resumePdf from '../assets/resume.pdf';
+import resumePdf from "../assets/Jiro Kakpovbia's Resume.pdf";
 
 function About() {
     return (
