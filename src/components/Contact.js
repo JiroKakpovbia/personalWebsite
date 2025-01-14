@@ -11,8 +11,8 @@ function Contact() {
         <section id="contact">
         <h1>Contact</h1>
         <form className="contact-form" data-aos="fade-left" data-netlify="true">
-            <input type="text" name="name" placeholder="Name*" required></input>
-            <input type="email" name="email" placeholder="Email*" required></input>
+            <input type="text" name="name" autocomplete="name" placeholder="Name*" required></input>
+            <input type="email" name="email" autocomplete="email" placeholder="Email*" required></input>
             <textarea placeholder="Message*" required></textarea>
             <button type="submit" className="button">Submit Form</button>
         </form>
