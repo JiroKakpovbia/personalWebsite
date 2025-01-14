@@ -3,11 +3,18 @@ import "./Navigation.css"
 
 function Navigation({ isNavScrolled }) {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [lightMode, setLightMode] = useState(false);
 
 	// Toggle Hamburger Menu
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen);
 	};
+
+	// Toggle Dark Mode
+    const toggleLightMode = () => {
+        setLightMode(!lightMode);
+        document.body.classList.toggle('light-mode', !lightMode);
+    };
 
 	return (
 		<div>
@@ -24,6 +31,10 @@ function Navigation({ isNavScrolled }) {
 					<li><a href="#experience">Experience</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
+				<button className="theme-toggle " data-aos="fade-down" data-aos-delay="500" data-aos-once="true" onClick={toggleLightMode}>
+					<i className={`fas ${lightMode ? 'fa-sun' : 'fa-moon'}`}></i>
+				</button>
+
 			</nav>
 
 			{/* Hamburger Navigation */}
@@ -45,6 +56,9 @@ function Navigation({ isNavScrolled }) {
 						<li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
 						<li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
 					</ul>
+					<button className="theme-toggle" data-aos="fade-down" data-aos-delay="500" data-aos-once="true" onClick={toggleLightMode}>
+						<i className={`fas ${lightMode ? 'fa-sun' : 'fa-moon'}`}></i>
+					</button>
 				</div>
 			</nav>
 		</div>

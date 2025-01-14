@@ -1,7 +1,6 @@
 .contact {
     border-radius: 1rem;
     padding: 2rem;
-    background-color: #1e1e21;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -24,7 +23,6 @@
 .contact-form {
     border-radius: 1rem;
     padding: 2rem;
-    background-color: #1e1e21;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -35,9 +33,7 @@
 .contact-form textarea {
     border-radius: 0.5rem;
     padding: 1rem;
-    background-color: #27272a;
     border: 1px solid #444;
-    color: whitesmoke;
     width: 100%;
     font-size: 1rem;
 }

@@ -7,7 +7,6 @@
 .project {
     border-radius: 1rem;
     padding: 2rem;
-    background-color: #1e1e21;
     box-sizing: border-box;
 }
 
@@ -15,18 +14,8 @@
     margin: auto;
 }
 
-.project b {
-    color: #a188d8;
-}
-
-.project a {
-    color: #a188d8;
-    text-decoration-color: #a188d8;
-}
-
 .project a:hover {
     text-decoration: underline;
-    color: #675a84;
 }
 
 /* Media Queries */

@@ -2,14 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme Colours (Light/Dark Mode) */
+:root {
+    --bg-colour: #27272a;
+	--accent-colour: #1e1e21;
+    --text-colour: whitesmoke;
+	--header-colour: #a188d8;
+	--link-colour: #a188d8;
+	--hover-colour: #675a84;
+}
+
+body.light-mode {
+    --bg-colour: #eae5f6;
+	--accent-colour: #d0cae2;
+    --text-colour: #27272a;
+	--header-colour: #675a84;
+	--link-colour: #675a84;
+	--hover-colour: #a188d8;
+}
+
+#desktop-nav,
+#hamburger-nav {
+    background-color: var(--bg-colour);
+    color: var(--text-colour);
+	transition: background-color 0.3s ease-in-out;
+}
+
+#desktop-nav.scrolled,
+#hamburger-nav.scrolled {
+    background-color: var(--accent-colour);
+}
+
+#about .about,
+#projects .project,
+#skills .skills,
+#experience .experience,
+#contact .contact-form,
+#contact .contact {
+	background-color: var(--accent-colour);
+	transition: background-color 0.3s ease-in-out;
+}
+
+#projects .project b {
+    color: var(--header-colour);
+}
+
+#projects .project a {
+    color: var(--header-colour);
+    text-decoration-color: var(--header-colour);
+}
+
+#projects .project a:hover {
+    color: var(--hover-colour);
+}
+
+#skills .display-text,
+#experience .job-title {
+    color: var(--text-colour);
+}
+
+#skills .display-text {
+	background-color: var(--bg-colour);
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+    background-color: var(--bg-colour);
+    color: var(--text-colour);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-colour);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Other */
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 }
 
 body {
-	background-color: #27272a;
+	background-color: var(--bg-colour);
 	overflow-x: hidden;
+	transition: background-color 0.3s ease-in-out;
 }
 
 section {
@@ -22,30 +101,34 @@ section {
 
 h1 {
 	text-align: center;
-	color: #a188d8;
+	color: var(--header-colour);
 	font-weight: bold;
 	margin-bottom: 1rem;
+	transition: background-color 0.3s ease-in-out;
 }
 
 h2 {
 	font-weight: bold;
-	color: whitesmoke;
+	color: var(--text-colour);
 	margin-bottom: 0.5rem;
+	transition: background-color 0.3s ease-in-out;
 }
 
 p {
-	color: whitesmoke;
+	color: var(--text-colour);
+	transition: background-color 0.3s ease-in-out;
 }
 
 a {
 	text-decoration: underline;
 	text-underline-offset: 0.5rem;
-	text-decoration-color: whitesmoke;
+	text-decoration-color: var(--text-colour);
+	transition: background-color 0.3s ease-in-out;
 }
 
 a:hover {
-	color: #a188d8;
-	text-decoration-color: #a188d8;
+	color: var(--link-colour);
+	text-decoration-color: var(--link-colour);
 }
 
 .text-content {
@@ -53,8 +136,8 @@ a:hover {
 }
 
 .button {
-	background-color: #a188d8;
-	color: whitesmoke;
+	background-color: var(--link-colour);
+	color: var(--text-colour);
 	border-radius: 0.5rem;
 	padding: 1rem;
 	text-align: center;
@@ -66,11 +149,11 @@ a:hover {
 }
 
 .button:hover {
-	background-color: #675a84;
+	background-color: var(--hover-colour);
 }
 
 button:focus, a:focus, input:focus, textarea:focus {
-	outline: 2px solid #a188d8;
+	outline: 2px solid var(--link-colour);
 	outline-offset: 2px;
 }
 
@@ -80,7 +163,7 @@ button:focus, a:focus, input:focus, textarea:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    color: whitesmoke;
+    color: var(--text-colour);
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,7 +1,3 @@
-:root {
-    --nav-background-color: #27272a;
-}
-
 /* Desktop Navigation */
 nav, 
 .nav-links {
@@ -19,12 +15,10 @@ nav {
     height: 10vh;
     color: whitesmoke;
     padding: 2rem;
-    background-color: var(--nav-background-color);
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 nav.scrolled {
-    --nav-background-color: #1e1e21;
     box-shadow: 0 0.25rem 0.4rem #00000057;
 }
 
@@ -39,8 +33,6 @@ nav.scrolled {
 .logo:hover {
     cursor: default;
 }
-
-
 
 /* Hamburger Navigation */
 #hamburger-nav {
@@ -116,6 +108,10 @@ nav.scrolled {
         font-size: 1.25rem;
     }
 
+    .theme-toggle i {
+        font-size: 1.25rem;
+    }
+
     .hamburger-icon {
         width: 2rem;
         height: 1.5rem;
@@ -139,6 +135,10 @@ nav.scrolled {
         font-size: 1.5rem;
     }
 
+    .theme-toggle i {
+        font-size: 1.5rem;
+    }
+    
     .hamburger-icon {
         width: 2.75rem;
         height: 1.75rem;
@@ -159,6 +159,10 @@ nav.scrolled {
     }
 
     .menu-links a {
+        font-size: 1.75rem;
+    }
+
+    .theme-toggle i {
         font-size: 1.75rem;
     }
 

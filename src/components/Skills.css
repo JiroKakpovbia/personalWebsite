@@ -1,7 +1,6 @@
 .skills {
     border-radius: 1rem;
     padding: 2rem;
-    background-color: #1e1e21;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -20,8 +19,6 @@
 
 .display-text {
     position: absolute;
-    background-color: #1e1e21;
-    color: whitesmoke;
     box-shadow: 0 0.25rem 0.4rem #00000057;
     padding: 0.5rem;
     border-radius: 0.5rem;

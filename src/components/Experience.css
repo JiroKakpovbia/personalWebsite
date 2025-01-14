@@ -1,7 +1,6 @@
 .experience {
     border-radius: 1rem;
     padding: 2rem;
-    background-color: #1e1e21;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -16,7 +15,6 @@
 .job-title {
     display: flex;
     margin: 0;
-    color: whitesmoke;
 }
 
 .job-title .dates {
