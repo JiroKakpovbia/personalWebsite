@@ -13,7 +13,7 @@
 
 body.light-mode {
 	--bg-colour: #f9f7ff;
-    --text-colour: #27272a;
+    --text-colour: #1e1e21;
 	--primary-colour: #7255af;
 	--secondary-colour: #a188d8;
 	--accent-colour: #e9e6f2;
@@ -44,7 +44,7 @@ body.light-mode {
 
 .homeTitle,
 .homeSubtitle {
-    color: #f9f7ff;
+    color: var(--text-colour);
 }
 
 #about .about,

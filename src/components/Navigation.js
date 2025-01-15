@@ -14,8 +14,12 @@ function Navigation({ isNavScrolled }) {
     const toggleLightMode = () => {
         setLightMode(!lightMode);
         document.body.classList.toggle("light-mode", !lightMode);
+		document.getElementById("instagram").classList.toggle("invert", lightMode);
+		document.getElementById("x").classList.toggle("invert", lightMode);
 		document.getElementById("phone").classList.toggle("invert", lightMode);
 		document.getElementById("email").classList.toggle("invert", lightMode);
+		document.getElementById("s-linkedin").classList.toggle("invert", lightMode);
+		document.getElementById("s-github").classList.toggle("invert", lightMode);
 		document.getElementById("c-linkedin").classList.toggle("invert", lightMode);
 		document.getElementById("c-github").classList.toggle("invert", lightMode);
     };
