@@ -15,9 +15,9 @@ function Projects() {
 			}
 
 			const reposData = await response.json();
-			setRepos(reposData.filter(repo => repo.name !== 'JiroKakpovbia')); // Filter out the README repo
+			setRepos(reposData.filter(repo => repo.name !== "JiroKakpovbia")); // Filter out the README repo
 		} catch (error) {
-			console.error('Error fetching GitHub repositories:', error);
+			console.error("Error fetching GitHub repositories:", error);
 		}
 	};
 
@@ -30,10 +30,10 @@ function Projects() {
 			<h1>Projects</h1>
 			<div id="projects-container">
 				{repos.map((repo, index) => (
-					<div key={repo.id} className="project" data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}>
+					<div key={repo.id} className="project" data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}>
 						<h2><a href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a></h2>
-						<p><b>Description:</b> {repo.description || 'No description available.'}</p>
-						<p><b>Language:</b> {repo.language || 'N/A'}</p>
+						<p><b>Description:</b> {repo.description || "No description available."}</p>
+						<p><b>Language:</b> {repo.language || "N/A"}</p>
 					</div>
 				))}
 			</div>

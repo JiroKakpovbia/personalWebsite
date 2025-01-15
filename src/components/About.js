@@ -1,7 +1,7 @@
-import React from 'react'
-import './About.css'
+import React from "react"
+import "./About.css"
 
-import headshotImage from '../assets/headshot.jpg';
+import headshotImage from "../assets/headshot.jpg";
 import resumePdf from "../assets/Jiro Kakpovbia's Resume.pdf";
 
 function About() {
@@ -24,7 +24,7 @@ function About() {
                     <br></br>
 
                     {/* Resume Button */}
-                    <button className="button" onClick={() => window.open(resumePdf, '_blank')}>Resume</button>
+                    <button className="button" onClick={() => window.open(resumePdf, "_blank")}>Resume</button>
                 </div>
             </div>
         </section>

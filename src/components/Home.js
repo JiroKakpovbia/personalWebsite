@@ -1,11 +1,11 @@
 import React from "react"
 import "./Home.css"
-import '@lottiefiles/dotlottie-react'
+import "@lottiefiles/dotlottie-react"
 
-import instagramImage from '../assets/instagram.png';
-import xImage from '../assets/x.png';
-import linkedinImage from '../assets/linkedin.png';
-import githubImage from '../assets/github.png';
+import instagramImage from "../assets/instagram.png";
+import xImage from "../assets/x.png";
+import linkedinImage from "../assets/linkedin.png";
+import githubImage from "../assets/github.png";
 
 
 function Home() {

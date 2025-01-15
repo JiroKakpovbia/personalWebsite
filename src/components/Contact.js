@@ -1,10 +1,10 @@
 import React from "react"
 import "./Contact.css"
 
-import phoneImage from '../assets/phone.png';
-import emailImage from '../assets/email.png';
-import linkedinImage from '../assets/linkedin.png';
-import githubImage from '../assets/github.png';
+import phoneImage from "../assets/phone.png";
+import emailImage from "../assets/email.png";
+import linkedinImage from "../assets/linkedin.png";
+import githubImage from "../assets/github.png";
 
 function Contact() {
     return (
