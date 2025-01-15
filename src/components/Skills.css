@@ -4,12 +4,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
 }
 
 .skills img {
     width: auto;
-    max-height: 3rem;
+    height: 3rem;
 }
 
 .skills a:hover .display-text {
@@ -24,7 +23,7 @@
     border-radius: 0.5rem;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* Media Queries */
