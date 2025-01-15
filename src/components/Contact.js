@@ -1,11 +1,6 @@
 import React from "react"
 import "./Contact.css"
 
-import phoneImage from "../assets/phone.png";
-import emailImage from "../assets/email.png";
-import linkedinImage from "../assets/linkedin.png";
-import githubImage from "../assets/github.png";
-
 function Contact() {
     return (
         <section id="contact">
@@ -20,26 +15,26 @@ function Contact() {
         <div id="contact-container" className="contact" data-aos="fade-right">
             <div className="method">
                 <p><a href="tel:2268993921" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center">
-                    <img id="phone" className="invert mb-4" alt="Call my Phone Number" src={phoneImage}/>
-                    (226) 899-3921
+                    <i id="phone" className="fa-solid fa-phone mb-4" alt="Call my Phone Number"></i>
+                    <span>(226) 899-3921</span>
                 </a></p>
             </div>
             <div className="method">
                 <p><a href="mailto:kakpovbia.jiro@gmail.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center">
-                    <img id="email" className="invert mb-4" alt="Send me an Email" src={emailImage}/>
-                    kakpovbia.jiro@gmail.com
+                    <i id="email" className="fa-regular fa-envelope mb-4" alt="Send me an Email"></i>
+                    <span>kakpovbia.jiro@gmail.com</span>
                 </a></p>
             </div>
             <div className="method">
                 <p><a href="https://linkedin.com/in/jiro-kakpovbia" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center">
-                    <img id="c-linkedin" className="invert mb-4" alt="Visit my LinkedIn" src={linkedinImage}/>
-                    jiro-kakpovbia
+                    <i id="c-linkedin" className="fa-brands fa-linkedin-in mb-4" alt="Visit my LinkedIn"></i>
+                    <span>jiro-kakpovbia</span>
                 </a></p>
             </div>
             <div className="method">
                 <p><a href="https://github.com/JiroKakpovbia" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center">
-                    <img id="c-github" className="invert mb-4" alt="Visit my GitHub" src={githubImage}/>
-                    JiroKakpovbia
+                    <i id="c-github" className="fa-brands fa-github mb-4" alt="Visit my GitHub"></i>
+                    <span>JiroKakpovbia</span>
                 </a></p>
             </div>
         </div>

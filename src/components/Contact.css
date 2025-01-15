@@ -8,8 +8,16 @@
     gap: 1.4rem;
 }
 
-.contact img {
-    height: auto;
+.contact i {
+    font-size: 3rem;
+}
+
+.contact a {
+    text-decoration: none;
+}
+
+.contact span {
+    text-decoration: underline;
 }
 
 .method {
@@ -56,10 +64,6 @@
 
 /* Media Queries */
 @media only screen and (min-width: 0px) {
-    .contact img {
-        width: 3rem;
-    }
-
     .method {
         width: 100%;
     }
@@ -70,11 +74,7 @@
     }
 }
 
-@media only screen and (min-width: 375px) {
-    .contact img {
-        width: 4rem;
-    }
-}
+@media only screen and (min-width: 375px) {}
 
 @media only screen and (min-width: 768px) {
     .method {

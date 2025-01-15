@@ -37,19 +37,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 1rem;
     z-index: 1;
     position: relative;
 }
 
-.socials img {
-    width: 4rem;
-    height: auto;
+.socials i {
+    font-size: 3rem;
     transition: width 0.3s ease-in-out;
-}
-
-.socials img:hover {
-    width: 5rem;
 }
 
 /* Media Queries */

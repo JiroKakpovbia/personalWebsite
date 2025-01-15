@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~@fortawesome/fontawesome-free/css/all.css"; /* Font Awesome */
+
+
 /* Theme Colours (Light/Dark Mode) */
 :root {
 	--bg-colour: #27272a;
     --text-colour: #f9f7ff;
 	--primary-colour: #a188d8;
-	--secondary-colour: #675a84;
+	--secondary-colour: #52446f;
 	--accent-colour: #1e1e21;
 }
 
