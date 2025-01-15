@@ -27,17 +27,19 @@ function Navigation({ isNavScrolled }) {
 				<div className="logo" data-aos="fade-down" data-aos-delay="0" data-aos-once="true">
 					Jiro Kakpovbia
 				</div>
-				<ul className="nav-links" data-aos="fade-down" data-aos-delay="500" data-aos-once="true">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#about">About Me</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#skills">Skills</a></li>
-					<li><a href="#experience">Experience</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-				<button className="theme-toggle " data-aos="fade-down" data-aos-delay="500" data-aos-once="true" onClick={toggleLightMode}>
-					<i className={`fas ${lightMode ? "fa-sun" : "fa-moon"}`}></i>
-				</button>
+				<div className="nav-actions" data-aos="fade-down" data-aos-delay="500" data-aos-once="true">
+					<ul className="nav-links" data-aos="fade-down" data-aos-delay="500" data-aos-once="true">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About Me</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#experience">Experience</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+					<button className="theme-toggle " data-aos="fade-down" data-aos-delay="500" data-aos-once="true" onClick={toggleLightMode}>
+						<i className={`fas ${lightMode ? "fa-sun" : "fa-moon"}`}></i>
+					</button>
+				</div>
 
 			</nav>
 

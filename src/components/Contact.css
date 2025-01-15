@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 2rem;
+    gap: 1.4rem;
 }
 
 .contact img {
@@ -26,7 +26,7 @@
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.4rem;
 }
 
 .contact-form input,
@@ -78,7 +78,7 @@
 
 @media only screen and (min-width: 768px) {
     .method {
-        width: calc(50% - 1.5rem);
+        width: calc(50% - 1.4rem);
     }
 
     .contact-form input,
@@ -89,7 +89,7 @@
 
 @media only screen and (min-width: 1024px) {
     .method {
-        width: calc(20% - 1.5rem);
+        width: calc(25% - 1.4rem);
     }
 }
 

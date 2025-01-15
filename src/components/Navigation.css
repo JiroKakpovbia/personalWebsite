@@ -22,7 +22,7 @@ nav.scrolled {
 }
 
 .nav-links {
-    gap: 2rem;
+    gap: 1.4rem;
 }
 
 .logo {
@@ -48,7 +48,7 @@ nav.scrolled {
 .nav-actions {
 	display: flex;
 	align-items: center;
-	gap: 2rem;
+	gap: 1.4rem;
 }
 
 .hamburger-icon {
