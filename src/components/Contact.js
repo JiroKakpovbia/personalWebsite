@@ -11,9 +11,9 @@ function Contact() {
         <section id="contact">
         <h1>Contact</h1>
         <form className="contact-form" data-aos="fade-left" data-netlify="true">
-            <input type="text" name="name" autocomplete="name" placeholder="Name*" required></input>
-            <input type="email" name="email" autocomplete="email" placeholder="Email*" required></input>
-            <textarea placeholder="Message*" required></textarea>
+            <input type="text" name="name" autoComplete="name" placeholder="Name*" required></input>
+            <input type="email" name="email" autoComplete="email" placeholder="Email*" required></input>
+            <textarea name="message" placeholder="Message*" required></textarea>
             <button type="submit" className="button">Submit Form</button>
         </form>
         <br></br>
@@ -32,13 +32,13 @@ function Contact() {
             </div>
             <div className="method">
                 <p><a href="https://linkedin.com/in/jiro-kakpovbia" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center">
-                    <img id="linkedin" className="invert mb-4" alt="Visit my LinkedIn" src={linkedinImage}/>
+                    <img id="c-linkedin" className="invert mb-4" alt="Visit my LinkedIn" src={linkedinImage}/>
                     jiro-kakpovbia
                 </a></p>
             </div>
             <div className="method">
                 <p><a href="https://github.com/JiroKakpovbia" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center">
-                    <img id="github" className="invert mb-4" alt="Visit my GitHub" src={githubImage}/>
+                    <img id="c-github" className="invert mb-4" alt="Visit my GitHub" src={githubImage}/>
                     JiroKakpovbia
                 </a></p>
             </div>

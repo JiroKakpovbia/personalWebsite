@@ -31,10 +31,10 @@ function Home() {
                             <img id="x" className="invert" alt="Visit my X (formerly Twitter)" src={xImage}/>
                         </a>
                         <a href="https://linkedin.com/in/jiro-kakpovbia" target="_blank" rel="noopener noreferrer">
-                            <img id="linkedin" className="invert" alt="Visit my LinkedIn" src={linkedinImage}/>
+                            <img id="s-linkedin" className="invert" alt="Visit my LinkedIn" src={linkedinImage}/>
                         </a>
                         <a href="https://github.com/JiroKakpovbia" target="_blank" rel="noopener noreferrer">
-                            <img id="github" className="invert" alt="Visit my GitHub" src={githubImage}/>
+                            <img id="s-github" className="invert" alt="Visit my GitHub" src={githubImage}/>
                         </a>
                 </div>
             </div>

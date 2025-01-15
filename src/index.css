@@ -4,33 +4,47 @@
 
 /* Theme Colours (Light/Dark Mode) */
 :root {
-    --bg-colour: #27272a;
+	--bg-colour: #27272a;
+    --text-colour: #f9f7ff;
+	--primary-colour: #a188d8;
+	--secondary-colour: #675a84;
 	--accent-colour: #1e1e21;
-    --text-colour: whitesmoke;
-	--header-colour: #a188d8;
-	--link-colour: #a188d8;
-	--hover-colour: #675a84;
 }
 
 body.light-mode {
-    --bg-colour: #eae5f6;
-	--accent-colour: #d0cae2;
+	--bg-colour: #f9f7ff;
     --text-colour: #27272a;
-	--header-colour: #675a84;
-	--link-colour: #675a84;
-	--hover-colour: #a188d8;
+	--primary-colour: #7255af;
+	--secondary-colour: #a188d8;
+	--accent-colour: #e9e6f2;
 }
 
 #desktop-nav,
 #hamburger-nav {
     background-color: var(--bg-colour);
     color: var(--text-colour);
-	transition: background-color 0.3s ease-in-out;
 }
 
 #desktop-nav.scrolled,
 #hamburger-nav.scrolled {
     background-color: var(--accent-colour);
+}
+
+#hamburger-nav .hamburger-icon span {
+    background-color: var(--text-colour);
+}
+
+#hamburger-nav .menu-links {
+    background-color: var(--bg-colour);
+}
+
+.menu-links li a:hover {
+    background-color: var(--secondary-colour);
+}
+
+.homeTitle,
+.homeSubtitle {
+    color: #f9f7ff;
 }
 
 #about .about,
@@ -40,20 +54,20 @@ body.light-mode {
 #contact .contact-form,
 #contact .contact {
 	background-color: var(--accent-colour);
-	transition: background-color 0.3s ease-in-out;
 }
 
 #projects .project b {
-    color: var(--header-colour);
+    color: var(--primary-colour);
 }
 
 #projects .project a {
-    color: var(--header-colour);
-    text-decoration-color: var(--header-colour);
+    color: var(--primary-colour);
+    text-decoration-color: var(--primary-colour);
 }
 
 #projects .project a:hover {
-    color: var(--hover-colour);
+    color: var(--secondary-colour);
+    text-decoration-color: var(--secondary-colour);
 }
 
 #skills .display-text,
@@ -71,12 +85,17 @@ body.light-mode {
     color: var(--text-colour);
 }
 
+#footer .footer {
+    background-color: var(--accent-colour);
+}
+
 .theme-toggle {
     background: none;
     border: none;
     color: var(--text-colour);
     cursor: pointer;
     font-size: 1rem;
+	transition: color 0.3s ease-in-out;
 }
 
 /* Other */
@@ -101,34 +120,30 @@ section {
 
 h1 {
 	text-align: center;
-	color: var(--header-colour);
+	color: var(--primary-colour);
 	font-weight: bold;
 	margin-bottom: 1rem;
-	transition: background-color 0.3s ease-in-out;
 }
 
 h2 {
 	font-weight: bold;
 	color: var(--text-colour);
 	margin-bottom: 0.5rem;
-	transition: background-color 0.3s ease-in-out;
 }
 
 p {
 	color: var(--text-colour);
-	transition: background-color 0.3s ease-in-out;
 }
 
 a {
 	text-decoration: underline;
 	text-underline-offset: 0.5rem;
 	text-decoration-color: var(--text-colour);
-	transition: background-color 0.3s ease-in-out;
 }
 
 a:hover {
-	color: var(--link-colour);
-	text-decoration-color: var(--link-colour);
+	color: var(--secondary-colour);
+	text-decoration-color: var(--secondary-colour);
 }
 
 .text-content {
@@ -136,8 +151,8 @@ a:hover {
 }
 
 .button {
-	background-color: var(--link-colour);
-	color: var(--text-colour);
+	background-color: var(--primary-colour);
+	color: #f9f7ff;
 	border-radius: 0.5rem;
 	padding: 1rem;
 	text-align: center;
@@ -145,15 +160,14 @@ a:hover {
 	display: inline-block;
 	margin: auto;
 	cursor: pointer;
-	transition: background-color 0.3s ease-in-out;
 }
 
 .button:hover {
-	background-color: var(--hover-colour);
+	background-color: var(--secondary-colour);
 }
 
 button:focus, a:focus, input:focus, textarea:focus {
-	outline: 2px solid var(--link-colour);
+	outline: 2px solid var(--primary-colour);
 	outline-offset: 2px;
 }
 
