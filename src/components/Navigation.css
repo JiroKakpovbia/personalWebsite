@@ -13,7 +13,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 10vh;
-    padding: 2rem;
+    padding: 1.4rem;
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -38,7 +38,7 @@ nav.scrolled {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1.4rem;
 }
 
 .hamburger-menu {
@@ -48,7 +48,7 @@ nav.scrolled {
 .nav-actions {
 	display: flex;
 	align-items: center;
-	gap: 1.4rem;
+	gap: 1.75rem;
 }
 
 .hamburger-icon {

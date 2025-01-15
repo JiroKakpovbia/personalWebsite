@@ -1,6 +1,6 @@
 .about {
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1.4rem;
     flex-direction: column;
     text-align: center;
     display: flex;
@@ -25,7 +25,6 @@
     .about {
         flex-direction: row;
         text-align: left;
-        padding: 2rem;
     }
 }
 
