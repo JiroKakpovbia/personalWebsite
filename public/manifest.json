@@ -1,5 +1,5 @@
 {
-	"short_name": "Jiro Kakpovbia",
+	"short_name": "Jiro's Site",
 	"name": "Jiro Kakpovbia's Personal Website",
 	"icons": [
 		{
@@ -20,6 +20,6 @@
 	],
 	"start_url": ".",
 	"display": "standalone",
-	"theme_color": "#a188d8",
+	"theme_color": "#27272a",
 	"background_color": "#27272a"
 }
