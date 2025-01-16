@@ -1,20 +1,62 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navigation.css";
 
 function Navigation({ isNavScrolled }) {
-	const [menuOpen, setMenuOpen] = useState(false);
-	const [lightMode, setLightMode] = useState(false);
+	// Check and set the initial theme
+	const initialTheme = (() => {
+		const storedPreference = localStorage.getItem("theme");
+		if (storedPreference) {
+			return storedPreference === "light";
+		}
+		return window.matchMedia("(prefers-color-scheme: light)").matches;
+	})();
+
+	// Apply initial theme
+	if (initialTheme) {
+		document.body.classList.remove("dark-mode");
+		document.body.classList.add("light-mode");
+	} else {
+		document.body.classList.remove("light-mode");
+		document.body.classList.add("dark-mode");
+	}
+
+	const [lightMode, setLightMode] = useState(initialTheme);
+
+	// Toggle Light/Dark Mode
+	const toggleLightMode = () => {
+		const newLightMode = !lightMode;
+		setLightMode(newLightMode);
+		document.body.classList.toggle("light-mode", newLightMode);
+		document.body.classList.toggle("dark-mode", !newLightMode);
+
+
+		// Save user preference
+		localStorage.setItem("theme", newLightMode ? "light" : "dark");
+	};
+
+	// Listen for changes to system theme preference
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
+
+		const handleChange = (event) => {
+			if (!localStorage.getItem("theme")) {
+				setLightMode(event.matches);
+				document.body.classList.toggle("light-mode", event.matches);
+				document.body.classList.toggle("dark-mode", !event.matches);
+			}
+		};
+
+		mediaQuery.addEventListener("change", handleChange);
+		return () => mediaQuery.removeEventListener("change", handleChange);
+	}, []);
+
 
 	// Toggle Hamburger Menu
+	const [menuOpen, setMenuOpen] = useState(false);
+
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen);
 	};
-
-	// Toggle Light/Dark Mode
-    const toggleLightMode = () => {
-        setLightMode(!lightMode);
-        document.body.classList.toggle("light-mode", !lightMode);
-    };
 
 	return (
 		<div>
@@ -32,7 +74,7 @@ function Navigation({ isNavScrolled }) {
 						<li><a href="#experience">Experience</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
-					<button className="theme-toggle " data-aos="fade-down" data-aos-delay="500" data-aos-once="true" onClick={toggleLightMode}>
+					<button className="theme-toggle" data-aos="fade-down" data-aos-delay="500" data-aos-once="true" onClick={toggleLightMode}>
 						<i className={`fas ${lightMode ? "fa-sun" : "fa-moon"}`}></i>
 					</button>
 				</div>

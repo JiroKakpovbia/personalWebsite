@@ -6,9 +6,9 @@
 
 
 /* Theme Colours (Light/Dark Mode) */
-:root {
+body.dark-mode {
 	--bg-colour: #27272a;
-    --text-colour: #f9f7ff;
+	--text-colour: #f9f7ff;
 	--primary-colour: #a188d8;
 	--secondary-colour: #52446f;
 	--accent-colour: #1e1e21;
@@ -16,7 +16,7 @@
 
 body.light-mode {
 	--bg-colour: #f9f7ff;
-    --text-colour: #1e1e21;
+	--text-colour: #1e1e21;
 	--primary-colour: #7255af;
 	--secondary-colour: #a188d8;
 	--accent-colour: #e9e6f2;
