@@ -3,7 +3,13 @@
     padding: 1.4rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 2.8rem;
+}
+
+.skills h2 {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .skills img {
@@ -28,10 +34,6 @@
 
 /* Media Queries */
 @media only screen and (min-width: 0px) {
-    .skills {
-        gap: 2rem;
-    }
-
     .display-text {
         font-size: 1rem;
     }
@@ -45,14 +47,6 @@
     }
 }
 
-@media only screen and (min-width: 1024px) {
-    .skills {
-        gap: 2.5rem;
-    }
-}
+@media only screen and (min-width: 1024px) {}
 
-@media only screen and (min-width: 1440px) {
-    .skills {
-        gap: 1rem;
-    }
-}
+@media only screen and (min-width: 1440px) {}

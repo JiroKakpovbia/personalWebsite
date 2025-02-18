@@ -7,7 +7,7 @@ function Skills() {
             <h1>Skills</h1>
             <div id="skills-container">
                 <div id="skills" className="skills" data-aos="fade-in" data-aos-delay="0">
-                    <h2 data-aos="fade-left" data-aos-delay="0">Languages: </h2>
+                    <h2 data-aos="fade-left" data-aos-delay="0">Languages:</h2>
                     <a href="https://www.python.org" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="50"> 
                         <img alt="Python Logo" src="https://quantumzeitgeist.com/wp-content/uploads/pythoned.png"/>
                         <span className="display-text">Python</span>
@@ -27,6 +27,10 @@ function Skills() {
                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="250"> 
                         <img alt="JavaScript logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png"/>
                         <span className="display-text">JavaScript</span>
+                    </a>
+                    <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="250"> 
+                        <img alt="TypeScript logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/800px-Typescript.svg.png"/>
+                        <span className="display-text">TypeScript</span>
                     </a>
                     <a href="https://www.php.net/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="300"> 
                         <img alt="PHP logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"/>
@@ -48,25 +52,29 @@ function Skills() {
                         <img alt="GraphQL logo" src="https://graphqleditorcms.fra1.cdn.digitaloceanspaces.com/graphqleditorcms/graphql_page/graphql-1732132118455.png"/>
                         <span className="display-text">GraphQL</span>
                     </a>
+                    <a href="https://racket-lang.org/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="500"> 
+                        <img alt="Racket logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Racket-logo.svg"/>
+                        <span className="display-text">Racket</span>
+                    </a>
                 </div>
                 <br></br>
                 <div id="developer-tools" className="skills" data-aos="fade-in" data-aos-delay="0">
-                    <h2 data-aos="fade-left" data-aos-delay="0">Developer Tools: </h2>
+                    <h2 data-aos="fade-left" data-aos-delay="0">Developer Tools:</h2>
                     <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="50"> 
                         <img alt="Git Logo" src="https://avatars.githubusercontent.com/u/18133?s=280&v=4"/>
                         <span className="display-text">Git</span>
                     </a>
-                    <a href="https://en.wikipedia.org/wiki/Node.js" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="100">
-                        <img alt="Node.js Logo" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"/>
-                        <span className="display-text">Node.js</span>
+                    <a href="https://en.wikipedia.org/wiki/Docker_(software)" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="200"> 
+                        <img alt="Docker logo" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png"/>
+                        <span className="display-text">Docker</span>
                     </a>
                     <a href="https://en.wikipedia.org/wiki/MySQL" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="150">
                         <img alt="MySQL Logo" src="https://images.sftcdn.net/images/t_app-icon-m/p/917c77e8-96d1-11e6-8453-00163ed833e7/3780880766/mysql-com-icon.png"/>
                         <span className="display-text">MySQL</span>
                     </a>
-                    <a href="https://en.wikipedia.org/wiki/Docker_(software)" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="200"> 
-                        <img alt="Docker logo" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png"/>
-                        <span className="display-text">Docker</span>
+                    <a href="https://unity.com/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="150">
+                        <img alt="Unity Logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Unity_2021.svg"/>
+                        <span className="display-text">Unity</span>
                     </a>
                     <a href="https://en.wikipedia.org/wiki/CURL" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="250"> 
                         <img alt="cURL logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Curl-logo.svg/2880px-Curl-logo.svg.png"/>
@@ -87,6 +95,38 @@ function Skills() {
                     <a href="https://en.wikipedia.org/wiki/Visual_Studio_Code" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="450"> 
                         <img alt="Visual Studio Code logo" src="https://chris-ayers.com/assets/images/vscode-logo.png"/>
                         <span className="display-text">Visual Studio Code</span>
+                    </a>
+                </div>
+                <br></br>
+                <div id="frameworks+libraries" className="skills" data-aos="fade-in" data-aos-delay="0">
+                    <h2 data-aos="fade-left" data-aos-delay="0">Frameworks + Libraries:</h2>
+                    <a href="https://en.wikipedia.org/wiki/Node.js" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="100">
+                        <img alt="Node.js Logo" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"/>
+                        <span className="display-text">Node.js</span>
+                    </a>
+                    <a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="100">
+                        <img alt="Express.js Logo" src="https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png"/>
+                        <span className="display-text">Express.js</span>
+                    </a>
+                    <a href="https://processing.org/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="100">
+                        <img alt="Processing.js Logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Processing_2021_logo.svg"/>
+                        <span className="display-text">Processing.js</span>
+                    </a>
+                    <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="100">
+                        <img alt="React Logo" src="https://michaelwashburnjr.com/hubfs/Imported_Blog_Media/react-icon_svg_.png"/>
+                        <span className="display-text">React</span>
+                    </a>
+                    <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="100">
+                        <img alt="Tailwind CSS Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png"/>
+                        <span className="display-text">Tailwind CSS</span>
+                    </a>
+                    <a href="https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="100">
+                        <img alt=".NET Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/800px-Microsoft_.NET_logo.svg.png"/>
+                        <span className="display-text">.NET</span>
+                    </a>
+                    <a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="100">
+                        <img alt="TensorFlow Logo" src="https://avatars.githubusercontent.com/u/15658638?s=280&v=4"/>
+                        <span className="display-text">TensorFlow</span>
                     </a>
                 </div>
             </div>
