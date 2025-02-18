@@ -17,6 +17,10 @@
     height: 3rem;
 }
 
+.skills a {
+    white-space: nowrap;
+}
+
 .skills a:hover .display-text {
     visibility: visible;
     opacity: 1;
