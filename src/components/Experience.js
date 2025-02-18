@@ -1,6 +1,7 @@
 import React from "react"
 import "./Experience.css"
 
+import equitableImage from "../assets/equitable.png";
 import prsImage from "../assets/wprint.png";
 import warriorsImage from "../assets/waterloowarriors.png";
 import svpImage from "../assets/svpteens.png";
@@ -9,8 +10,23 @@ function Experience() {
     return (
         <section id="experience">
             <h1>Experience</h1>
-            <div id="experience1-container" className="experience" data-aos="fade-left">
-                <img id="prs" alt="University of Waterloo's Print + Retail Solutions Logo" src={prsImage}></img>
+            <div id="experience5-container" className="experience" data-aos="fade-right">
+                <img id="equitable" alt="The Equitable Life Insurance Company of Canada Logo" src={equitableImage}></img>
+                <div className="text-content">
+                    <h2 className="job-title">
+                        <span className="position">Junior Software Developer</span>
+                        <span className="dates">
+                            <span className="short">May 2025 — Aug 2025</span>
+                            <span className="full">May 2025 — August 2025</span>
+                        </span>
+                    </h2>
+                    <p className="location">The Equitable Life Insurance Company of Canada, Waterloo, ON</p>
+                    <p><b>Languages and Tools:</b> SQL, .NET, C#, React.</p>
+                </div>
+            </div>
+            <br></br>
+            <div id="experience4-container" className="experience" data-aos="fade-left">
+                <img id="prs2" alt="University of Waterloo's Print + Retail Solutions Logo" src={prsImage}></img>
                 <div className="text-content">
                     <h2 className="job-title">
                         <span className="position">Back-End Software Engineer</span>
@@ -24,8 +40,8 @@ function Experience() {
                 </div>
             </div>
             <br></br>
-            <div id="experience2-container" className="experience" data-aos="fade-right">
-                <img id="prs" alt="University of Waterloo's Print + Retail Solutions Logo" src={prsImage}></img>
+            <div id="experience3-container" className="experience" data-aos="fade-right">
+                <img id="prs1" alt="University of Waterloo's Print + Retail Solutions Logo" src={prsImage}></img>
                 <div className="text-content">
                     <h2 className="job-title">
                         <span className="position">Front-End Web Developer</span>
@@ -69,7 +85,7 @@ function Experience() {
                 </div>
             </div> */}
             <br></br>
-            <div id="experience3-container" className="experience" data-aos="fade-left">
+            <div id="experience2-container" className="experience" data-aos="fade-left">
                 <img id="warriors" alt="Waterloo Warriors Logo" src={warriorsImage}></img>
                 <div className="text-content">
                     <h2 className="job-title">
@@ -84,7 +100,7 @@ function Experience() {
                 </div>
             </div>
             <br></br>
-            <div id="experience4-container" className="experience" data-aos="fade-right">
+            <div id="experience1-container" className="experience" data-aos="fade-right">
                 <img id="svpteens" alt="Social Venture Partners Teens Logo" src={svpImage}></img>
                 <div className="text-content">
                     <h2 className="job-title">
