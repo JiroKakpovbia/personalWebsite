@@ -16,8 +16,8 @@ function Experience() {
                     <h2 className="job-title">
                         <span className="position">Junior Software Developer</span>
                         <span className="dates">
-                            <span className="short">May 2025 — Aug 2025</span>
-                            <span className="full">May 2025 — August 2025</span>
+                            <span className="short">May 2025 — Present</span>
+                            <span className="full">May 2025 — Present</span>
                         </span>
                     </h2>
                     <p className="location">The Equitable Life Insurance Company of Canada, Waterloo, ON</p>
