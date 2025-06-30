@@ -1,96 +1,98 @@
 .contact {
-    border-radius: 1rem;
-    padding: 1.4rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1.4rem;
+	border-radius: 1rem;
+	padding: 1.4rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	gap: 1.4rem;
 }
 
 .contact i {
-    font-size: 3rem;
+	font-size: 3rem;
 }
 
 .contact a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .contact span {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .method {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin: auto;
 }
 
 .contact-form {
-    border-radius: 1rem;
-    padding: 1.4rem;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
+	border-radius: 1rem;
+	padding: 1.4rem;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	gap: 1.4rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-    border-radius: 0.5rem;
-    padding: 1rem;
-    border: 1px solid #444;
-    width: 100%;
-    font-size: 1rem;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	border: 1px solid #444;
+	width: 100%;
+	font-size: 1rem;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    outline: none;
-    border-color: #a188d8;
-    box-shadow: 0 0 0.25rem #a188d8;
+	outline: none;
+	border-color: #a188d8;
+	box-shadow: 0 0 0.25rem #a188d8;
 }
 
 .contact-form textarea {
-    resize: vertical;
-    min-height: 8rem;
+	resize: vertical;
+	min-height: 8rem;
 }
 
 .contact-form button {
-    width: 100%;
+	width: 100%;
 }
 
 /* Media Queries */
 @media only screen and (min-width: 0px) {
-    .method {
-        width: 100%;
-    }
+	.method {
+		width: 100%;
+	}
 
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 1rem;
-    }
+	.contact-form input,
+	.contact-form textarea {
+		font-size: 1rem;
+	}
 }
 
-@media only screen and (min-width: 375px) {}
+@media only screen and (min-width: 375px) {
+}
 
 @media only screen and (min-width: 768px) {
-    .method {
-        width: calc(50% - 1.4rem);
-    }
+	.method {
+		width: calc(50% - 1.4rem);
+	}
 
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 1.2rem;
-    }
+	.contact-form input,
+	.contact-form textarea {
+		font-size: 1.2rem;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
-    .method {
-        width: calc(25% - 1.4rem);
-    }
+	.method {
+		width: calc(25% - 1.4rem);
+	}
 }
 
-@media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
+}

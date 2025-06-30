@@ -4,10 +4,9 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: ["Gotham", "Graphik", "Helvetica"],
-			serif: ["Georgia", "Cambria"], 
+			serif: ["Georgia", "Cambria"],
 		},
 		extend: {},
 	},
 	plugins: [],
-}
-
+};

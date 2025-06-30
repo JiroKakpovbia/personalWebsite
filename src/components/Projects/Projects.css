@@ -1,38 +1,41 @@
 #projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.4rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.4rem;
 }
 
 .project {
-    border-radius: 1rem;
-    padding: 1.4rem;
-    box-sizing: border-box;
+	border-radius: 1rem;
+	padding: 1.4rem;
+	box-sizing: border-box;
 }
 
 .project p {
-    margin: auto;
+	margin: auto;
 }
 
 .project a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* Media Queries */
 @media only screen and (min-width: 0px) {
-    .project {
-        width: calc(100% - 1.4rem);
-    }
+	.project {
+		width: calc(100% - 1.4rem);
+	}
 }
 
-@media only screen and (min-width: 375px) {}
+@media only screen and (min-width: 375px) {
+}
 
 @media only screen and (min-width: 768px) {
-    .project {
-        width: calc(50% - 1.4rem);
-    }
+	.project {
+		width: calc(50% - 1.4rem);
+	}
 }
 
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+}
 
-@media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
+}

@@ -37,14 +37,14 @@ function App() {
 
 	return (
 		<>
-		<Navigation isNavScrolled={isNavScrolled} />
-		<Home />
-		<About />
-		<Projects />
-		<Skills />
-		<Experience />
-		<Contact />
-		<Footer />
+			<Navigation isNavScrolled={isNavScrolled} />
+			<Home />
+			<About />
+			<Projects />
+			<Skills />
+			<Experience />
+			<Contact />
+			<Footer />
 		</>
 	);
 }

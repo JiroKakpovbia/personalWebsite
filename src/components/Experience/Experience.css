@@ -1,39 +1,39 @@
 .experience {
-    border-radius: 1rem;
-    padding: 1.4rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.4rem;
+	border-radius: 1rem;
+	padding: 1.4rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.4rem;
 }
 
 .experience img {
-    width: 5rem;
-    height: auto;
-    margin: auto;
+	width: 5rem;
+	height: auto;
+	margin: auto;
 }
 
 .job-title {
-    display: flex;
-    margin: 0;
+	display: flex;
+	margin: 0;
 }
 
 .job-title .dates {
-    font-style: normal;
-    font-weight: normal;
+	font-style: normal;
+	font-weight: normal;
 }
 
 .job-title .dates .full {
-    display: none;
+	display: none;
 }
 
 .job-title .dates .short {
-    display: inline;
+	display: inline;
 }
 
 .location {
-    text-align: left;
-    font-style: italic;
-    margin-bottom: 0.5rem;
+	text-align: left;
+	font-style: italic;
+	margin-bottom: 0.5rem;
 }
 
 /* Media Queries */
@@ -42,50 +42,51 @@
 		font-size: 1.25rem;
 	}
 
-    .experience {
-        flex-direction: column;
-        align-items: center;
-    }
+	.experience {
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .job-title {
-        flex-direction: column;
-    }
+	.job-title {
+		flex-direction: column;
+	}
 }
 
-@media only screen and (min-width: 375px) {}
+@media only screen and (min-width: 375px) {
+}
 
 @media only screen and (min-width: 768px) {
-    .job-title .dates {
-        font-size: 1.5rem;
-    }
+	.job-title .dates {
+		font-size: 1.5rem;
+	}
 
-    .experience {
-        flex-direction: row;
-    }
+	.experience {
+		flex-direction: row;
+	}
 
-    .job-title {
-        align-items: flex-start;
-        text-align: left;
-    }
+	.job-title {
+		align-items: flex-start;
+		text-align: left;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
-    .job-title {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+	.job-title {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 
-    .location {
-        font-style: normal;
-    }
+	.location {
+		font-style: normal;
+	}
 }
 
 @media only screen and (min-width: 1440px) {
 	.job-title .dates .full {
-        display: inline;
-    }
-    
-    .job-title .dates .short {
-        display: none;
-    }
+		display: inline;
+	}
+
+	.job-title .dates .short {
+		display: none;
+	}
 }

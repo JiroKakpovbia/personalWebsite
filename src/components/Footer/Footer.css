@@ -1,27 +1,32 @@
 #footer {
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-    margin-bottom: 0rem;
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+	margin-bottom: 0rem;
 }
 
 .footer {
-    background-color: #1e1e21;
-    align-items: center;
-    text-align: center;
-    margin: auto;
+	background-color: #1e1e21;
+	align-items: center;
+	text-align: center;
+	margin: auto;
 }
 
 .footer p {
-    max-width: 80%;
+	max-width: 80%;
 }
 
 /* Media Queries */
-@media only screen and (min-width: 0px) {}
+@media only screen and (min-width: 0px) {
+}
 
-@media only screen and (min-width: 375px) {}
+@media only screen and (min-width: 375px) {
+}
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+}
 
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+}
 
-@media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
+}
