@@ -114,8 +114,6 @@ function Home() {
 					</p>
 				</div>
 			</div>
-			{/* Scroll Arrow */}
-			{/* <div className="arrow" */}
 		</section>
 	);
 }
