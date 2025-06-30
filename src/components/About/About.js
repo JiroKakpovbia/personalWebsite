@@ -1,8 +1,7 @@
-import React from "react"
 import "./About.css"
 
-import headshotImage from "../assets/headshot.jpg";
-import resumePdf from "../assets/Jiro Kakpovbia's Resume.pdf";
+import headshotImage from "../../assets/headshot.jpg";
+import resumePdf from "../../assets/Jiro Kakpovbia's Resume.pdf";
 
 const degreeStart = new Date("September 1, 2022 00:00:00");
 const currentDate = new Date();

@@ -1,10 +1,9 @@
-import React from "react"
 import "./Experience.css"
 
-import equitableImage from "../assets/equitable.png";
-import prsImage from "../assets/wprint.png";
-import warriorsImage from "../assets/waterloowarriors.png";
-import svpImage from "../assets/svpteens.png";
+import equitableImage from "../../assets/equitable.png";
+import prsImage from "../../assets/wprint.png";
+import warriorsImage from "../../assets/waterloowarriors.png";
+import svpImage from "../../assets/svpteens.png";
 
 function Experience() {
     return (
