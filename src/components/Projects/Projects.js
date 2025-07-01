@@ -11,9 +11,7 @@ function Projects() {
 		try {
 			const response = await fetch(url);
 			if (!response.ok) {
-				throw new Error(
-					`Failed to fetch repositories: ${response.status}`
-				);
+				throw new Error(`Failed to fetch repositories: ${response.status}`);
 			}
 
 			const reposData = await response.json();
@@ -32,23 +30,14 @@ function Projects() {
 			<h1>Projects</h1>
 			<div id="projects-container">
 				{repos.map((repo, index) => (
-					<div
-						key={repo.id}
-						className="project"
-						data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-					>
+					<div key={repo.id} className="project" data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}>
 						<h2>
-							<a
-								href={repo.html_url}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href={repo.html_url} target="_blank" rel="noopener noreferrer">
 								{repo.name}
 							</a>
 						</h2>
 						<p>
-							<b>Description:</b>{" "}
-							{repo.description || "No description available."}
+							<b>Description:</b> {repo.description || "No description available."}
 						</p>
 						<p>
 							<b>Language:</b> {repo.language || "N/A"}
