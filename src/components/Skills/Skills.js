@@ -5,10 +5,8 @@ function Skills() {
 		<section id="skills">
 			<h1>Skills</h1>
 			<div id="skills-container">
+				<h2>Languages:</h2>
 				<div id="languages" className="skills" data-aos="fade-in" data-aos-delay="0">
-					<h2 data-aos="fade-left" data-aos-delay="0">
-						Languages:
-					</h2>
 					<a href="https://www.cprogramming.com" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="50">
 						<img
 							alt="C Logo"
@@ -137,25 +135,14 @@ function Skills() {
 						/>
 						<span className="display-text">GraphQL</span>
 					</a>
-					{/* <a
-						href="https://racket-lang.org/"
-						target="_blank"
-						rel="noopener noreferrer"
-						data-aos="fade-left"
-						data-aos-delay="700"
-					>
-						<img
-							alt="Racket logo"
-							src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Racket-logo.svg"
-						/>
+					<a href="https://racket-lang.org/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="700">
+						<img alt="Racket logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Racket-logo.svg" />
 						<span className="display-text">Racket</span>
-					</a> */}
+					</a>
 				</div>
 				<br />
+				<h2>Frameworks:</h2>
 				<div id="frameworks" className="skills" data-aos="fade-in" data-aos-delay="0">
-					<h2 data-aos="fade-left" data-aos-delay="0">
-						Frameworks:
-					</h2>
 					<a
 						href="https://en.wikipedia.org/wiki/Node.js"
 						target="_blank"
@@ -200,10 +187,8 @@ function Skills() {
 					</a>
 				</div>
 				<br />
+				<h2>Libraries:</h2>
 				<div id="libraries" className="skills" data-aos="fade-in" data-aos-delay="0">
-					<h2 data-aos="fade-left" data-aos-delay="0">
-						Libraries:
-					</h2>
 					<a href="https://react.dev/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="50">
 						<img
 							alt="React Logo"
@@ -248,10 +233,8 @@ function Skills() {
 					</a>
 				</div>
 				<br />
+				<h2>Developer Tools:</h2>
 				<div id="developer-tools" className="skills" data-aos="fade-in" data-aos-delay="0">
-					<h2 data-aos="fade-left" data-aos-delay="0">
-						Developer Tools:
-					</h2>
 					<a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="50">
 						<img alt="Git Logo" src="https://avatars.githubusercontent.com/u/18133?s=280&v=4" />
 						<span className="display-text">Git</span>
@@ -341,20 +324,17 @@ function Skills() {
 						/>
 						<span className="display-text">xCode</span>
 					</a>
-					{/* <a
+					<a
 						href="https://learn.microsoft.com/en-us/windows/terminal/"
 						target="_blank"
 						rel="noopener noreferrer"
 						data-aos="fade-left"
 						data-aos-delay="450"
 					>
-						<img
-							alt="Terminal logo"
-							src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Terminalicon2.png"
-						/>
+						<img alt="Terminal logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Terminalicon2.png" />
 						<span className="display-text">Terminal</span>
-					</a> */}
-					{/* <a
+					</a>
+					<a
 						href="https://learn.microsoft.com/en-us/powershell/"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -366,7 +346,7 @@ function Skills() {
 							src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/250px-PowerShell_5.0_icon.png"
 						/>
 						<span className="display-text">Powershell</span>
-					</a> */}
+					</a>
 					<a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="650">
 						<img alt="Figma logo" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" />
 						<span className="display-text">Figma</span>
@@ -379,17 +359,8 @@ function Skills() {
 						<img alt="Unity Logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Unity_2021.svg" />
 						<span className="display-text">Unity</span>
 					</a>
-					{/* <a
-						href="https://crontab.guru/"
-						target="_blank"
-						rel="noopener noreferrer"
-						data-aos="fade-left"
-						data-aos-delay="250"
-					>
-						<img
-							alt="cron logo"
-							src="https://miro.medium.com/v2/resize:fit:680/1*4-_XX9i1ans8TZERq0sK0A.png"
-						/>
+					{/* <a href="https://crontab.guru/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="250">
+						<img alt="cron logo" src="https://miro.medium.com/v2/resize:fit:680/1*4-_XX9i1ans8TZERq0sK0A.png" />
 						<span className="display-text">cron</span>
 					</a> */}
 					<a href="https://curl.se/" target="_blank" rel="noopener noreferrer" data-aos="fade-left" data-aos-delay="800">
@@ -475,7 +446,10 @@ function Skills() {
 						data-aos="fade-left"
 						data-aos-delay="1300"
 					>
-						<img alt="Azure DevOps logo" src="https://www.theprovatogroup.com/wp-content/uploads/2020/01/devops.png" />
+						<img
+							alt="Azure DevOps logo"
+							src="https://cdn.iconscout.com/icon/free/png-256/free-azure-devops-technology-logo-social-media-logo-logo-company-download-svg-png-gif-flat-icon-logos-technology-logo-vol-1-pack-azure-devops-logo-icon-2944715.png"
+						/>
 						<span className="display-text">Azure DevOps</span>
 					</a>
 					<a
