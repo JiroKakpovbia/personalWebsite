@@ -1,6 +1,6 @@
 import "./About.css";
 
-import headshotImage from "../../assets/headshot.jpg";
+import headshotImage from "../../assets/Jiro Kakpovbia - Headshot.jpeg";
 import resumePdf from "../../assets/Jiro Kakpovbia - Resume.pdf";
 
 const degreeStart = new Date("September 1, 2022 00:00:00");
