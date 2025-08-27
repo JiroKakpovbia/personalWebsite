@@ -21,7 +21,7 @@ function Experience() {
 					</h2>
 					<p className="location">The Equitable Life Insurance Company of Canada, Waterloo, ON</p>
 					<p>
-						<b>Languages and Tools:</b> React, TypeScript, C#, SQL, .NET.
+						<b>Languages and Tools:</b> React, TypeScript, C#, SQL, .NET, Azure, Jest, xUnit.
 					</p>
 				</div>
 			</div>
