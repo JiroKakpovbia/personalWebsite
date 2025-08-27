@@ -84,7 +84,14 @@ function Navigation({ isNavScrolled }) {
 							<a href="#contact">Contact</a>
 						</li>
 					</ul>
-					<button className="theme-toggle" data-aos="fade-down" data-aos-delay="500" data-aos-once="true" onClick={toggleLightMode}>
+					<button
+						aria-label="theme-toggle"
+						className="theme-toggle"
+						data-aos="fade-down"
+						data-aos-delay="500"
+						data-aos-once="true"
+						onClick={toggleLightMode}
+					>
 						<i className={`fas ${lightMode ? "fa-sun" : "fa-moon"}`}></i>
 					</button>
 				</div>
@@ -97,7 +104,14 @@ function Navigation({ isNavScrolled }) {
 				</div>
 
 				<div className="nav-actions" data-aos="fade-down" data-aos-delay="500" data-aos-once="true">
-					<button className="theme-toggle" data-aos="fade-down" data-aos-delay="500" data-aos-once="true" onClick={toggleLightMode}>
+					<button
+						aria-label="theme-toggle"
+						className="theme-toggle"
+						data-aos="fade-down"
+						data-aos-delay="500"
+						data-aos-once="true"
+						onClick={toggleLightMode}
+					>
 						<i className={`fas ${lightMode ? "fa-sun" : "fa-moon"}`}></i>
 					</button>
 					<div className="hamburger-menu" data-aos="fade-down" data-aos-delay="500" data-aos-once="true">

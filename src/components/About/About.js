@@ -33,7 +33,9 @@ function About() {
 				{/* Description */}
 				<div className="text-content">
 					<p>
-						Hey! My name is Jiro Kakpovbia, and I'm a {currentAcademicYear}. I'm a versatile developer with experience across front-end, back-end, full-stack, and AI projects. I've worked with technologies like C#, Python, React, Node.js, and Docker, and contributed to scalable enterprise applications, OCR-powered automation, and retail system integrations.
+						Hey! My name is Jiro Kakpovbia, and I'm a {currentAcademicYear}. I'm a versatile developer with experience across front-end,
+						back-end, full-stack, and AI projects. I've worked with technologies like C#, Python, React, Node.js, and Docker, and
+						contributed to scalable enterprise applications, OCR-powered automation, and retail system integrations.
 					</p>
 					<br></br>
 					<p>

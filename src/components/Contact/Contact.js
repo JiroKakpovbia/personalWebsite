@@ -16,7 +16,13 @@ function Contact() {
 			<div id="contact-container" className="contact" data-aos="fade-right">
 				<div className="method">
 					<p>
-						<a href="tel:2268993921" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center">
+						<a
+							aria-label="Call my Phone Number"
+							href="tel:2268993921"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex flex-col items-center text-center"
+						>
 							<i id="phone" className="fa-solid fa-phone mb-4" alt="Call my Phone Number"></i>
 							<span>(226) 899-3921</span>
 						</a>
@@ -25,6 +31,7 @@ function Contact() {
 				<div className="method">
 					<p>
 						<a
+							aria-label="Send me an Email"
 							href="mailto:kakpovbia.jiro@gmail.com"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -38,6 +45,7 @@ function Contact() {
 				<div className="method">
 					<p>
 						<a
+							aria-label="Visit my LinkedIn"
 							href="https://linkedin.com/in/jiro-kakpovbia"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -51,6 +59,7 @@ function Contact() {
 				<div className="method">
 					<p>
 						<a
+							aria-label="Visit my GitHub"
 							href="https://github.com/JiroKakpovbia"
 							target="_blank"
 							rel="noopener noreferrer"
