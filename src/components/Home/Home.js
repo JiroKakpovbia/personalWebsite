@@ -5,7 +5,7 @@ function Home() {
 	return (
 		<section id="home">
 			{/* Animation */}
-			<div className="background-animation" id="home-animation" data-aos="fade-in" data-aos-delay="2250" data-aos-once="true">
+			<div className="background-animation" id="home-animation">
 				<dotlottie-player
 					background="transparent"
 					speed="1"
@@ -18,19 +18,19 @@ function Home() {
 			{/* Content */}
 			<div className="home" id="home-textContainer">
 				<div id="home-textContainer">
-					<p className="homeSubtitle" data-aos="fade-down" data-aos-delay="1000" data-aos-once="true">
+					<p className="homeSubtitle" data-aos="fade-down" data-aos-once="true">
 						Hi, my name is
 					</p>
-					<h1 className="homeTitle" data-aos="fade-in" data-aos-delay="2000" data-aos-once="true">
+					<h1 className="homeTitle" data-aos="fade-in" data-aos-delay="300" data-aos-once="true">
 						Jiro Kakpovbia
 					</h1>
-					<p className="homeSubtitle" data-aos="fade-up" data-aos-delay="1500" data-aos-once="true">
+					<p className="homeSubtitle" data-aos="fade-up" data-aos-once="true">
 						Full-Stack Software Developer
 					</p>
 				</div>
 
 				{/* Social Media */}
-				<div className="socials" id="home-socialsContainer" data-aos="fade-up" data-aos-delay="2500" data-aos-once="true">
+				<div className="socials" id="home-socialsContainer" data-aos="fade-up" data-aos-once="true">
 					<p>
 						<a aria-label="Visit my Instagram" href="https://www.instagram.com/jiro.kakpovbia" target="_blank" rel="noopener noreferrer">
 							<i id="instagram" className="fa-brands fa-instagram" alt="Visit my Instagram">
