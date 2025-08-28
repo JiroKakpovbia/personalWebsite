@@ -21,32 +21,42 @@ body.light-mode {
 	--accent-colour: #e9e6f2;
 }
 
+* {
+	--colour-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
 #desktop-nav,
 #hamburger-nav {
-	background-color: var(--bg-colour);
 	color: var(--text-colour);
+	background-color: var(--bg-colour);
+	transition: var(--colour-transition);
 }
 
 #desktop-nav.scrolled,
 #hamburger-nav.scrolled {
 	background-color: var(--accent-colour);
+	transition: var(--colour-transition);
 }
 
 #hamburger-nav .hamburger-icon span {
 	background-color: var(--text-colour);
+	transition: var(--colour-transition);
 }
 
 #hamburger-nav .menu-links {
 	background-color: var(--bg-colour);
+	transition: var(--colour-transition);
 }
 
 .menu-links li a:hover {
 	background-color: var(--secondary-colour);
+	transition: var(--colour-transition);
 }
 
 .homeTitle,
 .homeSubtitle {
 	color: var(--text-colour);
+	transition: var(--colour-transition);
 }
 
 #about .about,
@@ -56,39 +66,47 @@ body.light-mode {
 #contact .contact-form,
 #contact .contact {
 	background-color: var(--accent-colour);
+	transition: var(--colour-transition);
 }
 
 #projects .project b {
 	color: var(--primary-colour);
+	transition: var(--colour-transition);
 }
 
 #projects .project a {
 	color: var(--primary-colour);
 	text-decoration-color: var(--primary-colour);
+	transition: var(--colour-transition);
 }
 
 #projects .project a:hover {
 	color: var(--secondary-colour);
 	text-decoration-color: var(--secondary-colour);
+	transition: var(--colour-transition);
 }
 
 #skills .display-text,
 #experience .job-title {
 	color: var(--text-colour);
+	transition: var(--colour-transition);
 }
 
 #skills .display-text {
 	background-color: var(--bg-colour);
+	transition: var(--colour-transition);
 }
 
 #contact .contact-form input,
 #contact .contact-form textarea {
-	background-color: var(--bg-colour);
 	color: var(--text-colour);
+	background-color: var(--bg-colour);
+	transition: var(--colour-transition);
 }
 
 #footer .footer {
 	background-color: var(--accent-colour);
+	transition: var(--colour-transition);
 }
 
 .theme-toggle {
@@ -97,7 +115,7 @@ body.light-mode {
 	color: var(--text-colour);
 	cursor: pointer;
 	font-size: 1rem;
-	transition: color 0.3s ease-in-out;
+	transition: var(--colour-transition);
 }
 
 /* Other */
@@ -109,7 +127,7 @@ html {
 body {
 	background-color: var(--bg-colour);
 	overflow-x: hidden;
-	transition: background-color 0.3s ease-in-out;
+	transition: var(--colour-transition);
 }
 
 section {
@@ -125,21 +143,25 @@ h1 {
 	color: var(--primary-colour);
 	font-weight: bold;
 	margin-bottom: 1rem;
+	transition: var(--colour-transition);
 }
 
 h2 {
 	font-weight: bold;
 	color: var(--text-colour);
 	margin-bottom: 0.5rem;
+	transition: var(--colour-transition);
 }
 
 p {
 	color: var(--text-colour);
+	transition: var(--colour-transition);
 }
 
 a:hover {
 	color: var(--secondary-colour);
 	text-decoration-color: var(--secondary-colour);
+	transition: var(--colour-transition);
 }
 
 .text-content {
@@ -147,8 +169,8 @@ a:hover {
 }
 
 .button {
-	background-color: var(--primary-colour);
 	color: #f9f7ff;
+	background-color: var(--primary-colour);
 	border-radius: 0.5rem;
 	padding: 1rem;
 	text-align: center;
@@ -156,10 +178,12 @@ a:hover {
 	display: inline-block;
 	margin: auto;
 	cursor: pointer;
+	transition: var(--colour-transition);
 }
 
 .button:hover {
 	background-color: var(--secondary-colour);
+	transition: var(--colour-transition);
 }
 
 button:focus,
@@ -185,6 +209,7 @@ textarea:focus {
 	z-index: 1000;
 	padding: 20px;
 	box-sizing: border-box;
+	transition: var(--colour-transition);
 }
 
 /* Media Queries */
