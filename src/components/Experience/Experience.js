@@ -5,126 +5,106 @@ import prsImage from "../../assets/experience/wprint.png";
 import warriorsImage from "../../assets/experience/waterloowarriors.png";
 import svpImage from "../../assets/experience/svpteens.png";
 
+const experiences = [
+	{
+		company: "The Equitable Life Insurance Company of Canada",
+		position: "Junior Software Developer",
+		startDate: "May 2025",
+		endDate: "Present",
+		location: "Waterloo, ON",
+		content: "<b>Languages and Tools:</b> React, TypeScript, C#, SQL, .NET, Azure, Jest, xUnit, Postman, Swagger, Figma, Storybook.",
+		image: equitableImage,
+	},
+	{
+		company: "Print + Retail Solutions, University of Waterloo",
+		position: "Back-End Software Engineer",
+		startDate: "September 2024",
+		endDate: "December 2024",
+		location: "Waterloo, ON",
+		content: "<b>Languages and Tools:</b> BASIC, PHP, HTML, Javascript, MySQL, Node.js, Docker, GraphQL.",
+		image: prsImage,
+	},
+	{
+		company: "Print + Retail Solutions, University of Waterloo",
+		position: "Front-End Web Developer",
+		startDate: "January 2024",
+		endDate: "April 2024",
+		location: "Waterloo, ON",
+		content: "<b>Languages and Tools:</b> BASIC, PHP, HTML, Javascript, MySQL.",
+		image: prsImage,
+	},
+	{
+		company: "University of Waterloo Varsity Football",
+		position: "Varsity Athlete",
+		startDate: "August 2022",
+		endDate: "August 2024",
+		location: "Waterloo, ON",
+		content: "Received University of Waterloo Varsity Football Athletic Scholarship.",
+		image: warriorsImage,
+	},
+	// {
+	// 	company: "Home Depot",
+	// 	position: "Order Picker, Part-Time",
+	// 	startDate: "July 2023",
+	// 	endDate: "October 2023",
+	// 	location: "Waterloo, ON",
+	// 	content: "Gathered merchandise throughout the store, filled orders promptly, and carefully packed orders ensuring products remained undamaged.",
+	// 	image: homeDepotImage,
+	// },
+	// {
+	// 	company: "Sobeys",
+	// 	position: "Grocery Clerk, Part-Time",
+	// 	startDate: "April 2023",
+	// 	endDate: "September 2024",
+	// 	location: "Waterloo, ON",
+	// 	content: "Efficiently and effectively organized shelf products while maintaining displays within the store.",
+	// 	image: sobeysImage,
+	// },
+	{
+		company: "Social Venture Partners Teens",
+		position: "Vice Chair of Engagement",
+		startDate: "September 2019",
+		endDate: "June 2022",
+		location: "Waterloo, ON",
+		content:
+			"Contributed to raising nearly $4000 presented to the Bereaved Families of Ontario in 2021, and nearly $5000 to Martin Luther University College in 2022.",
+		image: svpImage,
+	},
+];
+
 function Experience() {
 	return (
 		<section id="experience">
 			<h1>Experience</h1>
-			<div id="experience5-container" className="experience" data-aos="fade-right">
-				<img id="equitable" alt="The Equitable Life Insurance Company of Canada Logo" src={equitableImage}></img>
-				<div className="text-content">
-					<h2 className="job-title">
-						<span className="position">Junior Software Developer</span>
-						<span className="dates">
-							<span className="short">May 2025 — Present</span>
-							<span className="full">May 2025 — Present</span>
-						</span>
-					</h2>
-					<p className="location">The Equitable Life Insurance Company of Canada, Waterloo, ON</p>
-					<p>
-						<b>Languages and Tools:</b> React, TypeScript, C#, SQL, .NET, Azure, Jest, xUnit.
-					</p>
+			{experiences.map((exp, idx) => (
+				<div key={`${exp.company}-${exp.position}`}>
+					<div id={`experience-${idx}-container`} className="experience" data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}>
+						<img alt={`${exp.company} Logo`} src={exp.image} />
+						<div className="text-content">
+							<h2 className="job-title">
+								<span className="position">{exp.position}</span>
+								<span className="dates">
+									<span className="short">
+										{`${exp.startDate.split(" ")[0].substring(0, 3)} ${exp.startDate.split(" ")[1]} — ${
+											exp.endDate === "Present"
+												? "Present"
+												: exp.endDate.split(" ")[0].substring(0, 3) + " " + exp.endDate.split(" ")[1]
+										}`}
+									</span>
+									<span className="full">
+										{exp.startDate} — {exp.endDate}
+									</span>
+								</span>
+							</h2>
+							<p className="location">
+								{exp.company}, {exp.location}
+							</p>
+							<p dangerouslySetInnerHTML={{ __html: exp.content }}></p>
+						</div>
+					</div>
+					<br></br>
 				</div>
-			</div>
-			<br></br>
-			<div id="experience4-container" className="experience" data-aos="fade-left">
-				<img id="prs2" alt="University of Waterloo's Print + Retail Solutions Logo" src={prsImage}></img>
-				<div className="text-content">
-					<h2 className="job-title">
-						<span className="position">Back-End Software Engineer</span>
-						<span className="dates">
-							<span className="short">Sep 2024 — Dec 2024</span>
-							<span className="full">September 2024 — December 2024</span>
-						</span>
-					</h2>
-					<p className="location">University of Waterloo's Print + Retail Solutions, Waterloo, ON</p>
-					<p>
-						<b>Languages and Tools:</b> UniVerse BASIC, PHP, HTML, Javascript, Node.js, Docker, MySQL.
-					</p>
-				</div>
-			</div>
-			<br></br>
-			<div id="experience3-container" className="experience" data-aos="fade-right">
-				<img id="prs1" alt="University of Waterloo's Print + Retail Solutions Logo" src={prsImage}></img>
-				<div className="text-content">
-					<h2 className="job-title">
-						<span className="position">Front-End Web Developer</span>
-						<span className="dates">
-							<span className="short">Jan 2024 — Apr 2024</span>
-							<span className="full">January 2024 — April 2024</span>
-						</span>
-					</h2>
-					<p className="location">University of Waterloo's Print + Retail Solutions, Waterloo, ON</p>
-					<p>
-						<b>Languages and Tools:</b> BASIC, PHP, HTML, Javascript, SQL.
-					</p>
-				</div>
-			</div>
-			{/* <br></br>
-            <div className="experience" data-aos="fade-left">
-                <img id="homedepot" alt="Home Depot Logo" src="./../assets/homedepot.png"/>
-                <div className="text-content">
-                    <h2 className="job-title">
-                        <span className="position">Order Picker, Part-Time</span>
-                        <span className="dates">
-                            <span className="short">Jul 2023 — Oct 2023</span>
-                            <span className="full">July 2023 — October 2023</span>
-                        </span>
-                    </h2>
-                    <p className="location">Home Depot, Waterloo, ON</p>
-                    <p>Gathered merchandise throughout the store, filled orders promptly, and carefully packed orders ensuring products remained undamaged.</p>
-                </div>
-            </div>
-            <br></br>
-            <div className="experience" data-aos="fade-right">
-                <img id="sobeys" alt="Sobeys Logo" src="./../assets/sobeys.png"/>
-                <div className="text-content">
-                    <h2 className="job-title">
-                        <span className="position">Grocery Clerk, Part-Time</span>
-                        <span className="dates">
-                            <span className="short">Apr 2023 — Sep 2024</span>
-                            <span className="full">April 2023 — September 2024</span>
-                        </span>
-                    </h2>
-                    <p className="location">Sobeys, Waterloo, ON</p>
-                    <p>Efficiently and effectively organized shelf products while maintaining displays within the store.</p>
-                </div>
-            </div> */}
-			<br></br>
-			<div id="experience2-container" className="experience" data-aos="fade-left">
-				<img id="warriors" alt="Waterloo Warriors Logo" src={warriorsImage}></img>
-				<div className="text-content">
-					<h2 className="job-title">
-						<span className="position">
-							<a href="https://athletics.uwaterloo.ca/sports/football/roster/jiro-kakpovbia/9548">Varsity Athlete</a>
-						</span>
-						<span className="dates">
-							<span className="short">Aug 2022 — Aug 2024</span>
-							<span className="full">August 2022 — August 2024</span>
-						</span>
-					</h2>
-					<p className="location">University of Waterloo Varsity Football, Waterloo, ON</p>
-					<p>Received University of Waterloo Varsity Football Athletic Scholarship.</p>
-				</div>
-			</div>
-			<br></br>
-			<div id="experience1-container" className="experience" data-aos="fade-right">
-				<img id="svpteens" alt="Social Venture Partners Teens Logo" src={svpImage}></img>
-				<div className="text-content">
-					<h2 className="job-title">
-						<span className="position">Vice Chair of Engagement</span>
-						<span className="dates">
-							<span className="short">Sep 2019 — Jun 2022</span>
-							<span className="full">September 2019 — June 2022</span>
-						</span>
-					</h2>
-					<p className="location">Social Venture Partners Teens, Waterloo, ON</p>
-					<p>
-						Contributed to raising nearly $4000 presented to the Bereaved Families of Ontario in 2021, and nearly $5000 to Martin Luther
-						University College in 2022.
-					</p>
-				</div>
-			</div>
-			<br></br>
+			))}
 		</section>
 	);
 }
