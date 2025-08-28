@@ -137,12 +137,6 @@ p {
 	color: var(--text-colour);
 }
 
-a {
-	text-decoration: underline;
-	text-underline-offset: 0.5rem;
-	text-decoration-color: var(--text-colour);
-}
-
 a:hover {
 	color: var(--secondary-colour);
 	text-decoration-color: var(--secondary-colour);

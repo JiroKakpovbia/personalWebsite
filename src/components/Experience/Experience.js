@@ -1,9 +1,9 @@
 import "./Experience.css";
 
-import equitableImage from "../../assets/equitable.png";
-import prsImage from "../../assets/wprint.png";
-import warriorsImage from "../../assets/waterloowarriors.png";
-import svpImage from "../../assets/svpteens.png";
+import equitableImage from "../../assets/experience/equitable.png";
+import prsImage from "../../assets/experience/wprint.png";
+import warriorsImage from "../../assets/experience/waterloowarriors.png";
+import svpImage from "../../assets/experience/svpteens.png";
 
 function Experience() {
 	return (
@@ -94,7 +94,9 @@ function Experience() {
 				<img id="warriors" alt="Waterloo Warriors Logo" src={warriorsImage}></img>
 				<div className="text-content">
 					<h2 className="job-title">
-						<span className="position">Varsity Athlete</span>
+						<span className="position">
+							<a href="https://athletics.uwaterloo.ca/sports/football/roster/jiro-kakpovbia/9548">Varsity Athlete</a>
+						</span>
 						<span className="dates">
 							<span className="short">Aug 2022 — Aug 2024</span>
 							<span className="full">August 2022 — August 2024</span>
