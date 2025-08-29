@@ -16,6 +16,38 @@ import Footer from "./components/Footer/Footer";
 function App() {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
 
+	// Determine the theme of the the website (dark/light)
+	const getInitialTheme = () => {
+		const storedPreference = localStorage.getItem("theme");
+		if (storedPreference) return storedPreference;
+		return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+	};
+
+	const [theme, setTheme] = useState(getInitialTheme());
+
+	// Apply theme to body
+	useEffect(() => {
+		document.body.classList.toggle("light-mode", theme === "light");
+		document.body.classList.toggle("dark-mode", theme === "dark");
+		localStorage.setItem("theme", theme);
+	}, [theme]);
+
+	// Listen for system theme changes
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
+		const handleChange = (event) => {
+			if (!localStorage.getItem("theme")) {
+				setTheme(event.matches ? "light" : "dark");
+			}
+		};
+		mediaQuery.addEventListener("change", handleChange);
+		return () => mediaQuery.removeEventListener("change", handleChange);
+	}, []);
+
+	const toggleTheme = () => {
+		setTheme((prev) => (prev === "light" ? "dark" : "light"));
+	};
+
 	// Handle scroll event to change nav colour
 	const handleScroll = () => {
 		setIsNavScrolled(window.scrollY > 50);
@@ -37,7 +69,7 @@ function App() {
 
 	return (
 		<>
-			<Navigation isNavScrolled={isNavScrolled} />
+			<Navigation isNavScrolled={isNavScrolled} theme={theme} toggleTheme={toggleTheme} />
 			<Home />
 			<About />
 			<Projects />

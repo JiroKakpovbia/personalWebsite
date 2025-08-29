@@ -1,59 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./Navigation.css";
 
-function Navigation({ isNavScrolled }) {
-	// Check and set the initial theme
-	const initialTheme = (() => {
-		const storedPreference = localStorage.getItem("theme");
-		if (storedPreference) {
-			return storedPreference === "light";
-		}
-		return window.matchMedia("(prefers-color-scheme: light)").matches;
-	})();
-
-	// Apply initial theme
-	if (initialTheme) {
-		document.body.classList.remove("dark-mode");
-		document.body.classList.add("light-mode");
-	} else {
-		document.body.classList.remove("light-mode");
-		document.body.classList.add("dark-mode");
-	}
-
-	const [lightMode, setLightMode] = useState(initialTheme);
-
-	// Toggle Light/Dark Mode
-	const toggleLightMode = () => {
-		const newLightMode = !lightMode;
-		setLightMode(newLightMode);
-		document.body.classList.toggle("light-mode", newLightMode);
-		document.body.classList.toggle("dark-mode", !newLightMode);
-
-		// Save user preference
-		localStorage.setItem("theme", newLightMode ? "light" : "dark");
-	};
-
-	// Listen for changes to system theme preference
-	useEffect(() => {
-		const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
-
-		const handleChange = (event) => {
-			if (!localStorage.getItem("theme")) {
-				setLightMode(event.matches);
-				document.body.classList.toggle("light-mode", event.matches);
-				document.body.classList.toggle("dark-mode", !event.matches);
-			}
-		};
-
-		mediaQuery.addEventListener("change", handleChange);
-		return () => mediaQuery.removeEventListener("change", handleChange);
-	}, []);
-
-	// Toggle Hamburger Menu
+function Navigation({ isNavScrolled, theme, toggleTheme }) {
 	const [menuOpen, setMenuOpen] = useState(false);
 
-	const toggleMenu = () => {
-		setMenuOpen(!menuOpen);
+	const handleMenuToggle = () => {
+		setMenuOpen((open) => !open);
 	};
 
 	return (
@@ -84,8 +36,8 @@ function Navigation({ isNavScrolled }) {
 							<a href="#contact">Contact</a>
 						</li>
 					</ul>
-					<button aria-label="theme-toggle" className="theme-toggle" onClick={toggleLightMode}>
-						<i className={`fas ${lightMode ? "fa-sun" : "fa-moon"}`}></i>
+					<button aria-label="theme-toggle" className="theme-toggle" onClick={toggleTheme}>
+						<i className={`fas ${theme === "light" ? "fa-sun" : "fa-moon"}`}></i>
 					</button>
 				</div>
 			</nav>
@@ -97,43 +49,43 @@ function Navigation({ isNavScrolled }) {
 				</div>
 
 				<div className="nav-actions" data-aos="fade-down" data-aos-once="true">
-					<button aria-label="theme-toggle" className="theme-toggle" onClick={toggleLightMode}>
-						<i className={`fas ${lightMode ? "fa-sun" : "fa-moon"}`}></i>
+					<button aria-label="theme-toggle" className="theme-toggle" onClick={toggleTheme}>
+						<i className={`fas ${theme === "light" ? "fa-sun" : "fa-moon"}`}></i>
 					</button>
 					<div className="hamburger-menu">
-						<button className="hamburger-icon" aria-label="Navigation" onClick={toggleMenu}>
+						<button className="hamburger-icon" aria-label="Navigation" onClick={handleMenuToggle}>
 							<span></span>
 							<span></span>
 							<span></span>
 						</button>
 						<ul className={`menu-links ${menuOpen ? "open" : ""}`}>
 							<li>
-								<a href="#home" onClick={toggleMenu}>
+								<a href="#home" onClick={handleMenuToggle}>
 									Home
 								</a>
 							</li>
 							<li>
-								<a href="#about" onClick={toggleMenu}>
+								<a href="#about" onClick={handleMenuToggle}>
 									About Me
 								</a>
 							</li>
 							<li>
-								<a href="#projects" onClick={toggleMenu}>
+								<a href="#projects" onClick={handleMenuToggle}>
 									Projects
 								</a>
 							</li>
 							<li>
-								<a href="#skills" onClick={toggleMenu}>
+								<a href="#skills" onClick={handleMenuToggle}>
 									Skills
 								</a>
 							</li>
 							<li>
-								<a href="#experience" onClick={toggleMenu}>
+								<a href="#experience" onClick={handleMenuToggle}>
 									Experience
 								</a>
 							</li>
 							<li>
-								<a href="#contact" onClick={toggleMenu}>
+								<a href="#contact" onClick={handleMenuToggle}>
 									Contact
 								</a>
 							</li>
