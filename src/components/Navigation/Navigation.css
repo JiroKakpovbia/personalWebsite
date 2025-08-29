@@ -22,7 +22,7 @@ nav {
 	align-items: center;
 	height: 10vh;
 	padding: 1.4rem;
-	transition: box-shadow 0.2s ease-in-out;
+	transition: box-shadow 0.3s ease-in-out;
 }
 
 nav.scrolled {
@@ -86,7 +86,7 @@ nav.scrolled {
 	overflow: hidden;
 	border-radius: 0.5rem;
 	box-shadow: 0 0.25rem 0.4rem #00000057;
-	transition: max-height 0.2s ease-in-out;
+	transition: max-height 0.3s ease-in-out;
 }
 
 .menu-links li a {

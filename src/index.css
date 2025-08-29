@@ -22,7 +22,7 @@ body.light-mode {
 }
 
 * {
-	--colour-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	--colour-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 #desktop-nav,
