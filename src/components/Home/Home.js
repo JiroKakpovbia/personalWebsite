@@ -6,7 +6,13 @@ function Home() {
 		<section id="home">
 			{/* Animation */}
 			<div className="background-animation" id="home-animation">
-				<DotLottieReact src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie" loop autoplay />;
+				<DotLottieReact
+					src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"
+					loop
+					autoplay
+					data-aos="fade-in"
+					data-aos-once="true"
+				/>
 			</div>
 
 			{/* Content */}

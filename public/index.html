@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Metadata for the page -->
+	<!-- Metadata for the page -->
 	<head>
         <meta charset="UTF-8"/>
 
@@ -13,9 +13,6 @@
 
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-        <!-- Homepage Animation -->
-        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 		
         <!-- Viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,9 +44,22 @@
 			content="#27272a"
 			media="(prefers-color-scheme: dark)"
 		/>
-
-  	</head>
-  	<body>
+		</head>
+		
+	<!-- Initial Theme Setup -->
+		<script>
+			(function() {
+				var darkBg = '#27272a';
+				var lightBg = '#f9f7ff';
+				var theme = localStorage.getItem('theme');
+				var systemLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+				var useLight = theme === 'light' || (!theme && systemLight);
+				window.addEventListener('DOMContentLoaded', function() {
+					document.body.style.backgroundColor = useLight ? lightBg : darkBg;
+				});
+			})();
+		</script>
+		<body>
 		<!-- JavaScript Reminder -->
 		<noscript>
 			<div class="noscript-message">
