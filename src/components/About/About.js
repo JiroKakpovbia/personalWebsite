@@ -27,7 +27,7 @@ function About() {
 	return (
 		<section id="about">
 			<h1>About Me</h1>
-			<div id="about-container" className="about" data-aos="fade-up" data-aos-delay="0" data-aos-once="true">
+			<div id="about-container" className="about" data-aos="fade-up" data-aos-once="true">
 				<img id="headshot" alt="Headshot of Jiro Kakpovbia" src={headshotImage}></img>
 
 				{/* Description */}

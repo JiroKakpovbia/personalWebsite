@@ -60,10 +60,10 @@ function Navigation({ isNavScrolled }) {
 		<div>
 			{/* Desktop Navigation */}
 			<nav id="desktop-nav" className={isNavScrolled ? "scrolled" : ""}>
-				<div className="logo" data-aos="fade-down" data-aos-delay="0" data-aos-once="true">
+				<div className="logo" data-aos="fade-down" data-aos-once="true">
 					Jiro Kakpovbia
 				</div>
-				<div className="nav-actions" data-aos="fade-down" data-aos-delay="0" data-aos-once="true">
+				<div className="nav-actions" data-aos="fade-down" data-aos-once="true">
 					<ul className="nav-links">
 						<li>
 							<a href="#home">Home</a>
@@ -92,11 +92,11 @@ function Navigation({ isNavScrolled }) {
 
 			{/* Hamburger Navigation */}
 			<nav id="hamburger-nav" className={isNavScrolled ? "scrolled" : ""}>
-				<div className="logo" data-aos="fade-down" data-aos-delay="0" data-aos-once="true">
+				<div className="logo" data-aos="fade-down" data-aos-once="true">
 					Jiro Kakpovbia
 				</div>
 
-				<div className="nav-actions" data-aos="fade-down" data-aos-delay="0" data-aos-once="true">
+				<div className="nav-actions" data-aos="fade-down" data-aos-once="true">
 					<button aria-label="theme-toggle" className="theme-toggle" onClick={toggleLightMode}>
 						<i className={`fas ${lightMode ? "fa-sun" : "fa-moon"}`}></i>
 					</button>

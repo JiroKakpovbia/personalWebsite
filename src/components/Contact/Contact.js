@@ -4,7 +4,7 @@ function Contact() {
 	return (
 		<section id="contact">
 			<h1>Contact</h1>
-			<form className="contact-form" data-aos="fade-left" data-aos-delay="0" data-aos-once="true" data-netlify="true">
+			<form className="contact-form" data-aos="fade-left" data-aos-once="true" data-netlify="true">
 				<input type="text" name="name" autoComplete="name" placeholder="Name*" required></input>
 				<input type="email" name="email" autoComplete="email" placeholder="Email*" required></input>
 				<textarea name="message" placeholder="Message*" required></textarea>
@@ -13,7 +13,7 @@ function Contact() {
 				</button>
 			</form>
 			<br></br>
-			<div id="contact-container" className="contact" data-aos="fade-right" data-aos-delay="0" data-aos-once="true">
+			<div id="contact-container" className="contact" data-aos="fade-right" data-aos-once="true">
 				<div className="method">
 					<p>
 						<a

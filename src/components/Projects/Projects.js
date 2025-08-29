@@ -30,13 +30,7 @@ function Projects() {
 			<h1>Projects</h1>
 			<div id="projects-container">
 				{repos.map((repo, index) => (
-					<div
-						key={repo.id}
-						className="project"
-						data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-						data-aos-delay="0"
-						data-aos-once="true"
-					>
+					<div key={repo.id} className="project" data-aos={index % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once="true">
 						<h2>
 							<a href={repo.html_url} target="_blank" rel="noopener noreferrer">
 								{repo.name}

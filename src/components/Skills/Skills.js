@@ -151,7 +151,7 @@ function Skills() {
 			<h1>Skills</h1>
 			<div id="skills-container">
 				<h2>Languages:</h2>
-				<div id="languages" className="skills" data-aos="fade-in" data-aos-delay="0" data-aos-once="true">
+				<div id="languages" className="skills" data-aos="fade-in" data-aos-once="true">
 					{languages.map((lang, idx) => (
 						<a
 							key={lang.name}
@@ -169,7 +169,7 @@ function Skills() {
 				</div>
 				<br />
 				<h2>Frameworks:</h2>
-				<div id="frameworks" className="skills" data-aos="fade-in" data-aos-delay="0" data-aos-once="true">
+				<div id="frameworks" className="skills" data-aos="fade-in" data-aos-once="true">
 					{frameworks.map((fw, idx) => (
 						<a
 							key={fw.name}
@@ -187,7 +187,7 @@ function Skills() {
 				</div>
 				<br />
 				<h2>Libraries:</h2>
-				<div id="libraries" className="skills" data-aos="fade-in" data-aos-delay="0" data-aos-once="true">
+				<div id="libraries" className="skills" data-aos="fade-in" data-aos-once="true">
 					{libraries.map((lib, idx) => (
 						<a
 							key={lib.name}
@@ -205,7 +205,7 @@ function Skills() {
 				</div>
 				<br />
 				<h2>Developer Tools:</h2>
-				<div id="developer-tools" className="skills" data-aos="fade-in" data-aos-delay="0" data-aos-once="true">
+				<div id="developer-tools" className="skills" data-aos="fade-in" data-aos-once="true">
 					{developerTools.map((tool, idx) => (
 						<a
 							key={tool.name}

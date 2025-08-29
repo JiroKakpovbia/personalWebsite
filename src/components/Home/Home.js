@@ -15,7 +15,7 @@ function Home() {
 					<p className="homeSubtitle" data-aos="fade-down" data-aos-once="true">
 						Hi, my name is
 					</p>
-					<h1 className="homeTitle" data-aos="fade-in" data-aos-delay="300" data-aos-once="true">
+					<h1 className="homeTitle" data-aos="fade-in" data-aos-once="true">
 						Jiro Kakpovbia
 					</h1>
 					<p className="homeSubtitle" data-aos="fade-up" data-aos-once="true">

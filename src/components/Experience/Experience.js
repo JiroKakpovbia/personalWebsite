@@ -82,7 +82,6 @@ function Experience() {
 						id={`experience-${idx}-container`}
 						className="experience"
 						data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
-						data-aos-delay="0"
 						data-aos-once="true"
 					>
 						<img alt={`${exp.company} Logo`} src={exp.image} />
