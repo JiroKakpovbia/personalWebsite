@@ -16,14 +16,8 @@ import Footer from "./components/Footer/Footer";
 function App() {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
 
-	// Determine the theme of the the website (dark/light)
-	const getInitialTheme = () => {
-		const storedPreference = localStorage.getItem("theme");
-		if (storedPreference) return storedPreference;
-		return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-	};
-
-	const [theme, setTheme] = useState(getInitialTheme());
+	// Determine the theme of the website (dark/light)
+	const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
 	// Apply theme to body
 	useEffect(() => {

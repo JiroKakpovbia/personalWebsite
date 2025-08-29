@@ -45,21 +45,17 @@
 			media="(prefers-color-scheme: dark)"
 		/>
 		</head>
+		<body>
 		
-	<!-- Initial Theme Setup -->
+		<!-- Initial Theme Setup -->
 		<script>
 			(function() {
-				var darkBg = '#27272a';
-				var lightBg = '#f9f7ff';
 				var theme = localStorage.getItem('theme');
-				var systemLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-				var useLight = theme === 'light' || (!theme && systemLight);
-				window.addEventListener('DOMContentLoaded', function() {
-					document.body.style.backgroundColor = useLight ? lightBg : darkBg;
-				});
+				document.body.classList.toggle("light-mode", theme === "light");
+				document.body.classList.toggle("dark-mode", theme === "dark");
 			})();
 		</script>
-		<body>
+
 		<!-- JavaScript Reminder -->
 		<noscript>
 			<div class="noscript-message">
