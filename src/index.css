@@ -22,7 +22,7 @@ body.light-mode {
 }
 
 :root {
-	--mode-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	--mode-transition: color 3s ease-in-out, background-color 3s ease-in-out;
 }
 
 #desktop-nav,
@@ -126,6 +126,7 @@ html {
 body {
 	background-color: var(--bg-colour);
 	overflow-x: hidden;
+	transition: var(--mode-transition);
 }
 
 section {
