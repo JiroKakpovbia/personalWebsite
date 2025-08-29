@@ -144,15 +144,14 @@ const developerTools = [
 	{ name: "Jira", logo: jiraLogo, link: "https://www.atlassian.com/software/jira" },
 ];
 
-var delayGap = 5;
-
 function Skills() {
+	var delayGap = 5;
 	return (
 		<section id="skills">
 			<h1>Skills</h1>
 			<div id="skills-container">
 				<h2>Languages:</h2>
-				<div id="languages" className="skills" data-aos="fade-in" data-aos-delay="0">
+				<div id="languages" className="skills" data-aos="fade-in" data-aos-delay="0" data-aos-once="true">
 					{languages.map((lang, idx) => (
 						<a
 							key={lang.name}
@@ -161,6 +160,7 @@ function Skills() {
 							rel="noopener noreferrer"
 							data-aos="fade-left"
 							data-aos-delay={idx * delayGap}
+							data-aos-once="true"
 						>
 							<img alt={`${lang.name} Logo`} src={lang.logo} />
 							<span className="display-text">{lang.name}</span>
@@ -169,7 +169,7 @@ function Skills() {
 				</div>
 				<br />
 				<h2>Frameworks:</h2>
-				<div id="frameworks" className="skills" data-aos="fade-in" data-aos-delay="0">
+				<div id="frameworks" className="skills" data-aos="fade-in" data-aos-delay="0" data-aos-once="true">
 					{frameworks.map((fw, idx) => (
 						<a
 							key={fw.name}
@@ -178,6 +178,7 @@ function Skills() {
 							rel="noopener noreferrer"
 							data-aos="fade-left"
 							data-aos-delay={idx * delayGap}
+							data-aos-once="true"
 						>
 							<img alt={`${fw.name} Logo`} src={fw.logo} />
 							<span className="display-text">{fw.name}</span>
@@ -186,7 +187,7 @@ function Skills() {
 				</div>
 				<br />
 				<h2>Libraries:</h2>
-				<div id="libraries" className="skills" data-aos="fade-in" data-aos-delay="0">
+				<div id="libraries" className="skills" data-aos="fade-in" data-aos-delay="0" data-aos-once="true">
 					{libraries.map((lib, idx) => (
 						<a
 							key={lib.name}
@@ -195,6 +196,7 @@ function Skills() {
 							rel="noopener noreferrer"
 							data-aos="fade-left"
 							data-aos-delay={idx * delayGap}
+							data-aos-once="true"
 						>
 							<img alt={`${lib.name} Logo`} src={lib.logo} />
 							<span className="display-text">{lib.name}</span>
@@ -203,7 +205,7 @@ function Skills() {
 				</div>
 				<br />
 				<h2>Developer Tools:</h2>
-				<div id="developer-tools" className="skills" data-aos="fade-in" data-aos-delay="0">
+				<div id="developer-tools" className="skills" data-aos="fade-in" data-aos-delay="0" data-aos-once="true">
 					{developerTools.map((tool, idx) => (
 						<a
 							key={tool.name}
@@ -212,6 +214,7 @@ function Skills() {
 							rel="noopener noreferrer"
 							data-aos="fade-left"
 							data-aos-delay={idx * delayGap}
+							data-aos-once="true"
 						>
 							<img alt={`${tool.name} logo`} src={tool.logo} />
 							<span className="display-text">{tool.name}</span>

@@ -13,7 +13,7 @@ function Contact() {
 				</button>
 			</form>
 			<br></br>
-			<div id="contact-container" className="contact" data-aos="fade-right">
+			<div id="contact-container" className="contact" data-aos="fade-right" data-aos-delay="0" data-aos-once="true">
 				<div className="method">
 					<p>
 						<a

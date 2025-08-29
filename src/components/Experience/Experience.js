@@ -78,7 +78,13 @@ function Experience() {
 			<h1>Experience</h1>
 			{experiences.map((exp, idx) => (
 				<div key={`${exp.company}-${exp.position}`}>
-					<div id={`experience-${idx}-container`} className="experience" data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}>
+					<div
+						id={`experience-${idx}-container`}
+						className="experience"
+						data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
+						data-aos-delay="0"
+						data-aos-once="true"
+					>
 						<img alt={`${exp.company} Logo`} src={exp.image} />
 						<div className="text-content">
 							<h2 className="job-title">

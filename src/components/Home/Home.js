@@ -1,18 +1,12 @@
 import "./Home.css";
-import "@lottiefiles/dotlottie-react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 function Home() {
 	return (
 		<section id="home">
 			{/* Animation */}
 			<div className="background-animation" id="home-animation">
-				<dotlottie-player
-					background="transparent"
-					speed="1"
-					src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"
-					loop
-					autoplay
-				/>
+				<DotLottieReact src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie" loop autoplay />;
 			</div>
 
 			{/* Content */}
