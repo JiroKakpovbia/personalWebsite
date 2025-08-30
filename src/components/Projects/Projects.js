@@ -29,19 +29,21 @@ function Projects() {
 		<section id="projects">
 			<h1>Projects</h1>
 			<div id="projects-container">
-				{repos.map((repo, index) => (
-					<div key={repo.id} className="project" data-aos={index % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once="true">
-						<h2>
-							<a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-								{repo.name}
-							</a>
-						</h2>
-						<p>
-							<b>Description:</b> {repo.description || "No description available."}
-						</p>
-						<p>
-							<b>Language:</b> {repo.language || "N/A"}
-						</p>
+				{repos.map((repo, idx) => (
+					<div key={repo.id} id={`projects-${idx}-container`} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once="true">
+						<div id={`project-${idx}-content`} className="project">
+							<h2>
+								<a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+									{repo.name}
+								</a>
+							</h2>
+							<p>
+								<b>Description:</b> {repo.description || "No description available."}
+							</p>
+							<p>
+								<b>Language:</b> {repo.language || "N/A"}
+							</p>
+						</div>
 					</div>
 				))}
 			</div>

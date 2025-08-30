@@ -27,30 +27,31 @@ function About() {
 	return (
 		<section id="about">
 			<h1>About Me</h1>
-			<div id="about-container" className="about" data-aos="fade-up" data-aos-once="true">
-				<img id="headshot" alt="Headshot of Jiro Kakpovbia" src={headshotImage}></img>
+			<div id="about-container" data-aos="fade-up" data-aos-once="true">
+				<div id="about-content" className="about">
+					<img id="headshot" alt="Headshot of Jiro Kakpovbia" src={headshotImage}></img>
+					{/* Description */}
+					<div className="text-content">
+						<p>
+							Hey! My name is Jiro Kakpovbia, and I'm a {currentAcademicYear}. I'm a versatile developer with experience across
+							front-end, back-end, full-stack, and AI projects. I've worked with technologies like C#, Python, React, Node.js, and
+							Docker, and contributed to scalable enterprise applications, OCR-powered automation, and retail system integrations.
+						</p>
+						<br></br>
+						<p>
+							As a former student-athlete, I bring discipline, focus, and a team-first mindset to every challenge. Whether I'm
+							optimizing data pipelines, refactoring legacy code, or experimenting with AI, I'm always driven by curiosity and a desire
+							to create meaningful solutions. Let's connect — I'm always open to new ideas, collaborations, and conversations!
+						</p>
+						<br></br>
+						<p>Please feel free to reach out — I'm always open to meeting new people!</p>
+						<br></br>
 
-				{/* Description */}
-				<div className="text-content">
-					<p>
-						Hey! My name is Jiro Kakpovbia, and I'm a {currentAcademicYear}. I'm a versatile developer with experience across front-end,
-						back-end, full-stack, and AI projects. I've worked with technologies like C#, Python, React, Node.js, and Docker, and
-						contributed to scalable enterprise applications, OCR-powered automation, and retail system integrations.
-					</p>
-					<br></br>
-					<p>
-						As a former student-athlete, I bring discipline, focus, and a team-first mindset to every challenge. Whether I'm optimizing
-						data pipelines, refactoring legacy code, or experimenting with AI, I'm always driven by curiosity and a desire to create
-						meaningful solutions. Let's connect — I'm always open to new ideas, collaborations, and conversations!
-					</p>
-					<br></br>
-					<p>Please feel free to reach out — I'm always open to meeting new people!</p>
-					<br></br>
-
-					{/* Resume Button */}
-					<button className="button" onClick={() => window.open(resumePdf, "_blank")}>
-						Resume
-					</button>
+						{/* Resume Button */}
+						<button className="button" onClick={() => window.open(resumePdf, "_blank")}>
+							Resume
+						</button>
+					</div>
 				</div>
 			</div>
 		</section>

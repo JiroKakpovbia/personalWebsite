@@ -151,43 +151,49 @@ function Skills() {
 			<h1>Skills</h1>
 			<div id="skills-container">
 				<h2>Languages:</h2>
-				<div id="languages" className="skills" data-aos="fade-in" data-aos-once="true">
-					{languages.map((lang, idx) => (
-						<a
-							key={lang.name}
-							href={lang.link}
-							target="_blank"
-							rel="noopener noreferrer"
-							data-aos="fade-left"
-							data-aos-delay={idx * delayGap}
-							data-aos-once="true"
-						>
-							<img alt={`${lang.name} Logo`} src={lang.logo} />
-							<span className="display-text">{lang.name}</span>
-						</a>
-					))}
+				<div id="languages-container" data-aos="fade-in" data-aos-once="true">
+					<div id="languages-content" className="skills">
+						{languages.map((lang, idx) => (
+							<a
+								key={lang.name}
+								href={lang.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								data-aos="fade-left"
+								data-aos-delay={idx * delayGap}
+								data-aos-once="true"
+							>
+								<img alt={`${lang.name} Logo`} src={lang.logo} />
+								<span className="display-text">{lang.name}</span>
+							</a>
+						))}
+					</div>
 				</div>
 				<br />
 				<h2>Frameworks:</h2>
-				<div id="frameworks" className="skills" data-aos="fade-in" data-aos-once="true">
-					{frameworks.map((fw, idx) => (
-						<a
-							key={fw.name}
-							href={fw.link}
-							target="_blank"
-							rel="noopener noreferrer"
-							data-aos="fade-left"
-							data-aos-delay={idx * delayGap}
-							data-aos-once="true"
-						>
-							<img alt={`${fw.name} Logo`} src={fw.logo} />
-							<span className="display-text">{fw.name}</span>
-						</a>
-					))}
+				<div id="frameworks-container" data-aos="fade-in" data-aos-once="true">
+					<div id="frameworks-content" className="skills">
+						{frameworks.map((fw, idx) => (
+							<a
+								key={fw.name}
+								href={fw.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								data-aos="fade-left"
+								data-aos-delay={idx * delayGap}
+								data-aos-once="true"
+							>
+								<img alt={`${fw.name} Logo`} src={fw.logo} />
+								<span className="display-text">{fw.name}</span>
+							</a>
+						))}
+					</div>
 				</div>
 				<br />
 				<h2>Libraries:</h2>
-				<div id="libraries" className="skills" data-aos="fade-in" data-aos-once="true">
+
+				<div id="libraries-container" data-aos="fade-in" data-aos-once="true">
+				<div id="libraries-content" className="skills">
 					{libraries.map((lib, idx) => (
 						<a
 							key={lib.name}
@@ -203,13 +209,15 @@ function Skills() {
 						</a>
 					))}
 				</div>
+				</div>
 				<br />
 				<h2>Developer Tools:</h2>
-				<div id="developer-tools" className="skills" data-aos="fade-in" data-aos-once="true">
-					{developerTools.map((tool, idx) => (
-						<a
-							key={tool.name}
-							href={tool.link}
+				<div id="developer-tools-container" data-aos="fade-in" data-aos-once="true">
+					<div id="developer-tools-content" className="skills">
+						{developerTools.map((tool, idx) => (
+							<a
+								key={tool.name}
+								href={tool.link}
 							target="_blank"
 							rel="noopener noreferrer"
 							data-aos="fade-left"
@@ -220,6 +228,7 @@ function Skills() {
 							<span className="display-text">{tool.name}</span>
 						</a>
 					))}
+				</div>
 				</div>
 			</div>
 		</section>
