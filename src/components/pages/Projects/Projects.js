@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./Projects.css";
-import { Grid } from "@mui/material";
 
 function Projects() {
 	const [repos, setRepos] = useState([]);
