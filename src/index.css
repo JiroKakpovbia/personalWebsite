@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "~@fortawesome/fontawesome-free/css/all.css"; /* Font Awesome */
-
 /* Theme Colours (Light/Dark Mode) */
 body.dark-mode {
 	--bg-colour: #27272a;
