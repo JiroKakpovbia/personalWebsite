@@ -22,7 +22,7 @@ body.light-mode {
 }
 
 :root {
-	--mode-transition: color 3s ease-in-out, background-color 3s ease-in-out;
+	--mode-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 #desktop-nav,
@@ -66,6 +66,7 @@ body.light-mode {
 #contact .contact-form,
 #contact .contact {
 	background-color: var(--accent-colour);
+	transition: var(--mode-transition);
 }
 
 #projects .project b {
@@ -135,6 +136,11 @@ section {
 	margin-bottom: 2rem;
 	width: 80%;
 	margin: auto;
+}
+
+div {
+
+
 }
 
 h1 {

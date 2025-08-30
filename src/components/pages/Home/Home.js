@@ -18,15 +18,22 @@ function Home() {
 			{/* Content */}
 			<div className="home" id="home-textContainer">
 				<div id="home-textContainer">
-					<p className="homeSubtitle" data-aos="fade-down" data-aos-once="true">
-						Hi, my name is
-					</p>
-					<h1 className="homeTitle" data-aos="fade-in" data-aos-once="true">
-						Jiro Kakpovbia
-					</h1>
-					<p className="homeSubtitle" data-aos="fade-up" data-aos-once="true">
-						Full-Stack Software Developer
-					</p>
+					<div id="subtitle-1-container" data-aos="fade-down" data-aos-once="true">
+						<p id="subtitle-1-content" className="homeSubtitle">
+							Hi, my name is
+						</p>
+					</div>
+
+					<div id="title-container" data-aos="fade-in" data-aos-once="true">
+						<h1 id="title-content" className="homeTitle">
+							Jiro Kakpovbia
+						</h1>
+					</div>
+					<div id="subtitle-2-container" data-aos="fade-up" data-aos-once="true">
+						<p id="subtitle-2-content" className="homeSubtitle">
+							Full-Stack Software Developer
+						</p>
+					</div>
 				</div>
 
 				{/* Social Media */}
