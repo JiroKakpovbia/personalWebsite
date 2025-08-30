@@ -1,9 +1,9 @@
 import "./Experience.css";
 
-import equitableImage from "../../assets/experience/equitable.png";
-import prsImage from "../../assets/experience/wprint.png";
-import warriorsImage from "../../assets/experience/waterloowarriors.png";
-import svpImage from "../../assets/experience/svpteens.png";
+import equitableImage from "../../../assets/experience/equitable.png";
+import prsImage from "../../../assets/experience/wprint.png";
+import warriorsImage from "../../../assets/experience/waterloowarriors.png";
+import svpImage from "../../../assets/experience/svpteens.png";
 
 function Experience() {
 	const experiences = [

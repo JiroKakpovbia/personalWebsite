@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Projects.css";
+import { Grid } from "@mui/material";
 
 function Projects() {
 	const [repos, setRepos] = useState([]);
@@ -31,7 +32,7 @@ function Projects() {
 			<div id="projects-container">
 				{repos.map((repo, idx) => (
 					<div key={repo.id} id={`projects-${idx}-container`} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once="true">
-						<div id={`project-${idx}-content`} className="project">
+						<div id={`project-${idx}`} className="project">
 							<h2>
 								<a href={repo.html_url} target="_blank" rel="noopener noreferrer">
 									{repo.name}

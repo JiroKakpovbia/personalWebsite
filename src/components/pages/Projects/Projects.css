@@ -20,7 +20,7 @@
 
 /* Media Queries */
 @media only screen and (min-width: 0px) {
-	.project {
+	#projects-container > div {
 		width: calc(100% - 1.4rem);
 	}
 }
@@ -29,7 +29,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-	.project {
+	#projects-container > div {
 		width: calc(50% - 1.4rem);
 	}
 }

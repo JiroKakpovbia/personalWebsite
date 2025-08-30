@@ -4,14 +4,14 @@ import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Navigation from "./components/Navigation/Navigation";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Skills from "./components/Skills/Skills";
-import Experience from "./components/Experience/Experience";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
+import Navigation from "./components/pages/Navigation/Navigation";
+import Home from "./components/pages/Home/Home";
+import About from "./components/pages/About/About";
+import Projects from "./components/pages/Projects/Projects";
+import Skills from "./components/pages/Skills/Skills";
+import Experience from "./components/pages/Experience/Experience";
+import Contact from "./components/pages/Contact/Contact";
+import Footer from "./components/pages/Footer/Footer";
 
 function App() {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
