@@ -4,7 +4,7 @@ import "./Skills.css";
 import cLogo from "../../../assets/skills/languages/c.svg";
 import cPlusPlusLogo from "../../../assets/skills/languages/cplusplus.svg";
 import cSharpLogo from "../../../assets/skills/languages/csharp.svg";
-import pythonLogo from "../../../assets/skills/languages/python.png";
+import pythonLogo from "../../../assets/skills/languages/python.svg";
 import javaLogo from "../../../assets/skills/languages/java.svg";
 import javascriptLogo from "../../../assets/skills/languages/javascript.svg";
 import typescriptLogo from "../../../assets/skills/languages/typescript.svg";
@@ -12,7 +12,7 @@ import phpLogo from "../../../assets/skills/languages/php.svg";
 import htmlLogo from "../../../assets/skills/languages/html5.svg";
 import cssLogo from "../../../assets/skills/languages/css3.svg";
 import xamlLogo from "../../../assets/skills/languages/xaml.png";
-import sqlLogo from "../../../assets/skills/languages/sql.png";
+import sqlLogo from "../../../assets/skills/languages/sql.svg";
 import graphqlLogo from "../../../assets/skills/languages/graphql.svg";
 import racketLogo from "../../../assets/skills/languages/racket.svg";
 
