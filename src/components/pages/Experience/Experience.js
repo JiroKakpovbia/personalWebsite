@@ -1,11 +1,11 @@
 import "./Experience.css";
 
-import equitableImage from "../../../assets/experience/equitable.png";
-import prsImage from "../../../assets/experience/wprint.png";
-import warriorsImage from "../../../assets/experience/waterloowarriors.png";
-import svpImage from "../../../assets/experience/svpteens.png";
-import homeDepotImage from "../../../assets/experience/homedepot.png";
-import sobeysImage from "../../../assets/experience/sobeys.png";
+import equitableImage from "../../../assets/experience/equitable.webp";
+import prsImage from "../../../assets/experience/wprint.webp";
+import warriorsImage from "../../../assets/experience/waterloowarriors.webp";
+import svpImage from "../../../assets/experience/svpteens.webp";
+import homeDepotImage from "../../../assets/experience/homedepot.webp";
+import sobeysImage from "../../../assets/experience/sobeys.webp";
 
 function Experience() {
 	const experiences = [
