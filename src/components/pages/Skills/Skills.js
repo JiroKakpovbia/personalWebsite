@@ -19,12 +19,12 @@ import racketLogo from "../../../assets/skills/languages/racket.svg";
 // Import Frameworks Logos
 import nodeJSLogo from "../../../assets/skills/frameworks/nodejs.svg";
 import nextJSLogo from "../../../assets/skills/frameworks/nextjs.svg";
-import expressJSLogo from "../../../assets/skills/frameworks/expressjs.png";
+import expressJSLogo from "../../../assets/skills/frameworks/expressjs.svg";
 import processingJSLogo from "../../../assets/skills/frameworks/processing.svg";
 import tailwindCSSLogo from "../../../assets/skills/frameworks/tailwindcss.svg";
 import dotNetLogo from "../../../assets/skills/frameworks/dotnet.svg";
 import xamarinLogo from "../../../assets/skills/frameworks/xamarin.svg";
-import xUnitLogo from "../../../assets/skills/frameworks/xunit.png";
+import xUnitLogo from "../../../assets/skills/frameworks/xunit.svg";
 import jestLogo from "../../../assets/skills/frameworks/jest.svg";
 
 // Import Libraries Logos
