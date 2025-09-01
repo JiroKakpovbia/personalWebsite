@@ -63,13 +63,21 @@ function App() {
 
 	return (
 		<>
+			{/* Navigation */}
 			<Navigation isNavScrolled={isNavScrolled} theme={theme} toggleTheme={toggleTheme} />
+			{/* Home */}
 			<Home />
+			{/* About */}
 			<About />
+			{/* Projects */}
 			<Projects />
+			{/* Skills */}
 			<Skills />
+			{/* Experience */}
 			<Experience />
+			{/* Contact */}
 			<Contact />
+			{/* Footer */}
 			<Footer />
 		</>
 	);
