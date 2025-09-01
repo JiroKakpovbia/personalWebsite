@@ -4,6 +4,8 @@ import equitableImage from "../../../assets/experience/equitable.png";
 import prsImage from "../../../assets/experience/wprint.png";
 import warriorsImage from "../../../assets/experience/waterloowarriors.png";
 import svpImage from "../../../assets/experience/svpteens.png";
+import homeDepotImage from "../../../assets/experience/homedepot.png";
+import sobeysImage from "../../../assets/experience/sobeys.png";
 
 function Experience() {
 	const experiences = [
@@ -40,27 +42,30 @@ function Experience() {
 			startDate: "August 2022",
 			endDate: "August 2024",
 			location: "Waterloo, ON",
-			content: "Received University of Waterloo Varsity Football Athletic Scholarship.",
+			content:
+				"Received University of Waterloo Varsity Football Athletic Scholarship, and balanced a 30-hour weekly training schedule with a full academic course load.",
 			image: warriorsImage,
 		},
-		// {
-		// 	company: "Home Depot",
-		// 	position: "Order Picker, Part-Time",
-		// 	startDate: "July 2023",
-		// 	endDate: "October 2023",
-		// 	location: "Waterloo, ON",
-		// 	content: "Gathered merchandise throughout the store, filled orders promptly, and carefully packed orders ensuring products remained undamaged.",
-		// 	image: homeDepotImage,
-		// },
-		// {
-		// 	company: "Sobeys",
-		// 	position: "Grocery Clerk, Part-Time",
-		// 	startDate: "April 2023",
-		// 	endDate: "September 2024",
-		// 	location: "Waterloo, ON",
-		// 	content: "Efficiently and effectively organized shelf products while maintaining displays within the store.",
-		// 	image: sobeysImage,
-		// },
+		{
+			company: "Home Depot",
+			position: "Order Fulfillment Systems Associate",
+			startDate: "July 2023",
+			endDate: "October 2023",
+			location: "Waterloo, ON",
+			content:
+				"Executed accurate order fulfillment using digital inventory systems, ensuring error-free results and high customer satisfaction under tight deadlines.",
+			image: homeDepotImage,
+		},
+		{
+			company: "Sobeys",
+			position: "Data Workflow Associate",
+			startDate: "April 2023",
+			endDate: "September 2024",
+			location: "Waterloo, ON",
+			content:
+				"Optimized product placement and maintained inventory accuracy while providing responsive customer support in a fast-paced environment.",
+			image: sobeysImage,
+		},
 		{
 			company: "Social Venture Partners Teens",
 			position: "Vice Chair of Engagement",
