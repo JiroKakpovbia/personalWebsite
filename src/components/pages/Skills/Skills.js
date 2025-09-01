@@ -33,10 +33,10 @@ import reduxLogo from "../../../assets/skills/libraries/redux.svg";
 import tensorflowLogo from "../../../assets/skills/libraries/tensorflow.svg";
 import pytorchLogo from "../../../assets/skills/libraries/pytorch.svg";
 import numpyLogo from "../../../assets/skills/libraries/numpy.svg";
-import matplotlibLogo from "../../../assets/skills/libraries/matplotlib.png";
-import aosLogo from "../../../assets/skills/libraries/aos.png";
+import matplotlibLogo from "../../../assets/skills/libraries/matplotlib.svg";
+import aosLogo from "../../../assets/skills/libraries/aos.svg";
 import openCVLogo from "../../../assets/skills/libraries/opencv.svg";
-import materialUILogo from "../../../assets/skills/libraries/materialui.jpg";
+import materialUILogo from "../../../assets/skills/libraries/materialui.svg";
 
 // Import Developer Tools Logos
 import gitLogo from "../../../assets/skills/developerTools/git.svg";
@@ -192,22 +192,22 @@ function Skills() {
 				<h2>Libraries:</h2>
 
 				<div id="libraries-container" data-aos="fade-in" data-aos-once="true">
-				<div id="libraries-content" className="skills">
-					{libraries.map((lib, idx) => (
-						<a
-							key={lib.name}
-							href={lib.link}
-							target="_blank"
-							rel="noopener noreferrer"
-							data-aos="fade-left"
-							data-aos-delay={idx * delayGap}
-							data-aos-once="true"
-						>
-							<img alt={`${lib.name} Logo`} src={lib.logo} />
-							<span className="display-text">{lib.name}</span>
-						</a>
-					))}
-				</div>
+					<div id="libraries-content" className="skills">
+						{libraries.map((lib, idx) => (
+							<a
+								key={lib.name}
+								href={lib.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								data-aos="fade-left"
+								data-aos-delay={idx * delayGap}
+								data-aos-once="true"
+							>
+								<img alt={`${lib.name} Logo`} src={lib.logo} />
+								<span className="display-text">{lib.name}</span>
+							</a>
+						))}
+					</div>
 				</div>
 				<br />
 				<h2>Developer Tools:</h2>
@@ -217,17 +217,17 @@ function Skills() {
 							<a
 								key={tool.name}
 								href={tool.link}
-							target="_blank"
-							rel="noopener noreferrer"
-							data-aos="fade-left"
-							data-aos-delay={idx * delayGap}
-							data-aos-once="true"
-						>
-							<img alt={`${tool.name} logo`} src={tool.logo} />
-							<span className="display-text">{tool.name}</span>
-						</a>
-					))}
-				</div>
+								target="_blank"
+								rel="noopener noreferrer"
+								data-aos="fade-left"
+								data-aos-delay={idx * delayGap}
+								data-aos-once="true"
+							>
+								<img alt={`${tool.name} logo`} src={tool.logo} />
+								<span className="display-text">{tool.name}</span>
+							</a>
+						))}
+					</div>
 				</div>
 			</div>
 		</section>
