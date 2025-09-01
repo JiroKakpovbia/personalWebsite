@@ -29,7 +29,7 @@ function About() {
 			<h1>About Me</h1>
 			<div id="about-container" data-aos="fade-up" data-aos-once="true">
 				<div id="about-content" className="about">
-					<img id="headshot" alt="Headshot of Jiro Kakpovbia" src={headshotImage}></img>
+					<img alt="Headshot of Jiro Kakpovbia" src={headshotImage}></img>
 					{/* Description */}
 					<div className="text-content">
 						<p>
