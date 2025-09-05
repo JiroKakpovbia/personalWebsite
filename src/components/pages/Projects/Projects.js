@@ -1,33 +1,25 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchProjects } from "../../../store/projectsSlice";
 import "./Projects.css";
 
 function Projects() {
-	const [repos, setRepos] = useState([]);
-
-	// Fetch GitHub Projects
-	const fetchGitHubProjects = async () => {
-		const url = `https://api.github.com/users/JiroKakpovbia/repos`;
-
-		try {
-			const response = await fetch(url);
-			if (!response.ok) {
-				throw new Error(`Failed to fetch repositories: ${response.status}`);
-			}
-
-			const reposData = await response.json();
-			setRepos(reposData.filter((repo) => repo.name !== "JiroKakpovbia")); // filter out the README repo
-		} catch (error) {
-			console.error("Error fetching GitHub repositories:", error);
-		}
-	};
+	const dispatch = useDispatch();
+	const url = `https://api.github.com/users/JiroKakpovbia/repos`;
+	const { cache, status, error } = useSelector((state) => state.projects);
+	const repos = (cache[url] || []).filter((repo) => repo.name !== "JiroKakpovbia");
 
 	useEffect(() => {
-		fetchGitHubProjects();
-	}, []);
+		if (!cache[url]) {
+			dispatch(fetchProjects(url));
+		}
+	}, [cache, url, dispatch]);
 
 	return (
 		<section id="projects">
 			<h1>Projects</h1>
+			{status === "loading" && <p>Loading...</p>}
+			{status === "failed" && <p>Error: {error}</p>}
 			<div id="projects-container">
 				{repos.map((repo, idx) => (
 					<div key={repo.id} id={`projects-${idx}-container`} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once="true">
