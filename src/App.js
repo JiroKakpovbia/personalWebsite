@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleTheme, setTheme } from "./store/themeSlice";
 import "./App.css";
 
 import AOS from "aos";
@@ -15,15 +17,13 @@ import Footer from "./components/pages/Footer/Footer";
 
 function App() {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
-
-	// Determine the theme of the website (dark/light)
-	const [theme, setTheme] = useState(localStorage.getItem("theme"));
+	const theme = useSelector((state) => state.theme.value);
+	const dispatch = useDispatch();
 
 	// Apply theme to body
 	useEffect(() => {
 		document.body.classList.toggle("light-mode", theme === "light");
 		document.body.classList.toggle("dark-mode", theme === "dark");
-		localStorage.setItem("theme", theme);
 	}, [theme]);
 
 	// Listen for system theme changes
@@ -31,15 +31,15 @@ function App() {
 		const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
 		const handleChange = (event) => {
 			if (!localStorage.getItem("theme")) {
-				setTheme(event.matches ? "light" : "dark");
+				dispatch(setTheme(event.matches ? "light" : "dark"));
 			}
 		};
 		mediaQuery.addEventListener("change", handleChange);
 		return () => mediaQuery.removeEventListener("change", handleChange);
-	}, []);
+	}, [dispatch]);
 
-	const toggleTheme = () => {
-		setTheme((prev) => (prev === "light" ? "dark" : "light"));
+	const handleToggleTheme = () => {
+		dispatch(toggleTheme());
 	};
 
 	// Handle scroll event to change nav colour
@@ -64,7 +64,7 @@ function App() {
 	return (
 		<>
 			{/* Navigation */}
-			<Navigation isNavScrolled={isNavScrolled} theme={theme} toggleTheme={toggleTheme} />
+			<Navigation isNavScrolled={isNavScrolled} theme={theme} toggleTheme={handleToggleTheme} />
 			{/* Home */}
 			<Home />
 			{/* About */}
