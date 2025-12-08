@@ -1,13 +1,21 @@
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchProjects } from "../../../store/projectsSlice";
+import { useAppSelector, useAppDispatch } from "../../../store/hooks.ts";
+import { fetchProjects } from "../../../store/projectsSlice.tsx";
 import "./Projects.css";
 
-function Projects() {
-	const dispatch = useDispatch();
+interface GithubRepo {
+	id: number;
+	name: string;
+	html_url: string;
+	description: string | null;
+	language: string | null;
+}
+
+export const ProjectsSection = () => {
+	const dispatch = useAppDispatch();
 	const url = `https://api.github.com/users/JiroKakpovbia/repos`;
-	const { cache, status, error } = useSelector((state) => state.projects);
-	const repos = (cache[url] || []).filter((repo) => repo.name !== "JiroKakpovbia");
+	const { cache, status, error } = useAppSelector((state) => state.projects);
+	const repos: GithubRepo[] = (cache[url] || []).filter((repo: GithubRepo) => repo.name !== "JiroKakpovbia");
 
 	useEffect(() => {
 		if (!cache[url]) {
@@ -21,7 +29,7 @@ function Projects() {
 			{status === "loading" && <p>Loading...</p>}
 			{status === "failed" && <p>Error: {error}</p>}
 			<div id="projects-container">
-				{repos.map((repo, idx) => (
+				{repos.map((repo, idx: number) => (
 					<div key={repo.id} id={`projects-${idx}-container`} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once="true">
 						<div id={`project-${idx}`} className="project">
 							<h2>
@@ -41,6 +49,6 @@ function Projects() {
 			</div>
 		</section>
 	);
-}
+};
 
-export default Projects;
+export default ProjectsSection;

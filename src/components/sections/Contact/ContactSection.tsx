@@ -1,6 +1,6 @@
 import "./Contact.css";
 
-function Contact() {
+export const ContactInfoSection = () => {
 	return (
 		<section id="contact">
 			<h1>Contact</h1>
@@ -26,7 +26,7 @@ function Contact() {
 								rel="noopener noreferrer"
 								className="flex flex-col items-center text-center"
 							>
-								<i id="phone" className="fa-solid fa-phone mb-4" alt="Call my Phone Number"></i>
+								<i id="phone" className="fa-solid fa-phone mb-4"></i>
 								<span>(226) 899-3921</span>
 							</a>
 						</p>
@@ -40,7 +40,7 @@ function Contact() {
 								rel="noopener noreferrer"
 								className="flex flex-col items-center text-center"
 							>
-								<i id="email" className="fa-regular fa-envelope mb-4" alt="Send me an Email"></i>
+								<i id="email" className="fa-regular fa-envelope mb-4"></i>
 								<span>kakpovbia.jiro@gmail.com</span>
 							</a>
 						</p>
@@ -54,7 +54,7 @@ function Contact() {
 								rel="noopener noreferrer"
 								className="flex flex-col items-center text-center"
 							>
-								<i id="c-linkedin" className="fa-brands fa-linkedin-in mb-4" alt="Visit my LinkedIn"></i>
+								<i id="c-linkedin" className="fa-brands fa-linkedin-in mb-4"></i>
 								<span>jiro-kakpovbia</span>
 							</a>
 						</p>
@@ -68,7 +68,7 @@ function Contact() {
 								rel="noopener noreferrer"
 								className="flex flex-col items-center text-center"
 							>
-								<i id="c-github" className="fa-brands fa-github mb-4" alt="Visit my GitHub"></i>
+								<i id="c-github" className="fa-brands fa-github mb-4"></i>
 								<span>JiroKakpovbia</span>
 							</a>
 						</p>
@@ -77,6 +77,6 @@ function Contact() {
 			</div>
 		</section>
 	);
-}
+};
 
-export default Contact;
+export default ContactInfoSection;

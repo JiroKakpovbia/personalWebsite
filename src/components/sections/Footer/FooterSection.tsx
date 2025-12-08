@@ -1,6 +1,6 @@
 import "./Footer.css";
 
-function Footer() {
+export const FooterSection = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
@@ -20,6 +20,6 @@ function Footer() {
 			</div>
 		</footer>
 	);
-}
+};
 
-export default Footer;
+export default FooterSection;

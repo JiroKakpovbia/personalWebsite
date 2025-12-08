@@ -1,7 +1,13 @@
 import { useState } from "react";
 import "./Navigation.css";
 
-function Navigation({ isNavScrolled, theme, toggleTheme }) {
+export interface NavigationSectionProps {
+	isNavScrolled: boolean;
+	theme: any;
+	toggleTheme: () => void;
+}
+
+export const NavigationSection = ({ isNavScrolled, theme, toggleTheme }: NavigationSectionProps) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const handleMenuToggle = () => {
@@ -95,6 +101,6 @@ function Navigation({ isNavScrolled, theme, toggleTheme }) {
 			</nav>
 		</div>
 	);
-}
+};
 
-export default Navigation;
+export default NavigationSection;

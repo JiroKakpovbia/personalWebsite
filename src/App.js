@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTheme, setTheme } from "./store/themeSlice";
+import { toggleTheme, setTheme } from "./store/themeSlice.tsx";
 import "./App.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Navigation from "./components/pages/Navigation/Navigation";
-import Home from "./components/pages/Home/Home";
-import About from "./components/pages/About/About";
-import Projects from "./components/pages/Projects/Projects";
-import Skills from "./components/pages/Skills/Skills";
-import Experience from "./components/pages/Experience/Experience";
-import Contact from "./components/pages/Contact/Contact";
-import Footer from "./components/pages/Footer/Footer";
+import NavigationSection from "./components/sections/Navigation/NavigationSection.tsx";
+import HomeSection from "./components/sections/Home/HomeSection.tsx";
+import { AboutSection } from "./components/sections/About/AboutSection.tsx";
+import { ProjectsSection } from "./components/sections/Projects/ProjectsSection.tsx";
+import { SkillsSection } from "./components/sections/Skills/SkillsSection.tsx";
+import { ExperienceSection } from "./components/sections/Experience/ExperienceSection.tsx";
+import { ContactInfoSection } from "./components/sections/Contact/ContactSection.tsx";
+import { FooterSection } from "./components/sections/Footer/FooterSection.tsx";
 
 function App() {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
@@ -64,21 +64,21 @@ function App() {
 	return (
 		<>
 			{/* Navigation */}
-			<Navigation isNavScrolled={isNavScrolled} theme={theme} toggleTheme={handleToggleTheme} />
+			<NavigationSection isNavScrolled={isNavScrolled} theme={theme} toggleTheme={handleToggleTheme} />
 			{/* Home */}
-			<Home />
+			<HomeSection />
 			{/* About */}
-			<About />
+			<AboutSection />
 			{/* Projects */}
-			<Projects />
+			<ProjectsSection />
 			{/* Skills */}
-			<Skills />
+			<SkillsSection />
 			{/* Experience */}
-			<Experience />
+			<ExperienceSection />
 			{/* Contact */}
-			<Contact />
+			<ContactInfoSection />
 			{/* Footer */}
-			<Footer />
+			<FooterSection />
 		</>
 	);
 }

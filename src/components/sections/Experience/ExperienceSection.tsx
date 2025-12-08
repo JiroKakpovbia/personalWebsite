@@ -7,7 +7,7 @@ import svpImage from "../../../assets/experience/svpteens.webp";
 import homeDepotImage from "../../../assets/experience/homedepot.webp";
 import sobeysImage from "../../../assets/experience/sobeys.webp";
 
-function Experience() {
+export const ExperienceSection = () => {
 	const experiences = [
 		{
 			company: "The Equitable Life Insurance Company of Canada",
@@ -95,9 +95,7 @@ function Experience() {
 								<span className="dates">
 									<span className="short">
 										{`${exp.startDate.split(" ")[0].substring(0, 3)} ${exp.startDate.split(" ")[1]} — ${
-											exp.endDate === "Present"
-												? "Present"
-												: exp.endDate.split(" ")[0].substring(0, 3) + " " + exp.endDate.split(" ")[1]
+											exp.endDate === "Present" ? "Present" : exp.endDate.split(" ")[0].substring(0, 3) + " " + exp.endDate.split(" ")[1]
 										}`}
 									</span>
 									<span className="full">
@@ -116,6 +114,6 @@ function Experience() {
 			))}
 		</section>
 	);
-}
+};
 
-export default Experience;
+export default ExperienceSection;

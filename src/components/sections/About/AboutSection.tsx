@@ -3,27 +3,27 @@ import "./About.css";
 import headshotImage from "../../../assets/about/JiroKakpovbia.webp";
 import resumePdf from "../../../assets/about/JiroKakpovbia.pdf";
 
-const degreeStart = new Date("September 1, 2022 00:00:00");
-const currentDate = new Date();
-const diffInDays = (currentDate - degreeStart) / (1000 * 60 * 60 * 24);
+export const AboutSection = () => {
+	const degreeStart = new Date("September 1, 2022 00:00:00");
+	const currentDate = new Date();
+	const diffInDays = (Number(currentDate) - Number(degreeStart)) / (1000 * 60 * 60 * 24);
 
-var currentAcademicYear;
+	let currentAcademicYear: string;
 
-if (diffInDays < 1 * 365) {
-	currentAcademicYear = "first-year Computer Science (BCS) student at the University of Waterloo, graduating in August 2027";
-} else if (diffInDays >= 1 * 365 && diffInDays < 2 * 365) {
-	currentAcademicYear = "second-year Computer Science (BCS) student at the University of Waterloo, graduating in August 2027";
-} else if (diffInDays >= 2 * 365 && diffInDays < 3 * 365) {
-	currentAcademicYear = "third-year Computer Science (BCS) student at the University of Waterloo, graduating in August 2027";
-} else if (diffInDays >= 3 * 365 && diffInDays < 4 * 365) {
-	currentAcademicYear = "fourth-year Computer Science (BCS) student at the University of Waterloo, graduating in August 2027";
-} else if (diffInDays >= 4 * 365 && diffInDays < 5 * 365) {
-	currentAcademicYear = "fifth-year Computer Science (BCS) student at the University of Waterloo, graduating in August 2027";
-} else {
-	currentAcademicYear = "Computer Science (BCS) graduate from the University of Waterloo";
-}
+	if (diffInDays < 1 * 365) {
+		currentAcademicYear = "first-year Computer Science (BCS) student at the University of Waterloo, graduating in August 2027";
+	} else if (diffInDays >= 1 * 365 && diffInDays < 2 * 365) {
+		currentAcademicYear = "second-year Computer Science (BCS) student at the University of Waterloo, graduating in August 2027";
+	} else if (diffInDays >= 2 * 365 && diffInDays < 3 * 365) {
+		currentAcademicYear = "third-year Computer Science (BCS) student at the University of Waterloo, graduating in August 2027";
+	} else if (diffInDays >= 3 * 365 && diffInDays < 4 * 365) {
+		currentAcademicYear = "fourth-year Computer Science (BCS) student at the University of Waterloo, graduating in August 2027";
+	} else if (diffInDays >= 4 * 365 && diffInDays < 5 * 365) {
+		currentAcademicYear = "fifth-year Computer Science (BCS) student at the University of Waterloo, graduating in August 2027";
+	} else {
+		currentAcademicYear = "Computer Science (BCS) graduate from the University of Waterloo";
+	}
 
-function About() {
 	return (
 		<section id="about">
 			<h1>About Me</h1>
@@ -58,4 +58,4 @@ function About() {
 	);
 }
 
-export default About;
+export default AboutSection;

@@ -1,7 +1,7 @@
 import "./Home.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
-function Home() {
+export const HomeSection = () => {
 	return (
 		<section id="home">
 			{/* Animation */}
@@ -40,30 +40,30 @@ function Home() {
 				<div className="socials" id="home-socialsContainer" data-aos="fade-up" data-aos-once="true">
 					<p>
 						<a aria-label="Visit my Instagram" href="https://www.instagram.com/jiro.kakpovbia" target="_blank" rel="noopener noreferrer">
-							<i id="instagram" className="fa-brands fa-instagram" alt="Visit my Instagram">
+							<i id="instagram" className="fa-brands fa-instagram">
 								{" "}
 							</i>
 						</a>
 					</p>
 					<p>
 						<a aria-label="Visit my X (formerly Twitter)" href="https://x.com/JiroKakpovbia" target="_blank" rel="noopener noreferrer">
-							<i id="x/twitter" className="fa-brands fa-x-twitter" alt="Visit my X (formerly Twitter)"></i>
+							<i id="x/twitter" className="fa-brands fa-x-twitter"></i>
 						</a>
 					</p>
 					<p>
 						<a aria-label="Visit my LinkedIn" href="https://linkedin.com/in/jiro-kakpovbia" target="_blank" rel="noopener noreferrer">
-							<i id="s-linkedin" className="fa-brands fa-linkedin-in" alt="Visit my LinkedIn"></i>
+							<i id="s-linkedin" className="fa-brands fa-linkedin-in"></i>
 						</a>
 					</p>
 					<p>
 						<a aria-label="Visit my GitHub" href="https://github.com/JiroKakpovbia" target="_blank" rel="noopener noreferrer">
-							<i id="s-github" className="fa-brands fa-github" alt="Visit my GitHub"></i>
+							<i id="s-github" className="fa-brands fa-github"></i>
 						</a>
 					</p>
 				</div>
 			</div>
 		</section>
 	);
-}
+};
 
-export default Home;
+export default HomeSection;
