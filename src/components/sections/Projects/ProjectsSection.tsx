@@ -1,15 +1,10 @@
 import { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "../../../store/hooks.ts";
 import { fetchProjects } from "../../../store/projectsSlice.tsx";
+import { GithubRepo } from "../../../types/Projects";
+import { ProjectInfoBlock } from "./components/ProjectInfoBlock.tsx";
+import { Grid } from "@mui/material";
 import "./Projects.css";
-
-interface GithubRepo {
-	id: number;
-	name: string;
-	html_url: string;
-	description: string | null;
-	language: string | null;
-}
 
 export const ProjectsSection = () => {
 	const dispatch = useAppDispatch();
@@ -28,25 +23,19 @@ export const ProjectsSection = () => {
 			<h1>Projects</h1>
 			{status === "loading" && <p>Loading...</p>}
 			{status === "failed" && <p>Error: {error}</p>}
-			<div id="projects-container">
+			<Grid container id="projects-container" size={12} spacing={3}>
 				{repos.map((repo, idx: number) => (
-					<div key={repo.id} id={`projects-${idx}-container`} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once="true">
-						<div id={`project-${idx}`} className="project">
-							<h2>
-								<a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-									{repo.name}
-								</a>
-							</h2>
-							<p>
-								<b>Description:</b> {repo.description || "No description available."}
-							</p>
-							<p>
-								<b>Language:</b> {repo.language || "N/A"}
-							</p>
-						</div>
-					</div>
+					<Grid container size={{ sm: 12, md: 6, lg: 6 }}>
+						<ProjectInfoBlock
+							key={repo.id}
+							repo={repo}
+							id={`project-${idx}`}
+							data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
+							data-aos-once="true"
+						/>
+					</Grid>
 				))}
-			</div>
+			</Grid>
 		</section>
 	);
 };
