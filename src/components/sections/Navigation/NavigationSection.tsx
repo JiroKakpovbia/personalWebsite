@@ -27,7 +27,7 @@ export const NavigationSection = ({ isNavScrolled, theme, toggleTheme }: Navigat
 							<a href="#home">Home</a>
 						</li>
 						<li>
-							<a href="#about">About Me</a>
+							<a href="#about">About</a>
 						</li>
 						<li>
 							<a href="#projects">Projects</a>
@@ -72,7 +72,7 @@ export const NavigationSection = ({ isNavScrolled, theme, toggleTheme }: Navigat
 							</li>
 							<li>
 								<a href="#about" onClick={handleMenuToggle}>
-									About Me
+									About
 								</a>
 							</li>
 							<li>

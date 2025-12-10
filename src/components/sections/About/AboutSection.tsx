@@ -26,7 +26,7 @@ export const AboutSection = () => {
 
 	return (
 		<section id="about">
-			<h1>About Me</h1>
+			<h1>About</h1>
 			<div id="about-container" data-aos="fade-up" data-aos-once="true">
 				<div id="about-content" className="about">
 					<img alt="Headshot of Jiro Kakpovbia" src={headshotImage}></img>
