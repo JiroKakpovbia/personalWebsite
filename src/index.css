@@ -47,7 +47,8 @@ body.light-mode {
 }
 
 .menu-links li a:hover {
-	background-color: var(--secondary-colour);
+	color: var(--text-colour);
+	background-color: var(--accent-colour);
 	transition: var(--mode-transition);
 }
 

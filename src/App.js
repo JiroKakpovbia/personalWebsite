@@ -61,10 +61,12 @@ function App() {
 		};
 	}, []);
 
+	const websiteSections = ["Home", "About", "Projects", "Skills", "Experience", "Contact"];
+
 	return (
 		<>
 			{/* Navigation */}
-			<NavigationSection isNavScrolled={isNavScrolled} theme={theme} toggleTheme={handleToggleTheme} />
+			<NavigationSection isNavScrolled={isNavScrolled} theme={theme} toggleTheme={handleToggleTheme} sections={websiteSections} />
 			{/* Home */}
 			<HomeSection />
 			{/* About */}

@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "./Navigation.css";
 
-export interface NavigationSectionProps {
+interface NavigationSectionProps {
 	isNavScrolled: boolean;
 	theme: any;
 	toggleTheme: () => void;
+	sections: string[];
 }
-
-export const NavigationSection = ({ isNavScrolled, theme, toggleTheme }: NavigationSectionProps) => {
+const NavigationSection = ({ isNavScrolled, theme, toggleTheme, sections }: NavigationSectionProps) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const handleMenuToggle = () => {
@@ -23,25 +23,15 @@ export const NavigationSection = ({ isNavScrolled, theme, toggleTheme }: Navigat
 				</div>
 				<div className="nav-actions" data-aos="fade-down" data-aos-once="true">
 					<ul className="nav-links">
-						<li>
-							<a href="#home">Home</a>
-						</li>
-						<li>
-							<a href="#about">About</a>
-						</li>
-						<li>
-							<a href="#projects">Projects</a>
-						</li>
-						<li>
-							<a href="#skills">Skills</a>
-						</li>
-						<li>
-							<a href="#experience">Experience</a>
-						</li>
-						<li>
-							<a href="#contact">Contact</a>
-						</li>
+						{sections.map((section) => {
+							return (
+								<li>
+									<a href={`#${section.toLowerCase()}`}>{section}</a>
+								</li>
+							);
+						})}
 					</ul>
+
 					<button aria-label="theme-toggle" className="theme-toggle" onClick={toggleTheme}>
 						<i className={`fas ${theme === "light" ? "fa-sun" : "fa-moon"}`}></i>
 					</button>
@@ -65,36 +55,15 @@ export const NavigationSection = ({ isNavScrolled, theme, toggleTheme }: Navigat
 							<span></span>
 						</button>
 						<ul className={`menu-links ${menuOpen ? "open" : ""}`}>
-							<li>
-								<a href="#home" onClick={handleMenuToggle}>
-									Home
-								</a>
-							</li>
-							<li>
-								<a href="#about" onClick={handleMenuToggle}>
-									About
-								</a>
-							</li>
-							<li>
-								<a href="#projects" onClick={handleMenuToggle}>
-									Projects
-								</a>
-							</li>
-							<li>
-								<a href="#skills" onClick={handleMenuToggle}>
-									Skills
-								</a>
-							</li>
-							<li>
-								<a href="#experience" onClick={handleMenuToggle}>
-									Experience
-								</a>
-							</li>
-							<li>
-								<a href="#contact" onClick={handleMenuToggle}>
-									Contact
-								</a>
-							</li>
+							{sections.map((section) => {
+								return (
+									<li>
+										<a href={`#${section.toLowerCase()}`} onClick={handleMenuToggle}>
+											{section}
+										</a>
+									</li>
+								);
+							})}
 						</ul>
 					</div>
 				</div>
