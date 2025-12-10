@@ -69,7 +69,7 @@ import microsoftAzureLogo from "../../../assets/skills/developerTools/azure.svg"
 import azureDevOpsLogo from "../../../assets/skills/developerTools/azuredevops.webp";
 import jiraLogo from "../../../assets/skills/developerTools/jira.svg";
 
-export const SkillsSection = () => {
+const SkillsSection = () => {
 	// Data arrays for each section
 	const languages = [
 		{ name: "C", logo: cLogo, link: "https://www.cprogramming.com" },

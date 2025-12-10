@@ -3,7 +3,7 @@ import "./About.css";
 import headshotImage from "../../../assets/about/JiroKakpovbia.webp";
 import resumePdf from "../../../assets/about/JiroKakpovbia.pdf";
 
-export const AboutSection = () => {
+const AboutSection = () => {
 	const degreeStart = new Date("September 1, 2022 00:00:00");
 	const currentDate = new Date();
 	const diffInDays = (Number(currentDate) - Number(degreeStart)) / (1000 * 60 * 60 * 24);

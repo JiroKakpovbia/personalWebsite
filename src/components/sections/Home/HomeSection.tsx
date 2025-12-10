@@ -1,7 +1,7 @@
 import "./Home.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
-export const HomeSection = () => {
+const HomeSection = () => {
 	return (
 		<section id="home">
 			{/* Animation */}

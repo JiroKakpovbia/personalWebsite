@@ -6,7 +6,7 @@ interface ProjectInfoBlockProps {
 	id: string;
 }
 
-export const ProjectInfoBlock = ({ repo, id }: ProjectInfoBlockProps) => {
+const ProjectInfoBlock = ({ repo, id }: ProjectInfoBlockProps) => {
 	return (
 		<Grid container id={`${id}-block`} className="project" alignContent={"flex-start"}>
 			<Grid container size={12}>
@@ -29,3 +29,5 @@ export const ProjectInfoBlock = ({ repo, id }: ProjectInfoBlockProps) => {
 		</Grid>
 	);
 };
+
+export default ProjectInfoBlock

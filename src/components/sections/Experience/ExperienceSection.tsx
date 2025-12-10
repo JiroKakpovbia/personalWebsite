@@ -7,7 +7,7 @@ import svpImage from "../../../assets/experience/svpteens.webp";
 import homeDepotImage from "../../../assets/experience/homedepot.webp";
 import sobeysImage from "../../../assets/experience/sobeys.webp";
 
-export const ExperienceSection = () => {
+const ExperienceSection = () => {
 	const experiences = [
 		{
 			company: "The Equitable Life Insurance Company of Canada",

@@ -8,12 +8,12 @@ import "aos/dist/aos.css";
 
 import NavigationSection from "./components/sections/Navigation/NavigationSection.tsx";
 import HomeSection from "./components/sections/Home/HomeSection.tsx";
-import { AboutSection } from "./components/sections/About/AboutSection.tsx";
-import { ProjectsSection } from "./components/sections/Projects/ProjectsSection.tsx";
-import { SkillsSection } from "./components/sections/Skills/SkillsSection.tsx";
-import { ExperienceSection } from "./components/sections/Experience/ExperienceSection.tsx";
-import { ContactInfoSection } from "./components/sections/Contact/ContactSection.tsx";
-import { FooterSection } from "./components/sections/Footer/FooterSection.tsx";
+import AboutSection from "./components/sections/About/AboutSection.tsx";
+import ProjectsSection from "./components/sections/Projects/ProjectsSection.tsx";
+import SkillsSection from "./components/sections/Skills/SkillsSection.tsx";
+import ExperienceSection from "./components/sections/Experience/ExperienceSection.tsx";
+import ContactInfoSection from "./components/sections/Contact/ContactSection.tsx";
+import FooterSection from "./components/sections/Footer/FooterSection.tsx";
 
 function App() {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
