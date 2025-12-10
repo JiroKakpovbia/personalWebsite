@@ -20,14 +20,6 @@
 	text-decoration: underline;
 }
 
-.method {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	margin: auto;
-}
-
 .contact-form {
 	border-radius: 1rem;
 	padding: 1.4rem;
@@ -64,10 +56,6 @@
 
 /* Media Queries */
 @media only screen and (min-width: 0px) {
-	.method {
-		width: 100%;
-	}
-
 	.contact-form input,
 	.contact-form textarea {
 		font-size: 1rem;
@@ -78,10 +66,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-	.method {
-		width: calc(50% - 1.4rem);
-	}
-
 	.contact-form input,
 	.contact-form textarea {
 		font-size: 1.2rem;
@@ -89,9 +73,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-	.method {
-		width: calc(25% - 1.4rem);
-	}
 }
 
 @media only screen and (min-width: 1440px) {

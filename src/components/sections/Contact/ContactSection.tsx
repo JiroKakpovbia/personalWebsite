@@ -1,6 +1,19 @@
+import ContactInfoBlock from "./components/ContactInfoBlock.tsx";
 import "./Contact.css";
 
 export const ContactInfoSection = () => {
+	const contactMethods = [
+		{ id: "phone", method: "Phone Number", label: "(226) 899-3921", url: "tel:2268993921", icon: "fa-solid fa-phone mb-4" },
+		{ id: "email", method: "Email", label: "kakpovbia.jiro@gmail.com", url: "mailto:kakpovbia.jiro@gmail.com", icon: "fa-regular fa-envelope mb-4" },
+		{
+			id: "c-linkedin",
+			method: "LinkedIn",
+			label: "jiro-kakpovbia",
+			url: "https://linkedin.com/in/jiro-kakpovbia",
+			icon: "fa-brands fa-linkedin-in mb-4",
+		},
+		{ id: "c-github", method: "Github", label: "JiroKakpovbia", url: "https://github.com/JiroKakpovbia", icon: "fa-brands fa-github mb-4" },
+	];
 	return (
 		<section id="contact">
 			<h1>Contact</h1>
@@ -17,62 +30,9 @@ export const ContactInfoSection = () => {
 			<br></br>
 			<div id="method-container" data-aos="fade-right" data-aos-once="true">
 				<div id="method-content" className="contact">
-					<div className="method">
-						<p>
-							<a
-								aria-label="Call my Phone Number"
-								href="tel:2268993921"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex flex-col items-center text-center"
-							>
-								<i id="phone" className="fa-solid fa-phone mb-4"></i>
-								<span>(226) 899-3921</span>
-							</a>
-						</p>
-					</div>
-					<div className="method">
-						<p>
-							<a
-								aria-label="Send me an Email"
-								href="mailto:kakpovbia.jiro@gmail.com"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex flex-col items-center text-center"
-							>
-								<i id="email" className="fa-regular fa-envelope mb-4"></i>
-								<span>kakpovbia.jiro@gmail.com</span>
-							</a>
-						</p>
-					</div>
-					<div className="method">
-						<p>
-							<a
-								aria-label="Visit my LinkedIn"
-								href="https://linkedin.com/in/jiro-kakpovbia"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex flex-col items-center text-center"
-							>
-								<i id="c-linkedin" className="fa-brands fa-linkedin-in mb-4"></i>
-								<span>jiro-kakpovbia</span>
-							</a>
-						</p>
-					</div>
-					<div className="method">
-						<p>
-							<a
-								aria-label="Visit my GitHub"
-								href="https://github.com/JiroKakpovbia"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex flex-col items-center text-center"
-							>
-								<i id="c-github" className="fa-brands fa-github mb-4"></i>
-								<span>JiroKakpovbia</span>
-							</a>
-						</p>
-					</div>
+					{contactMethods.map((contact) => {
+						return <ContactInfoBlock id={contact.id} method={contact.method} label={contact.label} url={contact.url} icon={contact.icon} />;
+					})}
 				</div>
 			</div>
 		</section>
