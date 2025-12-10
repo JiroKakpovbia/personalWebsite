@@ -1,24 +1,22 @@
 import { Grid } from "@mui/material";
+import { Contact } from "../../../../types/Contact";
 
 interface ContactInfoBlockProps {
 	id: string;
-	method: string;
-	label: string;
-	url: string;
-	icon: string;
+	contact: Contact;
 }
 
-const ContactInfoBlock = ({ id, method, label, url, icon }: ContactInfoBlockProps) => {
+const ContactInfoBlock = ({ id, contact }: ContactInfoBlockProps) => {
 	return (
 		<Grid container size={{ sm: 12, md: 6, lg: 3 }}>
 			<p>
-				<a aria-label={`Visit my ${method}`} href={url} target="_blank" rel="noopener noreferrer">
+				<a aria-label={`Visit my ${contact.method}`} href={contact.url} target="_blank" rel="noopener noreferrer">
 					<Grid container spacing={1}>
 						<Grid container size={12} justifyContent={"center"}>
-							<i id={id} className={icon}></i>
+							<i id={id} className={contact.icon}></i>
 						</Grid>
 						<Grid container size={12} justifyContent={"center"}>
-							<span>{label}</span>
+							<span>{contact.label}</span>
 						</Grid>
 					</Grid>
 				</a>

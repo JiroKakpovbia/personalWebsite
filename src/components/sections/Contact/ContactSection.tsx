@@ -31,7 +31,7 @@ const ContactInfoSection = () => {
 			<div id="method-container" data-aos="fade-right" data-aos-once="true">
 				<div id="method-content" className="contact">
 					{contactMethods.map((contact) => {
-						return <ContactInfoBlock id={contact.id} method={contact.method} label={contact.label} url={contact.url} icon={contact.icon} />;
+						return <ContactInfoBlock id={contact.id} contact={contact} />;
 					})}
 				</div>
 			</div>
