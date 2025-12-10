@@ -6,6 +6,8 @@ import warriorsImage from "../../../assets/experience/waterloowarriors.webp";
 import svpImage from "../../../assets/experience/svpteens.webp";
 import homeDepotImage from "../../../assets/experience/homedepot.webp";
 import sobeysImage from "../../../assets/experience/sobeys.webp";
+import ExperienceInfoBlock from "./components/ExperienceInfoBlock.tsx";
+import { Grid } from "@mui/material";
 
 const ExperienceSection = () => {
 	const experiences = [
@@ -80,38 +82,11 @@ const ExperienceSection = () => {
 	return (
 		<section id="experience">
 			<h1>Experience</h1>
-			{experiences.map((exp, idx) => (
-				<div
-					key={`${exp.company}-${exp.position}`}
-					id={`experience-${idx}-container`}
-					data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
-					data-aos-once="true"
-				>
-					<div id={`experience-${idx}-content`} className="experience">
-						<img alt={`${exp.company} Logo`} src={exp.image} />
-						<div className="text-content">
-							<h2 className="job-title">
-								<span className="position">{exp.position}</span>
-								<span className="dates">
-									<span className="short">
-										{`${exp.startDate.split(" ")[0].substring(0, 3)} ${exp.startDate.split(" ")[1]} — ${
-											exp.endDate === "Present" ? "Present" : exp.endDate.split(" ")[0].substring(0, 3) + " " + exp.endDate.split(" ")[1]
-										}`}
-									</span>
-									<span className="full">
-										{exp.startDate} — {exp.endDate}
-									</span>
-								</span>
-							</h2>
-							<p className="location">
-								{exp.company}, {exp.location}
-							</p>
-							<p dangerouslySetInnerHTML={{ __html: exp.content }}></p>
-						</div>
-					</div>
-					<br></br>
-				</div>
-			))}
+			<Grid container spacing={3}>
+				{experiences.map((exp, idx: number) => (
+					<ExperienceInfoBlock key={`${exp.company}-${exp.position}`} id={`experience-${idx}`} experience={exp} index={idx} />
+				))}
+			</Grid>
 		</section>
 	);
 };
