@@ -26,13 +26,7 @@ const ProjectsSection = () => {
 			<Grid container id="projects-container" size={12} spacing={3}>
 				{repos.map((repo, idx: number) => (
 					<Grid container size={{ sm: 12, md: 6, lg: 6 }}>
-						<ProjectInfoBlock
-							key={repo.id}
-							repo={repo}
-							id={`project-${idx}`}
-							data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
-							data-aos-once="true"
-						/>
+						<ProjectInfoBlock key={repo.id} repo={repo} id={`project-${idx}`} index={idx} />
 					</Grid>
 				))}
 			</Grid>

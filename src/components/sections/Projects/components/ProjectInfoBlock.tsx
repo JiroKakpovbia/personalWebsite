@@ -4,11 +4,19 @@ import { GithubRepo } from "../../../../types/Projects";
 interface ProjectInfoBlockProps {
 	repo: GithubRepo;
 	id: string;
+	index: number;
 }
 
-const ProjectInfoBlock = ({ repo, id }: ProjectInfoBlockProps) => {
+const ProjectInfoBlock = ({ repo, id, index }: ProjectInfoBlockProps) => {
 	return (
-		<Grid container id={`${id}-block`} className="project" alignContent={"flex-start"}>
+		<Grid
+			container
+			id={`${id}-block`}
+			className="project"
+			data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+			data-aos-once="true"
+			alignContent={"flex-start"}
+		>
 			<Grid container size={12}>
 				<h2>
 					<a href={repo.html_url} target="_blank" rel="noopener noreferrer">
@@ -30,4 +38,4 @@ const ProjectInfoBlock = ({ repo, id }: ProjectInfoBlockProps) => {
 	);
 };
 
-export default ProjectInfoBlock
+export default ProjectInfoBlock;
