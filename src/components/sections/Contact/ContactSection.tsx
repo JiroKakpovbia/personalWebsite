@@ -1,5 +1,7 @@
+import { Grid } from "@mui/material";
 import ContactInfoBlock from "./components/ContactInfoBlock.tsx";
 import "./Contact.css";
+import ContactForm from "./components/ContactForm.tsx";
 
 const ContactInfoSection = () => {
 	const contactMethods = [
@@ -16,25 +18,23 @@ const ContactInfoSection = () => {
 	];
 	return (
 		<section id="contact">
-			<h1>Contact</h1>
-			<div id="form-container" data-aos="fade-left" data-aos-once="true">
-				<form className="contact-form" data-netlify="true">
-					<input type="text" name="name" autoComplete="name" placeholder="Name*" required></input>
-					<input type="email" name="email" autoComplete="email" placeholder="Email*" required></input>
-					<textarea name="message" placeholder="Message*" required></textarea>
-					<button type="submit" className="button">
-						Submit Form
-					</button>
-				</form>
-			</div>
-			<br></br>
-			<div id="method-container" data-aos="fade-right" data-aos-once="true">
-				<div id="method-content" className="contact">
+			<Grid container size={12} spacing={2} justifyContent={"center"}>
+				<Grid container size={12} justifyContent={"center"}>
+					<h1>Contact</h1>
+				</Grid>
+				<Grid container size={12} justifyContent={"center"} id="form-container" data-aos="fade-left" data-aos-once="true">
+					<ContactForm />
+				</Grid>
+				<Grid size={12} id="method-container" className={"contact"} data-aos="fade-right" data-aos-once="true">
 					{contactMethods.map((contact) => {
-						return <ContactInfoBlock id={contact.id} contact={contact} />;
+						return (
+							<Grid container size={{ sm: 12, md: 6, lg: 3 }} justifyContent={"center"}>
+								<ContactInfoBlock id={contact.id} contact={contact} />
+							</Grid>
+						);
 					})}
-				</div>
-			</div>
+				</Grid>
+			</Grid>
 		</section>
 	);
 };
