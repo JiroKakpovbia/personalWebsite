@@ -1,3 +1,4 @@
+import { Grid } from "@mui/material";
 import "./Footer.css";
 
 const FooterSection = () => {
@@ -5,8 +6,7 @@ const FooterSection = () => {
 
 	return (
 		<footer id="footer">
-			<div id="footer-container" className="footer">
-				<br></br>
+			<Grid container size={12} id="footer-container" className="footer" justifyContent={"center"} padding={3} spacing={3}>
 				<p className="footer">
 					The source code for this website can be found on my{" "}
 					<a href="https://github.com/JiroKakpovbia/personalWebsite" target="_blank" rel="noopener noreferrer">
@@ -14,10 +14,8 @@ const FooterSection = () => {
 					</a>
 					, so be sure to check it out!
 				</p>
-				<br></br>
 				<p className="footer">Copyright &copy; {currentYear} Jiro Kakpovbia. All Rights Reserved.</p>
-				<br></br>
-			</div>
+			</Grid>
 		</footer>
 	);
 };
