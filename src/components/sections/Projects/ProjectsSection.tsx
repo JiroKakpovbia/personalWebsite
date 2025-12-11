@@ -25,7 +25,7 @@ const ProjectsSection = () => {
 			{status === "failed" && <p>Error: {error}</p>}
 			<Grid container id="projects-container" size={12} spacing={3}>
 				{repos.map((repo, idx: number) => (
-					<Grid container size={{ sm: 12, md: 6, lg: 6 }}>
+					<Grid container size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4}}>
 						<ProjectInfoBlock key={repo.id} repo={repo} id={`project-${idx}`} index={idx} />
 					</Grid>
 				))}

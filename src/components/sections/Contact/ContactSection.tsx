@@ -18,7 +18,7 @@ const ContactInfoSection = () => {
 	];
 	return (
 		<section id="contact">
-			<Grid container size={12} spacing={2} justifyContent={"center"}>
+			<Grid container size={12} spacing={3} justifyContent={"center"}>
 				<Grid container size={12} justifyContent={"center"}>
 					<h1>Contact</h1>
 				</Grid>
@@ -28,7 +28,7 @@ const ContactInfoSection = () => {
 				<Grid size={12} id="method-container" className={"contact"} data-aos="fade-right" data-aos-once="true">
 					{contactMethods.map((contact) => {
 						return (
-							<Grid container size={{ sm: 12, md: 6, lg: 3 }} justifyContent={"center"}>
+							<Grid container size={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3}} justifyContent={"center"}>
 								<ContactInfoBlock id={contact.id} contact={contact} />
 							</Grid>
 						);

@@ -14,7 +14,7 @@ const ExperienceInfoBlock = ({ id, experience, index }: ExperienceInfoBlockProps
 				<Grid container size={2}>
 					<img alt={`${experience.company} Logo`} src={experience.image} />
 				</Grid>
-				<Grid container size={10} spacing={0}className="text-content">
+				<Grid container size={10} spacing={0} className="text-content">
 					<h2 className="job-title">
 						<span className="position">{experience.position}</span>
 						<span className="dates">

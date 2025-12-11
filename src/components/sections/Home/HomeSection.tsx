@@ -31,7 +31,7 @@ const HomeSection = () => {
 				</Grid>
 
 				{/* Content */}
-				<Grid container size={12} spacing={2} justifyContent={"center"} id="home-content">
+				<Grid container size={12} spacing={3} justifyContent={"center"} id="home-content">
 					{/* Text */}
 					<Grid container size={12} id="home-textContainer">
 						<Grid container size={12} justifyContent={"center"} id="subtitle-1-container" data-aos="fade-down" data-aos-once="true">
@@ -55,7 +55,7 @@ const HomeSection = () => {
 					{/* Social Media */}
 					<Grid
 						container
-						size={{ sm: 12, md: 8, lg: 8 }}
+						size={{ xs: 12, sm: 8, md: 8, lg: 8, xl: 4}}
 						justifyContent={"center"}
 						className="socials"
 						id="home-socialsContainer"
@@ -64,7 +64,7 @@ const HomeSection = () => {
 					>
 						{socialMedias.map((social) => {
 							return (
-								<Grid container size={{ sm: 3, md: 2, lg: 2 }} justifyContent={"center"}>
+								<Grid container size={{ xs: 3, sm: 2, md: 2, lg: 1 }} justifyContent={"center"}>
 									<ContactInfoBlock id={social.id} contact={social} />
 								</Grid>
 							);
