@@ -20,13 +20,15 @@ const ProjectsSection = () => {
 
 	return (
 		<section id="projects">
-			<h1>Projects</h1>
-			{status === "loading" && <p>Loading...</p>}
-			{status === "failed" && <p>Error: {error}</p>}
-			<Grid container id="projects-container" size={12} spacing={3}>
+			<Grid container size={12} spacing={3}>
+				<Grid container size={12} justifyContent={"center"}>
+					<h1>Projects</h1>
+				</Grid>
+				{status === "loading" && <p>Loading...</p>}
+				{status === "failed" && <p>Error: {error}</p>}
 				{repos.map((repo, idx: number) => (
-					<Grid container size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4}}>
-						<ProjectInfoBlock key={repo.id} repo={repo} id={`project-${idx}`} index={idx} />
+					<Grid container size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once="true">
+						<ProjectInfoBlock key={repo.id} id={`project-${idx}`} repo={repo} />
 					</Grid>
 				))}
 			</Grid>

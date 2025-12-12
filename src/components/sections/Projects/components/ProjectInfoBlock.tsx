@@ -1,22 +1,14 @@
 import { Grid } from "@mui/material";
-import { GithubRepo } from "../../../../types/Projects";
+import { GithubRepo } from "../../../../types/";
 
 interface ProjectInfoBlockProps {
-	repo: GithubRepo;
 	id: string;
-	index: number;
+	repo: GithubRepo;
 }
 
-const ProjectInfoBlock = ({ repo, id, index }: ProjectInfoBlockProps) => {
+const ProjectInfoBlock = ({ repo, id }: ProjectInfoBlockProps) => {
 	return (
-		<Grid
-			container
-			id={`${id}-block`}
-			className="project"
-			data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-			data-aos-once="true"
-			alignContent={"flex-start"}
-		>
+		<Grid container id={`${id}-container`} spacing={1} padding={3} className="project" alignContent={"flex-start"}>
 			<Grid container size={12}>
 				<h2>
 					<a href={repo.html_url} target="_blank" rel="noopener noreferrer">
