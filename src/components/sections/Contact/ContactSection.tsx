@@ -22,17 +22,11 @@ const ContactInfoSection = () => {
 				<Grid container size={12} justifyContent={"center"}>
 					<h1>Contact</h1>
 				</Grid>
-				<Grid container size={12} justifyContent={"center"} id="form-container" data-aos="fade-left" data-aos-once="true">
+				<Grid container size={12} data-aos="fade-left" data-aos-once="true">
 					<ContactForm />
 				</Grid>
-				<Grid size={12} id="method-container" className={"contact"} data-aos="fade-right" data-aos-once="true">
-					{contactMethods.map((contact) => {
-						return (
-							<Grid container size={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3}} justifyContent={"center"}>
-								<ContactInfoBlock id={contact.id} contact={contact} />
-							</Grid>
-						);
-					})}
+				<Grid container size={12} data-aos="fade-right" data-aos-once="true">
+					<ContactInfoBlock id={"contact-info"} contactMethods={contactMethods} />
 				</Grid>
 			</Grid>
 		</section>
