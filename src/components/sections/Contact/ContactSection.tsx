@@ -18,7 +18,7 @@ const ContactInfoSection = () => {
 	];
 	return (
 		<section id="contact">
-			<Grid container size={12} spacing={3} justifyContent={"center"}>
+			<Grid container size={12} spacing={3}>
 				<Grid container size={12} justifyContent={"center"}>
 					<h1>Contact</h1>
 				</Grid>
