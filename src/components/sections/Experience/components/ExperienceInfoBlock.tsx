@@ -14,8 +14,10 @@ const ExperienceInfoBlock = ({ id, experience }: ExperienceInfoBlockProps) => {
 			</Grid>
 			<Grid container size={{ xs: 12, sm: 10, md: 10, lg: 11, xl: 11.2 }} spacing={0} id={`${id}-content`}>
 				<Grid container size={12} justifyContent={"space-between"} className="job-title">
-					<h2 className="position">{experience.position}</h2>
-					<h2 className="dates">
+					<h2 id={`${id}-position`} className="position">
+						{experience.position}
+					</h2>
+					<h2 id={`${id}-dates`} className="dates">
 						<span className="short">
 							{`${experience.startDate.split(" ")[0].substring(0, 3)} ${experience.startDate.split(" ")[1]} — ${
 								experience.endDate === "Present"
@@ -30,12 +32,12 @@ const ExperienceInfoBlock = ({ id, experience }: ExperienceInfoBlockProps) => {
 				</Grid>
 				<Grid container size={12} spacing={1}>
 					<Grid container size={12}>
-						<p className="location">
+						<p id={`${id}-location`} className="location">
 							{experience.company}, {experience.location}
 						</p>
 					</Grid>
 					<Grid container size={12}>
-						<p dangerouslySetInnerHTML={{ __html: experience.content }}></p>
+						<p id={`${id}-tools`} dangerouslySetInnerHTML={{ __html: experience.content }}></p>
 					</Grid>
 				</Grid>
 			</Grid>
