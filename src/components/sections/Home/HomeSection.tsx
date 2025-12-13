@@ -5,15 +5,14 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const HomeSection = () => {
 	const socialMedias = [
-		{ id: "instagram", method: "Instagram", url: "https://www.instagram.com/jiro.kakpovbia", icon: "fa-brands fa-instagram" },
-		{ id: "x/twitter", method: "X (formerly Twitter)", url: "https://x.com/JiroKakpovbia", icon: "fa-brands fa-x-twitter" },
+		{ method: "Instagram", url: "https://www.instagram.com/jiro.kakpovbia", icon: "fa-brands fa-instagram" },
+		{ method: "X (formerly Twitter)", url: "https://x.com/JiroKakpovbia", icon: "fa-brands fa-x-twitter" },
 		{
-			id: "s-linkedin",
 			method: "LinkedIn",
 			url: "https://linkedin.com/in/jiro-kakpovbia",
 			icon: "fa-brands fa-linkedin-in mb-4",
 		},
-		{ id: "s-github", method: "Github", url: "https://github.com/JiroKakpovbia", icon: "fa-brands fa-github mb-4" },
+		{ method: "Github", url: "https://github.com/JiroKakpovbia", icon: "fa-brands fa-github mb-4" },
 	];
 
 	return (
@@ -39,7 +38,6 @@ const HomeSection = () => {
 								Hi, my name is
 							</p>
 						</Grid>
-
 						<Grid container size={12} justifyContent={"center"} id="title-container" data-aos="fade-in" data-aos-once="true">
 							<h1 id="title-content" className="homeTitle">
 								Jiro Kakpovbia
@@ -55,20 +53,13 @@ const HomeSection = () => {
 					{/* Social Media */}
 					<Grid
 						container
-						size={{ xs: 12, sm: 8, md: 8, lg: 8, xl: 4}}
+						size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}
 						justifyContent={"center"}
-						className="socials"
-						id="home-socialsContainer"
+						id={"social-media-container"}
 						data-aos="fade-up"
 						data-aos-once="true"
 					>
-						{socialMedias.map((social) => {
-							return (
-								<Grid container size={{ xs: 3, sm: 2, md: 2, lg: 1 }} justifyContent={"center"}>
-									<ContactInfoBlock id={social.id} contact={social} />
-								</Grid>
-							);
-						})}
+						<ContactInfoBlock id={"social-media"} contactMethods={socialMedias} sizing={3} />
 					</Grid>
 				</Grid>
 			</Grid>
