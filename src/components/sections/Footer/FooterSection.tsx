@@ -6,15 +6,19 @@ const FooterSection = () => {
 
 	return (
 		<footer id="footer">
-			<Grid container size={12} id="footer-container" className="footer" justifyContent={"center"} padding={3} spacing={3}>
-				<p className="footer">
-					The source code for this website can be found on my{" "}
-					<a href="https://github.com/JiroKakpovbia/personalWebsite" target="_blank" rel="noopener noreferrer">
-						GitHub
-					</a>
-					, so be sure to check it out!
-				</p>
-				<p className="footer">Copyright &copy; {currentYear} Jiro Kakpovbia. All Rights Reserved.</p>
+			<Grid container size={12} id="footer-container" justifyContent={"center"} padding={3} spacing={3} className="footer">
+				<Grid container size={12} justifyContent={"center"}>
+					<p>
+						The source code for this website can be found on my{" "}
+						<a href="https://github.com/JiroKakpovbia/personalWebsite" target="_blank" rel="noopener noreferrer">
+							GitHub
+						</a>
+						, so be sure to check it out!
+					</p>
+				</Grid>
+				<Grid container size={12} justifyContent={"center"}>
+					<p>Copyright &copy; {currentYear} Jiro Kakpovbia. All Rights Reserved.</p>
+				</Grid>
 			</Grid>
 		</footer>
 	);
