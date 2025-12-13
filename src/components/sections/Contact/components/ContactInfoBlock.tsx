@@ -4,14 +4,15 @@ import { Contact } from "../../../../types";
 interface ContactInfoBlockProps {
 	id: string;
 	contactMethods: Contact[];
+	sizing: number | { xs: number; sm: number; md: number; lg: number; xl: number };
 }
 
-const ContactInfoBlock = ({ id, contactMethods }: ContactInfoBlockProps) => {
+const ContactInfoBlock = ({ id, contactMethods, sizing }: ContactInfoBlockProps) => {
 	return (
 		<Grid container size={12} id={`${id}-container`} spacing={6} padding={3} className={"contact"}>
 			{contactMethods.map((contact) => {
 				return (
-					<Grid container id={`${id}-${contact.method}`} size={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }} justifyContent={"center"}>
+					<Grid container id={`${id}-${contact.method}`} size={sizing} justifyContent={"center"}>
 						<p>
 							<a aria-label={`Visit my ${contact.method}`} href={contact.url} target="_blank" rel="noopener noreferrer">
 								<Grid container spacing={1}>
