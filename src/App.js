@@ -15,6 +15,8 @@ import ExperienceSection from "./components/sections/Experience/ExperienceSectio
 import ContactInfoSection from "./components/sections/Contact/ContactSection.tsx";
 import FooterSection from "./components/sections/Footer/FooterSection.tsx";
 
+import { Grid } from "@mui/material";
+
 function App() {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
 	const theme = useSelector((state) => state.theme.value);
@@ -64,7 +66,7 @@ function App() {
 	const websiteSections = ["Home", "About", "Projects", "Skills", "Experience", "Contact"];
 
 	return (
-		<>
+		<Grid container size={12} spacing={8} justifyContent={"center"}>
 			{/* Navigation */}
 			<NavigationSection isNavScrolled={isNavScrolled} theme={theme} toggleTheme={handleToggleTheme} sections={websiteSections} />
 			{/* Home */}
@@ -81,7 +83,7 @@ function App() {
 			<ContactInfoSection />
 			{/* Footer */}
 			<FooterSection />
-		</>
+		</Grid>
 	);
 }
 
