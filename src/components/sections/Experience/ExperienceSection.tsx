@@ -8,6 +8,7 @@ import homeDepotImage from "../../../assets/experience/homedepot.webp";
 import sobeysImage from "../../../assets/experience/sobeys.webp";
 import ExperienceInfoBlock from "./components/ExperienceInfoBlock.tsx";
 import { Grid } from "@mui/material";
+import { Experience } from "../../../types";
 
 const ExperienceSection = () => {
 	const experiences = [
@@ -19,7 +20,7 @@ const ExperienceSection = () => {
 			location: "Waterloo, ON",
 			content: "<b>Languages and Tools:</b> React, TypeScript, C#, SQL, .NET, Azure, Jest, xUnit, Postman, Swagger, Figma, Storybook.",
 			image: equitableImage,
-		},
+		} as Experience,
 		{
 			company: "Print + Retail Solutions, University of Waterloo",
 			position: "Back-End Software Engineer",
@@ -28,7 +29,7 @@ const ExperienceSection = () => {
 			location: "Waterloo, ON",
 			content: "<b>Languages and Tools:</b> BASIC, PHP, HTML, Javascript, MySQL, Node.js, Docker, GraphQL.",
 			image: prsImage,
-		},
+		} as Experience,
 		{
 			company: "Print + Retail Solutions, University of Waterloo",
 			position: "Front-End Web Developer",
@@ -37,7 +38,7 @@ const ExperienceSection = () => {
 			location: "Waterloo, ON",
 			content: "<b>Languages and Tools:</b> BASIC, PHP, HTML, Javascript, MySQL.",
 			image: prsImage,
-		},
+		} as Experience,
 		{
 			company: "University of Waterloo Varsity Football",
 			position: "Varsity Athlete",
@@ -47,7 +48,7 @@ const ExperienceSection = () => {
 			content:
 				"Received University of Waterloo Varsity Football Athletic Scholarship, and balanced a 30-hour weekly training schedule with a full academic course load.",
 			image: warriorsImage,
-		},
+		} as Experience,
 		{
 			company: "Home Depot",
 			position: "Order Fulfillment Systems Associate",
@@ -57,7 +58,7 @@ const ExperienceSection = () => {
 			content:
 				"Executed accurate order fulfillment using digital inventory systems, ensuring error-free results and high customer satisfaction under tight deadlines.",
 			image: homeDepotImage,
-		},
+		} as Experience,
 		{
 			company: "Sobeys",
 			position: "Data Workflow Associate",
@@ -67,7 +68,7 @@ const ExperienceSection = () => {
 			content:
 				"Optimized product placement and maintained inventory accuracy while providing responsive customer support in a fast-paced environment.",
 			image: sobeysImage,
-		},
+		} as Experience,
 		{
 			company: "Social Venture Partners Teens",
 			position: "Vice Chair of Engagement",
@@ -77,7 +78,7 @@ const ExperienceSection = () => {
 			content:
 				"Contributed to raising nearly $4000 presented to the Bereaved Families of Ontario in 2021, and nearly $5000 to Martin Luther University College in 2022.",
 			image: svpImage,
-		},
+		} as Experience,
 	];
 	return (
 		<section id="experience">

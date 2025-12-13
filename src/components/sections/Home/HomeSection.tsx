@@ -2,17 +2,18 @@ import { Grid } from "@mui/material";
 import ContactInfoBlock from "../Contact/components/ContactInfoBlock.tsx";
 import "./Home.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { Contact } from "../../../types";
 
 const HomeSection = () => {
 	const socialMedias = [
-		{ method: "Instagram", url: "https://www.instagram.com/jiro.kakpovbia", icon: "fa-brands fa-instagram" },
-		{ method: "X (formerly Twitter)", url: "https://x.com/JiroKakpovbia", icon: "fa-brands fa-x-twitter" },
+		{ method: "Instagram", url: "https://www.instagram.com/jiro.kakpovbia", icon: "fa-brands fa-instagram" } as Contact,
+		{ method: "X (formerly Twitter)", url: "https://x.com/JiroKakpovbia", icon: "fa-brands fa-x-twitter" } as Contact,
 		{
 			method: "LinkedIn",
 			url: "https://linkedin.com/in/jiro-kakpovbia",
 			icon: "fa-brands fa-linkedin-in mb-4",
-		},
-		{ method: "Github", url: "https://github.com/JiroKakpovbia", icon: "fa-brands fa-github mb-4" },
+		} as Contact,
+		{ method: "Github", url: "https://github.com/JiroKakpovbia", icon: "fa-brands fa-github mb-4" } as Contact,
 	];
 
 	return (
