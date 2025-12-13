@@ -29,7 +29,6 @@ const HomeSection = () => {
 						data-aos-once="true"
 					/>
 				</Grid>
-
 				{/* Content */}
 				<Grid container size={12} spacing={3} justifyContent={"center"} id="home-content">
 					{/* Text */}
