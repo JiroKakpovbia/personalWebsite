@@ -149,7 +149,7 @@ const SkillsSection = () => {
 	return (
 		<section id="skills">
 			<Grid container size={12} spacing={3}>
-				<Grid container size={12}>
+				<Grid container size={12} justifyContent={"center"}>
 					<h1>Skills</h1>
 				</Grid>
 				<Grid container size={12} spacing={1} data-aos="fade-in" data-aos-once="true">
