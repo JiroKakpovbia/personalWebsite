@@ -2,23 +2,22 @@ import { Grid } from "@mui/material";
 import { Contact } from "../../../../types";
 
 interface ContactInfoBlockProps {
-	id: string;
 	contactMethods: Contact[];
 	sizing: number | { xs: number; sm: number; md: number; lg: number; xl: number };
 }
 
-const ContactInfoBlock = ({ id, contactMethods, sizing }: ContactInfoBlockProps) => {
+const ContactInfoBlock = ({ contactMethods, sizing }: ContactInfoBlockProps) => {
 	return (
-		<Grid container size={12} id={`${id}-container`} spacing={6} padding={3} className={"contact"}>
+		<Grid container size={12} spacing={6} padding={3} className={"contact"}>
 			{contactMethods.map((contact, idx) => (
-				<Grid container key={`${id}-${idx}`} id={`${id}-${idx}`} size={sizing} justifyContent={"center"}>
+				<Grid container key={`contact-${idx}`} size={sizing} justifyContent={"center"}>
 					<a aria-label={`Visit my ${contact.method}`} href={contact.url} target="_blank" rel="noopener noreferrer">
 						<Grid container spacing={1}>
 							<Grid container size={12} justifyContent={"center"}>
-								<i id={`${id}-${idx}-icon`} className={contact.icon}></i>
+								<i className={contact.icon}></i>
 							</Grid>
 							<Grid container size={12} justifyContent={"center"}>
-								<p id={`${id}-${idx}-label`}>{contact.label}</p>
+								<p >{contact.label}</p>
 							</Grid>
 						</Grid>
 					</a>

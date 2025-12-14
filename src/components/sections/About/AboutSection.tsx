@@ -27,13 +27,13 @@ const AboutSection = () => {
 	}
 
 	return (
-		<section id="about">
+		<section id={"about"}>
 			<Grid container size={12} spacing={3}>
 				<Grid container size={12} justifyContent={"center"}>
 					<h1>About</h1>
 				</Grid>
 				<Grid container size={12} data-aos="fade-up" data-aos-once="true">
-					<AboutInfoBlock id={"about"} headshot={headshotImage} resume={resumePdf} academicYear={currentAcademicYear} />
+					<AboutInfoBlock headshot={headshotImage} resume={resumePdf} academicYear={currentAcademicYear} />
 				</Grid>
 			</Grid>
 		</section>

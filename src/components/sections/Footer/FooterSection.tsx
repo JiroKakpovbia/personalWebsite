@@ -5,8 +5,8 @@ const FooterSection = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer id="footer">
-			<Grid container size={12} id="footer-container" justifyContent={"center"} padding={3} spacing={3} className="footer">
+		<footer id={"footer"}>
+			<Grid container size={12} justifyContent={"center"} padding={3} spacing={3} className="footer">
 				<Grid container size={12} justifyContent={"center"}>
 					<p>
 						The source code for this website can be found on my{" "}

@@ -21,12 +21,11 @@ const NavigationSection = ({ isNavScrolled, theme, toggleTheme, sections }: Navi
 		<Grid container size={12} justifyContent={"center"}>
 			{/* Desktop Navigation */}
 			<Grid container size={12}>
-				<DesktopNavigation id={"desktop-nav"} sections={sections} scrolled={isNavScrolled} theme={theme} toggleTheme={toggleTheme} />
+				<DesktopNavigation sections={sections} scrolled={isNavScrolled} theme={theme} toggleTheme={toggleTheme} />
 			</Grid>
 			{/* Hamburger Navigation */}
 			<Grid container size={12}>
 				<MobileNavigation
-					id={"hamburger-nav"}
 					sections={sections}
 					scrolled={isNavScrolled}
 					theme={theme}

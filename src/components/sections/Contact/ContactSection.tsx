@@ -17,7 +17,7 @@ const ContactInfoSection = () => {
 		{ method: "Github", label: "JiroKakpovbia", url: "https://github.com/JiroKakpovbia", icon: "fa-brands fa-github mb-4" } as Contact,
 	];
 	return (
-		<section id="contact">
+		<section id={"contact"}>
 			<Grid container size={12} spacing={3}>
 				<Grid container size={12} justifyContent={"center"}>
 					<h1>Contact</h1>
@@ -26,7 +26,7 @@ const ContactInfoSection = () => {
 					<ContactForm />
 				</Grid>
 				<Grid container size={12} data-aos="fade-right" data-aos-once="true">
-					<ContactInfoBlock id={"contact-info"} contactMethods={contactMethods} sizing={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }} />
+					<ContactInfoBlock contactMethods={contactMethods} sizing={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }} />
 				</Grid>
 			</Grid>
 		</section>

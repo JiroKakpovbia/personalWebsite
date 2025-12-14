@@ -81,14 +81,14 @@ const ExperienceSection = () => {
 		} as Experience,
 	];
 	return (
-		<section id="experience">
+		<section id={"experience"}>
 			<Grid container size={12} spacing={3}>
 				<Grid container size={12} justifyContent={"center"}>
 					<h1>Experience</h1>
 				</Grid>
 				{experiences.map((exp, idx: number) => (
-					<Grid container size={12} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once="true">
-						<ExperienceInfoBlock key={`${exp.company}-${exp.position}`} id={`experience-${idx}`} experience={exp} />
+					<Grid container key={`experience-${idx}`} size={12} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once="true">
+						<ExperienceInfoBlock key={`${exp.company}-${exp.position}`} experience={exp} />
 					</Grid>
 				))}
 			</Grid>

@@ -2,13 +2,12 @@ import { Grid } from "@mui/material";
 import { GithubRepo } from "../../../../types/";
 
 interface ProjectInfoBlockProps {
-	id: string;
 	repo: GithubRepo;
 }
 
-const ProjectInfoBlock = ({ repo, id }: ProjectInfoBlockProps) => {
+const ProjectInfoBlock = ({ repo }: ProjectInfoBlockProps) => {
 	return (
-		<Grid container id={`${id}-container`} spacing={1} padding={3} className="project" alignContent={"flex-start"}>
+		<Grid container spacing={1} padding={3} className="project" alignContent={"flex-start"}>
 			<Grid size={12}>
 				<h2>
 					<a href={repo.html_url} target="_blank" rel="noopener noreferrer">
