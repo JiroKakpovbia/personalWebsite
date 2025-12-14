@@ -20,7 +20,7 @@ const HomeSection = () => {
 		<section id="home">
 			<Grid container size={12}>
 				{/* Animation */}
-				<Grid container size={12} className="background-animation" id="home-animation">
+				<Grid size={12} className="background-animation" id="home-animation">
 					<DotLottieReact
 						src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"
 						loop
@@ -30,7 +30,7 @@ const HomeSection = () => {
 					/>
 				</Grid>
 				{/* Content */}
-				<Grid container size={12} spacing={3} justifyContent={"center"} id="home-content">
+				<Grid container size={12} justifyContent={"center"} id="home-content">
 					{/* Text */}
 					<Grid container size={12} id="home-textContainer">
 						<Grid container size={12} justifyContent={"center"} id="subtitle-1-container" data-aos="fade-down" data-aos-once="true">
@@ -52,8 +52,7 @@ const HomeSection = () => {
 
 					{/* Social Media */}
 					<Grid
-						container
-						size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}
+						size={{ xs: 8, sm: 6, md: 6, lg: 4, xl: 4 }}
 						justifyContent={"center"}
 						id={"social-media-container"}
 						data-aos="fade-up"

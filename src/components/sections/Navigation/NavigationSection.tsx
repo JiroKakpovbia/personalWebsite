@@ -18,7 +18,7 @@ const NavigationSection = ({ isNavScrolled, theme, toggleTheme, sections }: Navi
 	};
 
 	return (
-		<Grid container size={12}>
+		<Grid container size={12} justifyContent={"center"}>
 			{/* Desktop Navigation */}
 			<Grid container size={12}>
 				<DesktopNavigation id={"desktop-nav"} sections={sections} scrolled={isNavScrolled} theme={theme} toggleTheme={toggleTheme} />

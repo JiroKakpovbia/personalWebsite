@@ -12,16 +12,16 @@ interface MobileNavigationProps {
 
 const MobileNavigation = ({ id, sections, scrolled, theme, toggleTheme, open, toggleMenu }: MobileNavigationProps) => {
 	return (
-		<Grid container size={12} id={`${id}-container`}>
+		<Grid container size={12} id={`${id}-container`} justifyContent={"center"}>
 			<nav id="hamburger-nav" className={scrolled ? "scrolled" : ""}>
 				<Grid container size={12} padding={3} justifyContent={"space-between"}>
 					{/* Name */}
-					<Grid container className={"logo"} data-aos="fade-down" data-aos-once="true">
+					<Grid className={"logo"} data-aos="fade-down" data-aos-once="true">
 						<h2 id={`${id}-website-name`}>Jiro Kakpovbia</h2>
 					</Grid>
 					<Grid container spacing={3} data-aos="fade-down" data-aos-once="true">
 						{/* Theme Toggle */}
-						<Grid container className="theme-toggle">
+						<Grid className="theme-toggle">
 							<button id={`${id}-theme-toggle`} aria-label="theme-toggle" onClick={toggleTheme}>
 								<i className={`fas ${theme === "light" ? "fa-sun" : "fa-moon"}`}></i>
 							</button>
@@ -35,15 +35,13 @@ const MobileNavigation = ({ id, sections, scrolled, theme, toggleTheme, open, to
 							</button>
 							{/* Page Links */}
 							<Grid container className={`menu-links ${open ? "open" : ""}`}>
-								{sections.map((section, idx) => {
-									return (
-										<Grid container className="nav-links" onClick={toggleMenu}>
-											<a id={`${id}-section-${idx}`} href={`#${section.toLowerCase()}`}>
-												{section}
-											</a>
-										</Grid>
-									);
-								})}
+								{sections.map((section, idx) => (
+									<Grid key={`${id}-section-${idx}-container`} className="nav-links" onClick={toggleMenu}>
+										<a key={`${id}-section-${idx}`} id={`${id}-section-${idx}`} href={`#${section.toLowerCase()}`}>
+											{section}
+										</a>
+									</Grid>
+								))}
 							</Grid>
 						</Grid>
 					</Grid>
