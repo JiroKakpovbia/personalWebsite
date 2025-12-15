@@ -18,13 +18,13 @@ const NavigationSection = ({ isNavScrolled, theme, toggleTheme, sections }: Navi
 	};
 
 	return (
-		<Grid container size={12} justifyContent={"center"}>
+		<Grid container size={12}>
 			{/* Desktop Navigation */}
-			<Grid container size={12}>
+			<Grid container size={12} display={{ xs: "none", md: "flex" }}>
 				<DesktopNavigation sections={sections} scrolled={isNavScrolled} theme={theme} toggleTheme={toggleTheme} />
 			</Grid>
-			{/* Hamburger Navigation */}
-			<Grid container size={12}>
+			{/* Mobile Navigation */}
+			<Grid container size={12} display={{ xs: "flex", md: "none" }}>
 				<MobileNavigation
 					sections={sections}
 					scrolled={isNavScrolled}
