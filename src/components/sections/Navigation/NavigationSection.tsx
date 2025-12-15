@@ -5,12 +5,12 @@ import DesktopNavigation from "./components/DesktopNavigation.tsx";
 import MobileNavigation from "./components/MobileNavigation.tsx";
 
 interface NavigationSectionProps {
-	isNavScrolled: boolean;
+	scrollProgress: number;
 	theme: any;
 	toggleTheme: () => void;
 	sections: string[];
 }
-const NavigationSection = ({ isNavScrolled, theme, toggleTheme, sections }: NavigationSectionProps) => {
+const NavigationSection = ({ scrollProgress, theme, toggleTheme, sections }: NavigationSectionProps) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const handleMenuToggle = () => {
@@ -19,22 +19,27 @@ const NavigationSection = ({ isNavScrolled, theme, toggleTheme, sections }: Navi
 
 	return (
 		<section id="navigation">
-			<Grid container size={12}>
-				{/* Desktop Navigation */}
-				<Grid container size={12} display={{ xs: "none", md: "flex" }}>
-					<DesktopNavigation sections={sections} scrolled={isNavScrolled} theme={theme} toggleTheme={toggleTheme} />
-				</Grid>
-				{/* Mobile Navigation */}
-				<Grid container size={12} display={{ xs: "flex", md: "none" }}>
-					<MobileNavigation
-						sections={sections}
-						scrolled={isNavScrolled}
-						theme={theme}
-						toggleTheme={toggleTheme}
-						open={menuOpen}
-						toggleMenu={handleMenuToggle}
-					/>
-				</Grid>
+			<Grid container size={12} justifyContent={"center"}>
+				<nav className={scrollProgress > 0 ? "scrolled" : ""}>
+					<Grid container size={12} padding={3} justifyContent={"space-between"}>
+						{/* Name */}
+						<Grid className={"logo"} data-aos="fade-down" data-aos-once="true">
+							{scrollProgress > 0 && <h2>Jiro Kakpovbia</h2>}
+						</Grid>
+						{/* Desktop Links */}
+						<Grid display={{ xs: "none", md: "flex" }}>
+							<DesktopNavigation sections={sections} theme={theme} toggleTheme={toggleTheme} />
+						</Grid>
+						{/* Mobile Links */}
+						<Grid display={{ xs: "flex", md: "none" }}>
+							<MobileNavigation sections={sections} theme={theme} toggleTheme={toggleTheme} open={menuOpen} toggleMenu={handleMenuToggle} />
+						</Grid>
+					</Grid>
+					{/* Progress Bar */}
+					<div className="scroll-progress-container">
+						<div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
+					</div>
+				</nav>
 			</Grid>
 		</section>
 	);
