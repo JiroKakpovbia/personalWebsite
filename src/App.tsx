@@ -19,7 +19,7 @@ import { RootState } from "./store/store.ts";
 import { useAppSelector, useAppDispatch } from "./store/hooks.ts";
 
 const App = () => {
-	const [isNavScrolled, setIsNavScrolled] = useState(false);
+	const [scrollProgress, setScrollProgress] = useState(0);
 	const theme = useAppSelector((state: RootState) => state.theme.value);
 	const dispatch = useAppDispatch();
 
@@ -47,7 +47,10 @@ const App = () => {
 
 	// Handle scroll event to change nav colour
 	const handleScroll = () => {
-		setIsNavScrolled(window.scrollY > 50);
+		const scrollTop = window.scrollY;
+		const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+		const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+		setScrollProgress(progress);
 	};
 
 	// Initialize AOS, handle scroll
@@ -69,7 +72,7 @@ const App = () => {
 	return (
 		<Grid container size={12} spacing={8} justifyContent={"center"}>
 			{/* Navigation */}
-			<NavigationSection isNavScrolled={isNavScrolled} theme={theme} toggleTheme={handleToggleTheme} sections={websiteSections} />
+			<NavigationSection scrollProgress={scrollProgress} theme={theme} toggleTheme={handleToggleTheme} sections={websiteSections} />
 			{/* Home */}
 			<HomeSection />
 			{/* About */}
