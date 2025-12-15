@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme, setTheme } from "./store/themeSlice.tsx";
 import "./App.css";
 
@@ -16,11 +15,13 @@ import ContactInfoSection from "./components/sections/Contact/ContactSection.tsx
 import FooterSection from "./components/sections/Footer/FooterSection.tsx";
 
 import { Grid } from "@mui/material";
+import { RootState } from "./store/store.ts";
+import { useAppSelector, useAppDispatch } from "./store/hooks.ts";
 
-function App() {
+const App = () => {
 	const [isNavScrolled, setIsNavScrolled] = useState(false);
-	const theme = useSelector((state) => state.theme.value);
-	const dispatch = useDispatch();
+	const theme = useAppSelector((state: RootState) => state.theme.value);
+	const dispatch = useAppDispatch();
 
 	// Apply theme to body
 	useEffect(() => {
@@ -31,7 +32,7 @@ function App() {
 	// Listen for system theme changes
 	useEffect(() => {
 		const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
-		const handleChange = (event) => {
+		const handleChange = (event: MediaQueryListEvent) => {
 			if (!localStorage.getItem("theme")) {
 				dispatch(setTheme(event.matches ? "light" : "dark"));
 			}
@@ -85,6 +86,6 @@ function App() {
 			<FooterSection />
 		</Grid>
 	);
-}
+};
 
 export default App;
