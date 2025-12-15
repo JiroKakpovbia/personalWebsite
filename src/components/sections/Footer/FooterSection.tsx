@@ -6,7 +6,7 @@ const FooterSection = () => {
 
 	return (
 		<footer id={"footer"}>
-			<Grid container size={12} justifyContent={"center"} padding={3} spacing={3} className="footer">
+			<Grid container size={12} justifyContent={"center"} spacing={3} padding={3} className="footer">
 				<Grid container size={12} justifyContent={"center"}>
 					<p>
 						The source code for this website can be found on my{" "}

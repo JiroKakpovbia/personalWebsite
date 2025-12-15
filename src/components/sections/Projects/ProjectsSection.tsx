@@ -20,7 +20,7 @@ const ProjectsSection = () => {
 
 	return (
 		<section id={"projects"}>
-			<Grid container size={12} spacing={3}>
+			<Grid container size={12} spacing={3} padding={3}>
 				<Grid container size={12} justifyContent={"center"}>
 					<h1>Projects</h1>
 				</Grid>

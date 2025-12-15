@@ -18,9 +18,9 @@ const HomeSection = () => {
 
 	return (
 		<section id={"home"}>
-			<Grid container size={12}>
+			<Grid container size={12} justifyContent={"center"} padding={3}>
 				{/* Animation */}
-				<Grid size={12} className="background-animation">
+				<Grid size={{ xs: 12, sm: 10, md: 10, lg: 9, xl: 6 }} className="background-animation">
 					<DotLottieReact
 						src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"
 						loop
@@ -33,8 +33,10 @@ const HomeSection = () => {
 				<Grid container size={12} justifyContent={"center"}>
 					{/* Text */}
 					<Grid container size={12}>
-						<Grid container size={12} justifyContent={"center"} data-aos="fade-down" data-aos-once="true">
-							<p className="homeSubtitle">Hi, my name is</p>
+						<Grid container size={12} justifyContent={"center"}>
+							<p data-aos="fade-down" data-aos-once="true" className="homeSubtitle">
+								Hi, my name is
+							</p>
 						</Grid>
 						<Grid container size={12} justifyContent={"center"} data-aos="fade-in" data-aos-once="true">
 							<h1 className="homeTitle">Jiro Kakpovbia</h1>

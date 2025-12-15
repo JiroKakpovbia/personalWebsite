@@ -6,11 +6,12 @@ import MobileNavigation from "./components/MobileNavigation.tsx";
 
 interface NavigationSectionProps {
 	scrollProgress: number;
+	showName: boolean;
+	sections: string[];
 	theme: any;
 	toggleTheme: () => void;
-	sections: string[];
 }
-const NavigationSection = ({ scrollProgress, theme, toggleTheme, sections }: NavigationSectionProps) => {
+const NavigationSection = ({ scrollProgress, showName, sections, theme, toggleTheme }: NavigationSectionProps) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const handleMenuToggle = () => {
@@ -19,12 +20,12 @@ const NavigationSection = ({ scrollProgress, theme, toggleTheme, sections }: Nav
 
 	return (
 		<section id="navigation">
-			<Grid container size={12} justifyContent={"center"}>
+			<Grid container size={12} justifyContent={"center"} padding={3}>
 				<nav className={scrollProgress > 0 ? "scrolled" : ""}>
 					<Grid container size={12} padding={3} justifyContent={"space-between"}>
 						{/* Name */}
 						<Grid className={"logo"} data-aos="fade-down" data-aos-once="true">
-							{scrollProgress > 0 && <h2>Jiro Kakpovbia</h2>}
+							{showName && <h2>Jiro Kakpovbia</h2>}
 						</Grid>
 						{/* Desktop Links */}
 						<Grid display={{ xs: "none", md: "flex" }}>

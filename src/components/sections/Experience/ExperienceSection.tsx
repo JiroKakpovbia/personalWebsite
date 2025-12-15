@@ -82,7 +82,7 @@ const ExperienceSection = () => {
 	];
 	return (
 		<section id={"experience"}>
-			<Grid container size={12} spacing={3}>
+			<Grid container size={12} spacing={3} padding={3}>
 				<Grid container size={12} justifyContent={"center"}>
 					<h1>Experience</h1>
 				</Grid>
