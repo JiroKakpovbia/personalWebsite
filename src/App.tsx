@@ -20,6 +20,7 @@ import { useAppSelector, useAppDispatch } from "./store/hooks.ts";
 
 const App = () => {
 	const [scrollProgress, setScrollProgress] = useState(0);
+	const [showName, setShowName] = useState(false);
 	const theme = useAppSelector((state: RootState) => state.theme.value);
 	const dispatch = useAppDispatch();
 
@@ -45,12 +46,21 @@ const App = () => {
 		dispatch(toggleTheme());
 	};
 
-	// Handle scroll event to change nav colour
+	// Handle scroll event in navigation
 	const handleScroll = () => {
+		// Handle progress bar
 		const scrollTop = window.scrollY;
 		const docHeight = document.documentElement.scrollHeight - window.innerHeight;
 		const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 		setScrollProgress(progress);
+
+		// Handle name
+		const homeSection = document.getElementById("home");
+
+		if (homeSection) {
+			const homeBottom = homeSection.getBoundingClientRect().bottom;
+			setShowName(homeBottom < 25);
+		}
 	};
 
 	// Initialize AOS, handle scroll
@@ -70,24 +80,32 @@ const App = () => {
 	const websiteSections = ["Home", "About", "Projects", "Skills", "Experience", "Contact"];
 
 	return (
-		<Grid container size={12} spacing={8} justifyContent={"center"}>
+		<>
 			{/* Navigation */}
-			<NavigationSection scrollProgress={scrollProgress} theme={theme} toggleTheme={handleToggleTheme} sections={websiteSections} />
-			{/* Home */}
-			<HomeSection />
-			{/* About */}
-			<AboutSection />
-			{/* Projects */}
-			<ProjectsSection />
-			{/* Skills */}
-			<SkillsSection />
-			{/* Experience */}
-			<ExperienceSection />
-			{/* Contact */}
-			<ContactInfoSection />
-			{/* Footer */}
-			<FooterSection />
-		</Grid>
+			<NavigationSection
+				scrollProgress={scrollProgress}
+				showName={showName}
+				sections={websiteSections}
+				theme={theme}
+				toggleTheme={handleToggleTheme}
+			/>
+			<Grid container size={12} spacing={8} justifyContent={"center"}>
+				{/* Home */}
+				<HomeSection />
+				{/* About */}
+				<AboutSection />
+				{/* Projects */}
+				<ProjectsSection />
+				{/* Skills */}
+				<SkillsSection />
+				{/* Experience */}
+				<ExperienceSection />
+				{/* Contact */}
+				<ContactInfoSection />
+				{/* Footer */}
+				<FooterSection />
+			</Grid>
+		</>
 	);
 };
 
