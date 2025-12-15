@@ -18,23 +18,25 @@ const NavigationSection = ({ isNavScrolled, theme, toggleTheme, sections }: Navi
 	};
 
 	return (
-		<Grid container size={12}>
-			{/* Desktop Navigation */}
-			<Grid container size={12} display={{ xs: "none", md: "flex" }}>
-				<DesktopNavigation sections={sections} scrolled={isNavScrolled} theme={theme} toggleTheme={toggleTheme} />
+		<section id="navigation">
+			<Grid container size={12}>
+				{/* Desktop Navigation */}
+				<Grid container size={12} display={{ xs: "none", md: "flex" }}>
+					<DesktopNavigation sections={sections} scrolled={isNavScrolled} theme={theme} toggleTheme={toggleTheme} />
+				</Grid>
+				{/* Mobile Navigation */}
+				<Grid container size={12} display={{ xs: "flex", md: "none" }}>
+					<MobileNavigation
+						sections={sections}
+						scrolled={isNavScrolled}
+						theme={theme}
+						toggleTheme={toggleTheme}
+						open={menuOpen}
+						toggleMenu={handleMenuToggle}
+					/>
+				</Grid>
 			</Grid>
-			{/* Mobile Navigation */}
-			<Grid container size={12} display={{ xs: "flex", md: "none" }}>
-				<MobileNavigation
-					sections={sections}
-					scrolled={isNavScrolled}
-					theme={theme}
-					toggleTheme={toggleTheme}
-					open={menuOpen}
-					toggleMenu={handleMenuToggle}
-				/>
-			</Grid>
-		</Grid>
+		</section>
 	);
 };
 
