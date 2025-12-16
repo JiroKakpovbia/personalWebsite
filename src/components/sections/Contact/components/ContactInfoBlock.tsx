@@ -10,13 +10,15 @@ const ContactInfoBlock = ({ contactMethods, sizing }: ContactInfoBlockProps) => 
 	return (
 		<Grid container size={12} spacing={6} padding={3} className={"contact"}>
 			{contactMethods.map((contact, idx) => (
-				<Grid container key={`contact-${idx}`} size={sizing} justifyContent={"center"} className={"icon-link"}>
+				<Grid container key={`contact-${idx}`} size={sizing} justifyContent={"center"}>
 					<a aria-label={`Visit my ${contact.method}`} href={contact.url} target="_blank" rel="noopener noreferrer">
 						<Grid container spacing={1} justifyContent={"center"}>
-							<Grid container size={12} justifyContent={"center"}>
+							<Grid container size={12} justifyContent={"center"} className={"icon-link"}>
 								<contact.icon fontSize="large" />
 							</Grid>
-							{contact.label}
+							<Grid container size={12} justifyContent={"center"}>
+								<p>{contact.label}</p>
+							</Grid>
 						</Grid>
 					</a>
 				</Grid>

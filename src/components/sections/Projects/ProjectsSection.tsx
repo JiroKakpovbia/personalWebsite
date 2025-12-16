@@ -32,7 +32,7 @@ const ProjectsSection = () => {
 						key={`project-${idx}`}
 						size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}
 						data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
-						data-aos-once="true"
+						data-aos-once={"true"}
 					>
 						<ProjectInfoBlock key={`project-${idx}`} repo={repo} />
 					</Grid>

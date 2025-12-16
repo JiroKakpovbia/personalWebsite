@@ -12,7 +12,7 @@ interface MobileNavigationProps {
 
 const MobileNavigation = ({ sections, theme, toggleTheme, open, toggleMenu }: MobileNavigationProps) => {
 	return (
-		<Grid container spacing={3} data-aos="fade-down" data-aos-once="true">
+		<Grid container spacing={3} data-aos={"fade-down"} data-aos-once={"true"}>
 			{/* Theme Toggle */}
 			<Grid container className="theme-toggle">
 				<button aria-label="theme-toggle" onClick={toggleTheme} className={"icon-link"}>

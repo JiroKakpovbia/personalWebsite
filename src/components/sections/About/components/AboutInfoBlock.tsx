@@ -13,7 +13,7 @@ const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps)
 			<Grid container size={{ xs: 9, sm: 6, md: 3, lg: 4, xl: 3 }} flex={1} flexDirection={"column"}>
 				<img alt="Headshot of Jiro Kakpovbia" src={headshot}></img>
 			</Grid>
-			<Grid container size={{ xs: 12, sm: 12, md: 9, lg: 8, xl: 9 }} spacing={2} justifyContent={"center"}>
+			<Grid container size={{ xs: 12, sm: 12, md: 9, lg: 8, xl: 9 }} spacing={0}>
 				{/* Paragraph 1 */}
 				<Grid size={12}>
 					<p>

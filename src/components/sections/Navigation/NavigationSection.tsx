@@ -26,7 +26,7 @@ const NavigationSection = ({ scrollProgress, showName, sections, theme, toggleTh
 						{/* Name */}
 						<Grid className={"logo"}>
 							{showName && (
-								<h2 data-aos={"fade-in"} data-aos-once="true">
+								<h2 data-aos={"fade-in"} data-aos-once={"true"}>
 									Jiro Kakpovbia
 								</h2>
 							)}

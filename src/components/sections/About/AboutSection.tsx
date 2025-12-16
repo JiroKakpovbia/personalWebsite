@@ -32,7 +32,7 @@ const AboutSection = () => {
 				<Grid container size={12} justifyContent={"center"}>
 					<h1>About</h1>
 				</Grid>
-				<Grid container size={12} data-aos="fade-up" data-aos-once="true">
+				<Grid container size={12} data-aos={"fade-up"} data-aos-once={"true"}>
 					<AboutInfoBlock headshot={headshotImage} resume={resumePdf} academicYear={currentAcademicYear} />
 				</Grid>
 			</Grid>

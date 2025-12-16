@@ -11,7 +11,7 @@ interface DesktopNavigationProps {
 const DesktopNavigation = ({ sections, theme, toggleTheme }: DesktopNavigationProps) => {
 	return (
 		// Page Links
-		<Grid container spacing={3} data-aos="fade-down" data-aos-once="true">
+		<Grid container spacing={3} data-aos={"fade-down"} data-aos-once={"true"}>
 			{sections.map((section, idx) => (
 				<Grid key={`desktop-nav-section-${idx}-container`} className="nav-links">
 					<a href={`#${section.toLowerCase()}`}>{section}</a>
