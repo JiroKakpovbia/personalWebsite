@@ -1,4 +1,6 @@
 import { Grid } from "@mui/material";
+import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 interface MobileNavigationProps {
 	sections: string[];
@@ -12,9 +14,10 @@ const MobileNavigation = ({ sections, theme, toggleTheme, open, toggleMenu }: Mo
 	return (
 		<Grid container spacing={3} data-aos="fade-down" data-aos-once="true">
 			{/* Theme Toggle */}
-			<Grid className="theme-toggle">
-				<button aria-label="theme-toggle" onClick={toggleTheme}>
-					<i className={`fas ${theme === "light" ? "fa-sun" : "fa-moon"}`}></i>
+			<Grid container className="theme-toggle">
+				<button aria-label="theme-toggle" onClick={toggleTheme} className={"icon-link"}>
+					{theme === "dark" && <NightlightRoundIcon fontSize={"large"} />}
+					{theme === "light" && <LightModeIcon fontSize={"large"} />}
 				</button>
 			</Grid>
 			{/* Hamburger Menu */}

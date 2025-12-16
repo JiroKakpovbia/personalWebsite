@@ -3,17 +3,21 @@ import ContactInfoBlock from "../Contact/components/ContactInfoBlock.tsx";
 import "./Home.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Contact } from "../../../types";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import XIcon from "@mui/icons-material/X";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const HomeSection = () => {
 	const socialMedias = [
-		{ method: "Instagram", url: "https://www.instagram.com/jiro.kakpovbia", icon: "fa-brands fa-instagram" } as Contact,
-		{ method: "X (formerly Twitter)", url: "https://x.com/JiroKakpovbia", icon: "fa-brands fa-x-twitter" } as Contact,
+		{ method: "Instagram", url: "https://www.instagram.com/jiro.kakpovbia", icon: InstagramIcon } as Contact,
+		{ method: "X (formerly Twitter)", url: "https://x.com/JiroKakpovbia", icon: XIcon  } as Contact,
 		{
 			method: "LinkedIn",
 			url: "https://linkedin.com/in/jiro-kakpovbia",
-			icon: "fa-brands fa-linkedin-in mb-4",
+			icon: LinkedInIcon ,
 		} as Contact,
-		{ method: "Github", url: "https://github.com/JiroKakpovbia", icon: "fa-brands fa-github mb-4" } as Contact,
+		{ method: "Github", url: "https://github.com/JiroKakpovbia", icon: GitHubIcon  } as Contact,
 	];
 
 	return (
@@ -47,7 +51,7 @@ const HomeSection = () => {
 					</Grid>
 
 					{/* Social Media */}
-					<Grid container size={{ xs: 8, sm: 6, md: 6, lg: 4, xl: 4 }} justifyContent={"center"} data-aos="fade-up" data-aos-once="true">
+					<Grid container size={{ xs: 10, sm: 6, md: 4, lg: 3, xl: 2 }} justifyContent={"center"} data-aos="fade-up" data-aos-once="true">
 						<ContactInfoBlock contactMethods={socialMedias} sizing={3} />
 					</Grid>
 				</Grid>

@@ -6,6 +6,7 @@
 		"@emotion/react": "^11.14.0",
 		"@emotion/styled": "^11.14.1",
 		"@lottiefiles/dotlottie-react": "^0.15.2",
+		"@mui/icons-material": "^7.3.6",
 		"@mui/material": "^7.3.6",
 		"@reduxjs/toolkit": "^2.9.0",
 		"@testing-library/jest-dom": "^6.8.0",
@@ -42,6 +43,7 @@
 		]
 	},
 	"devDependencies": {
+		"@types/aos": "^3.0.7",
 		"autoprefixer": "^10.4.21",
 		"eslint-config-react-app": "^7.0.1",
 		"postcss": "^8.5.6",

@@ -3,18 +3,22 @@ import ContactInfoBlock from "./components/ContactInfoBlock.tsx";
 import "./Contact.css";
 import ContactForm from "./components/ContactForm.tsx";
 import { Contact } from "../../../types";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const ContactInfoSection = () => {
 	const contactMethods = [
-		{ method: "Phone Number", label: "(226) 899-3921", url: "tel:2268993921", icon: "fa-solid fa-phone mb-4" } as Contact,
-		{ method: "Email", label: "kakpovbia.jiro@gmail.com", url: "mailto:kakpovbia.jiro@gmail.com", icon: "fa-regular fa-envelope mb-4" } as Contact,
+		{ method: "Phone Number", label: "(226) 899-3921", url: "tel:2268993921", icon: PhoneIcon } as Contact,
+		{ method: "Email", label: "kakpovbia.jiro@gmail.com", url: "mailto:kakpovbia.jiro@gmail.com", icon: EmailIcon } as Contact,
 		{
 			method: "LinkedIn",
 			label: "jiro-kakpovbia",
 			url: "https://linkedin.com/in/jiro-kakpovbia",
-			icon: "fa-brands fa-linkedin-in mb-4",
+			icon: LinkedInIcon,
 		} as Contact,
-		{ method: "Github", label: "JiroKakpovbia", url: "https://github.com/JiroKakpovbia", icon: "fa-brands fa-github mb-4" } as Contact,
+		{ method: "Github", label: "JiroKakpovbia", url: "https://github.com/JiroKakpovbia", icon: GitHubIcon } as Contact,
 	];
 	return (
 		<section id={"contact"}>

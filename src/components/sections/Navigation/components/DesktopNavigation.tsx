@@ -1,4 +1,6 @@
 import { Grid } from "@mui/material";
+import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 interface DesktopNavigationProps {
 	sections: string[];
@@ -16,9 +18,10 @@ const DesktopNavigation = ({ sections, theme, toggleTheme }: DesktopNavigationPr
 				</Grid>
 			))}
 			{/* Theme Toggle */}
-			<Grid className="theme-toggle">
-				<button aria-label="theme-toggle" onClick={toggleTheme}>
-					<i className={`fas ${theme === "light" ? "fa-sun" : "fa-moon"}`}></i>
+			<Grid container className="theme-toggle">
+				<button aria-label="theme-toggle" onClick={toggleTheme} className={"icon-link"}>
+					{theme === "dark" && <NightlightRoundIcon fontSize={"large"} />}
+					{theme === "light" && <LightModeIcon fontSize={"large"} />}
 				</button>
 			</Grid>
 		</Grid>

@@ -8,11 +8,11 @@ interface SkillsInfoBlockProps {
 const SkillsInfoBlock = ({ skills }: SkillsInfoBlockProps) => {
 	const delay = 5;
 	return (
-		<Grid container size={12} spacing={3} padding={3} className="skills">
+		<Grid container size={12} spacing={6} padding={3} className="skills">
 			{skills.map((skill, idx) => (
 				<Grid
 					key={`skill-${skill.name}`}
-					size={{ xs: 3, sm: 2, md: 1.2, lg: 1, xl: 0.8 }}
+					size={{ xs: 3, sm: 2, md: 1.6, lg: 1.2, xl: 0.8 }}
 					data-aos="fade-left"
 					data-aos-delay={idx * delay}
 					data-aos-once="true"
