@@ -2,27 +2,27 @@
 <html lang="en">
 	<!-- Metadata for the page -->
 	<head>
-        <meta charset="UTF-8"/>
+		<meta charset="UTF-8" />
 
 		<!-- Browser Icon -->
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.webp" />
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="output.css">
+		<!-- CSS -->
+		<link rel="stylesheet" href="output.css" />
 
-        <!-- Viewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- Preconnect -->
-		<link rel="preconnect" href="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie">
-		<link rel="preconnect" href="https://api.github.com">
+		<link rel="preconnect" href="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie" />
+		<link rel="preconnect" href="https://api.github.com" />
 
-        <!-- Title of webpage in the browser -->
-        <title>Jiro Kakpovbia</title>
+		<!-- Title of webpage in the browser -->
+		<title>Jiro Kakpovbia</title>
 
-        <!-- Meta Description -->
-        <meta
+		<!-- Meta Description -->
+		<meta
 			name="description"
 			content="Jiro Kakpovbia's Personal Website, showcasing his projects, experiences, and qualifications regarding his role as a Full-Stack Software Developer while studying Computer Science at the University of Waterloo!"
 		/>
@@ -31,23 +31,14 @@
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
 		<!-- Theme Colour-->
-		<meta
-			name="theme-color"
-			content="#f9f7ff"
-			media="(prefers-color-scheme: light)"
-		/>
-		<meta
-			name="theme-color"
-			content="#27272a"
-			media="(prefers-color-scheme: dark)"
-		/>
-		</head>
-		<body>
-		
+		<meta name="theme-color" content="#f9f7ff" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#27272a" media="(prefers-color-scheme: dark)" />
+	</head>
+	<body>
 		<!-- Initial Theme Setup -->
 		<script>
-			(function() {
-				var theme = localStorage.getItem('theme');
+			(function () {
+				var theme = localStorage.getItem("theme");
 				document.body.classList.toggle("light-mode", theme === "light");
 				document.body.classList.toggle("dark-mode", theme === "dark");
 			})();
@@ -55,9 +46,15 @@
 
 		<!-- JavaScript Reminder -->
 		<noscript>
-			<div class="noscript-message">
+			<div
+				class="noscript-message"
+				style="position: fixed; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; text-align: center"
+			>
 				<p>JavaScript is disabled in your browser. Please enable JavaScript to access this website.</p>
-				<p>For help enabling JavaScript, visit <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">enable-javascript.com</a>.</p>
+				<p>
+					For help enabling JavaScript, visit
+					<a href="https://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">enable-javascript.com</a>.
+				</p>
 			</div>
 		</noscript>
 
