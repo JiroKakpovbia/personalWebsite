@@ -8,7 +8,7 @@ interface ExperienceInfoBlockProps {
 const ExperienceInfoBlock = ({ experience }: ExperienceInfoBlockProps) => {
 	return (
 		<Grid container size={12} spacing={3} padding={3} className="experience">
-			<Grid size={{ xs: 6, sm: 4, md: 2, lg: 2, xl: 1 }}>
+			<Grid size={{ xs: 6, sm: 3, md: 2, lg: 2, xl: 1 }}>
 				<img alt={`${experience.company} Logo`} src={experience.image} />
 			</Grid>
 			<Grid container size={{ xs: 12, sm: 12, md: 10, lg: 10, xl: 11 }} spacing={1}>
