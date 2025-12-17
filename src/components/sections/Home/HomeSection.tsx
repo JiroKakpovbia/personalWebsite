@@ -38,10 +38,8 @@ const HomeSection = () => {
 				<Grid container size={12} justifyContent={"center"}>
 					{/* Text */}
 					<Grid container size={12}>
-						<Grid container size={12} justifyContent={"center"}>
-							<p data-aos={"fade-down"} data-aos-once={"true"} className="homeSubtitle">
-								Hi, my name is
-							</p>
+						<Grid container size={12} justifyContent={"center"} data-aos={"fade-down"} data-aos-once={"true"}>
+							<p className="homeSubtitle">Hi, my name is</p>
 						</Grid>
 						<Grid container size={12} justifyContent={"center"} data-aos={"fade-in"} data-aos-once={"true"}>
 							<h1 className="homeTitle">Jiro Kakpovbia</h1>
@@ -58,9 +56,8 @@ const HomeSection = () => {
 				</Grid>
 
 				{/* Advance Arrow */}
-				<Grid container size={12} className={"advance-arrow"} justifyContent={"center"}>
+				<Grid container size={12} className={"advance-arrow icon-link"} justifyContent={"center"}>
 					<ExpandCircleDownIcon
-						className="icon-link"
 						fontSize="large"
 						onClick={() => (window.location.href = "#about")}
 						data-aos={"fade-up"}

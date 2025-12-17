@@ -24,11 +24,11 @@ const NavigationSection = ({ scrollProgress, showName, sections, theme, toggleTh
 				<nav className={scrollProgress > 0 ? "scrolled" : ""}>
 					<Grid container size={12} padding={3} justifyContent={"space-between"}>
 						{/* Name */}
-						<Grid className={"logo"}>
+						<Grid container>
 							{showName && (
-								<h2 data-aos={"fade-in"} data-aos-once={"true"}>
-									Jiro Kakpovbia
-								</h2>
+								<Grid className={"logo"} data-aos={"fade-in"} data-aos-once={"true"}>
+									<h2>Jiro Kakpovbia</h2>
+								</Grid>
 							)}
 						</Grid>
 						{/* Desktop Links */}
