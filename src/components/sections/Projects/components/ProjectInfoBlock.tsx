@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
-import { GithubRepo } from "../../../../types/";
+import { GitHubProject } from "../../../../types/";
 
 interface ProjectInfoBlockProps {
-	repo: GithubRepo;
+	repo: GitHubProject;
 }
 
 const ProjectInfoBlock = ({ repo }: ProjectInfoBlockProps) => {
@@ -10,7 +10,7 @@ const ProjectInfoBlock = ({ repo }: ProjectInfoBlockProps) => {
 		<Grid container spacing={1} padding={3} className="project" alignContent={"flex-start"}>
 			<Grid size={12}>
 				<h2>
-					<a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+					<a href={repo.url} target="_blank" rel="noopener noreferrer">
 						{repo.name}
 					</a>
 				</h2>

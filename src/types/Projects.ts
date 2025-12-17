@@ -1,6 +1,6 @@
-export interface GithubRepo {
+export interface GitHubProject {
 	name: string;
-	html_url: string;
+	url: string;
 	description: string | null;
 	language: string | null;
 }

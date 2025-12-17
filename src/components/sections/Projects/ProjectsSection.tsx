@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "../../../store/hooks.ts";
 import { fetchProjects } from "../../../store/projectsSlice.tsx";
-import { GithubRepo } from "../../../types/Projects";
+import { GitHubProject } from "../../../types/Projects";
 import ProjectInfoBlock from "./components/ProjectInfoBlock.tsx";
 import { Grid } from "@mui/material";
 import "./Projects.css";
@@ -10,7 +10,7 @@ const ProjectsSection = () => {
 	const dispatch = useAppDispatch();
 	const url = `https://api.github.com/users/JiroKakpovbia/repos`;
 	const { cache, status, error } = useAppSelector((state) => state.projects);
-	const repos: GithubRepo[] = (cache[url] || []).filter((repo: GithubRepo) => repo.name !== "JiroKakpovbia");
+	const repos: GitHubProject[] = (cache[url] || []).filter((repo: GitHubProject) => repo.name !== "JiroKakpovbia");
 
 	useEffect(() => {
 		if (!cache[url]) {

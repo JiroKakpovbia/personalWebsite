@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "./store";
+import { GitHubProject } from "../types";
 
 // ---------- Types ----------
 export interface ProjectsState {
@@ -28,7 +29,15 @@ export const fetchProjects = createAsyncThunk<
 
 	// Fetch fresh
 	const response = await fetch(url);
-	const data = await response.json();
+	const rawData = await response.json();
+
+	const data: GitHubProject[] = rawData.map((repo: { name: any; url: any; description: any; language: any }) => ({
+		name: repo.name,
+		url: repo.url,
+		description: repo.description,
+		language: repo.language,
+	}));
+
 	return { data, url };
 });
 
