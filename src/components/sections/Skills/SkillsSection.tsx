@@ -152,19 +152,19 @@ const SkillsSection = () => {
 				<Grid container size={12} justifyContent={"center"}>
 					<h1>Skills</h1>
 				</Grid>
-				<Grid container size={12} spacing={1} data-aos={"fade-in"} data-aos-once={"true"}>
+				<Grid container size={12} spacing={1} data-aos={"zoom-in"} data-aos-once={"true"}>
 					<h2>Languages:</h2>
 					<SkillsInfoBlock skills={languages} />
 				</Grid>
-				<Grid container size={12} spacing={1} data-aos={"fade-in"} data-aos-once={"true"}>
+				<Grid container size={12} spacing={1} data-aos={"zoom-in"} data-aos-once={"true"}>
 					<h2>Frameworks:</h2>
 					<SkillsInfoBlock skills={frameworks} />
 				</Grid>
-				<Grid container size={12} spacing={1} data-aos={"fade-in"} data-aos-once={"true"}>
+				<Grid container size={12} spacing={1} data-aos={"zoom-in"} data-aos-once={"true"}>
 					<h2>Libraries:</h2>
 					<SkillsInfoBlock skills={libraries} />
 				</Grid>
-				<Grid container size={12} spacing={1} data-aos={"fade-in"} data-aos-once={"true"}>
+				<Grid container size={12} spacing={1} data-aos={"zoom-in"} data-aos-once={"true"}>
 					<h2>Developer Tools:</h2>
 					<SkillsInfoBlock skills={developerTools} />
 				</Grid>

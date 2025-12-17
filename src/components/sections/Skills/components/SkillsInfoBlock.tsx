@@ -6,19 +6,12 @@ interface SkillsInfoBlockProps {
 }
 
 const SkillsInfoBlock = ({ skills }: SkillsInfoBlockProps) => {
-	const delay = 5;
 	return (
 		<Grid container size={12} spacing={6} padding={3} className="skills" justifyContent={"flex-start"}>
 			{skills.map((skill, idx) => (
-				<Grid
-					key={`skill-${skill.name}`}
-					size={{ xs: 3, sm: 2, md: 1.6, lg: 1.2, xl: 0.8 }}
-					data-aos={"fade-left"}
-					data-aos-delay={idx * delay}
-					data-aos-once={"true"}
-				>
+				<Grid key={`skill-${idx}`} size={{ xs: 3, sm: 2, md: 1.6, lg: 1.2, xl: 0.8 }}>
 					<a href={skill.url} target="_blank" rel="noopener noreferrer">
-						<img alt={`${skill.name} Logo`} src={skill.logo} />
+						<img alt={`${skill.name} Logo`} src={skill.logo} className="icon-link" />
 						<span className="tooltip">{skill.name}</span>
 					</a>
 				</Grid>
