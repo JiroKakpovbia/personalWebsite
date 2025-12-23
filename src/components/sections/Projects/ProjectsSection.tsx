@@ -22,8 +22,16 @@ const ProjectsSection = () => {
 		<section id={"projects"}>
 			<Grid container size={12} justifyContent={"center"} spacing={3} padding={3}>
 				<Typography variant={"h4"}>Projects</Typography>
-				{status === "loading" && <Typography variant={"body1"}>Loading...</Typography>}
-				{status === "failed" && <Typography variant={"body1"}>LError: {error}</Typography>}
+				{status === "loading" && (
+					<Grid container size={12}>
+						<Typography variant={"body1"}>Loading...</Typography>
+					</Grid>
+				)}
+				{status === "failed" && (
+					<Grid container size={12}>
+						<Typography variant={"body1"}>LError: {error}</Typography>
+					</Grid>
+				)}
 				<Grid container size={12}>
 					{repos.map((repo, idx: number) => (
 						<Grid

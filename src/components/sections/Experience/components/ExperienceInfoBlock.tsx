@@ -10,7 +10,16 @@ const ExperienceInfoBlock = ({ experience }: ExperienceInfoBlockProps) => {
 	const isSmall = useMediaQuery((theme) => theme.breakpoints.up("sm"));
 	return (
 		<Box bgcolor={"accent.main"}>
-			<Grid container size={12} justifyContent={"center"} spacing={3} padding={3} flex={1} flexDirection={isSmall ? "row" : "column"}>
+			<Grid
+				container
+				size={12}
+				justifyContent={"center"}
+				alignItems={"center"}
+				spacing={3}
+				padding={3}
+				flex={1}
+				flexDirection={isSmall ? "row" : "column"}
+			>
 				<Grid size={{ xs: 6, sm: 3, md: 2, lg: 2, xl: 1 }}>
 					<img alt={`${experience.company} Logo`} src={experience.image} />
 				</Grid>
