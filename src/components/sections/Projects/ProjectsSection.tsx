@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from "../../../store/hooks.ts";
 import { fetchProjects } from "../../../store/projectsSlice.tsx";
 import { GitHubProject } from "../../../types/Projects";
 import ProjectInfoBlock from "./components/ProjectInfoBlock.tsx";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import "./Projects.css";
 
 const ProjectsSection = () => {
@@ -20,23 +20,23 @@ const ProjectsSection = () => {
 
 	return (
 		<section id={"projects"}>
-			<Grid container size={12} spacing={3} padding={3}>
-				<Grid container size={12} justifyContent={"center"}>
-					<h1>Projects</h1>
+			<Grid container size={12} justifyContent={"center"} spacing={3} padding={3}>
+				<Typography variant={"h4"}>Projects</Typography>
+				{status === "loading" && <Typography variant={"body1"}>Loading...</Typography>}
+				{status === "failed" && <Typography variant={"body1"}>LError: {error}</Typography>}
+				<Grid container size={12}>
+					{repos.map((repo, idx: number) => (
+						<Grid
+							container
+							key={`project-${idx}`}
+							size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}
+							data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
+							data-aos-once={"true"}
+						>
+							<ProjectInfoBlock key={`project-${idx}`} repo={repo} />
+						</Grid>
+					))}
 				</Grid>
-				{status === "loading" && <p>Loading...</p>}
-				{status === "failed" && <p>Error: {error}</p>}
-				{repos.map((repo, idx: number) => (
-					<Grid
-						container
-						key={`project-${idx}`}
-						size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}
-						data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
-						data-aos-once={"true"}
-					>
-						<ProjectInfoBlock key={`project-${idx}`} repo={repo} />
-					</Grid>
-				))}
 			</Grid>
 		</section>
 	);

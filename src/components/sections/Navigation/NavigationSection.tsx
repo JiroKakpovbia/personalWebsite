@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navigation.css";
-import { Grid } from "@mui/material";
+import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
 import DesktopNavigation from "./components/DesktopNavigation.tsx";
 import MobileNavigation from "./components/MobileNavigation.tsx";
 
@@ -19,34 +19,32 @@ const NavigationSection = ({ scrollProgress, showName, sections, theme, toggleTh
 	};
 
 	return (
-		<section id="navigation">
-			<Grid container size={12} justifyContent={"center"} padding={3}>
-				<nav className={scrollProgress > 0 ? "scrolled" : ""}>
-					<Grid container size={12} padding={3} justifyContent={"space-between"}>
-						{/* Name */}
-						<Grid container>
-							{showName && (
-								<Grid className={"logo"} data-aos={"fade-in"} data-aos-once={"true"}>
-									<h2>Jiro Kakpovbia</h2>
-								</Grid>
-							)}
-						</Grid>
-						{/* Desktop Links */}
-						<Grid display={{ xs: "none", md: "flex" }}>
-							<DesktopNavigation sections={sections} theme={theme} toggleTheme={toggleTheme} />
-						</Grid>
-						{/* Mobile Links */}
-						<Grid display={{ xs: "flex", md: "none" }}>
-							<MobileNavigation sections={sections} theme={theme} toggleTheme={toggleTheme} open={menuOpen} toggleMenu={handleMenuToggle} />
-						</Grid>
+		<AppBar position="fixed" color={scrollProgress > 0 ? "accent" : "primary"} elevation={scrollProgress > 0 ? 4 : 0}>
+			<Toolbar>
+				<Grid container size={12} justifyContent={"space-between"} flex={1} flexDirection={"row"}>
+					{/* Name */}
+					<Grid container alignItems={"center"}>
+						{showName && (
+							<Typography variant="h4" color={"text"} data-aos={"fade-in"} data-aos-once={"true"}>
+								Jiro Kakpovbia
+							</Typography>
+						)}
 					</Grid>
-					{/* Progress Bar */}
-					<div className="scroll-progress-container">
-						<div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
-					</div>
-				</nav>
-			</Grid>
-		</section>
+					{/* Desktop Links */}
+					<Grid display={{ xs: "none", md: "flex" }} data-aos={"fade-down"} data-aos-once={"true"}>
+						<DesktopNavigation sections={sections} theme={theme} toggleTheme={toggleTheme} />
+					</Grid>
+					{/* Mobile Links */}
+					<Grid display={{ xs: "flex", md: "none" }} data-aos={"fade-down"} data-aos-once={"true"}>
+						<MobileNavigation sections={sections} theme={theme} toggleTheme={toggleTheme} open={menuOpen} toggleMenu={handleMenuToggle} />
+					</Grid>
+				</Grid>
+			</Toolbar>
+			{/* Progress Bar */}
+			<Box height={2}>
+				<Box width={`${scrollProgress}%`} height="100%" bgcolor="primary.main" />
+			</Box>
+		</AppBar>
 	);
 };
 

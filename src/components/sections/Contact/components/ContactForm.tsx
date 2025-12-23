@@ -1,17 +1,19 @@
-import { Grid } from "@mui/material";
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 
 const ContactForm = () => {
 	return (
-		<Grid container size={12} flex={1} flexDirection={"column"}>
-			<form className="contact-form" data-netlify="true">
-				<input type="text" name="name" autoComplete="name" placeholder="Name*" required></input>
-				<input type="email" name="email" autoComplete="email" placeholder="Email*" required></input>
-				<textarea name="message" placeholder="Message*" required></textarea>
-				<button type="submit" className="button">
-					Submit Form
-				</button>
-			</form>
-		</Grid>
+		<Box component={"form"} bgcolor={"accent.main"} sx={{ "data-netlify": "true" }}>
+			<Grid container size={12} spacing={3} padding={3}>
+				<TextField required fullWidth variant={"outlined"} label={"Name"} autoComplete={"name"} />
+				<TextField required fullWidth variant={"outlined"} label={"Email"} autoComplete={"email"} />
+				<TextField required fullWidth multiline rows={6} variant={"outlined"} label={"Message"} />
+				<Button fullWidth variant="contained" color={"primary"} onClick={() => {}}>
+					<Typography variant="button" color={"text"} sx={{ type: "Submit" }}>
+						Submit Form
+					</Typography>
+				</Button>
+			</Grid>
+		</Box>
 	);
 };
 

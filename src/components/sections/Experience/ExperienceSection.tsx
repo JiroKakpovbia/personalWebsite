@@ -7,7 +7,7 @@ import svpImage from "../../../assets/experience/svpteens.webp";
 import homeDepotImage from "../../../assets/experience/homedepot.webp";
 import sobeysImage from "../../../assets/experience/sobeys.webp";
 import ExperienceInfoBlock from "./components/ExperienceInfoBlock.tsx";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Experience } from "../../../types";
 
 const ExperienceSection = () => {
@@ -82,15 +82,15 @@ const ExperienceSection = () => {
 	];
 	return (
 		<section id={"experience"}>
-			<Grid container size={12} spacing={3} padding={3}>
-				<Grid container size={12} justifyContent={"center"}>
-					<h1>Experience</h1>
+			<Grid container size={12} justifyContent={"center"} spacing={3} padding={3}>
+				<Typography variant={"h4"}>Experience</Typography>
+				<Grid container size={12}>
+					{experiences.map((exp, idx: number) => (
+						<Grid container key={`experience-${idx}`} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once={"true"}>
+							<ExperienceInfoBlock experience={exp} />
+						</Grid>
+					))}
 				</Grid>
-				{experiences.map((exp, idx: number) => (
-					<Grid container key={`experience-${idx}`} size={12} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once={"true"}>
-						<ExperienceInfoBlock key={`${exp.company}-${exp.position}`} experience={exp} />
-					</Grid>
-				))}
 			</Grid>
 		</section>
 	);

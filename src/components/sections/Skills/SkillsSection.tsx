@@ -1,7 +1,7 @@
 import "./Skills.css";
 import SkillsInfoBlock from "./components/SkillsInfoBlock.tsx";
 import { Skill } from "../../../types";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 // Import Languages Logos
 import cLogo from "../../../assets/skills/languages/c.svg";
@@ -148,24 +148,22 @@ const SkillsSection = () => {
 	];
 	return (
 		<section id={"skills"}>
-			<Grid container size={12} spacing={3} padding={3}>
-				<Grid container size={12} justifyContent={"center"}>
-					<h1>Skills</h1>
-				</Grid>
-				<Grid container size={12} spacing={1} data-aos={"zoom-in"} data-aos-once={"true"}>
-					<h2>Languages:</h2>
+			<Grid container size={12} justifyContent={"center"} spacing={3} padding={3}>
+				<Typography variant={"h4"}>Skills</Typography>
+				<Grid container size={12} spacing={3} data-aos={"zoom-in"} data-aos-once={"true"}>
+					<Typography variant={"h5"}>Languages:</Typography>
 					<SkillsInfoBlock skills={languages} />
 				</Grid>
-				<Grid container size={12} spacing={1} data-aos={"zoom-in"} data-aos-once={"true"}>
-					<h2>Frameworks:</h2>
+				<Grid container size={12} spacing={3} data-aos={"zoom-in"} data-aos-once={"true"}>
+					<Typography variant={"h5"}>Frameworks:</Typography>
 					<SkillsInfoBlock skills={frameworks} />
 				</Grid>
-				<Grid container size={12} spacing={1} data-aos={"zoom-in"} data-aos-once={"true"}>
-					<h2>Libraries:</h2>
+				<Grid container size={12} spacing={3} data-aos={"zoom-in"} data-aos-once={"true"}>
+					<Typography variant={"h5"}>Libraries:</Typography>
 					<SkillsInfoBlock skills={libraries} />
 				</Grid>
-				<Grid container size={12} spacing={1} data-aos={"zoom-in"} data-aos-once={"true"}>
-					<h2>Developer Tools:</h2>
+				<Grid container size={12} spacing={3} data-aos={"zoom-in"} data-aos-once={"true"}>
+					<Typography variant={"h5"}>Developer Tools:</Typography>
 					<SkillsInfoBlock skills={developerTools} />
 				</Grid>
 			</Grid>

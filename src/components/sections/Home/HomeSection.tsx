@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import ContactInfoBlock from "../Contact/components/ContactInfoBlock.tsx";
 import "./Home.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
@@ -23,7 +23,7 @@ const HomeSection = () => {
 
 	return (
 		<section id={"home"}>
-			<Grid container size={12} justifyContent={"center"} padding={3}>
+			<Grid container size={12} justifyContent={"center"} alignItems={"center"} padding={3}>
 				{/* Animation */}
 				<Grid size={{ xs: 12, sm: 10, md: 10, lg: 9, xl: 6 }} className="background-animation">
 					<DotLottieReact
@@ -35,18 +35,16 @@ const HomeSection = () => {
 					/>
 				</Grid>
 				{/* Content */}
-				<Grid container size={12} justifyContent={"center"}>
+				<Grid container size={12} justifyContent={"center"} textAlign={"center"} spacing={3}>
 					{/* Text */}
-					<Grid container size={12}>
-						<Grid container size={12} justifyContent={"center"} data-aos={"fade-down"} data-aos-once={"true"}>
-							<p className="homeSubtitle">Hi, my name is</p>
-						</Grid>
-						<Grid container size={12} justifyContent={"center"} data-aos={"fade-in"} data-aos-once={"true"}>
-							<h1 className="homeTitle">Jiro Kakpovbia</h1>
-						</Grid>
-						<Grid container size={12} justifyContent={"center"} data-aos={"fade-up"} data-aos-once={"true"}>
-							<p className="homeSubtitle">Full-Stack Software Developer</p>
-						</Grid>
+					<Grid size={12} data-aos={"fade-down"} data-aos-once={"true"}>
+						<Typography variant={"h5"}>Hi, my name is</Typography>
+					</Grid>
+					<Grid size={12} data-aos={"fade-in"} data-aos-once={"true"}>
+						<Typography variant={"h2"}>Jiro Kakpovbia</Typography>
+					</Grid>
+					<Grid size={12} data-aos={"fade-up"} data-aos-once={"true"}>
+						<Typography variant={"h5"}>Full-Stack Software Developer</Typography>
 					</Grid>
 
 					{/* Social Media */}

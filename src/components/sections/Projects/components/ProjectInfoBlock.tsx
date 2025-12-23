@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { GitHubProject } from "../../../../types/";
 
 interface ProjectInfoBlockProps {
@@ -7,25 +7,25 @@ interface ProjectInfoBlockProps {
 
 const ProjectInfoBlock = ({ repo }: ProjectInfoBlockProps) => {
 	return (
-		<Grid container spacing={1} padding={3} className="project" alignContent={"flex-start"}>
-			<Grid size={12}>
-				<h2>
+		<Box bgcolor={"accent.main"}>
+			<Grid container padding={3} spacing={1}>
+				<Grid size={12}>
 					<a href={repo.url} target="_blank" rel="noopener noreferrer">
-						{repo.name}
+						<Typography variant={"h5"}>{repo.name}</Typography>
 					</a>
-				</h2>
+				</Grid>
+				<Grid size={12}>
+					<Typography variant={"body1"}>
+						<b>Description:</b> {repo.description || "No description available."}
+					</Typography>
+				</Grid>
+				<Grid size={12}>
+					<Typography variant={"body1"}>
+						<b>Language:</b> {repo.language || "N/A"}
+					</Typography>
+				</Grid>
 			</Grid>
-			<Grid size={12}>
-				<p>
-					<b>Description:</b> {repo.description || "No description available."}
-				</p>
-			</Grid>
-			<Grid size={12}>
-				<p>
-					<b>Language:</b> {repo.language || "N/A"}
-				</p>
-			</Grid>
-		</Grid>
+		</Box>
 	);
 };
 
