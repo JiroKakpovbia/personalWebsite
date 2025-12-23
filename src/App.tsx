@@ -17,18 +17,17 @@ import FooterSection from "./components/sections/Footer/FooterSection.tsx";
 import { Grid } from "@mui/material";
 import { RootState } from "./store/store.ts";
 import { useAppSelector, useAppDispatch } from "./store/hooks.ts";
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import { useMemo } from "react";
+import { getTheme } from "./theme/theme.ts";
 
 const App = () => {
 	const [scrollProgress, setScrollProgress] = useState(0);
 	const [showName, setShowName] = useState(false);
-	const theme = useAppSelector((state: RootState) => state.theme.value);
+	const themeMode = useAppSelector((state: RootState) => state.theme.value);
 	const dispatch = useAppDispatch();
 
-	// Apply theme to body
-	useEffect(() => {
-		document.body.classList.toggle("light-mode", theme === "light");
-		document.body.classList.toggle("dark-mode", theme === "dark");
-	}, [theme]);
+	const muiTheme = useMemo(() => getTheme(themeMode), [themeMode]);
 
 	// Listen for system theme changes
 	useEffect(() => {
@@ -80,16 +79,17 @@ const App = () => {
 	const websiteSections = ["Home", "About", "Projects", "Skills", "Experience", "Contact"];
 
 	return (
-		<>
+		<ThemeProvider theme={muiTheme}>
+			<CssBaseline />
 			{/* Navigation */}
 			<NavigationSection
 				scrollProgress={scrollProgress}
 				showName={showName}
 				sections={websiteSections}
-				theme={theme}
+				theme={themeMode}
 				toggleTheme={handleToggleTheme}
 			/>
-			<Grid container size={12} spacing={8} justifyContent={"center"}>
+			<Grid container size={12} spacing={8} justifyContent={"center"} sx={{ backgroundColor: "background.main" }}>
 				{/* Home */}
 				<HomeSection />
 				{/* About */}
@@ -105,7 +105,7 @@ const App = () => {
 				{/* Footer */}
 				<FooterSection />
 			</Grid>
-		</>
+		</ThemeProvider>
 	);
 };
 
