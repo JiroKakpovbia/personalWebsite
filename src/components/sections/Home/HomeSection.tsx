@@ -23,7 +23,7 @@ const HomeSection = () => {
 
 	return (
 		<section id={"home"}>
-			<Grid container size={12} justifyContent={"space-between"} alignItems={"center"} padding={3} minHeight="100vh">
+			<Grid container size={12} justifyContent={"space-between"} alignItems={"center"} padding={3} minHeight="100dvh">
 				{/* Animation */}
 				{/* <Grid size={{ xs: 12, sm: 10, md: 10, lg: 9, xl: 6 }} className="background-animation">
 					<DotLottieReact

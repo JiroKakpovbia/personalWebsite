@@ -6,7 +6,7 @@ const FooterSection = () => {
 
 	return (
 		<footer id={"footer"}>
-			<Grid container size={12} justifyContent={"center"} textAlign={"center"} spacing={3} padding={3} sx={{ backgroundColor: "background.paper" }}>
+			<Grid container size={12} justifyContent={"center"} textAlign={"center"} spacing={3} padding={3} sx={{ backgroundColor: "background.paper" }} width={"100dvw"}>
 				<Grid container size={12} justifyContent={"center"}>
 					<Typography variant={"body1"}>
 						The source code for this website can be found on my{" "}
