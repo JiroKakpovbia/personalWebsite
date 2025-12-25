@@ -1,92 +1,15 @@
-#home {
-	position: relative;
-	padding-top: 40vh;
-	padding-bottom: 30vh;
-	height: 100%;
-}
-
-.background-animation {
-	position: absolute;
-	top: 55%;
-	left: 50%;
-	max-width: 100vw;
-	transform: translate(-50%, -50%);
-	aspect-ratio: 1/1;
-	object-fit: contain;
-	z-index: -1;
-}
-
-.homeTitle {
-	margin-bottom: 0rem;
-}
-
-.socials {
-	border-radius: 1rem;
-	padding: 1rem;
-	background-color: transparent;
-	z-index: 1;
-}
-
-.socials i {
-	font-size: 3rem;
-	transition: width 0.3s ease-in-out;
-}
-
 /* Media Queries */
 @media only screen and (min-width: 0px) {
-	.background-animation {
-		width: 100vw;
-	}
-
-	.homeSubtitle {
-		font-size: 1.25rem;
-	}
-
-	.homeTitle {
-		font-size: 2.5rem;
-	}
-
-	#home {
-		width: 100%;
-	}
 }
 
 @media only screen and (min-width: 375px) {
-	.homeSubtitle {
-		font-size: 1.5rem;
-	}
-
-	.homeTitle {
-		font-size: 3rem;
-	}
 }
 
 @media only screen and (min-width: 768px) {
-	.background-animation {
-		width: 80vw;
-	}
-
-	.homeTitle {
-		font-size: 4rem;
-	}
-
-	#home {
-		width: 80%;
-	}
 }
 
 @media only screen and (min-width: 1024px) {
-	.background-animation {
-		width: 70vw;
-	}
-
-	.homeTitle {
-		font-size: 5rem;
-	}
 }
 
 @media only screen and (min-width: 1440px) {
-	.background-animation {
-		width: 45vw;
-	}
 }

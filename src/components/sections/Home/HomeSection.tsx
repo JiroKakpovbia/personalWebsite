@@ -8,6 +8,7 @@ import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
+import CustomInfoBox from "../../CustomInfoBox.tsx";
 
 const HomeSection = () => {
 	const socialMedias = [
@@ -25,15 +26,39 @@ const HomeSection = () => {
 		<section id={"home"}>
 			<Grid container size={12} justifyContent={"space-between"} alignItems={"center"} padding={3} minHeight="100dvh">
 				{/* Animation */}
-				{/* <Grid size={{ xs: 12, sm: 10, md: 10, lg: 9, xl: 6 }} className="background-animation">
-					<DotLottieReact
-						src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"
-						loop
-						autoplay
-						data-aos={"fade-in"}
-						data-aos-once={"true"}
-					/>
-				</Grid> */}
+				<Grid
+					container
+					sx={{
+						position: "absolute",
+						inset: 0,
+						zIndex: 0,
+						alignItems: "center",
+						justifyContent: "center",
+						pointerEvents: "none",
+					}}
+				>
+					<CustomInfoBox
+						transparent={true}
+						sx={{
+							width: {
+								xs: "200%",
+								sm: "80%",
+								md: "60%",
+								lg: "50%",
+								xl: "40%",
+							},
+							aspectRatio: "1 / 1",
+						}}
+					>
+						<DotLottieReact
+							src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"
+							loop
+							autoplay
+							data-aos={"fade-in"}
+							data-aos-once={"true"}
+						/>
+					</CustomInfoBox>
+				</Grid>
 				<Grid container size={12} justifyContent={"center"}>
 					{/* Content */}
 					<Grid container size={12} justifyContent={"center"} textAlign={"center"} spacing={3}>
