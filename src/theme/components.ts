@@ -23,14 +23,4 @@ export const components: Components = {
 			},
 		},
 	},
-
-	MuiButton: {
-		styleOverrides: {
-			root: {
-				textTransform: "none" as const,
-				transition: "all 0.2s ease-in-out",
-				color: "var(--mui-palette-text-primary)",
-			},
-		},
-	},
 };

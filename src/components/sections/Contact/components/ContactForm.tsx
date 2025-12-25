@@ -1,5 +1,6 @@
-import { Button, Grid, TextField, Typography } from "@mui/material";
+import { Grid, TextField } from "@mui/material";
 import CustomInfoBox from "../../../CustomInfoBox.tsx";
+import CustomButton from "../../../CustomButton.tsx";
 
 const ContactForm = () => {
 	return (
@@ -8,11 +9,7 @@ const ContactForm = () => {
 				<TextField required fullWidth variant={"outlined"} label={"Name"} autoComplete={"name"} />
 				<TextField required fullWidth variant={"outlined"} label={"Email"} autoComplete={"email"} />
 				<TextField required fullWidth multiline rows={6} variant={"outlined"} label={"Message"} />
-				<Button fullWidth variant="contained" color={"primary"} onClick={() => {}}>
-					<Typography variant="button" sx={{ type: "Submit" }}>
-						Submit Form
-					</Typography>
-				</Button>
+				<CustomButton fullWidth label={"Submit Form"} onClick={() => {}} sx={{ type: "Submit" }} />
 			</Grid>
 		</CustomInfoBox>
 	);

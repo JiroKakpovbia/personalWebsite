@@ -1,6 +1,7 @@
-import { Grid, IconButton, Link, Typography } from "@mui/material";
+import { Grid, Link, Typography } from "@mui/material";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import CustomIconButton from "../../../CustomIconButton.tsx";
 
 interface DesktopNavigationProps {
 	sections: string[];
@@ -20,10 +21,7 @@ const DesktopNavigation = ({ sections, theme, toggleTheme }: DesktopNavigationPr
 				</Grid>
 			))}
 			{/* Theme Toggle */}
-			<IconButton aria-label="theme-toggle" onClick={toggleTheme} className={"icon-link"}>
-				{theme === "dark" && <NightlightRoundIcon fontSize={"large"} />}
-				{theme === "light" && <LightModeIcon fontSize={"large"} />}
-			</IconButton>
+			<CustomIconButton icon={theme === "light" ? LightModeIcon : NightlightRoundIcon} aria-label="theme-toggle" onClick={toggleTheme} />
 		</Grid>
 	);
 };

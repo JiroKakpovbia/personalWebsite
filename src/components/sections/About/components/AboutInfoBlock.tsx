@@ -1,5 +1,6 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import CustomInfoBox from "../../../CustomInfoBox.tsx";
+import CustomButton from "../../../CustomButton.tsx";
 
 interface AboutInfoBlockProps {
 	headshot: string;
@@ -42,9 +43,7 @@ const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps)
 
 					{/* Resume Button */}
 					<Grid container size={12} justifyContent={"center"}>
-						<Button variant="contained" onClick={() => window.open(resume, "_blank")}>
-							<Typography variant="button">Resume</Typography>
-						</Button>
+						<CustomButton label={"Resume"} onClick={() => window.open(resume, "_blank")} />
 					</Grid>
 				</Grid>
 			</Grid>

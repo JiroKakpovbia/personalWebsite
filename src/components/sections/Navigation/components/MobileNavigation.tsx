@@ -1,7 +1,8 @@
-import { Grid, IconButton, Link, Typography } from "@mui/material";
+import { Grid, Link, Typography } from "@mui/material";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import MenuIcon from "@mui/icons-material/Menu";
+import CustomIconButton from "../../../CustomIconButton.tsx";
 
 interface MobileNavigationProps {
 	sections: string[];
@@ -15,14 +16,9 @@ const MobileNavigation = ({ sections, theme, toggleTheme, open, toggleMenu }: Mo
 	return (
 		<Grid container>
 			{/* Theme Toggle */}
-			<IconButton aria-label="theme-toggle" onClick={toggleTheme} className={"icon-link"}>
-				{theme === "dark" && <NightlightRoundIcon fontSize={"large"} />}
-				{theme === "light" && <LightModeIcon fontSize={"large"} />}
-			</IconButton>
+			<CustomIconButton icon={theme === "light" ? LightModeIcon : NightlightRoundIcon} aria-label="theme-toggle" onClick={toggleTheme} />
 			{/* Hamburger Menu */}
-			<IconButton aria-label="Navigation" onClick={toggleMenu} className={" icon-link"}>
-				<MenuIcon fontSize="large" />
-			</IconButton>
+			<CustomIconButton icon={MenuIcon} aria-label="Navigation" onClick={toggleMenu} />
 			{/* Page Links */}
 			<Grid container className={`menu-links ${open ? "open" : ""}`}>
 				{sections.map((section, idx) => (

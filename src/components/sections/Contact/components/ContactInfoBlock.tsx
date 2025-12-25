@@ -1,6 +1,7 @@
-import { Grid, IconButton, Link, Typography } from "@mui/material";
+import { Grid, Link, Typography } from "@mui/material";
 import { Contact } from "../../../../types";
 import CustomInfoBox from "../../../CustomInfoBox.tsx";
+import CustomIconButton from "../../../CustomIconButton.tsx";
 
 interface ContactInfoBlockProps {
 	contactMethods: Contact[];
@@ -16,9 +17,7 @@ const ContactInfoBlock = ({ contactMethods, sizing, background = true }: Contact
 					<Grid container key={`contact-${idx}`} size={sizing} justifyContent={"center"}>
 						<Link aria-label={`Visit my ${contact.method}`} href={contact.url} target="_blank" rel="noopener noreferrer">
 							<Grid container spacing={1} justifyContent={"center"}>
-								<IconButton className={"icon-link"}>
-									<contact.icon fontSize="large" />
-								</IconButton>
+								<CustomIconButton icon={contact.icon} />
 								<Grid container size={12} justifyContent={"center"}>
 									<Typography variant={"body1"}>{contact.label}</Typography>
 								</Grid>

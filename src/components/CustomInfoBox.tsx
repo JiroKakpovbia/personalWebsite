@@ -6,7 +6,7 @@ interface CustomInfoBoxProps extends BoxProps {
 
 const CustomInfoBox = ({ transparent = false, children, ...boxProps }: CustomInfoBoxProps) => {
 	return (
-		<Box bgcolor={!transparent ? "background.paper" : undefined} borderRadius={3} {...boxProps}>
+		<Box {...boxProps} bgcolor={!transparent ? "background.paper" : undefined} boxShadow={!transparent ? 10 : undefined} borderRadius={3}>
 			{children}
 		</Box>
 	);
