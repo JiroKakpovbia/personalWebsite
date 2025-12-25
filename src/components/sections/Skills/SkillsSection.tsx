@@ -146,10 +146,13 @@ const SkillsSection = () => {
 		{ name: "Azure DevOps", logo: azureDevOpsLogo, url: "https://azure.microsoft.com/en-us/products/devops" } as Skill,
 		{ name: "Jira", logo: jiraLogo, url: "https://www.atlassian.com/software/jira" } as Skill,
 	];
+	
 	return (
 		<section id={"skills"}>
 			<Grid container size={12} justifyContent={"center"} spacing={3} padding={3}>
-				<Typography variant={"h4"}>Skills</Typography>
+				<Typography variant={"h4"} color={"primary.main"}>
+					Skills
+				</Typography>
 				<Grid container size={12} spacing={3} data-aos={"zoom-in"} data-aos-once={"true"}>
 					<Typography variant={"h5"}>Languages:</Typography>
 					<SkillsInfoBlock skills={languages} />

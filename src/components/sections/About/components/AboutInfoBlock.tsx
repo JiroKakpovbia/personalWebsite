@@ -1,4 +1,5 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
+import CustomInfoBox from "../../../CustomInfoBox.tsx";
 
 interface AboutInfoBlockProps {
 	headshot: string;
@@ -8,13 +9,21 @@ interface AboutInfoBlockProps {
 
 const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps) => {
 	return (
-		<Box bgcolor={"accent.main"}>
-			<Grid container padding={3} spacing={3} justifyContent={"center"}>
+		<CustomInfoBox>
+			<Grid container padding={3} spacing={3} justifyContent={"center"} alignItems={"center"}>
 				{/* Image */}
-				<Grid size={{ xs: 9, sm: 6, md: 3, lg: 4, xl: 3 }}>
-					<img alt="Headshot of Jiro Kakpovbia" src={headshot}></img>
+				<Grid container size={{ xs: 9, sm: 6, md: 5, lg: 4, xl: 3 }}>
+					<img
+						alt="Headshot of Jiro Kakpovbia"
+						src={headshot}
+						style={{
+							width: "100%",
+							height: "100%",
+							objectFit: "contain",
+						}}
+					></img>
 				</Grid>
-				<Grid container size={{ xs: 12, sm: 12, md: 9, lg: 8, xl: 9 }} spacing={1}>
+				<Grid container size={{ xs: 12, sm: 12, md: 12, lg: 8, xl: 9 }} spacing={3}>
 					{/* Paragraph 1 */}
 					<Typography variant={"body1"}>
 						Hey! My name is Jiro Kakpovbia, and I'm a {academicYear}. I'm a versatile developer with experience across front-end, back-end,
@@ -32,14 +41,14 @@ const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps)
 					<Typography variant={"body1"}>Please feel free to reach out — I'm always open to meeting new people!</Typography>
 
 					{/* Resume Button */}
-					<Button variant="contained" color={"primary"} onClick={() => window.open(resume, "_blank")}>
-						<Typography variant="button" color={"text"}>
-							Resume
-						</Typography>
-					</Button>
+					<Grid container size={12} justifyContent={"center"}>
+						<Button variant="contained" onClick={() => window.open(resume, "_blank")}>
+							<Typography variant="button">Resume</Typography>
+						</Button>
+					</Grid>
 				</Grid>
 			</Grid>
-		</Box>
+		</CustomInfoBox>
 	);
 };
 

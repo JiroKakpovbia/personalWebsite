@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import "./Navigation.css";
 import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
 import DesktopNavigation from "./components/DesktopNavigation.tsx";
@@ -18,14 +18,37 @@ const NavigationSection = ({ scrollProgress, showName, sections, theme, toggleTh
 		setMenuOpen((open) => !open);
 	};
 
+	const appBarRef = useRef<HTMLDivElement>(null);
+
+	// Get/set the height of the navigation bar
+	useLayoutEffect(() => {
+		if (!appBarRef.current) return;
+
+		const updateOffset = () => {
+			document.documentElement.style.setProperty("--appbar-offset", `${appBarRef.current!.offsetHeight}px`);
+		};
+
+		updateOffset();
+
+		const observer = new ResizeObserver(updateOffset);
+		observer.observe(appBarRef.current);
+
+		return () => observer.disconnect();
+	}, []);
+
 	return (
-		<AppBar position="fixed" color={scrollProgress > 0 ? "accent" : "primary"} elevation={scrollProgress > 0 ? 4 : 0}>
+		<AppBar
+			ref={appBarRef}
+			position="fixed"
+			color={scrollProgress > 0 ? "background.paper" : "background.default"}
+			elevation={scrollProgress > 0 ? 4 : 0}
+		>
 			<Toolbar>
 				<Grid container size={12} justifyContent={"space-between"} flex={1} flexDirection={"row"}>
 					{/* Name */}
 					<Grid container alignItems={"center"}>
 						{showName && (
-							<Typography variant="h4" color={"text"} data-aos={"fade-in"} data-aos-once={"true"}>
+							<Typography variant="h4" data-aos={"fade-in"} data-aos-once={"true"}>
 								Jiro Kakpovbia
 							</Typography>
 						)}

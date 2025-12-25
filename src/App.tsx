@@ -14,10 +14,9 @@ import ExperienceSection from "./components/sections/Experience/ExperienceSectio
 import ContactInfoSection from "./components/sections/Contact/ContactSection.tsx";
 import FooterSection from "./components/sections/Footer/FooterSection.tsx";
 
-import { Grid } from "@mui/material";
+import { Grid, CssBaseline, ThemeProvider } from "@mui/material";
 import { RootState } from "./store/store.ts";
 import { useAppSelector, useAppDispatch } from "./store/hooks.ts";
-import { ThemeProvider, CssBaseline } from "@mui/material";
 import { useMemo } from "react";
 import { getTheme } from "./theme/theme.ts";
 
@@ -89,7 +88,7 @@ const App = () => {
 				theme={themeMode}
 				toggleTheme={handleToggleTheme}
 			/>
-			<Grid container size={12} spacing={8} justifyContent={"center"} sx={{ backgroundColor: "background.main" }}>
+			<Grid container size={12} spacing={8} justifyContent={"center"}>
 				{/* Home */}
 				<HomeSection />
 				{/* About */}

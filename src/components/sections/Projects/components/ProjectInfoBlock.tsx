@@ -1,5 +1,6 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid, Link, Typography } from "@mui/material";
 import { GitHubProject } from "../../../../types/";
+import CustomInfoBox from "../../../CustomInfoBox.tsx";
 
 interface ProjectInfoBlockProps {
 	repo: GitHubProject;
@@ -7,12 +8,14 @@ interface ProjectInfoBlockProps {
 
 const ProjectInfoBlock = ({ repo }: ProjectInfoBlockProps) => {
 	return (
-		<Box bgcolor={"accent.main"}>
+		<CustomInfoBox>
 			<Grid container padding={3} spacing={1}>
 				<Grid size={12}>
-					<a href={repo.url} target="_blank" rel="noopener noreferrer">
-						<Typography variant={"h5"}>{repo.name}</Typography>
-					</a>
+					<Link href={repo.url} target="_blank" rel="noopener noreferrer">
+						<Typography variant={"h5"} color={"primary.main"}>
+							{repo.name}
+						</Typography>
+					</Link>
 				</Grid>
 				<Grid size={12}>
 					<Typography variant={"body1"}>
@@ -25,7 +28,7 @@ const ProjectInfoBlock = ({ repo }: ProjectInfoBlockProps) => {
 					</Typography>
 				</Grid>
 			</Grid>
-		</Box>
+		</CustomInfoBox>
 	);
 };
 

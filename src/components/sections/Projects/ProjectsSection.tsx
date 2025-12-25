@@ -21,7 +21,9 @@ const ProjectsSection = () => {
 	return (
 		<section id={"projects"}>
 			<Grid container size={12} justifyContent={"center"} spacing={3} padding={3}>
-				<Typography variant={"h4"}>Projects</Typography>
+				<Typography variant={"h4"} color={"primary.main"}>
+					Projects
+				</Typography>
 				{status === "loading" && (
 					<Grid container size={12}>
 						<Typography variant={"body1"}>Loading...</Typography>

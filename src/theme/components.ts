@@ -1,12 +1,25 @@
-export const components = {
+import type { Components } from "@mui/material/styles";
+
+export const components: Components = {
 	MuiCssBaseline: {
 		styleOverrides: {
 			body: {
 				transition: "color 0.2s ease-in-out, background-color 0.2s ease-in-out",
 			},
 			a: {
-				textDecorationColor: "inherit",
+				textDecoration: "none",
 				transition: "color 0.2s ease-in-out",
+			},
+		},
+	},
+
+	MuiLink: {
+		defaultProps: {
+			color: "inherit",
+		},
+		styleOverrides: {
+			root: {
+				textDecoration: "none",
 			},
 		},
 	},
@@ -14,10 +27,9 @@ export const components = {
 	MuiButton: {
 		styleOverrides: {
 			root: {
-				borderRadius: "0.5rem",
-				padding: "1rem",
 				textTransform: "none" as const,
 				transition: "all 0.2s ease-in-out",
+				color: "var(--mui-palette-text-primary)",
 			},
 		},
 	},

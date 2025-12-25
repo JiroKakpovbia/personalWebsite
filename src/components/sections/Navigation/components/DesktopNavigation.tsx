@@ -1,4 +1,4 @@
-import { Grid, IconButton, Typography } from "@mui/material";
+import { Grid, IconButton, Link, Typography } from "@mui/material";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
@@ -14,20 +14,16 @@ const DesktopNavigation = ({ sections, theme, toggleTheme }: DesktopNavigationPr
 			{/* Page Links */}
 			{sections.map((section, idx) => (
 				<Grid key={`desktop-nav-section-${idx}-container`} className="nav-links">
-					<a href={`#${section.toLowerCase()}`}>
-						<Typography variant="h6" color={"text"}>
-							{section}
-						</Typography>
-					</a>
+					<Link href={`#${section.toLowerCase()}`}>
+						<Typography variant="h6">{section}</Typography>
+					</Link>
 				</Grid>
 			))}
 			{/* Theme Toggle */}
-			<Grid container className="theme-toggle">
-				<IconButton aria-label="theme-toggle" color={"text"} onClick={toggleTheme} className={"icon-link"}>
-					{theme === "dark" && <NightlightRoundIcon fontSize={"large"} />}
-					{theme === "light" && <LightModeIcon fontSize={"large"} />}
-				</IconButton>
-			</Grid>
+			<IconButton aria-label="theme-toggle" onClick={toggleTheme} className={"icon-link"}>
+				{theme === "dark" && <NightlightRoundIcon fontSize={"large"} />}
+				{theme === "light" && <LightModeIcon fontSize={"large"} />}
+			</IconButton>
 		</Grid>
 	);
 };

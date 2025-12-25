@@ -22,15 +22,15 @@ const ContactInfoSection = () => {
 	];
 	return (
 		<section id={"contact"}>
-			<Grid container size={12} spacing={3} padding={3}>
-				<Grid container size={12} justifyContent={"center"}>
-					<Typography variant={"h4"}>Contact</Typography>
-				</Grid>
-				<Grid container size={12} data-aos={"zoom-out"} data-aos-once={"true"}>
+			<Grid container size={12} justifyContent={"center"} padding={3} spacing={3}>
+				<Typography variant={"h4"} color={"primary.main"}>
+					Contact
+				</Typography>
+				<Grid size={12} data-aos={"zoom-out"} data-aos-once={"true"}>
 					<ContactForm />
 				</Grid>
-				<Grid container size={12} justifyContent={"center"} data-aos={"zoom-out"} data-aos-once={"true"}>
-					<ContactInfoBlock contactMethods={contactMethods} sizing={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }} />
+				<Grid size={12} data-aos={"zoom-out"} data-aos-once={"true"}>
+					<ContactInfoBlock contactMethods={contactMethods} sizing={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3 }} />
 				</Grid>
 			</Grid>
 		</section>

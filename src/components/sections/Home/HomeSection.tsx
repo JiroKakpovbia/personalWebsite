@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, IconButton, Typography } from "@mui/material";
 import ContactInfoBlock from "../Contact/components/ContactInfoBlock.tsx";
 import "./Home.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
@@ -23,9 +23,9 @@ const HomeSection = () => {
 
 	return (
 		<section id={"home"}>
-			<Grid container size={12} justifyContent={"center"} alignItems={"center"} padding={3}>
+			<Grid container size={12} justifyContent={"space-between"} alignItems={"center"} padding={3} minHeight="100vh">
 				{/* Animation */}
-				<Grid size={{ xs: 12, sm: 10, md: 10, lg: 9, xl: 6 }} className="background-animation">
+				{/* <Grid size={{ xs: 12, sm: 10, md: 10, lg: 9, xl: 6 }} className="background-animation">
 					<DotLottieReact
 						src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"
 						loop
@@ -33,28 +33,31 @@ const HomeSection = () => {
 						data-aos={"fade-in"}
 						data-aos-once={"true"}
 					/>
-				</Grid>
-				{/* Content */}
-				<Grid container size={12} justifyContent={"center"} textAlign={"center"} spacing={3}>
-					{/* Text */}
-					<Grid size={12} data-aos={"fade-down"} data-aos-once={"true"}>
-						<Typography variant={"h5"}>Hi, my name is</Typography>
+				</Grid> */}
+				<Grid container size={12} justifyContent={"center"}>
+					{/* Content */}
+					<Grid container size={12} justifyContent={"center"} textAlign={"center"} spacing={3}>
+						{/* Text */}
+						<Grid size={12} data-aos={"fade-down"} data-aos-once={"true"}>
+							<Typography variant={"h5"}>Hi, my name is</Typography>
+						</Grid>
+						<Grid size={12} data-aos={"fade-in"} data-aos-once={"true"}>
+							<Typography variant={"h2"}>Jiro Kakpovbia</Typography>
+						</Grid>
+						<Grid size={12} data-aos={"fade-up"} data-aos-once={"true"}>
+							<Typography variant={"h5"}>Full-Stack Software Developer</Typography>
+						</Grid>
 					</Grid>
-					<Grid size={12} data-aos={"fade-in"} data-aos-once={"true"}>
-						<Typography variant={"h2"}>Jiro Kakpovbia</Typography>
-					</Grid>
-					<Grid size={12} data-aos={"fade-up"} data-aos-once={"true"}>
-						<Typography variant={"h5"}>Full-Stack Software Developer</Typography>
-					</Grid>
-
 					{/* Social Media */}
 					<Grid container size={{ xs: 10, sm: 6, md: 4, lg: 3, xl: 2 }} justifyContent={"center"} data-aos={"fade-up"} data-aos-once={"true"}>
-						<ContactInfoBlock contactMethods={socialMedias} sizing={3} />
+						<ContactInfoBlock contactMethods={socialMedias} sizing={3} background={false} />
 					</Grid>
 				</Grid>
+			</Grid>
 
-				{/* Advance Arrow */}
-				<Grid container size={12} className={"advance-arrow icon-link"} justifyContent={"center"}>
+			{/* Advance Arrow */}
+			{/* <Grid container size={12} justifyContent={"center"}>
+				<IconButton className={"advance-arrow icon-link"}>
 					<ExpandCircleDownIcon
 						fontSize="large"
 						onClick={() => (window.location.href = "#about")}
@@ -62,8 +65,8 @@ const HomeSection = () => {
 						data-aos-once={"true"}
 						data-aos-delay={1000}
 					/>
-				</Grid>
-			</Grid>
+				</IconButton>
+			</Grid> */}
 		</section>
 	);
 };

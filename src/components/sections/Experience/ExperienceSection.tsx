@@ -51,7 +51,7 @@ const ExperienceSection = () => {
 		} as Experience,
 		{
 			company: "Home Depot",
-			position: "Order Fulfillment Systems Associate",
+			position: "Order Fulfillment Associate",
 			startDate: "July 2023",
 			endDate: "October 2023",
 			location: "Waterloo, ON",
@@ -80,10 +80,13 @@ const ExperienceSection = () => {
 			image: svpImage,
 		} as Experience,
 	];
+
 	return (
 		<section id={"experience"}>
 			<Grid container size={12} justifyContent={"center"} spacing={3} padding={3}>
-				<Typography variant={"h4"}>Experience</Typography>
+				<Typography variant={"h4"} color={"primary.main"}>
+					Experience
+				</Typography>
 				<Grid container size={12}>
 					{experiences.map((exp, idx: number) => (
 						<Grid container key={`experience-${idx}`} data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-once={"true"}>

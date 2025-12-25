@@ -1,31 +1,33 @@
-import { Box, Grid, IconButton, Typography } from "@mui/material";
+import { Grid, IconButton, Link, Typography } from "@mui/material";
 import { Contact } from "../../../../types";
+import CustomInfoBox from "../../../CustomInfoBox.tsx";
 
 interface ContactInfoBlockProps {
 	contactMethods: Contact[];
 	sizing: number | { xs: number; sm: number; md: number; lg: number; xl: number };
+	background?: boolean;
 }
 
-const ContactInfoBlock = ({ contactMethods, sizing }: ContactInfoBlockProps) => {
+const ContactInfoBlock = ({ contactMethods, sizing, background = true }: ContactInfoBlockProps) => {
 	return (
-		<Box bgcolor={"accent.main"}>
-			<Grid container padding={3} spacing={3}>
+		<CustomInfoBox transparent={!background}>
+			<Grid container justifyContent={"space-between"} padding={3} spacing={3}>
 				{contactMethods.map((contact, idx) => (
 					<Grid container key={`contact-${idx}`} size={sizing} justifyContent={"center"}>
-						<a aria-label={`Visit my ${contact.method}`} href={contact.url} target="_blank" rel="noopener noreferrer">
+						<Link aria-label={`Visit my ${contact.method}`} href={contact.url} target="_blank" rel="noopener noreferrer">
 							<Grid container spacing={1} justifyContent={"center"}>
-								<IconButton color={"text"}>
-									<contact.icon fontSize="large" className={"icon-link"} />
+								<IconButton className={"icon-link"}>
+									<contact.icon fontSize="large" />
 								</IconButton>
 								<Grid container size={12} justifyContent={"center"}>
 									<Typography variant={"body1"}>{contact.label}</Typography>
 								</Grid>
 							</Grid>
-						</a>
+						</Link>
 					</Grid>
 				))}
 			</Grid>
-		</Box>
+		</CustomInfoBox>
 	);
 };
 
