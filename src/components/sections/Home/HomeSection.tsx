@@ -8,8 +8,8 @@ import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
-import CustomInfoBox from "../../CustomInfoBox.tsx";
-import CustomIconButton from "../../CustomIconButton.tsx";
+import CustomInfoBox from "../../CustomComponents/CustomInfoBox.tsx";
+import CustomIconButton from "../../CustomComponents/CustomIconButton.tsx";
 
 const HomeSection = () => {
 	const socialMedias = [

@@ -2,7 +2,7 @@ import { Grid, Link, Typography } from "@mui/material";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import MenuIcon from "@mui/icons-material/Menu";
-import CustomIconButton from "../../../CustomIconButton.tsx";
+import CustomIconButton from "../../CustomComponents/CustomIconButton.tsx";
 
 interface MobileNavigationProps {
 	sections: string[];

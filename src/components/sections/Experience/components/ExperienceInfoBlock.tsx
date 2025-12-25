@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { Experience } from "../../../../types";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import CustomInfoBox from "../../../CustomInfoBox.tsx";
+import CustomInfoBox from "../../../CustomComponents/CustomInfoBox.tsx";
 
 interface ExperienceInfoBlockProps {
 	experience: Experience;

@@ -5,7 +5,7 @@ import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import NavigationSection from "./components/sections/Navigation/NavigationSection.tsx";
+import Navigation from "./components/Navigation/Navigation.tsx";
 import HomeSection from "./components/sections/Home/HomeSection.tsx";
 import AboutSection from "./components/sections/About/AboutSection.tsx";
 import ProjectsSection from "./components/sections/Projects/ProjectsSection.tsx";
@@ -81,13 +81,7 @@ const App = () => {
 		<ThemeProvider theme={muiTheme}>
 			<CssBaseline />
 			{/* Navigation */}
-			<NavigationSection
-				scrollProgress={scrollProgress}
-				showName={showName}
-				sections={websiteSections}
-				theme={themeMode}
-				toggleTheme={handleToggleTheme}
-			/>
+			<Navigation scrollProgress={scrollProgress} showName={showName} sections={websiteSections} theme={themeMode} toggleTheme={handleToggleTheme} />
 			<Grid container size={12} spacing={8} justifyContent={"center"}>
 				{/* Home */}
 				<HomeSection />

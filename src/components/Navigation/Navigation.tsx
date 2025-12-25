@@ -4,14 +4,14 @@ import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
 import DesktopNavigation from "./components/DesktopNavigation.tsx";
 import MobileNavigation from "./components/MobileNavigation.tsx";
 
-interface NavigationSectionProps {
+interface NavigationProps {
 	scrollProgress: number;
 	showName: boolean;
 	sections: string[];
 	theme: any;
 	toggleTheme: () => void;
 }
-const NavigationSection = ({ scrollProgress, showName, sections, theme, toggleTheme }: NavigationSectionProps) => {
+const Navigation = ({ scrollProgress, showName, sections, theme, toggleTheme }: NavigationProps) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const handleMenuToggle = () => {
@@ -71,4 +71,4 @@ const NavigationSection = ({ scrollProgress, showName, sections, theme, toggleTh
 	);
 };
 
-export default NavigationSection;
+export default Navigation;

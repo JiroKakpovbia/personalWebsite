@@ -1,6 +1,6 @@
 import { Grid, Link, Typography } from "@mui/material";
 import { Skill } from "../../../../types";
-import CustomInfoBox from "../../../CustomInfoBox.tsx";
+import CustomInfoBox from "../../../CustomComponents/CustomInfoBox.tsx";
 
 interface SkillsInfoBlockProps {
 	skills: Skill[];

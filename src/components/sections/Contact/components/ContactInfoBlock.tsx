@@ -1,7 +1,7 @@
 import { Grid, Link, Typography } from "@mui/material";
 import { Contact } from "../../../../types";
-import CustomInfoBox from "../../../CustomInfoBox.tsx";
-import CustomIconButton from "../../../CustomIconButton.tsx";
+import CustomInfoBox from "../../../CustomComponents/CustomInfoBox.tsx";
+import CustomIconButton from "../../../CustomComponents/CustomIconButton.tsx";
 
 interface ContactInfoBlockProps {
 	contactMethods: Contact[];

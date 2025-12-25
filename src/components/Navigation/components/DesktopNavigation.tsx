@@ -1,7 +1,7 @@
 import { Grid, Link, Typography } from "@mui/material";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import CustomIconButton from "../../../CustomIconButton.tsx";
+import CustomIconButton from "../../CustomComponents/CustomIconButton.tsx";
 
 interface DesktopNavigationProps {
 	sections: string[];

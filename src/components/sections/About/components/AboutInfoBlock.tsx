@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
-import CustomInfoBox from "../../../CustomInfoBox.tsx";
-import CustomButton from "../../../CustomButton.tsx";
+import CustomInfoBox from "../../../CustomComponents/CustomInfoBox.tsx";
+import CustomButton from "../../../CustomComponents/CustomButton.tsx";
 
 interface AboutInfoBlockProps {
 	headshot: string;
