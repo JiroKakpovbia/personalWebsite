@@ -9,12 +9,7 @@ export const components: Components<Theme> = {
 			},
 			body: {
 				overflowX: "hidden",
-				transition: "color 2s ease-in-out, background-color 0.2s ease-in-out",
 			},
-			// "button:focus, a:focus, input:focus, textarea:focus": {
-			// 	outline: "2px solid ${theme.palette.primary.main}",
-			// 	outlineOffset: 2,
-			// },
 			section: {
 				scrollMarginTop: theme.layout.appBarHeight,
 				width: "100%",
