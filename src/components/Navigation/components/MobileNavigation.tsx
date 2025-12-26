@@ -8,7 +8,7 @@ import { Section } from "../../../types/";
 
 interface MobileNavigationProps {
 	sections: Section[];
-	theme: any;
+	theme: "light" | "dark";
 	toggleTheme: () => void;
 }
 

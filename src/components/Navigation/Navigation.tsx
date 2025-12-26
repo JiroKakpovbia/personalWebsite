@@ -15,7 +15,7 @@ import DialpadIcon from "@mui/icons-material/Dialpad";
 interface NavigationProps {
 	scrollProgress: number;
 	showName: boolean;
-	theme: any;
+	theme: "light" | "dark";
 	toggleTheme: () => void;
 }
 const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: NavigationProps) => {

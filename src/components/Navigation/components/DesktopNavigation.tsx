@@ -6,7 +6,7 @@ import { Section } from "../../../types/";
 
 interface DesktopNavigationProps {
 	sections: Section[];
-	theme: any;
+	theme: "light" | "dark";
 	toggleTheme: () => void;
 }
 
