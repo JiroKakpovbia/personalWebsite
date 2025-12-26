@@ -1,4 +1,3 @@
-import "./Navigation.css";
 import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 

@@ -1,4 +1,3 @@
-import "./Skills.css";
 import SkillsInfoBlock from "./components/SkillsInfoBlock.tsx";
 import { Skill } from "../../../types";
 import { Grid, Typography } from "@mui/material";
@@ -146,7 +145,7 @@ const SkillsSection = () => {
 		{ name: "Azure DevOps", logo: azureDevOpsLogo, url: "https://azure.microsoft.com/en-us/products/devops" } as Skill,
 		{ name: "Jira", logo: jiraLogo, url: "https://www.atlassian.com/software/jira" } as Skill,
 	];
-	
+
 	return (
 		<section id={"skills"}>
 			<Grid container size={12} justifyContent={"center"} spacing={3} padding={3}>

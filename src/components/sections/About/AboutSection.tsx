@@ -1,5 +1,3 @@
-import "./About.css";
-
 import headshotImage from "../../../assets/about/JiroKakpovbia.webp";
 import resumePdf from "../../../assets/about/JiroKakpovbia.pdf";
 import AboutInfoBlock from "./components/AboutInfoBlock.tsx";
@@ -30,7 +28,9 @@ const AboutSection = () => {
 		<section id={"about"}>
 			<Grid container size={12} spacing={3} padding={3}>
 				<Grid container size={12} justifyContent={"center"}>
-					<Typography variant={"h4"} color={"primary.main"}>About</Typography>
+					<Typography variant={"h4"} color={"primary.main"}>
+						About
+					</Typography>
 				</Grid>
 				<Grid container size={12} data-aos={"fade-up"} data-aos-once={"true"}>
 					<AboutInfoBlock headshot={headshotImage} resume={resumePdf} academicYear={currentAcademicYear} />

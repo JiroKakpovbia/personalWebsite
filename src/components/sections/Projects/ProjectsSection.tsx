@@ -4,7 +4,6 @@ import { fetchProjects } from "../../../store/projectsSlice.tsx";
 import { GitHubProject } from "../../../types/Projects";
 import ProjectInfoBlock from "./components/ProjectInfoBlock.tsx";
 import { Grid, Typography } from "@mui/material";
-import "./Projects.css";
 
 const ProjectsSection = () => {
 	const dispatch = useAppDispatch();

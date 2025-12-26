@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import ContactInfoBlock from "../Contact/components/ContactInfoBlock.tsx";
-import "./Home.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Contact } from "../../../types";
 import InstagramIcon from "@mui/icons-material/Instagram";

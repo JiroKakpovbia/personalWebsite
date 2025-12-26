@@ -1,5 +1,3 @@
-import "./Experience.css";
-
 import equitableImage from "../../../assets/experience/equitable.webp";
 import prsImage from "../../../assets/experience/wprint.webp";
 import warriorsImage from "../../../assets/experience/waterloowarriors.webp";

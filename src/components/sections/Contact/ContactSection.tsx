@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import ContactInfoBlock from "./components/ContactInfoBlock.tsx";
-import "./Contact.css";
 import ContactForm from "./components/ContactForm.tsx";
 import { Contact } from "../../../types";
 import PhoneIcon from "@mui/icons-material/Phone";
