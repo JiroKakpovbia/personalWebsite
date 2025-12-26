@@ -46,8 +46,8 @@ const MobileNavigation = ({ sections, theme, toggleTheme }: MobileNavigationProp
 			>
 				<List>
 					{sections.map((section, idx) => (
-						<>
-							<ListItem disablePadding key={section.title}>
+						<Grid key={section.title}>
+							<ListItem disablePadding>
 								<ListItemButton component="a" href={`#${section.title.toLowerCase()}`} onClick={handleCloseMenu}>
 									<ListItemIcon>
 										<section.icon />
@@ -56,7 +56,7 @@ const MobileNavigation = ({ sections, theme, toggleTheme }: MobileNavigationProp
 								</ListItemButton>
 							</ListItem>
 							{idx < sections.length - 1 && <Divider component="li" sx={{ opacity: 0.6 }} />}
-						</>
+						</Grid>
 					))}
 				</List>
 			</SwipeableDrawer>

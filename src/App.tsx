@@ -6,13 +6,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import Navigation from "./components/Navigation/Navigation.tsx";
-import HomeSection from "./components/sections/Home/HomeSection.tsx";
-import AboutSection from "./components/sections/About/AboutSection.tsx";
-import ProjectsSection from "./components/sections/Projects/ProjectsSection.tsx";
-import SkillsSection from "./components/sections/Skills/SkillsSection.tsx";
-import ExperienceSection from "./components/sections/Experience/ExperienceSection.tsx";
-import ContactInfoSection from "./components/sections/Contact/ContactSection.tsx";
-import FooterSection from "./components/sections/Footer/FooterSection.tsx";
+import HomeSection from "./components/PageSections/Home/HomeSection.tsx";
+import AboutSection from "./components/PageSections/About/AboutSection.tsx";
+import ProjectsSection from "./components/PageSections/Projects/ProjectsSection.tsx";
+import SkillsSection from "./components/PageSections/Skills/SkillsSection.tsx";
+import ExperienceSection from "./components/PageSections/Experience/ExperienceSection.tsx";
+import ContactInfoSection from "./components/PageSections/Contact/ContactSection.tsx";
+import FooterSection from "./components/PageSections/Footer/FooterSection.tsx";
 
 import { Grid, CssBaseline, ThemeProvider } from "@mui/material";
 import { RootState } from "./store/store.ts";

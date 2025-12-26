@@ -56,6 +56,7 @@ const HomeSection = () => {
 							autoplay
 							data-aos={"fade-in"}
 							data-aos-once={"true"}
+							data-aos-delay={500}
 						/>
 					</CustomInfoBox>
 				</Grid>
