@@ -1,9 +1,5 @@
-import equitableImage from "../../../assets/experience/equitable.webp";
-import prsImage from "../../../assets/experience/wprint.webp";
-import warriorsImage from "../../../assets/experience/waterloowarriors.webp";
-import svpImage from "../../../assets/experience/svpteens.webp";
-import homeDepotImage from "../../../assets/experience/homedepot.webp";
-import sobeysImage from "../../../assets/experience/sobeys.webp";
+import * as experienceLogos from "../../../assets/experience/index.ts";
+
 import ExperienceInfoBlock from "./components/ExperienceInfoBlock.tsx";
 import { Grid, Typography } from "@mui/material";
 import { Experience } from "../../../types";
@@ -17,7 +13,7 @@ const ExperienceSection = () => {
 			endDate: "Present",
 			location: "Waterloo, ON",
 			content: "<b>Languages and Tools:</b> React, TypeScript, C#, SQL, .NET, Azure, Jest, xUnit, Postman, Swagger, Figma, Storybook.",
-			image: equitableImage,
+			image: experienceLogos.equitable,
 			url: "https://equitable.ca/home",
 		},
 		{
@@ -27,7 +23,7 @@ const ExperienceSection = () => {
 			endDate: "December 2024",
 			location: "Waterloo, ON",
 			content: "<b>Languages and Tools:</b> BASIC, PHP, HTML, Javascript, MySQL, Node.js, Docker, GraphQL.",
-			image: prsImage,
+			image: experienceLogos.prs,
 			url: "https://uwaterloo.ca/print-and-retail-solutions/",
 		},
 		{
@@ -37,7 +33,7 @@ const ExperienceSection = () => {
 			endDate: "April 2024",
 			location: "Waterloo, ON",
 			content: "<b>Languages and Tools:</b> BASIC, PHP, HTML, Javascript, MySQL.",
-			image: prsImage,
+			image: experienceLogos.prs,
 			url: "https://uwaterloo.ca/print-and-retail-solutions/",
 		},
 		{
@@ -48,7 +44,7 @@ const ExperienceSection = () => {
 			location: "Waterloo, ON",
 			content:
 				"Received University of Waterloo Varsity Football Athletic Scholarship, and balanced a 30-hour weekly training schedule with a full academic course load.",
-			image: warriorsImage,
+			image: experienceLogos.warriors,
 			url: "https://athletics.uwaterloo.ca/sports/football",
 		},
 		{
@@ -59,7 +55,7 @@ const ExperienceSection = () => {
 			location: "Waterloo, ON",
 			content:
 				"Executed accurate order fulfillment using digital inventory systems, ensuring error-free results and high customer satisfaction under tight deadlines.",
-			image: homeDepotImage,
+			image: experienceLogos.homeDepot,
 			url: "https://www.homedepot.ca/en/home.html",
 		},
 		{
@@ -70,7 +66,7 @@ const ExperienceSection = () => {
 			location: "Waterloo, ON",
 			content:
 				"Optimized product placement and maintained inventory accuracy while providing responsive customer support in a fast-paced environment.",
-			image: sobeysImage,
+			image: experienceLogos.sobeys,
 			url: "https://www.sobeys.com/",
 		},
 		{
@@ -81,7 +77,7 @@ const ExperienceSection = () => {
 			location: "Waterloo, ON",
 			content:
 				"Contributed to raising nearly $4000 presented to the Bereaved Families of Ontario in 2021, and nearly $5000 to Martin Luther University College in 2022.",
-			image: svpImage,
+			image: experienceLogos.svp,
 			url: "https://www.svpwr.org/home/",
 		},
 	];

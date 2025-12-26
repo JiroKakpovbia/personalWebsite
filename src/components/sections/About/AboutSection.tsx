@@ -1,5 +1,5 @@
-import headshotImage from "../../../assets/about/JiroKakpovbia.webp";
-import resumePdf from "../../../assets/about/JiroKakpovbia.pdf";
+import * as aboutAssets from "../../../assets/about/index.ts";
+
 import AboutInfoBlock from "./components/AboutInfoBlock.tsx";
 import { Grid, Typography } from "@mui/material";
 
@@ -33,7 +33,7 @@ const AboutSection = () => {
 					</Typography>
 				</Grid>
 				<Grid container size={12} data-aos={"fade-up"} data-aos-once={"true"}>
-					<AboutInfoBlock headshot={headshotImage} resume={resumePdf} academicYear={currentAcademicYear} />
+					<AboutInfoBlock headshot={aboutAssets.headshot} resume={aboutAssets.resume} academicYear={currentAcademicYear} />
 				</Grid>
 			</Grid>
 		</section>
