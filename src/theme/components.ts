@@ -32,9 +32,12 @@ export const components: Components<Theme> = {
 			color: "inherit",
 		},
 		styleOverrides: {
-			root: {
+			root: ({ theme }) => ({
 				textDecoration: "none",
-			},
+				"&:hover": {
+					color: theme.palette.secondary.main,
+				},
+			}),
 		},
 	},
 };
