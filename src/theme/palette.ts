@@ -3,17 +3,17 @@ import { PaletteOptions } from "@mui/material";
 export const lightModePalette: PaletteOptions = {
 	mode: "light" as const,
 	background: {
-		default: "#f9f7ff",
-		paper: "#e9e6f2",
+		default: "#f5f5f7",
+		paper: "#ffffff",
 	},
 	text: {
 		primary: "#1e1e21",
 	},
 	primary: {
-		main: "#7255af",
+		main: "#7e57c2",
 	},
 	secondary: {
-		main: "#a188d8",
+		main: "#b39ddb",
 	},
 };
 
