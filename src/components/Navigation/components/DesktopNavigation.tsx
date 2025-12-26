@@ -2,9 +2,10 @@ import { Grid, Link, Typography } from "@mui/material";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import CustomIconButton from "../../CustomComponents/CustomIconButton.tsx";
+import { Section } from "../../../types/";
 
 interface DesktopNavigationProps {
-	sections: string[];
+	sections: Section[];
 	theme: any;
 	toggleTheme: () => void;
 }
@@ -15,8 +16,8 @@ const DesktopNavigation = ({ sections, theme, toggleTheme }: DesktopNavigationPr
 			{/* Page Links */}
 			{sections.map((section, idx) => (
 				<Grid key={`desktop-nav-section-${idx}-container`} className="nav-links">
-					<Link href={`#${section.toLowerCase()}`}>
-						<Typography variant="h6">{section}</Typography>
+					<Link href={`#${section.title.toLowerCase()}`}>
+						<Typography variant="h6">{section.title}</Typography>
 					</Link>
 				</Grid>
 			))}

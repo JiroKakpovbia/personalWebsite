@@ -1,24 +1,26 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import "./Navigation.css";
-import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Grid, Toolbar, Typography, useMediaQuery } from "@mui/material";
 import DesktopNavigation from "./components/DesktopNavigation.tsx";
 import MobileNavigation from "./components/MobileNavigation.tsx";
+import { Section } from "../../types/";
+
+import HomeIcon from "@mui/icons-material/Home";
+import PersonIcon from "@mui/icons-material/Person";
+import DeviceHubIcon from "@mui/icons-material/DeviceHub";
+import ComputerIcon from "@mui/icons-material/Computer";
+import WorkIcon from "@mui/icons-material/Work";
+import DialpadIcon from "@mui/icons-material/Dialpad";
 
 interface NavigationProps {
 	scrollProgress: number;
 	showName: boolean;
-	sections: string[];
 	theme: any;
 	toggleTheme: () => void;
 }
-const Navigation = ({ scrollProgress, showName, sections, theme, toggleTheme }: NavigationProps) => {
-	const [menuOpen, setMenuOpen] = useState(false);
-
-	const handleMenuToggle = () => {
-		setMenuOpen((open) => !open);
-	};
-
+const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: NavigationProps) => {
 	const appBarRef = useRef<HTMLDivElement>(null);
+	const isSmall = useMediaQuery((theme) => theme.breakpoints.up("sm"));
 
 	// Get/set the height of the navigation bar
 	useLayoutEffect(() => {
@@ -36,6 +38,15 @@ const Navigation = ({ scrollProgress, showName, sections, theme, toggleTheme }: 
 		return () => observer.disconnect();
 	}, []);
 
+	const websiteSections: Section[] = [
+		{ title: "Home", icon: HomeIcon },
+		{ title: "About", icon: PersonIcon },
+		{ title: "Projects", icon: DeviceHubIcon },
+		{ title: "Skills", icon: ComputerIcon },
+		{ title: "Experience", icon: WorkIcon },
+		{ title: "Contact", icon: DialpadIcon },
+	];
+
 	return (
 		<AppBar
 			ref={appBarRef}
@@ -49,17 +60,17 @@ const Navigation = ({ scrollProgress, showName, sections, theme, toggleTheme }: 
 					<Grid container alignItems={"center"}>
 						{showName && (
 							<Typography variant="h4" data-aos={"fade-in"} data-aos-once={"true"}>
-								Jiro Kakpovbia
+								{isSmall ? "Jiro Kakpovbia" : "Jiro K."}
 							</Typography>
 						)}
 					</Grid>
 					{/* Desktop Links */}
 					<Grid display={{ xs: "none", md: "flex" }} data-aos={"fade-down"} data-aos-once={"true"}>
-						<DesktopNavigation sections={sections} theme={theme} toggleTheme={toggleTheme} />
+						<DesktopNavigation sections={websiteSections} theme={theme} toggleTheme={toggleTheme} />
 					</Grid>
 					{/* Mobile Links */}
 					<Grid display={{ xs: "flex", md: "none" }} data-aos={"fade-down"} data-aos-once={"true"}>
-						<MobileNavigation sections={sections} theme={theme} toggleTheme={toggleTheme} open={menuOpen} toggleMenu={handleMenuToggle} />
+						<MobileNavigation sections={websiteSections} theme={theme} toggleTheme={toggleTheme} />
 					</Grid>
 				</Grid>
 			</Toolbar>

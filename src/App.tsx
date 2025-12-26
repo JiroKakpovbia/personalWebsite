@@ -75,13 +75,11 @@ const App = () => {
 		};
 	}, []);
 
-	const websiteSections = ["Home", "About", "Projects", "Skills", "Experience", "Contact"];
-
 	return (
 		<ThemeProvider theme={muiTheme}>
 			<CssBaseline />
 			{/* Navigation */}
-			<Navigation scrollProgress={scrollProgress} showName={showName} sections={websiteSections} theme={themeMode} toggleTheme={handleToggleTheme} />
+			<Navigation scrollProgress={scrollProgress} showName={showName} theme={themeMode} toggleTheme={handleToggleTheme} />
 			<Grid container size={12} spacing={8} justifyContent={"center"}>
 				{/* Home */}
 				<HomeSection />
