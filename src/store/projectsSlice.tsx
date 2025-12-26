@@ -31,9 +31,9 @@ export const fetchProjects = createAsyncThunk<
 	const response = await fetch(url);
 	const rawData = await response.json();
 
-	const data: GitHubProject[] = rawData.map((repo: { name: any; url: any; description: any; language: any }) => ({
+	const data: GitHubProject[] = rawData.map((repo: { name: string; html_url: string; description: string; language: string }) => ({
 		name: repo.name,
-		url: repo.url,
+		url: repo.html_url,
 		description: repo.description,
 		language: repo.language,
 	}));
