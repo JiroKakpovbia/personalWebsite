@@ -1,5 +1,5 @@
 import "./Navigation.css";
-import { AppBar, Box, Grid, Toolbar, Typography, useMediaQuery } from "@mui/material";
+import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import DesktopNavigation from "./components/DesktopNavigation.tsx";
@@ -20,7 +20,6 @@ interface NavigationProps {
 	toggleTheme: () => void;
 }
 const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: NavigationProps) => {
-	const isSmall = useMediaQuery((theme) => theme.breakpoints.up("sm"));
 	const muiTheme = useTheme();
 	const appBarHeight = muiTheme.layout.appBarHeight;
 
@@ -54,8 +53,8 @@ const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: Navigation
 					{/* Name */}
 					<Grid container alignItems={"center"}>
 						{showName && (
-							<Typography variant="h4" sx={{ cursor: "default" }} data-aos={"fade-in"} data-aos-once={"true"}>
-								{isSmall ? "Jiro Kakpovbia" : "Jiro K."}
+							<Typography variant="h6" sx={{ cursor: "default" }} data-aos={"fade-in"} data-aos-once={"true"}>
+								Jiro Kakpovbia
 							</Typography>
 						)}
 					</Grid>
