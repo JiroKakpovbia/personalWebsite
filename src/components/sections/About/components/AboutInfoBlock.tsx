@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
 import CustomInfoBox from "../../../CustomComponents/CustomInfoBox.tsx";
 import CustomButton from "../../../CustomComponents/CustomButton.tsx";
 
@@ -9,6 +9,7 @@ interface AboutInfoBlockProps {
 }
 
 const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps) => {
+	const isLarge = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 	return (
 		<CustomInfoBox>
 			<Grid container padding={3} spacing={3} justifyContent={"center"} alignItems={"center"}>
@@ -42,7 +43,7 @@ const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps)
 					<Typography variant={"body1"}>Please feel free to reach out — I'm always open to meeting new people!</Typography>
 
 					{/* Resume Button */}
-					<Grid container size={12} justifyContent={"center"}>
+					<Grid container size={12} justifyContent={isLarge ? "flex-start" : "center"}>
 						<CustomButton label={"Resume"} onClick={() => window.open(resume, "_blank")} />
 					</Grid>
 				</Grid>
