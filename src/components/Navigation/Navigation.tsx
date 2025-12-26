@@ -59,7 +59,7 @@ const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: Navigation
 					{/* Name */}
 					<Grid container alignItems={"center"}>
 						{showName && (
-							<Typography variant="h4" data-aos={"fade-in"} data-aos-once={"true"}>
+							<Typography variant="h4" sx={{ cursor: "default" }} data-aos={"fade-in"} data-aos-once={"true"}>
 								{isSmall ? "Jiro Kakpovbia" : "Jiro K."}
 							</Typography>
 						)}

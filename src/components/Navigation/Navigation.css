@@ -1,24 +1,3 @@
-/* Navigation */
-.logo:hover {
-	cursor: default;
-}
-
-/* Scroll Progress Bar */
-.scroll-progress-container {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 0.1rem;
-	overflow: hidden;
-	z-index: 1500;
-}
-
-.scroll-progress-bar {
-	height: 100%;
-	width: 0%;
-}
-
 /* Media Queries */
 @media only screen and (min-width: 0px) {
 }
