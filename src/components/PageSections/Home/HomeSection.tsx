@@ -38,7 +38,7 @@ const HomeSection = () => {
 					}}
 				>
 					<CustomInfoBox
-						transparent={true}
+						transparent
 						sx={{
 							width: {
 								xs: "200%",
