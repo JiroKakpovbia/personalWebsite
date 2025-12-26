@@ -11,7 +11,7 @@ import { Grid, Typography } from "@mui/material";
 import { Experience } from "../../../types";
 
 const ExperienceSection = () => {
-	const experiences = [
+	const experiences: Experience[] = [
 		{
 			company: "The Equitable Life Insurance Company of Canada",
 			position: "Junior Software Developer",
@@ -20,7 +20,8 @@ const ExperienceSection = () => {
 			location: "Waterloo, ON",
 			content: "<b>Languages and Tools:</b> React, TypeScript, C#, SQL, .NET, Azure, Jest, xUnit, Postman, Swagger, Figma, Storybook.",
 			image: equitableImage,
-		} as Experience,
+			url: "https://equitable.ca/home",
+		},
 		{
 			company: "Print + Retail Solutions, University of Waterloo",
 			position: "Back-End Software Engineer",
@@ -29,7 +30,8 @@ const ExperienceSection = () => {
 			location: "Waterloo, ON",
 			content: "<b>Languages and Tools:</b> BASIC, PHP, HTML, Javascript, MySQL, Node.js, Docker, GraphQL.",
 			image: prsImage,
-		} as Experience,
+			url: "https://uwaterloo.ca/print-and-retail-solutions/",
+		},
 		{
 			company: "Print + Retail Solutions, University of Waterloo",
 			position: "Front-End Web Developer",
@@ -38,9 +40,10 @@ const ExperienceSection = () => {
 			location: "Waterloo, ON",
 			content: "<b>Languages and Tools:</b> BASIC, PHP, HTML, Javascript, MySQL.",
 			image: prsImage,
-		} as Experience,
+			url: "https://uwaterloo.ca/print-and-retail-solutions/",
+		},
 		{
-			company: "University of Waterloo Varsity Football",
+			company: "Varsity Football, University of Waterloo",
 			position: "Varsity Athlete",
 			startDate: "August 2022",
 			endDate: "August 2024",
@@ -48,17 +51,19 @@ const ExperienceSection = () => {
 			content:
 				"Received University of Waterloo Varsity Football Athletic Scholarship, and balanced a 30-hour weekly training schedule with a full academic course load.",
 			image: warriorsImage,
-		} as Experience,
+			url: "https://athletics.uwaterloo.ca/sports/football",
+		},
 		{
 			company: "Home Depot",
-			position: "Order Fulfillment Associate",
+			position: "Order Fulfillment Systems Associate",
 			startDate: "July 2023",
 			endDate: "October 2023",
 			location: "Waterloo, ON",
 			content:
 				"Executed accurate order fulfillment using digital inventory systems, ensuring error-free results and high customer satisfaction under tight deadlines.",
 			image: homeDepotImage,
-		} as Experience,
+			url: "https://www.homedepot.ca/en/home.html",
+		},
 		{
 			company: "Sobeys",
 			position: "Data Workflow Associate",
@@ -68,7 +73,8 @@ const ExperienceSection = () => {
 			content:
 				"Optimized product placement and maintained inventory accuracy while providing responsive customer support in a fast-paced environment.",
 			image: sobeysImage,
-		} as Experience,
+			url: "https://www.sobeys.com/",
+		},
 		{
 			company: "Social Venture Partners Teens",
 			position: "Vice Chair of Engagement",
@@ -78,7 +84,8 @@ const ExperienceSection = () => {
 			content:
 				"Contributed to raising nearly $4000 presented to the Bereaved Families of Ontario in 2021, and nearly $5000 to Martin Luther University College in 2022.",
 			image: svpImage,
-		} as Experience,
+			url: "https://www.svpwr.org/home/",
+		},
 	];
 
 	return (

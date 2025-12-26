@@ -6,4 +6,5 @@ export interface Experience {
 	location: string;
 	content: string;
 	image: string;
+	url: string;
 }
