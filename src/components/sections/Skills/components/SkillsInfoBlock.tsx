@@ -11,7 +11,7 @@ const SkillsInfoBlock = ({ skills }: SkillsInfoBlockProps) => {
 		<CustomInfoBox>
 			<Grid container padding={3} spacing={6} alignItems={"center"}>
 				{skills.map((skill, idx) => (
-					<Grid key={`skill-${idx}`} size={{ xs: 4, sm: 1.5, md: 1.2, lg: 1, xl: 0.8 }}>
+					<Grid key={`skill-${idx}`} size={{ xs: 3, sm: 1.5, md: 1.2, lg: 1, xl: 0.8 }}>
 						<Tooltip
 							arrow
 							title={skill.name}
@@ -33,7 +33,7 @@ const SkillsInfoBlock = ({ skills }: SkillsInfoBlockProps) => {
 							}}
 						>
 							<Link href={skill.url} target="_blank" rel="noopener noreferrer">
-								<img alt={`${skill.name} Logo`} src={skill.logo} style={{ width: "100%" }} className="icon-link" />
+								<img alt={`${skill.name} Logo`} src={skill.logo} style={{ width: "100%" }} />
 							</Link>
 						</Tooltip>
 					</Grid>
