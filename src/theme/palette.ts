@@ -1,6 +1,6 @@
 import { PaletteOptions } from "@mui/material";
 
-export const lightModePalette = {
+export const lightModePalette: PaletteOptions = {
 	mode: "light" as const,
 	background: {
 		default: "#f9f7ff",
@@ -15,9 +15,9 @@ export const lightModePalette = {
 	secondary: {
 		main: "#a188d8",
 	},
-} as PaletteOptions;
+};
 
-export const darkModePalette = {
+export const darkModePalette: PaletteOptions = {
 	mode: "dark" as const,
 	background: {
 		default: "#27272a",
@@ -32,4 +32,4 @@ export const darkModePalette = {
 	secondary: {
 		main: "#52446f",
 	},
-} as PaletteOptions;
+};

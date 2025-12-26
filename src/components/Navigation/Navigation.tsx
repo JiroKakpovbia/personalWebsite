@@ -1,6 +1,7 @@
-import { useLayoutEffect, useRef } from "react";
 import "./Navigation.css";
 import { AppBar, Box, Grid, Toolbar, Typography, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+
 import DesktopNavigation from "./components/DesktopNavigation.tsx";
 import MobileNavigation from "./components/MobileNavigation.tsx";
 import { Section } from "../../types/";
@@ -19,24 +20,9 @@ interface NavigationProps {
 	toggleTheme: () => void;
 }
 const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: NavigationProps) => {
-	const appBarRef = useRef<HTMLDivElement>(null);
 	const isSmall = useMediaQuery((theme) => theme.breakpoints.up("sm"));
-
-	// Get/set the height of the navigation bar
-	useLayoutEffect(() => {
-		if (!appBarRef.current) return;
-
-		const updateOffset = () => {
-			document.documentElement.style.setProperty("--appbar-offset", `${appBarRef.current!.offsetHeight}px`);
-		};
-
-		updateOffset();
-
-		const observer = new ResizeObserver(updateOffset);
-		observer.observe(appBarRef.current);
-
-		return () => observer.disconnect();
-	}, []);
+	const muiTheme = useTheme();
+	const appBarHeight = muiTheme.layout.appBarHeight;
 
 	const websiteSections: Section[] = [
 		{ title: "Home", icon: HomeIcon },
@@ -49,12 +35,20 @@ const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: Navigation
 
 	return (
 		<AppBar
-			ref={appBarRef}
 			position="fixed"
 			color={scrollProgress > 0 ? "background.paper" : "background.default"}
 			elevation={scrollProgress > 0 ? 4 : 0}
+			sx={{
+				height: appBarHeight,
+			}}
 		>
-			<Toolbar>
+			<Toolbar
+				disableGutters
+				sx={{
+					minHeight: appBarHeight,
+					height: appBarHeight,
+				}}
+			>
 				<Grid container size={12} justifyContent={"space-between"} flex={1} flexDirection={"row"}>
 					{/* Name */}
 					<Grid container alignItems={"center"}>
