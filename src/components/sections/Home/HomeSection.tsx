@@ -81,7 +81,17 @@ const HomeSection = () => {
 			</Grid>
 
 			{/* Advance Arrow */}
-			{/* <Grid container size={12} justifyContent={"center"}>
+			<Grid
+				container
+				size={12}
+				justifyContent={"center"}
+				sx={{
+					position: "absolute",
+					bottom: 100,
+					left: 0,
+					right: 0,
+				}}
+			>
 				<CustomIconButton
 					icon={ExpandCircleDownIcon}
 					onClick={() => (window.location.href = "#about")}
@@ -89,7 +99,7 @@ const HomeSection = () => {
 					data-aos-once={"true"}
 					data-aos-delay={1000}
 				/>
-			</Grid> */}
+			</Grid>
 		</section>
 	);
 };
