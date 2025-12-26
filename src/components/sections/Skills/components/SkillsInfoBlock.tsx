@@ -1,4 +1,4 @@
-import { Grid, Link, Tooltip, Typography } from "@mui/material";
+import { Grid, Link, Tooltip } from "@mui/material";
 import { Skill } from "../../../../types";
 import CustomInfoBox from "../../../CustomComponents/CustomInfoBox.tsx";
 
