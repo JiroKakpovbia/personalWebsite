@@ -9,7 +9,7 @@ interface AboutInfoBlockProps {
 }
 
 const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps) => {
-	const isLarge = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+	const isMedium= useMediaQuery((theme) => theme.breakpoints.up("md"));
 	return (
 		<CustomInfoBox>
 			<Grid container padding={3} spacing={3} justifyContent={"center"} alignItems={"center"}>
@@ -25,7 +25,7 @@ const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps)
 						}}
 					></img>
 				</Grid>
-				<Grid container size={{ xs: 12, sm: 12, md: 12, lg: 8, xl: 9 }} spacing={3}>
+				<Grid container size={{ xs: 12, sm: 12, md: 7, lg: 8, xl: 9 }} spacing={3}>
 					{/* Paragraph 1 */}
 					<Typography variant={"body1"}>
 						Hey! My name is Jiro Kakpovbia, and I'm a {academicYear}. I'm a versatile developer with experience across front-end, back-end,
@@ -43,7 +43,7 @@ const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps)
 					<Typography variant={"body1"}>Please feel free to reach out — I'm always open to meeting new people!</Typography>
 
 					{/* Resume Button */}
-					<Grid container size={12} justifyContent={isLarge ? "flex-start" : "center"}>
+					<Grid container size={12} justifyContent={isMedium ? "flex-start" : "center"}>
 						<CustomButton label={"Resume"} onClick={() => window.open(resume, "_blank")} />
 					</Grid>
 				</Grid>

@@ -49,7 +49,7 @@ const ExperienceSection = () => {
 		},
 		{
 			company: "Home Depot",
-			position: "Order Fulfillment Systems Associate",
+			position: "Order Fulfillment Associate",
 			startDate: "July 2023",
 			endDate: "October 2023",
 			location: "Waterloo, ON",

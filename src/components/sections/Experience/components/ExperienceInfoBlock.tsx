@@ -19,10 +19,10 @@ const ExperienceInfoBlock = ({ experience }: ExperienceInfoBlockProps) => {
 				</Grid>
 				<Grid container size={{ xs: 12, sm: 10, md: 10, lg: 11, xl: 11 }} spacing={1}>
 					<Grid container size={12} justifyContent={"space-between"} alignItems={"center"}>
-						<Grid container size={{ sm: 12, lg: "auto" }}>
+						<Grid container size={{ sm: 12, md: "auto" }}>
 							<Typography variant={"h5"}>{experience.position}</Typography>
 						</Grid>
-						<Grid container size={{ sm: 12, lg: "auto" }}>
+						<Grid container size={{ sm: 12, md: "auto" }}>
 							<Typography variant={"h5"} fontWeight={"normal"}>
 								{!isLarge &&
 									`${experience.startDate.split(" ")[0].substring(0, 3)} ${experience.startDate.split(" ")[1]} — ${
