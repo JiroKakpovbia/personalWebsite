@@ -8,10 +8,10 @@ const CustomIconButton = ({ icon: Icon, sx, ...iconButtonProps }: CustomIconButt
 	return (
 		<IconButton
 			{...iconButtonProps}
-			color={"text.primary"}
 			size={"large"}
 			sx={{
 				// boxShadow: 10,
+				color: "text.primary",
 				textTransform: "none",
 				"&:hover": {
 					transform: "scale(1.1)",

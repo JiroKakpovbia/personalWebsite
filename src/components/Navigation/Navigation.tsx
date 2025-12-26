@@ -36,14 +36,15 @@ const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: Navigation
 	return (
 		<AppBar
 			position="fixed"
-			color={scrollProgress > 0 ? "background.paper" : "background.default"}
+			color="transparent"
 			elevation={scrollProgress > 0 ? 4 : 0}
 			sx={{
 				height: appBarHeight,
+				bgcolor: scrollProgress > 0 ? "background.paper" : "background.default",
+				color: "text.primary",
 			}}
 		>
 			<Toolbar
-				disableGutters
 				sx={{
 					minHeight: appBarHeight,
 					height: appBarHeight,
