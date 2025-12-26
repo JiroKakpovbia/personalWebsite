@@ -1,4 +1,4 @@
-import { Grid, Link, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import CustomIconButton from "../../CustomComponents/CustomIconButton.tsx";
@@ -15,11 +15,9 @@ const DesktopNavigation = ({ sections, theme, toggleTheme }: DesktopNavigationPr
 		<Grid container spacing={3} alignItems={"center"}>
 			{/* Page Links */}
 			{sections.map((section, idx) => (
-				<Grid key={`desktop-nav-section-${idx}-container`} className="nav-links">
-					<Link href={`#${section.title.toLowerCase()}`}>
-						<Typography variant="h6">{section.title}</Typography>
-					</Link>
-				</Grid>
+				<Typography key={section.title} variant="h6" component={"a"} href={`#${section.title.toLowerCase()}`}>
+					{section.title}
+				</Typography>
 			))}
 			{/* Theme Toggle */}
 			<CustomIconButton icon={theme === "light" ? LightModeIcon : NightlightRoundIcon} aria-label="theme-toggle" onClick={toggleTheme} />

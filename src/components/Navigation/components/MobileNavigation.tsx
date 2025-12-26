@@ -48,7 +48,16 @@ const MobileNavigation = ({ sections, theme, toggleTheme }: MobileNavigationProp
 					{sections.map((section, idx) => (
 						<Grid key={section.title}>
 							<ListItem disablePadding>
-								<ListItemButton component="a" href={`#${section.title.toLowerCase()}`} onClick={handleCloseMenu}>
+								<ListItemButton
+									component="a"
+									href={`#${section.title.toLowerCase()}`}
+									onClick={handleCloseMenu}
+									sx={{
+										"&:hover": {
+											color: "text.primary",
+										},
+									}}
+								>
 									<ListItemIcon>
 										<section.icon />
 									</ListItemIcon>

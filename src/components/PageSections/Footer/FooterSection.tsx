@@ -1,4 +1,4 @@
-import { Grid, Link, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 const FooterSection = () => {
 	const currentYear = new Date().getFullYear();
@@ -18,9 +18,9 @@ const FooterSection = () => {
 				<Grid container size={12} justifyContent={"center"}>
 					<Typography variant={"body1"}>
 						The source code for this website can be found on my{" "}
-						<Link href="https://github.com/JiroKakpovbia/personalWebsite" target="_blank" rel="noopener noreferrer">
+						<a href="https://github.com/JiroKakpovbia/personalWebsite" target="_blank" rel="noopener noreferrer">
 							GitHub
-						</Link>
+						</a>
 						, so be sure to check it out!
 					</Typography>
 				</Grid>

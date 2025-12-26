@@ -24,20 +24,13 @@ export const components: Components<Theme> = {
 					width: "70%",
 				},
 			},
-		}),
-	},
-
-	MuiLink: {
-		defaultProps: {
-			color: "inherit",
-		},
-		styleOverrides: {
-			root: ({ theme }) => ({
-				textDecoration: "none",
+			a: {
+				color: "inherit",
+				textDecoration: "none", // could remove to make underlines show up again
 				"&:hover": {
 					color: theme.palette.secondary.main,
 				},
-			}),
-		},
+			},
+		}),
 	},
 };

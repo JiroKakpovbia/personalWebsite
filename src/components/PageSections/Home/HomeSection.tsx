@@ -95,7 +95,9 @@ const HomeSection = () => {
 			>
 				<CustomIconButton
 					icon={ExpandCircleDownIcon}
-					onClick={() => (window.location.href = "#about")}
+					component={"a"}
+					aria-label={"Advance to About section"}
+					href={`#about`}
 					data-aos={"fade-up"}
 					data-aos-once={"true"}
 					data-aos-delay={1000}

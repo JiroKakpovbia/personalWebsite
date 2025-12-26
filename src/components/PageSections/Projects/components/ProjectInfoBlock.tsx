@@ -1,4 +1,4 @@
-import { Grid, Link, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { GitHubProject } from "../../../../types/";
 import CustomInfoBox from "../../../CustomComponents/CustomInfoBox.tsx";
 
@@ -11,11 +11,9 @@ const ProjectInfoBlock = ({ repo }: ProjectInfoBlockProps) => {
 		<CustomInfoBox>
 			<Grid container padding={3} spacing={1}>
 				<Grid size={12}>
-					<Link href={repo.url} target="_blank" rel="noopener noreferrer">
-						<Typography variant={"h5"} color={"primary.main"}>
-							{repo.name}
-						</Typography>
-					</Link>
+					<Typography variant={"h5"} color={"primary.main"} component={"a"} href={repo.url} target="_blank" rel="noopener noreferrer">
+						{repo.name}
+					</Typography>
 				</Grid>
 				<Grid size={12}>
 					<Typography variant={"body1"}>

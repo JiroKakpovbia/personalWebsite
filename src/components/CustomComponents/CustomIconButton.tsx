@@ -15,6 +15,7 @@ const CustomIconButton = ({ icon: Icon, sx, ...iconButtonProps }: CustomIconButt
 				textTransform: "none",
 				"&:hover": {
 					transform: "scale(1.1)",
+					color: "text.primary",
 				},
 			}}
 		>
