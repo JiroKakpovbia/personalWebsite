@@ -33,7 +33,7 @@ const SkillsInfoBlock = ({ skills }: SkillsInfoBlockProps) => {
 							}}
 						>
 							<Link href={skill.url} target={"_blank"} rel={"noopener noreferrer"}>
-								<img alt={`${skill.name} Logo`} src={skill.logo} style={{ width: "100%" }} />
+								<img alt={`${skill.name} Logo`} src={skill.logo} loading={"lazy"} style={{ width: "100%" }} />
 							</Link>
 						</Tooltip>
 					</Grid>

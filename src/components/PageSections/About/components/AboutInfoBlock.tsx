@@ -9,7 +9,7 @@ interface AboutInfoBlockProps {
 }
 
 const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps) => {
-	const isMedium= useMediaQuery((theme) => theme.breakpoints.up("md"));
+	const isMedium = useMediaQuery((theme) => theme.breakpoints.up("md"));
 	return (
 		<CustomInfoBox>
 			<Grid container padding={3} spacing={3} justifyContent={"center"} alignItems={"center"}>
@@ -18,6 +18,7 @@ const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps)
 					<img
 						alt={"Headshot of Jiro Kakpovbia"}
 						src={headshot}
+						loading={"lazy"}
 						style={{
 							width: "100%",
 							height: "100%",

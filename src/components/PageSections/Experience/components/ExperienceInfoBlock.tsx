@@ -14,7 +14,7 @@ const ExperienceInfoBlock = ({ experience }: ExperienceInfoBlockProps) => {
 			<Grid container size={12} justifyContent={"center"} alignItems={"center"} spacing={3} padding={3}>
 				<Grid size={{ xs: 5, sm: 2, md: 2, lg: 1, xl: 1 }}>
 					<Link href={experience.url} target={"_blank"} rel={"noopener noreferrer"}>
-						<img alt={`${experience.company} Logo`} src={experience.image} style={{ width: "100%" }} />
+						<img alt={`${experience.company} Logo`} src={experience.image} loading={"lazy"} style={{ width: "100%" }} />
 					</Link>
 				</Grid>
 				<Grid container size={{ xs: 12, sm: 10, md: 10, lg: 11, xl: 11 }} spacing={1}>
