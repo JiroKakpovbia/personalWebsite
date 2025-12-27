@@ -37,7 +37,7 @@ const ExperienceInfoBlock = ({ experience }: ExperienceInfoBlockProps) => {
 						</Grid>
 					</Grid>
 					<Grid container size={12}>
-						<Typography variant={"h6"} component={"p"} fontStyle={"italic"}>
+						<Typography variant={"h6"} component={"p"}>
 							{experience.company}, {experience.location}
 						</Typography>
 					</Grid>
