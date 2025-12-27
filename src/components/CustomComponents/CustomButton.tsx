@@ -17,7 +17,7 @@ const CustomButton = ({ label, ...buttonProps }: CustomButtonProps) => {
 				textTransform: "none",
 			}}
 		>
-			<Typography variant="button" color="text.primary">
+			<Typography variant={"button"} color={"text.primary"}>
 				{label}
 			</Typography>
 		</Button>

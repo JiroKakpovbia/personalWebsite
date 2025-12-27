@@ -15,12 +15,12 @@ const DesktopNavigation = ({ sections, theme, toggleTheme }: DesktopNavigationPr
 		<Grid container spacing={3} alignItems={"center"}>
 			{/* Page Links */}
 			{sections.map((section, idx) => (
-				<Typography key={section.title} variant="h6" component={"a"} href={`#${section.title.toLowerCase()}`}>
+				<Typography key={section.title} variant={"h6"} component={"a"} href={`#${section.title.toLowerCase()}`}>
 					{section.title}
 				</Typography>
 			))}
 			{/* Theme Toggle */}
-			<CustomIconButton icon={theme === "light" ? LightModeIcon : NightlightRoundIcon} aria-label="theme-toggle" onClick={toggleTheme} />
+			<CustomIconButton icon={theme === "light" ? LightModeIcon : NightlightRoundIcon} aria-label={"theme-toggle"} onClick={toggleTheme} />
 		</Grid>
 	);
 };

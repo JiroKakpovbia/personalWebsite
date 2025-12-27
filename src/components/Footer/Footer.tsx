@@ -18,7 +18,7 @@ const Footer = () => {
 				<Grid container size={12} justifyContent={"center"}>
 					<Typography variant={"body1"}>
 						The source code for this website can be found on my{" "}
-						<a href="https://github.com/JiroKakpovbia/personalWebsite" target="_blank" rel="noopener noreferrer">
+						<a href={"https://github.com/JiroKakpovbia/personalWebsite"} target={"_blank"} rel={"noopener noreferrer"}>
 							GitHub
 						</a>
 						, so be sure to check it out!

@@ -27,12 +27,12 @@ const MobileNavigation = ({ sections, theme, toggleTheme }: MobileNavigationProp
 	return (
 		<Grid container>
 			{/* Theme Toggle */}
-			<CustomIconButton icon={theme === "light" ? LightModeIcon : NightlightRoundIcon} aria-label="theme-toggle" onClick={toggleTheme} />
+			<CustomIconButton icon={theme === "light" ? LightModeIcon : NightlightRoundIcon} aria-label={"theme-toggle"} onClick={toggleTheme} />
 			{/* Menu Icon */}
-			<CustomIconButton icon={MenuIcon} aria-label="Navigation" onClick={handleOpenMenu} />
+			<CustomIconButton icon={MenuIcon} aria-label={"Navigation"} onClick={handleOpenMenu} />
 			{/* Page Links */}
 			<SwipeableDrawer
-				anchor="right"
+				anchor={"right"}
 				open={menuOpen}
 				onOpen={handleOpenMenu}
 				onClose={handleCloseMenu}
@@ -49,7 +49,7 @@ const MobileNavigation = ({ sections, theme, toggleTheme }: MobileNavigationProp
 						<Grid key={section.title}>
 							<ListItem disablePadding>
 								<ListItemButton
-									component="a"
+									component={"a"}
 									href={`#${section.title.toLowerCase()}`}
 									onClick={handleCloseMenu}
 									sx={{
@@ -64,7 +64,7 @@ const MobileNavigation = ({ sections, theme, toggleTheme }: MobileNavigationProp
 									<ListItemText primary={section.title} slotProps={{ primary: { variant: "h6" } }} />
 								</ListItemButton>
 							</ListItem>
-							{idx < sections.length - 1 && <Divider component="li" sx={{ opacity: 0.6 }} />}
+							{idx < sections.length - 1 && <Divider component={"li"} sx={{ opacity: 0.6 }} />}
 						</Grid>
 					))}
 				</List>

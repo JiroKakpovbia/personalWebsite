@@ -16,7 +16,7 @@ const AboutInfoBlock = ({ headshot, resume, academicYear }: AboutInfoBlockProps)
 				{/* Image */}
 				<Grid container size={{ xs: 9, sm: 6, md: 5, lg: 4, xl: 3 }}>
 					<img
-						alt="Headshot of Jiro Kakpovbia"
+						alt={"Headshot of Jiro Kakpovbia"}
 						src={headshot}
 						style={{
 							width: "100%",

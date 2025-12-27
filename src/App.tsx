@@ -68,7 +68,7 @@ const App = () => {
 			<CssBaseline />
 			{/* Navigation */}
 			<Navigation scrollProgress={scrollProgress} showName={showName} theme={themeMode} toggleTheme={handleToggleTheme} />
-			<Grid container size={12} spacing={8} justifyContent={"center"} component="main">
+			<Grid container size={12} spacing={8} justifyContent={"center"} component={"main"}>
 				{/* Home */}
 				<HomeSection />
 				{/* About */}

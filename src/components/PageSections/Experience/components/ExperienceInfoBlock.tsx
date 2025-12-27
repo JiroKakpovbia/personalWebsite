@@ -13,7 +13,7 @@ const ExperienceInfoBlock = ({ experience }: ExperienceInfoBlockProps) => {
 		<CustomInfoBox>
 			<Grid container size={12} justifyContent={"center"} alignItems={"center"} spacing={3} padding={3}>
 				<Grid size={{ xs: 5, sm: 2, md: 2, lg: 1, xl: 1 }}>
-					<Link href={experience.url} target="_blank" rel="noopener noreferrer">
+					<Link href={experience.url} target={"_blank"} rel={"noopener noreferrer"}>
 						<img alt={`${experience.company} Logo`} src={experience.image} style={{ width: "100%" }} />
 					</Link>
 				</Grid>

@@ -24,7 +24,7 @@ const HomeSection = () => {
 
 	return (
 		<section id={"home"}>
-			<Grid container size={12} alignItems={"center"} padding={3} minHeight="100dvh">
+			<Grid container size={12} alignItems={"center"} padding={3} minHeight={"100dvh"}>
 				{/* Animation */}
 				<Grid
 					container
@@ -51,7 +51,7 @@ const HomeSection = () => {
 						}}
 					>
 						<DotLottieReact
-							src="https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"
+							src={"https://lottie.host/a367f2aa-4068-44af-b626-4e55960578dc/Xla2bWkpIb.lottie"}
 							loop
 							autoplay
 							data-aos={"fade-in"}
@@ -65,7 +65,7 @@ const HomeSection = () => {
 					<Grid container size={12} justifyContent={"center"} textAlign={"center"} spacing={3}>
 						{/* Text */}
 						<Grid size={12} data-aos={"fade-down"} data-aos-once={"true"}>
-							<Typography variant="h5" component="h2">
+							<Typography variant={"h5"} component={"h2"}>
 								Hi, my name is
 							</Typography>
 						</Grid>
@@ -73,7 +73,7 @@ const HomeSection = () => {
 							<Typography variant={"h2"}>Jiro Kakpovbia</Typography>
 						</Grid>
 						<Grid size={12} data-aos={"fade-up"} data-aos-once={"true"}>
-							<Typography variant="h5" component="h2">
+							<Typography variant={"h5"} component={"h2"}>
 								Full-Stack Software Developer
 							</Typography>
 						</Grid>

@@ -33,8 +33,8 @@ const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: Navigation
 
 	return (
 		<AppBar
-			position="fixed"
-			color="transparent"
+			position={"fixed"}
+			color={"transparent"}
 			elevation={scrollProgress > 0 ? 4 : 0}
 			sx={{
 				height: appBarHeight,
@@ -52,7 +52,7 @@ const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: Navigation
 					{/* Name */}
 					<Grid container alignItems={"center"}>
 						{showName && (
-							<Typography variant="h6" sx={{ cursor: "default" }} data-aos={"fade-in"} data-aos-once={"true"}>
+							<Typography variant={"h6"} sx={{ cursor: "default" }} data-aos={"fade-in"} data-aos-once={"true"}>
 								Jiro Kakpovbia
 							</Typography>
 						)}
@@ -69,7 +69,7 @@ const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: Navigation
 			</Toolbar>
 			{/* Progress Bar */}
 			<Box height={2}>
-				<Box width={`${scrollProgress}%`} height="100%" bgcolor="primary.main" />
+				<Box width={`${scrollProgress}%`} height={"100%"} bgcolor={"primary.main" }/>
 			</Box>
 		</AppBar>
 	);
