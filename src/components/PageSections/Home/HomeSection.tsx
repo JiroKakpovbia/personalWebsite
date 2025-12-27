@@ -24,7 +24,7 @@ const HomeSection = () => {
 
 	return (
 		<section id={"home"}>
-			<Grid container size={12} justifyContent={"space-between"} alignItems={"center"} padding={3} minHeight="100dvh">
+			<Grid container size={12} alignItems={"center"} padding={3} minHeight="100dvh">
 				{/* Animation */}
 				<Grid
 					container
@@ -90,22 +90,18 @@ const HomeSection = () => {
 				container
 				size={12}
 				justifyContent={"center"}
+				data-aos={"fade-up"}
+				data-aos-once={"true"}
+				data-aos-delay={1000}
 				sx={{
 					position: "absolute",
 					bottom: 100,
 					left: 0,
 					right: 0,
+					zIndex: 1,
 				}}
 			>
-				<CustomIconButton
-					icon={ExpandCircleDownIcon}
-					component={"a"}
-					aria-label={"Advance to About section"}
-					href={`#about`}
-					data-aos={"fade-up"}
-					data-aos-once={"true"}
-					data-aos-delay={1000}
-				/>
+				<CustomIconButton icon={ExpandCircleDownIcon} component={"a"} aria-label={"Advance to About section"} href={`#about`} />
 			</Grid>
 		</section>
 	);
