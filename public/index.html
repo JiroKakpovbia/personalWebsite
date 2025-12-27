@@ -25,21 +25,8 @@
 
 		<!-- Manifest Metadata -->
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
-		<!-- Theme Colour-->
-		<meta name="theme-color" content="#f9f7ff" media="(prefers-color-scheme: light)" />
-		<meta name="theme-color" content="#27272a" media="(prefers-color-scheme: dark)" />
 	</head>
 	<body>
-		<!-- Initial Theme Setup -->
-		<script>
-			(function () {
-				var theme = localStorage.getItem("theme");
-				document.body.classList.toggle("light-mode", theme === "light");
-				document.body.classList.toggle("dark-mode", theme === "dark");
-			})();
-		</script>
-
 		<!-- JavaScript Reminder -->
 		<noscript>
 			<div
