@@ -8,21 +8,21 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const ContactInfoSection = () => {
-	const contactMethods = [
-		{ method: "Phone Number", label: "(226) 899-3921", url: "tel:2268993921", icon: PhoneIcon } as Contact,
-		{ method: "Email", label: "kakpovbia.jiro@gmail.com", url: "mailto:kakpovbia.jiro@gmail.com", icon: EmailIcon } as Contact,
+	const contactMethods: Contact[] = [
+		{ method: "Phone Number", label: "(226) 899-3921", url: "tel:2268993921", icon: PhoneIcon },
+		{ method: "Email", label: "kakpovbia.jiro@gmail.com", url: "mailto:kakpovbia.jiro@gmail.com", icon: EmailIcon },
 		{
 			method: "LinkedIn",
 			label: "jiro-kakpovbia",
 			url: "https://linkedin.com/in/jiro-kakpovbia",
 			icon: LinkedInIcon,
-		} as Contact,
-		{ method: "Github", label: "JiroKakpovbia", url: "https://github.com/JiroKakpovbia", icon: GitHubIcon } as Contact,
+		},
+		{ method: "Github", label: "JiroKakpovbia", url: "https://github.com/JiroKakpovbia", icon: GitHubIcon },
 	];
 	return (
 		<section id={"contact"}>
 			<Grid container size={12} justifyContent={"center"} padding={3} spacing={3}>
-				<Typography variant={"h4"} color={"primary.main"}>
+				<Typography variant={"h4"} component={"h3"} color={"primary.main"}>
 					Contact
 				</Typography>
 				<Grid size={12} data-aos={"zoom-out"} data-aos-once={"true"}>

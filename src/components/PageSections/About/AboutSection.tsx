@@ -28,7 +28,7 @@ const AboutSection = () => {
 		<section id={"about"}>
 			<Grid container size={12} spacing={3} padding={3}>
 				<Grid container size={12} justifyContent={"center"}>
-					<Typography variant={"h4"} color={"primary.main"}>
+					<Typography variant={"h4"} component={"h3"} color={"primary.main"}>
 						About
 					</Typography>
 				</Grid>

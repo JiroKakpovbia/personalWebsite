@@ -11,15 +11,15 @@ import CustomInfoBox from "../../CustomComponents/CustomInfoBox.tsx";
 import CustomIconButton from "../../CustomComponents/CustomIconButton.tsx";
 
 const HomeSection = () => {
-	const socialMedias = [
-		{ method: "Instagram", url: "https://www.instagram.com/jiro.kakpovbia", icon: InstagramIcon } as Contact,
-		{ method: "X (formerly Twitter)", url: "https://x.com/JiroKakpovbia", icon: XIcon } as Contact,
+	const socialMedias: Contact[] = [
+		{ method: "Instagram", url: "https://www.instagram.com/jiro.kakpovbia", icon: InstagramIcon },
+		{ method: "X (formerly Twitter)", url: "https://x.com/JiroKakpovbia", icon: XIcon },
 		{
 			method: "LinkedIn",
 			url: "https://linkedin.com/in/jiro-kakpovbia",
 			icon: LinkedInIcon,
-		} as Contact,
-		{ method: "Github", url: "https://github.com/JiroKakpovbia", icon: GitHubIcon } as Contact,
+		},
+		{ method: "Github", url: "https://github.com/JiroKakpovbia", icon: GitHubIcon },
 	];
 
 	return (
@@ -65,13 +65,17 @@ const HomeSection = () => {
 					<Grid container size={12} justifyContent={"center"} textAlign={"center"} spacing={3}>
 						{/* Text */}
 						<Grid size={12} data-aos={"fade-down"} data-aos-once={"true"}>
-							<Typography variant={"h5"}>Hi, my name is</Typography>
+							<Typography variant="h5" component="h2">
+								Hi, my name is
+							</Typography>
 						</Grid>
 						<Grid size={12} data-aos={"fade-in"} data-aos-once={"true"}>
 							<Typography variant={"h2"}>Jiro Kakpovbia</Typography>
 						</Grid>
 						<Grid size={12} data-aos={"fade-up"} data-aos-once={"true"}>
-							<Typography variant={"h5"}>Full-Stack Software Developer</Typography>
+							<Typography variant="h5" component="h2">
+								Full-Stack Software Developer
+							</Typography>
 						</Grid>
 					</Grid>
 					{/* Social Media */}

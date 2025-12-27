@@ -20,10 +20,12 @@ const ExperienceInfoBlock = ({ experience }: ExperienceInfoBlockProps) => {
 				<Grid container size={{ xs: 12, sm: 10, md: 10, lg: 11, xl: 11 }} spacing={1}>
 					<Grid container size={12} justifyContent={"space-between"} alignItems={"center"}>
 						<Grid container size={{ sm: 12, md: "auto" }}>
-							<Typography variant={"h5"}>{experience.position}</Typography>
+							<Typography variant={"h5"} component={"h4"}>
+								{experience.position}
+							</Typography>
 						</Grid>
 						<Grid container size={{ sm: 12, md: "auto" }}>
-							<Typography variant={"h5"} fontWeight={"normal"}>
+							<Typography variant={"h5"} component={"p"} fontWeight={"normal"}>
 								{!isLarge &&
 									`${experience.startDate.split(" ")[0].substring(0, 3)} ${experience.startDate.split(" ")[1]} — ${
 										experience.endDate === "Present"
@@ -35,7 +37,7 @@ const ExperienceInfoBlock = ({ experience }: ExperienceInfoBlockProps) => {
 						</Grid>
 					</Grid>
 					<Grid container size={12}>
-						<Typography variant={"h6"} fontStyle={"italic"}>
+						<Typography variant={"h6"} component={"p"} fontStyle={"italic"}>
 							{experience.company}, {experience.location}
 						</Typography>
 					</Grid>
