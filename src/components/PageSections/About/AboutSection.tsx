@@ -33,7 +33,7 @@ const AboutSection = () => {
 					</Typography>
 				</Grid>
 				<Grid container size={12} data-aos={"fade-up"} data-aos-once={"true"}>
-					<AboutInfoBlock headshot={aboutAssets.headshot} resume={aboutAssets.resume} academicYear={currentAcademicYear} />
+					<AboutInfoBlock headshot={aboutAssets.headshot} resume={"/Jiro_Kakpovbia_Resume.pdf"} academicYear={currentAcademicYear} />
 				</Grid>
 			</Grid>
 		</section>
