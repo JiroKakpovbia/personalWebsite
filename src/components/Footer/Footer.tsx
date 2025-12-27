@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 
-const FooterSection = () => {
+const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
@@ -32,4 +32,4 @@ const FooterSection = () => {
 	);
 };
 
-export default FooterSection;
+export default Footer;

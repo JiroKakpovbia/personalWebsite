@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { toggleTheme, setTheme } from "./store/themeSlice.tsx";
+import { toggleTheme } from "./store/themeSlice.tsx";
 import "./App.css";
 
 import AOS from "aos";
@@ -12,7 +12,7 @@ import ProjectsSection from "./components/PageSections/Projects/ProjectsSection.
 import SkillsSection from "./components/PageSections/Skills/SkillsSection.tsx";
 import ExperienceSection from "./components/PageSections/Experience/ExperienceSection.tsx";
 import ContactInfoSection from "./components/PageSections/Contact/ContactSection.tsx";
-import FooterSection from "./components/PageSections/Footer/FooterSection.tsx";
+import Footer from "./components/Footer/Footer.tsx";
 
 import { Grid, CssBaseline, ThemeProvider } from "@mui/material";
 import { RootState } from "./store/store.ts";
@@ -28,23 +28,11 @@ const App = () => {
 
 	const muiTheme = useMemo(() => getTheme(themeMode), [themeMode]);
 
-	// Listen for system theme changes
-	useEffect(() => {
-		const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
-		const handleChange = (event: MediaQueryListEvent) => {
-			if (!localStorage.getItem("theme")) {
-				dispatch(setTheme(event.matches ? "light" : "dark"));
-			}
-		};
-		mediaQuery.addEventListener("change", handleChange);
-		return () => mediaQuery.removeEventListener("change", handleChange);
-	}, [dispatch]);
-
 	const handleToggleTheme = () => {
 		dispatch(toggleTheme());
 	};
 
-	// Handle scroll event in navigation
+	// Handle scroll events in navigation
 	const handleScroll = () => {
 		// Handle progress bar
 		const scrollTop = window.scrollY;
@@ -95,7 +83,7 @@ const App = () => {
 				<ContactInfoSection />
 			</Grid>
 			{/* Footer */}
-			<FooterSection />
+			<Footer />
 		</ThemeProvider>
 	);
 };
