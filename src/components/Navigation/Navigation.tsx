@@ -69,7 +69,7 @@ const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: Navigation
 			</Toolbar>
 			{/* Progress Bar */}
 			<Box height={2}>
-				<Box width={`${scrollProgress}%`} height={"100%"} bgcolor={"primary.main" }/>
+				<Box width={`${scrollProgress}%`} height={"100%"} bgcolor={"primary.main"} />
 			</Box>
 		</AppBar>
 	);
