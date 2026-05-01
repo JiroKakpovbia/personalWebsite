@@ -10,7 +10,7 @@ const ExperienceSection = () => {
 			company: "The Equitable Life Insurance Company of Canada",
 			position: "Junior Software Developer",
 			startDate: "May 2025",
-			endDate: "Present",
+			endDate: "April 2026",
 			location: "Waterloo, ON",
 			content: "<b>Languages and Tools:</b> React, TypeScript, C#, SQL, .NET, Azure, Jest, xUnit, Postman, Swagger, Figma, Storybook.",
 			image: experienceLogos.equitable,
