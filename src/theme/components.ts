@@ -1,8 +1,20 @@
 import type { Components, Theme } from "@mui/material/styles";
 
+const themeTransition = "background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, fill 0.4s ease";
+
 export const components: Components<Theme> = {
+	MuiAppBar: {
+		styleOverrides: {
+			root: {
+				transition: themeTransition,
+			},
+		},
+	},
 	MuiCssBaseline: {
 		styleOverrides: (theme: Theme) => ({
+			"*": {
+				transition: themeTransition,
+			},
 			html: {
 				scrollBehavior: "smooth",
 				overflowX: "hidden",

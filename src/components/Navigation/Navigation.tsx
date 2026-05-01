@@ -38,7 +38,7 @@ const Navigation = ({ scrollProgress, showName, theme, toggleTheme }: Navigation
 			elevation={scrollProgress > 0 ? 4 : 0}
 			sx={{
 				height: appBarHeight,
-				bgcolor: scrollProgress > 0 ? "background.paper" : "background.default",
+				bgcolor: scrollProgress > 0 ? "background.paper" : "transparent",
 				color: "text.primary",
 			}}
 		>
