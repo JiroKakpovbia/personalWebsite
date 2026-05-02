@@ -3,4 +3,5 @@ export interface GitHubProject {
 	url: string;
 	description: string | null;
 	language: string | null;
+	imageUrl?: string;
 }

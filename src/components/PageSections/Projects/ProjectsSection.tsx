@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from "../../../store/hooks.ts";
 import { fetchProjects } from "../../../store/projectsSlice.tsx";
 import { GitHubProject } from "../../../types/Projects";
 import ProjectInfoBlock from "./components/ProjectInfoBlock.tsx";
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 const ProjectsSection = () => {
 	const dispatch = useAppDispatch();
@@ -30,22 +30,32 @@ const ProjectsSection = () => {
 				)}
 				{status === "failed" && (
 					<Grid container size={12}>
-						<Typography variant={"body1"}>LError: {error}</Typography>
+						<Typography variant={"body1"}>Error: {error}</Typography>
 					</Grid>
 				)}
-				<Grid container size={12}>
+				<Box
+					sx={{
+						columnCount: { xs: 1, sm: 1, md: 2 },
+						columnGap: 3,
+						width: "100%",
+					}}
+				>
 					{repos.map((repo, idx: number) => (
-						<Grid
-							container
+						<Box
 							key={`project-${idx}`}
-							size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}
+							sx={{
+								display: "inline-block",
+								width: "100%",
+								mb: 3,
+								breakInside: "avoid",
+							}}
 							data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
 							data-aos-once={"true"}
 						>
-							<ProjectInfoBlock key={`project-${idx}`} repo={repo} />
-						</Grid>
+							<ProjectInfoBlock repo={repo} />
+						</Box>
 					))}
-				</Grid>
+				</Box>
 			</Grid>
 		</section>
 	);

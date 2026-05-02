@@ -25,6 +25,19 @@ const ProjectInfoBlock = ({ repo }: ProjectInfoBlockProps) => {
 						<b>Language:</b> {repo.language || "N/A"}
 					</Typography>
 				</Grid>
+				{repo.imageUrl && (
+					<Grid size={12}>
+						<img
+							src={repo.imageUrl}
+							alt={`${repo.name} preview`}
+							loading={"lazy"}
+							style={{
+								width: "100%",
+								objectFit: "contain",
+							}}
+						/>
+					</Grid>
+				)}
 			</Grid>
 		</CustomInfoBox>
 	);

@@ -14,6 +14,11 @@ interface FetchResult {
 	url: string;
 }
 
+async function urlExists(url: string) {
+	const response = await fetch(url, { method: "HEAD" });
+	return response.ok;
+}
+
 // ---------- Async Thunk ----------
 export const fetchProjects = createAsyncThunk<
 	FetchResult, // return type
@@ -31,12 +36,22 @@ export const fetchProjects = createAsyncThunk<
 	const response = await fetch(url);
 	const rawData = await response.json();
 
-	const data: GitHubProject[] = rawData.map((repo: { name: string; html_url: string; description: string; language: string }) => ({
-		name: repo.name,
-		url: repo.html_url,
-		description: repo.description,
-		language: repo.language,
-	}));
+	console.log("Fetched projects data:", rawData); // Debug log
+
+	const data: GitHubProject[] = await Promise.all(
+		rawData.map(async (repo: { name: string; html_url: string; description: string; language: string; imageUrl?: string }, index: number) => {
+			const imageUrl = `https://raw.githubusercontent.com/JiroKakpovbia/${repo.name}/${rawData[index].default_branch}/preview.png`;
+			const imageUrlExists = await urlExists(imageUrl);
+
+			return {
+				name: repo.name,
+				url: repo.html_url,
+				description: repo.description,
+				language: repo.language,
+				imageUrl: imageUrlExists ? imageUrl : undefined,
+			};
+		}),
+	);
 
 	return { data, url };
 });
