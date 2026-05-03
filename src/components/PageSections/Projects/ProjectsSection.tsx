@@ -49,7 +49,7 @@ const ProjectsSection = () => {
 								mb: 3,
 								breakInside: "avoid",
 							}}
-							data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
+							data-aos={"flip-down"}
 							data-aos-once={"true"}
 						>
 							<ProjectInfoBlock repo={repo} />
