@@ -6,6 +6,16 @@ import { Experience } from "../../../types";
 
 const ExperienceSection = () => {
 	const experiences: Experience[] = [
+		// {
+		// 	company: "The Equitable Life Insurance Company of Canada",
+		// 	position: "Junior Software Developer",
+		// 	startDate: "September 2026",
+		// 	endDate: "December 2026",
+		// 	location: "Waterloo, ON",
+		// 	content: "<b>Languages and Tools:</b> React, TypeScript, C#, SQL, .NET, Azure, Jest, xUnit, Postman, Swagger, Figma, Storybook.",
+		// 	image: experienceLogos.equitable,
+		// 	url: "https://equitable.ca/home",
+		// },
 		{
 			company: "The Equitable Life Insurance Company of Canada",
 			position: "Junior Software Developer",
